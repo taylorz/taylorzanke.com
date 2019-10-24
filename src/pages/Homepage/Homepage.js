@@ -15,7 +15,7 @@ class Homepage extends Component {
     return (
       <>
         <PageContainer className="homepage">
-          <Whole workImage={TwoCitiesReader1} title="Two Cities Diary" year="2014"/>
+          <Whole workImage={TwoCitiesReader1} title="Two Cities Diary" year="2014" object="Book"/>
           <Grid container className="fragments" justify="space-between">
             <Grid item md={4} xs={12} className="fragment-container">
               <Fragment fragmentImage={DrawingsModels1} title="Two Cities Reader" year="2014"/>
@@ -24,7 +24,7 @@ class Homepage extends Component {
               <Fragment fragmentImage={DrawingsModels2} title="Two Cities Reader" year="2014"/>
             </Grid>
           </Grid>
-          <Whole workImage={TwoCitiesReader2}/>
+          <Whole workImage={TwoCitiesReader2} title="Two Cities Diary" year="2014" object="Book"/>
         </PageContainer>
       </>
     );
