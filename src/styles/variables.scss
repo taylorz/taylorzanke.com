@@ -1,19 +1,18 @@
 $buffer:                            4px;
 
 $bgColorLight:                       #fafafa;
-$accentColorCream:                   #FFF0E8;
 $primaryColor:                       #ECB7D9;
 $secondaryColor:                     #1E3F4F;
 $lightGray:                          #dddddd;
 
-$primaryFont:                        "DomaineDisplayNarrowTest-Regular", serif;
-$secondaryFont:                      "Roboto", sans-serif;
+$primaryFont:                        "Atlas Grotesk", serif;
+$secondaryFont:                      "Domaine", sans-serif;
 
-$fontSize:                           1vmin;
-$fontSizeStatement:                  $fontSize*4;
-$fontSizeHero:                       $fontSize*6;
+$fontSize:                           2vmin;
+$fontSizeStatement:                  $fontSize*2;
+$fontSizeHero:                       $fontSize*5;
 
-$lineHeight:                         2.5vmin;
+$lineHeight:                         2.25vmin;
 $lineHeightStatement:                $lineHeight*2;
 $lineHeightHero:                     $lineHeight*3;
 
