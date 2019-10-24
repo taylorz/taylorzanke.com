@@ -1,0 +1,19 @@
+@import '/mixins.scss';
+@import '/variables.scss';
+
+@font-face {
+    // font-family: 'Founders Grotesk Regular';
+    // src: url('../assets/type/FoundersGroteskWeb-Regular.woff2') format('woff2'),
+    //      url('../assets/type/FoundersGroteskWeb-Regular.woff') format('woff'),
+    //      url('../assets/type/FoundersGroteskWeb-Regular.eot') format('eot');
+    // font-weight: normal;
+    // font-style: normal;
+}
+
+*{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}//*
+body {
+  background: $bgColorLight;
+  margin: 0; padding: 0;
+}//body

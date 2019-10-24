@@ -1,0 +1,69 @@
+@import "../../styles/styles.scss";
+
+.homepage-container {
+  .homepage-hero {
+    height: 90vh;
+    overflow: hidden;
+    .hero-statement {
+      padding: $buffer*10;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      .statement-text {
+        p {
+          &.text-main {
+            font-family: $primaryFont;
+            font-size: $fontSizeHero;
+            line-height: $lineHeightHero;
+            color: $secondaryColor;
+            transform: translateY(100%);
+            opacity: 0;
+            @include animation(1s, $easingCubic, $delay6, fadeInUp);
+            span {
+              display: block;
+              @include breakpoint(sm) {
+                display: inline-block;
+              }
+            }//span
+          }//text-main
+          &.text-cta {
+            font-family: $secondaryFont;
+            color: $primaryColor;
+            transform: translateY(100%);
+            opacity: 0;
+            @include animation(1s, $easingCubic, $delay7, fadeInUp);
+          }
+        }//p
+      }//statement-text
+    }//hero-statement
+    .hero-graphic {
+      background: $accentColorCream;
+      transform: translateX(100%);
+      @include animation(1s, $easingCubic, $delay3, slideInLeft);
+      .graphic-headshot {
+        width: 100%; height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include animation(1s, $easingCubic, $delay4, slideInLeft);
+        img {
+          background: lighten($secondaryColor, 70%);
+          width: 50%;
+        }
+      }//graphic-headshot
+    }//hero-graphic
+  }//homepage-hero
+  .homepage-statement {
+    padding: $buffer*40 0;
+    background: $secondaryColor;
+    transform: translateY(100%);
+    @include animation(1s, $easingCubic, $delay1, slideInUp);
+    .statement-text {
+      font-family: $secondaryFont;
+      font-size: $fontSizeStatement;
+      line-height: $lineHeightStatement;
+      color: $accentColorCream;
+      text-align: center;
+    }//statement-text
+  }//homepage-statement
+}//homepage-container

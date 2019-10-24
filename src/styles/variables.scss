@@ -1,0 +1,36 @@
+$buffer:                            4px;
+
+$bgColorLight:                       #fafafa;
+$accentColorCream:                   #FFF0E8;
+$primaryColor:                       #ECB7D9;
+$secondaryColor:                     #1E3F4F;
+$lightGray:                          #dddddd;
+
+$primaryFont:                        "DomaineDisplayNarrowTest-Regular", serif;
+$secondaryFont:                      "Roboto", sans-serif;
+
+$fontSize:                           1vmin;
+$fontSizeStatement:                  $fontSize*4;
+$fontSizeHero:                       $fontSize*6;
+
+$lineHeight:                         2.5vmin;
+$lineHeightStatement:                $lineHeight*2;
+$lineHeightHero:                     $lineHeight*3;
+
+$timing:                             .25s;
+$easingCubic:                        cubic-bezier(0.77, 0, 0.175, 1);
+$easingRegular:                      ease-in-out;
+$transitionCubic:                    all $timing $easingCubic;
+$transitionRegular:                  all $timing $easingRegular;
+
+$delay1:                             .25s;
+$delay2:                             $delay1+$delay1;
+$delay3:                             $delay1+$delay2;
+$delay4:                             $delay1+$delay3;
+$delay5:                             $delay1+$delay4;
+$delay6:                             $delay1+$delay5;
+$delay7:                             $delay1+$delay6;
+$delay8:                             $delay1+$delay7;
+
+$borderGray:                         1px solid $lightGray;
+$borderGreen:                        1px solid $secondaryColor;

@@ -1,0 +1,46 @@
+@import "../../styles/styles.scss";
+
+.work-excerpt {
+  border-bottom: $borderGray;
+  height: 100vh;
+  @include breakpoint(md) {
+    height: inherit;
+  }
+  .work-excerpt-wrapper {
+    height: 100%; width: 100%;
+    font-family: $secondaryFont;
+    line-height: $lineHeight;
+    padding: $buffer*10;
+    .excerpt-titles {
+        color: $lightGray;
+        .titles-title {}//titles-title
+        .titles-published {
+          span {
+            font-style: italic;
+          }//span
+        }//titles-title
+    }//excerpt-titles
+    .excerpt-linkto {}//excerpt-linkto
+    .excerpt-writing {
+      @include breakpoint(md) {
+        margin: 10vh 0;
+      }
+      .excerpt-writing-wrapper {
+        .writing-copy {
+          font-size: $fontSizeStatement;
+          line-height: $lineHeightStatement;
+          font-family: $primaryFont;
+          color: $secondaryColor;
+          padding: 0 $buffer*24;
+          border-right: $borderGray;
+          border-left: $borderGray;
+        }//writing-copy
+      }//excerpt-writing-wrapper
+    }//excerpt-writing
+    .excerpt-context {
+      display: flex;
+      align-items: flex-end;
+      color: $lightGray;
+    }//excerpt-excerpt
+  }//work-excerpt-wrapper
+}//work-excerpt
