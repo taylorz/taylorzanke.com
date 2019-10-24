@@ -1,0 +1,19 @@
+@import "../../styles/styles.scss";
+
+.caption {
+  height: $captionHeight;
+  font-family: $secondaryFont;
+  font-size: $fontSizeCaption;
+  line-height: $lineHeightCaption;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  .caption-item {
+    &:first-child {
+      padding: 0;
+    }
+    padding-left: $buffer*4;
+  }//caption-item
+}//caption

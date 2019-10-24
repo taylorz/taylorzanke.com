@@ -1,20 +1,23 @@
 $buffer:                            4px;
 
-$bgColorLight:                       #fafafa;
+$bgColorLight:                       #f1f1f1;
 $primaryColor:                       #ECB7D9;
 $secondaryColor:                     #1E3F4F;
-$lightGray:                          #dddddd;
 
-$primaryFont:                        "Atlas Grotesk", serif;
-$secondaryFont:                      "Domaine", sans-serif;
+$primaryFont:                        "GT Sectra Trial", serif;
+$secondaryFont:                      "Atlas Grotesk", sans-serif;
 
 $fontSize:                           2vmin;
 $fontSizeStatement:                  $fontSize*2;
 $fontSizeHero:                       $fontSize*5;
+$fontSizeCaption:                    $fontSize*.5;
 
 $lineHeight:                         2.25vmin;
 $lineHeightStatement:                $lineHeight*2;
 $lineHeightHero:                     $lineHeight*3;
+$lineHeightCaption:                  $lineHeight*.5;
+
+$captionHeight:                      $buffer*4;
 
 $timing:                             .25s;
 $easingCubic:                        cubic-bezier(0.77, 0, 0.175, 1);
@@ -31,5 +34,7 @@ $delay6:                             $delay1+$delay5;
 $delay7:                             $delay1+$delay6;
 $delay8:                             $delay1+$delay7;
 
-$borderGray:                         1px solid $lightGray;
-$borderGreen:                        1px solid $secondaryColor;
+$xs:                                 600px;
+$sm:                                 960px;
+$md:                                 1280px;
+$lg:                                 1920px;

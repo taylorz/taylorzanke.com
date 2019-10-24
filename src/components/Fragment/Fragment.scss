@@ -1,0 +1,14 @@
+@import "../../styles/styles.scss";
+
+.fragment-container {
+  width: 100%;
+  height: 100%;
+  padding-bottom: $captionHeight;
+  .fragment {
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }//fragment
+}//fragment-container
