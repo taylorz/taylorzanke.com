@@ -1,21 +1,23 @@
 $buffer:                            4px;
 
 $bgColorLight:                       #f1f1f1;
-$primaryColor:                       #ECB7D9;
-$secondaryColor:                     #1E3F4F;
+$bgColorDark:                        #11111a;
+
+$darkFontColor:                      $bgColorDark;
+$lightFontColor:                     $bgColorLight;
 
 $primaryFont:                        "GT Sectra Trial", serif;
 $secondaryFont:                      "Atlas Grotesk", sans-serif;
 
-$fontSize:                           2vmin;
+$fontSize:                           12px;
 $fontSizeStatement:                  $fontSize*2;
 $fontSizeHero:                       $fontSize*5;
-$fontSizeCaption:                    $fontSize*.5;
+$fontSizeCaption:                    $fontSize*.75;
 
-$lineHeight:                         2.25vmin;
-$lineHeightStatement:                $lineHeight*2;
+$lineHeight:                         16px;
+$lineHeightStatement:                $lineHeight*1.75;
 $lineHeightHero:                     $lineHeight*3;
-$lineHeightCaption:                  $lineHeight*.5;
+$lineHeightCaption:                  $lineHeight*.75;
 
 $captionHeight:                      $buffer*4;
 

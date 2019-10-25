@@ -1,0 +1,20 @@
+@import "../../styles/styles.scss";
+
+.menu {
+  padding: $buffer*4;
+  // position: fixed;
+  transform: translateX(200%);
+  width: calc(100% - 960px) !important;
+  min-width: calc(1440px - 960px) !important;
+  .menu-about {
+      font-family: $primaryFont;
+      font-size: $fontSizeStatement;
+      line-height: $lineHeightStatement;
+  }//menu-about
+  .menu-description {
+    font-family: $secondaryFont;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    margin-top: $lineHeight;
+  }//menu-description
+}//menu

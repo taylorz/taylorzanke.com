@@ -6,13 +6,12 @@ import Caption from '../Caption/Caption'
 
 class Whole extends Component {
   render() {
-    const { className, workImage, title, year, object, dimension } = this.props
+    const { className, workImage, matte, full, light, dark} = this.props
     return (
       <>
-        <Grid container className={`whole ${className}`} justify="center" alignItems="center">
-          <Grid item md={8} className="whole-image-container" style={{backgroundImage: `url(${workImage})`}}></Grid>
+        <Grid container className={`whole ${className} ${matte && "matte"} ${full && "full"} ${light && "light"} ${dark && "dark"}`} justify={`${matte ? "center" : "flex-end"}`} alignItems="center">
+          <Grid item md={matte ? 12 : 10} className="whole-image-container" style={{backgroundImage: `url(${workImage})`}}></Grid>
         </Grid>
-        <Caption title={title} year={year} object={object} dimension={dimension}/>
       </>
     );
   }

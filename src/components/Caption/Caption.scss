@@ -10,6 +10,12 @@
   padding: 0;
   display: flex;
   align-items: center;
+  &.light {
+    color: $lightFontColor;
+  }
+  &.dark {
+    color: $darkFontColor;
+  }
   .caption-item {
     &:first-child {
       padding: 0;

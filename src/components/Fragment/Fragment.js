@@ -11,7 +11,6 @@ class Fragment extends Component {
       <>
         <div className={`fragment-container ${className}`}>
           <div className="fragment" style={{backgroundImage: `url(${fragmentImage})`}}></div>
-          <Caption title={title} year={year} object={object} dimension={dimension}/>
         </div>
       </>
     );

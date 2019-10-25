@@ -4,9 +4,9 @@
   .fragments {
     width: 100%;
     height: 60vh;
-    padding: 0 $buffer*4;
-    @include breakpoint(sm) {
-      height: 50vh;
+    padding: $buffer*4;
+    @include breakpoint(xs) {
+      height: auto;
     }
     .fragment-container {
     }//fragment-container
