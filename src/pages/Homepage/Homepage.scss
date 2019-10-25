@@ -1,14 +1,5 @@
 @import "../../styles/styles.scss";
 
 .homepage {
-  .fragments {
-    width: 100%;
-    height: 60vh;
-    padding: $buffer*4;
-    @include breakpoint(xs) {
-      height: auto;
-    }
-    .fragment-container {
-    }//fragment-container
-  }//fragments
+
 }//homepage-container

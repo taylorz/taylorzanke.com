@@ -1,11 +1,15 @@
 @import "../../styles/styles.scss";
 
 .menu {
-  padding: $buffer*4;
-  // position: fixed;
-  transform: translateX(200%);
-  width: calc(100% - 960px) !important;
-  min-width: calc(1440px - 960px) !important;
+  padding: $buffer*4 $buffer*4 $buffer*4 $buffer*4;
+  background: white;
+  @include breakpoint(lg) {
+    height: 100vh;
+    width: 80vw;
+    right: 0;
+    position: fixed;
+    transform: translateX(100%);
+  }
   .menu-about {
       font-family: $primaryFont;
       font-size: $fontSizeStatement;

@@ -1,0 +1,17 @@
+@import "../../styles/styles.scss";
+
+.work-id {
+  background: $bgBody;
+  font-family: $secondaryFont;
+  font-weight: 600;
+  font-size: $fontSizeCaption;
+  height: 100%;
+  width: $captionHeight;
+  position: absolute;
+  right: -$captionHeight;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}//work-id

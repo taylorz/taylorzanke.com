@@ -6,9 +6,9 @@ class PageContainer extends Component {
   render() {
     const { children, className } = this.props
     return (
-      <div className={`page-container ${className}`}>
+      <Grid item lg={8} md={12} className={`page-container ${className}`}>
         {children}
-      </div>
+      </Grid>
     );
   }
 }

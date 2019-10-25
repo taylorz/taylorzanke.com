@@ -6,13 +6,13 @@ class Menu extends Component {
   render() {
     const { children, className } = this.props
     return (
-        <Grid container className={`menu ${className}`}>
-          <Grid item md={12} className="menu-about">
-            Taylor Zanke is an artist and designer who makes drawings, models, books, spreadsheets, and photographs.
-          </Grid>
-          <Grid item md={10} className="menu-description">
+        <Grid item lg={4} md={12} className={`menu ${className}`}>
+          <div className="menu-about">
+            Taylor Zanke is an artist who makes books, models, drawings, documents, and photographs, among other media. He strives to understand the languages used in the Present to discuss the Future and the Past, and in so doing develop the perspective to realize alternative compositional and existential realities.
+          </div>
+          <div className="menu-description">
             This website is a collection of works and fragments waiting to be assembled or taken apart.
-          </Grid>
+          </div>
         </Grid>
     );
   }

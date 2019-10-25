@@ -6,9 +6,9 @@ class SiteWrapper extends Component {
   render() {
     const { children, className } = this.props
     return (
-      <div className={`site-wrapper ${className}`}>
+      <Grid container className={`site-wrapper ${className}`}>
         {children}
-      </div>
+      </Grid>
     );
   }
 }

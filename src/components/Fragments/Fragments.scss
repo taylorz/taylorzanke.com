@@ -1,0 +1,15 @@
+@import "../../styles/styles.scss";
+
+.fragments-container {
+  width: 100%;
+  position: relative;
+  padding: $buffer*4;
+  .fragment {
+    display: flex;
+    align-items: flex-end;
+    margin-right: $buffer*4;
+    img {
+      width: 100%;
+    }
+  }//fragment
+}//fragment-container

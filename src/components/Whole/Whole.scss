@@ -3,7 +3,10 @@
 .whole {
   width: 100%;
   height: 80vh;
-  overflow: hidden;
+  position: relative;
+  @include breakpoint(sm) {
+    height: 50vh;
+  }
   .whole-image-container {
     height: 100%;
     width: 100%;
