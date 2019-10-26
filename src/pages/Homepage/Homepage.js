@@ -11,7 +11,9 @@ import WORKS from '../../constants/works/works';
 import FRAGMENTS from '../../constants/fragments/fragments';
 
 const TwoCitiesDiary = WORKS[0];
-const Model = WORKS[1];
+const SeveralSpeculative = WORKS[1];
+const DirectionZine = WORKS[2];
+const Model = WORKS[3];
 
 class Homepage extends Component {
   render() {
@@ -51,6 +53,12 @@ class Homepage extends Component {
               fragment1={FRAGMENTS[5]}
               fragment2={FRAGMENTS[2]}
               fragment3={FRAGMENTS[3]}
+            />
+            <Whole
+              matte
+              light
+              workId={Model.id}
+              workImage={Model.images[3]}
             />
           </PageContainer>
           <Menu/>

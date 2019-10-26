@@ -4,18 +4,21 @@
   width: 100%;
   position: relative;
   padding: $buffer*4;
-  &:last-child {
-    padding-right: $buffer*2;
-  }
-  .work-id {
-    bottom: $buffer*4;
+  @include breakpoint(lg) {
+    padding-right: $buffer*4;
   }
   .fragment {
     display: flex;
     align-items: flex-end;
-    // margin-right: $buffer*4;
+    padding-left: $buffer*4;
+    &:first-child {
+      padding-left: 0;
+    }
     img {
       width: 100%;
-    }
+    }//img
   }//fragment
+  .work-id {
+    bottom: $buffer*4;
+  }//work-id
 }//fragment-container

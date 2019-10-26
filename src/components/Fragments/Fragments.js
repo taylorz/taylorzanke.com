@@ -9,7 +9,7 @@ class Fragments extends Component {
     const { className, fragment1, fragment2, fragment3, one, two, three} = this.props
     return (
       <>
-        <Grid container className="fragments-container" spacing={2}>
+        <Grid container className="fragments-container">
         {one &&
           <>
             <Grid item md={4} className="fragment">
