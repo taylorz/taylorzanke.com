@@ -11,7 +11,7 @@ class Menu extends Component {
             Taylor Zanke is an artist who makes books, models, drawings, documents, and photographs, among other media. He strives to understand the languages used in the Present to discuss the Future and the Past, and in so doing develop the perspective to realize alternative compositional and existential realities.
           </div>
           <div className="menu-description">
-            This website is a collection of works and fragments waiting to be assembled or taken apart.
+            This website is a collection of works (ABC) and fragments (123) waiting to be assembled or taken apart.
           </div>
         </Grid>
     );

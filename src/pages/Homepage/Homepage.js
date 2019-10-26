@@ -25,6 +25,7 @@ class Homepage extends Component {
               workImage={TwoCitiesDiary.images[0]}
             />
             <Fragments
+              two
               fragment1={FRAGMENTS[0]}
               fragment2={FRAGMENTS[1]}
             />
@@ -33,6 +34,23 @@ class Homepage extends Component {
               light
               workId={TwoCitiesDiary.id}
               workImage={TwoCitiesDiary.images[2]}
+            />
+            <Fragments
+              two
+              fragment1={FRAGMENTS[3]}
+              fragment2={FRAGMENTS[4]}
+            />
+            <Whole
+              matte
+              dark
+              workId={TwoCitiesDiary.id}
+              workImage={TwoCitiesDiary.images[1]}
+            />
+            <Fragments
+              three
+              fragment1={FRAGMENTS[5]}
+              fragment2={FRAGMENTS[2]}
+              fragment3={FRAGMENTS[3]}
             />
           </PageContainer>
           <Menu/>

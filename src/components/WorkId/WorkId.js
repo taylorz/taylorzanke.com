@@ -7,7 +7,11 @@ class WorkId extends Component {
     const { className, workId } = this.props
     return (
       <div className="work-id">
-        {workId}
+        <ul className="id-list">
+          {workId.reverse().map((id) =>
+            <li className="id-list-item">{id}</li>
+          )}
+        </ul>
       </div>
     );
   }
