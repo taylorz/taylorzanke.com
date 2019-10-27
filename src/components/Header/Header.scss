@@ -6,18 +6,17 @@
   position: fixed;
   color: white;
   z-index: $zIndex1;
-  width: 100%;
+  width: calc(100% - 16px);
   .header-contents {
-    margin-right: $buffer*8;
+    margin-right: $buffer*4;
     display: flex;
     justify-content: space-between;
-    @include breakpoint(xs) {
-      margin-right: $buffer*4;
-    }
+    .name {
+    }//name
     .menu-toggler {
       &:hover {
         cursor: pointer;
       }
-    }
+    }//menu-toggler
   }//header-contents
 }//header-container

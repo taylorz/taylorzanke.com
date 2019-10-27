@@ -6,20 +6,16 @@
   width: calc(100% - 16px);
   flex-basis: auto;
   @include breakpoint(lg) {
+    transform: translateX(100%);
     background: white;
     height: 100vh;
-    width: 50vw;
+    width: 40vw;
     right: 0;
     position: fixed;
   }
-  @include breakpoint(md) {
-    background: white;
-    width: 60vw;
-  }
-  @include breakpoint(sm) {
-    background: white;
-    width: 80vw;
-  }
+  @include breakpoint(md) { width: 50vw; }
+  @include breakpoint(sm) { width: 70vw; }
+  @include breakpoint(xs) { width: 80vw; }
   .menu-about {
       font-family: $primaryFont;
       font-size: $fontSizeStatement;

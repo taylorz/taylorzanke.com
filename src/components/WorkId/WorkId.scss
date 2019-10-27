@@ -20,9 +20,4 @@
     padding: 0;
     .id-list-item {}//id-list-item
   }//id-list
-  @include breakpoint(md) {
-    &:hover {
-      cursor: pointer;
-    }
-  }
 }//work-id

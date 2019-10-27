@@ -12,7 +12,7 @@
     .page-container {
       .menu-dark-overlay {
         pointer-events: auto;
-        opacity: .25;
+        opacity: .5;
         @include transition;
       }
       &:hover {

@@ -5,6 +5,7 @@
 }
 @mixin transition {
   transition: $transitionCubic;
+  // transition: all 1s linear;
 }
 @mixin breakpoint($class) {
   @if $class == xs {
