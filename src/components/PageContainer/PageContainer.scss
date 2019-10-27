@@ -4,4 +4,16 @@
   width: calc(100% - 16px);
   flex-basis: auto !important;
   z-index: $zIndex1;
+  .menu-dark-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: $zIndex3;
+    pointer-events: none;
+    opacity: 0;
+    background: $bgColorDark;
+    @include transition;
+  }//menu-dark-overlay
 }//page-container

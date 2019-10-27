@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import './Homepage.scss';
 import SiteWrapper from '../../components/SiteWrapper/SiteWrapper';
+import Header from '../../components/Header/Header';
 import Menu from '../../components/Menu/Menu';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import Whole from '../../components/Whole/Whole';
@@ -28,7 +29,8 @@ class Homepage extends Component {
     return (
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
-          <PageContainer className="homepage" onClick={() => this.toggleMenu()}>
+          <PageContainer className="homepage" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
+          <Header onClick={() => this.toggleMenu()}/>
             <Whole
               matte
               workId={TwoCitiesDiary.id}

@@ -16,6 +16,10 @@
     background: white;
     width: 60vw;
   }
+  @include breakpoint(sm) {
+    background: white;
+    width: 80vw;
+  }
   .menu-about {
       font-family: $primaryFont;
       font-size: $fontSizeStatement;

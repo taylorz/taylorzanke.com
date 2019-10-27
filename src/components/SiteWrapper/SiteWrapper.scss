@@ -10,6 +10,11 @@
     // overflow-y: hidden;
     position: fixed;
     .page-container {
+      .menu-dark-overlay {
+        pointer-events: auto;
+        opacity: .25;
+        @include transition;
+      }
       &:hover {
         cursor: pointer;
       }

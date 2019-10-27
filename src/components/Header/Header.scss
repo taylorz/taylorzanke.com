@@ -11,6 +11,9 @@
     margin-right: $buffer*8;
     display: flex;
     justify-content: space-between;
+    @include breakpoint(xs) {
+      margin-right: $buffer*4;
+    }
     .menu-toggler {
       &:hover {
         cursor: pointer;
