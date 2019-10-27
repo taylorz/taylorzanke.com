@@ -9,6 +9,10 @@
   &.menu-opened {
     // overflow-y: hidden;
     position: fixed;
+    &::-webkit-scrollbar {
+      // width: 0;
+      background: transparent;
+    }
     .page-container {
       .menu-dark-overlay {
         pointer-events: auto;

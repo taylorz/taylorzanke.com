@@ -78,8 +78,8 @@ class Homepage extends Component {
             <Whole
               matte
               dark
-              workId={Model.id}
-              workImage={Model.images[2]}
+              workId={DirectionZine.id}
+              workImage={DirectionZine.images[2]}
             />
             <Fragments
               one
@@ -87,9 +87,9 @@ class Homepage extends Component {
             />
             <Whole
               matte
-              light
-              workId={Model.id}
-              workImage={Model.images[1]}
+              dark
+              workId={SeveralSpeculative.id}
+              workImage={SeveralSpeculative.images[2]}
             />
           </PageContainer>
           <Menu/>
