@@ -1,6 +1,7 @@
 @import "../../styles/styles.scss";
 
 .page-container {
-  width: 100%;
-  // max-width: $md;
+  width: calc(100% - 16px);
+  flex-basis: auto !important;
+  z-index: $zIndex1;
 }//page-container

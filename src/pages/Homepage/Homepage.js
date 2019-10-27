@@ -16,11 +16,19 @@ const DirectionZine = WORKS[2];
 const Model = WORKS[3];
 
 class Homepage extends Component {
+  state = {
+    menuOpened: false,
+  }
+  toggleMenu() {
+    this.setState({
+      menuOpened: !this.state.menuOpened,
+    });
+  }
   render() {
     return (
       <>
-        <SiteWrapper>
-          <PageContainer className="homepage">
+        <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
+          <PageContainer className="homepage" onClick={() => this.toggleMenu()}>
             <Whole
               matte
               workId={TwoCitiesDiary.id}

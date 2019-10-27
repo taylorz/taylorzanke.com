@@ -3,7 +3,7 @@
 @mixin transitionRegular {
   transition: $transitionRegular;
 }
-@mixin transitionCubic {
+@mixin transition {
   transition: $transitionCubic;
 }
 @mixin breakpoint($class) {

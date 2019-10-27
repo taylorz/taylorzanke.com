@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import './Menu.scss'
+import './Menu.scss';
 
 class Menu extends Component {
   render() {

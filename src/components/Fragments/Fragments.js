@@ -6,7 +6,7 @@ import WorkId from '../WorkId/WorkId';
 
 class Fragments extends Component {
   render() {
-    const { className, fragment1, fragment2, fragment3, one, two, three} = this.props
+    const { className, onClick, fragment1, fragment2, fragment3, one, two, three} = this.props
     return (
       <>
         <Grid container className="fragments-container">
@@ -15,7 +15,7 @@ class Fragments extends Component {
             <Grid item md={4} className="fragment">
               <img src={fragment1.image}/>
             </Grid>
-            <WorkId workId={[fragment1.id]}/>
+            <WorkId workId={[fragment1.id]} onClick={onClick}/>
           </>
         }
         {two &&
@@ -26,7 +26,7 @@ class Fragments extends Component {
             <Grid item md={7} className="fragment">
               <img src={fragment2.image}/>
             </Grid>
-            <WorkId workId={[fragment1.id, fragment2.id]}/>
+            <WorkId workId={[fragment1.id, fragment2.id]} onClick={onClick}/>
           </>
         }
         {three &&
@@ -40,7 +40,7 @@ class Fragments extends Component {
             <Grid item md={4} className="fragment">
               <img src={fragment3.image}/>
             </Grid>
-            <WorkId workId={[fragment1.id, fragment2.id, fragment3.id]}/>
+            <WorkId workId={[fragment1.id, fragment2.id, fragment3.id]} onClick={onClick}/>
           </>
         }
         </Grid>

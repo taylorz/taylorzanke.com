@@ -1,0 +1,20 @@
+@import "../../styles/styles.scss";
+
+.header-container {
+  font-family: $secondaryFont;
+  padding: $buffer*4;
+  position: fixed;
+  color: white;
+  z-index: $zIndex1;
+  width: 100%;
+  .header-contents {
+    margin-right: $buffer*8;
+    display: flex;
+    justify-content: space-between;
+    .menu-toggler {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }//header-contents
+}//header-container

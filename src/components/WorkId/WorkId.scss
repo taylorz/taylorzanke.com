@@ -1,7 +1,7 @@
 @import "../../styles/styles.scss";
 
 .work-id {
-  // background: $bgBody;
+  height: 100%;
   font-family: $secondaryFont;
   font-weight: 600;
   font-size: $fontSizeCaption;
@@ -9,7 +9,7 @@
   position: absolute;
   right: -$captionHeight;
   bottom: 0;
-  z-index: 100;
+  z-index: $zIndex2;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -20,4 +20,9 @@
     padding: 0;
     .id-list-item {}//id-list-item
   }//id-list
+  @include breakpoint(md) {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }//work-id

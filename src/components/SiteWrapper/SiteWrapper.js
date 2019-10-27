@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import './SiteWrapper.scss'
+import './SiteWrapper.scss';
 
 class SiteWrapper extends Component {
   render() {
-    const { children, className } = this.props
+    const { children, className, menuState } = this.props
     return (
-      <Grid container className={`site-wrapper ${className}`}>
+      <Grid container className={`site-wrapper ${className} ${menuState}`}>
         {children}
       </Grid>
     );

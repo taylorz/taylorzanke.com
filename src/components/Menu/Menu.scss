@@ -2,13 +2,19 @@
 
 .menu {
   padding: $buffer*4 $buffer*4 $buffer*4 $buffer*4;
-  background: white;
+  z-index: $zIndex1;
+  width: calc(100% - 16px);
+  flex-basis: auto;
   @include breakpoint(lg) {
+    background: white;
     height: 100vh;
-    width: 80vw;
+    width: 50vw;
     right: 0;
     position: fixed;
-    transform: translateX(100%);
+  }
+  @include breakpoint(md) {
+    background: white;
+    width: 60vw;
   }
   .menu-about {
       font-family: $primaryFont;
