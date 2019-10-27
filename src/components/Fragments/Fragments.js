@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import './Fragments.scss';
 
 import WorkId from '../WorkId/WorkId';
+import Caption from '../Caption/Caption';
 
 class Fragments extends Component {
   render() {
@@ -13,7 +14,10 @@ class Fragments extends Component {
         {one &&
           <>
             <Grid item md={4} className="fragment">
-              <img src={fragment1.image}/>
+              <div className="fragments-wrapper">
+                <img src={fragment1.image}/>
+                <Caption title={fragment1.description}/>
+              </div>
             </Grid>
             <WorkId workId={[fragment1.id]} onClick={onClick}/>
           </>
@@ -21,10 +25,16 @@ class Fragments extends Component {
         {two &&
           <>
             <Grid item md={4} className="fragment">
-              <img src={fragment1.image}/>
+              <div className="fragments-wrapper">
+                <img src={fragment1.image}/>
+                <Caption title={fragment1.description}/>
+              </div>
             </Grid>
             <Grid item md={7} className="fragment">
-              <img src={fragment2.image}/>
+              <div className="fragments-wrapper">
+                <img src={fragment2.image}/>
+                <Caption title={fragment2.description}/>
+              </div>
             </Grid>
             <WorkId workId={[fragment1.id, fragment2.id]} onClick={onClick}/>
           </>
@@ -32,13 +42,22 @@ class Fragments extends Component {
         {three &&
           <>
             <Grid item md={3} className="fragment">
-              <img src={fragment1.image}/>
+              <div className="fragments-wrapper">
+                <img src={fragment1.image}/>
+                <Caption title={fragment1.description}/>
+              </div>
             </Grid>
             <Grid item md={5} className="fragment">
-              <img src={fragment2.image}/>
+              <div className="fragments-wrapper">
+                <img src={fragment2.image}/>
+                <Caption title={fragment2.description}/>
+              </div>
             </Grid>
             <Grid item md={4} className="fragment">
-              <img src={fragment3.image}/>
+              <div className="fragments-wrapper">
+                <img src={fragment3.image}/>
+                <Caption title={fragment3.description}/>
+              </div>
             </Grid>
             <WorkId workId={[fragment1.id, fragment2.id, fragment3.id]} onClick={onClick}/>
           </>

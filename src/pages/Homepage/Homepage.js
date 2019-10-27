@@ -14,7 +14,7 @@ import FRAGMENTS from '../../constants/fragments/fragments';
 const TwoCitiesDiary = WORKS[0];
 const SeveralSpeculative = WORKS[1];
 const DirectionZine = WORKS[2];
-const Model = WORKS[3];
+const GraftedSpaces = WORKS[3];
 
 class Homepage extends Component {
   state = {
@@ -34,6 +34,11 @@ class Homepage extends Component {
             <Whole
               matte
               workId={TwoCitiesDiary.id}
+              workTitle={TwoCitiesDiary.title}
+              workYear={TwoCitiesDiary.year}
+              workObject={TwoCitiesDiary.object}
+              workDims={TwoCitiesDiary.dimensions}
+              workDetails={TwoCitiesDiary.details}
               workImage={TwoCitiesDiary.images[0]}
             />
             <Fragments
@@ -45,6 +50,11 @@ class Homepage extends Component {
               matte
               light
               workId={TwoCitiesDiary.id}
+              workTitle={TwoCitiesDiary.title}
+              workYear={TwoCitiesDiary.year}
+              workObject={TwoCitiesDiary.object}
+              workDims={TwoCitiesDiary.dimensions}
+              workDetails={TwoCitiesDiary.details}
               workImage={TwoCitiesDiary.images[2]}
             />
             <Fragments
@@ -56,6 +66,11 @@ class Homepage extends Component {
               matte
               dark
               workId={TwoCitiesDiary.id}
+              workTitle={TwoCitiesDiary.title}
+              workYear={TwoCitiesDiary.year}
+              workObject={TwoCitiesDiary.object}
+              workDims={TwoCitiesDiary.dimensions}
+              workDetails={TwoCitiesDiary.details}
               workImage={TwoCitiesDiary.images[1]}
             />
             <Fragments
@@ -67,8 +82,13 @@ class Homepage extends Component {
             <Whole
               matte
               light
-              workId={Model.id}
-              workImage={Model.images[3]}
+              workId={GraftedSpaces.id}
+              workTitle={GraftedSpaces.title}
+              workYear={GraftedSpaces.year}
+              workObject={GraftedSpaces.object}
+              workDims={GraftedSpaces.dimensions}
+              workDetails={GraftedSpaces.details}
+              workImage={GraftedSpaces.images[3]}
             />
             <Fragments
               two
@@ -79,6 +99,11 @@ class Homepage extends Component {
               matte
               dark
               workId={DirectionZine.id}
+              workTitle={DirectionZine.title}
+              workYear={DirectionZine.year}
+              workObject={DirectionZine.object}
+              workDims={DirectionZine.dimensions}
+              workDetails={DirectionZine.details}
               workImage={DirectionZine.images[2]}
             />
             <Fragments
@@ -89,6 +114,11 @@ class Homepage extends Component {
               matte
               dark
               workId={SeveralSpeculative.id}
+              workTitle={SeveralSpeculative.title}
+              workYear={SeveralSpeculative.year}
+              workObject={SeveralSpeculative.object}
+              workDims={SeveralSpeculative.dimensions}
+              workDetails={SeveralSpeculative.details}
               workImage={SeveralSpeculative.images[2]}
             />
           </PageContainer>

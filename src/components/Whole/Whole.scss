@@ -7,6 +7,11 @@
   @include breakpoint(sm) {
     height: 50vh;
   }
+  &:hover {
+    .caption {
+      opacity: 1;
+    }
+  }//hover
   .whole-image-container {
     height: 100%;
     width: 100%;
@@ -23,11 +28,11 @@
       max-height: 80%;
       background-size: contain;
     }//whole-image-container
-  }
+  }//matte
   &.full {
     padding: 0;
     .whole-image-container {
       background-size: cover;
     }//whole-image-container
-  }
+  }//full
 }//whole

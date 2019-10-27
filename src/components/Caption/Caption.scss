@@ -1,25 +1,17 @@
 @import "../../styles/styles.scss";
 
 .caption {
-  height: $captionHeight;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  opacity: 0;
   font-family: $secondaryFont;
-  font-size: $fontSizeCaption;
-  line-height: $lineHeightCaption;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
   &.light {
     color: $lightFontColor;
-  }
+  }//light
   &.dark {
     color: $darkFontColor;
-  }
-  .caption-item {
-    &:first-child {
-      padding: 0;
-    }
-    padding-left: $buffer*4;
-  }//caption-item
+  }//dark
 }//caption

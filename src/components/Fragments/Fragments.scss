@@ -14,9 +14,18 @@
     &:first-child {
       padding-left: 0;
     }
-    img {
+    .fragments-wrapper {
+      position: relative;
       width: 100%;
-    }//img
+      &:hover {
+        .caption {
+          opacity: 1;
+        }
+      }//hover
+      img {
+        width: 100%;
+      }//img
+    }//fragment-wrapper
   }//fragment
   .work-id {
     bottom: $buffer*4;

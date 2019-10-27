@@ -9,30 +9,37 @@ import F7 from '../../assets/images/fragments/img125.jpg'
 const FRAGMENTS = [
   {
     id: "1",
+    description: "I collected rocks here.",
     image: F1
   },
   {
     id: "2",
+    description: "I collected rocks here.",
     image: F2
   },
   {
     id: "3",
+    description: "I collected rocks here.",
     image: F3
   },
   {
     id: "4",
+    description: "I collected rocks here.",
     image: F4
   },
   {
     id: "5",
+    description: "I collected rocks here.",
     image: F5
   },
   {
     id: "6",
+    description: "I collected rocks here.",
     image: F6
   },
   {
     id: "7",
+    description: "I collected rocks here.",
     image: F7
   },
 ]
