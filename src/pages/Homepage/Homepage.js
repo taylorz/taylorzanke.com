@@ -121,6 +121,17 @@ class Homepage extends Component {
               workDetails={SeveralSpeculative.details}
               workImage={SeveralSpeculative.images[2]}
             />
+            <Whole
+              matte
+              light
+              workId={GraftedSpaces.id}
+              workTitle={GraftedSpaces.title}
+              workYear={GraftedSpaces.year}
+              workObject={GraftedSpaces.object}
+              workDims={GraftedSpaces.dimensions}
+              workDetails={GraftedSpaces.details}
+              workImage={GraftedSpaces.images[1]}
+            />
           </PageContainer>
           <Menu/>
         </SiteWrapper>

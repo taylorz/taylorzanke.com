@@ -14,12 +14,23 @@
     &:first-child {
       padding-left: 0;
     }
+    @include breakpoint(sm) {
+      width: 60%;
+      padding-left: 0;
+      padding-top: $buffer*4;
+      &:first-child {
+        padding-top: 0 !important;
+      }
+    }
     .fragments-wrapper {
       position: relative;
       width: 100%;
       &:hover {
         .caption {
           opacity: 1;
+          .title {
+            text-transform: none;
+          }//title
         }
       }//hover
       img {

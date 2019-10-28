@@ -7,11 +7,11 @@ class Menu extends Component {
     const { className } = this.props
     return (
         <Grid item lg={4} md={12} className={`menu ${className}`}>
-          <div className="menu-about">
-            Taylor Zanke is an artist who makes books, models, drawings, documents, and photographs, among other media. He strives to understand the languages used in the Present to discuss the Future and the Past, and in so doing develop the perspective to realize alternative compositional and existential realities.
+          <div className="menu-headline">
+            Taylor Zanke is an artist and designer who makes drawings, models, books, photographs, and recordings. He strives to understand the ways in which space travels through time and our role within it.
           </div>
           <div className="menu-description">
-            This website is a collection of works (ABC) and fragments (123) waiting to be assembled or taken apart.
+            <p>This website is a collection of works (ABC) and fragments (123) waiting to be assembled or taken apart.</p>
           </div>
         </Grid>
     );

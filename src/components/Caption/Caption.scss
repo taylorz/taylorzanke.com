@@ -1,6 +1,8 @@
 @import "../../styles/styles.scss";
 
 .caption {
+  list-style-type: none;
+  margin: 0;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -8,6 +10,19 @@
   background: white;
   opacity: 0;
   font-family: $secondaryFont;
+  font-size: $fontSizeCaption;
+  line-height: $lineHeightCaption;
+  padding: $buffer 0;
+  display: flex;
+  li {
+    padding-left: $buffer*4;
+    &:first-child {
+      padding-left: 0;
+    }
+    &.title {
+      text-transform: uppercase;
+    }//title
+  }//li
   &.light {
     color: $lightFontColor;
   }//light

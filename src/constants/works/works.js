@@ -28,7 +28,7 @@ const WORKS = [
     year: "2013",
     object: "Book",
     dimensions: "6 x 8 inches",
-    details: "Self Published, Single Edition.",
+    details: "Self, Single Edition.",
     images: [
       TwoCitiesDiary1,
       TwoCitiesDiary2,
@@ -42,7 +42,7 @@ const WORKS = [
     year: "2016",
     object: "Book",
     dimensions: "6 x 8.5 inches",
-    details: "Self Published, Single Edition.",
+    details: "Self, Single Edition.",
     images: [
       SeveralSpeculative1,
       SeveralSpeculative2,
@@ -56,7 +56,7 @@ const WORKS = [
     year: "2017",
     object: "Zine",
     dimensions: "5.5 x 7 inches",
-    details: "Self Published, Edition of 10.",
+    details: "Self, Edition of 10.",
     images: [
       DirectionZine1,
       DirectionZine2,
@@ -71,8 +71,8 @@ const WORKS = [
     title: "Models of Grafted Spaces",
     year: "2017",
     object: "Model",
-    dimensions: "12 x 12 inches",
-    details: "1:1 scale, found materials.",
+    dimensions: "Roughly 16 x 18 inches",
+    details: "1 in = 1 ft, Interior Section.",
     images: [
       Model1,
       Model2,

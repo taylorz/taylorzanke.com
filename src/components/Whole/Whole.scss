@@ -7,6 +7,9 @@
   @include breakpoint(sm) {
     height: 50vh;
   }
+  .caption {
+    padding: $buffer;
+  }//caption
   &:hover {
     .caption {
       opacity: 1;

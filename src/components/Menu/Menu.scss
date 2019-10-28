@@ -16,11 +16,11 @@
   @include breakpoint(md) { width: 50vw; }
   @include breakpoint(sm) { width: 70vw; }
   @include breakpoint(xs) { width: 80vw; }
-  .menu-about {
+  .menu-headline {
       font-family: $primaryFont;
       font-size: $fontSizeStatement;
       line-height: $lineHeightStatement;
-  }//menu-about
+  }//menu-headline
   .menu-description {
     font-family: $secondaryFont;
     font-size: $fontSize;

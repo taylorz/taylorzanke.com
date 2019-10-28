@@ -9,7 +9,7 @@ import F7 from '../../assets/images/fragments/img125.jpg'
 const FRAGMENTS = [
   {
     id: "1",
-    description: "I collected rocks here.",
+    description: "I collected rocks here. I did a few things with them and stuff and this is two lines.",
     image: F1
   },
   {
