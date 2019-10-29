@@ -7,8 +7,8 @@ class FragmentItem extends Component {
     const { className, description, id } = this.props
     return (
       <div className={`fragments-wrapper ${className}`}>
-        <Grid item xs={2} className="fragment-item fragment-id">1</Grid>
-        <Grid item xs={9} className="fragment-item fragment-description">This is a rock.</Grid>
+        <Grid item xs={2} className="fragment-item fragment-id">{id}</Grid>
+        <Grid item xs={9} className="fragment-item fragment-description">{description}</Grid>
       </div>
     );
   }
