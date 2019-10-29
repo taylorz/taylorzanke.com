@@ -1,20 +1,30 @@
 @import "../../styles/styles.scss";
 
 .project-container {
-  font-family: $secondaryFont;
-  font-size: $fontSizeStatement;
-  line-height: $lineHeightStatement;
   width: 100%;
   display: flex;
   align-items: flex-start;
   .project-id {
     font-size: $fontSizeCaption;
+    line-height: $lineHeightCaption;
+    font-family: $primaryFont;
     font-weight: 600;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
   }//project-id
-  .project-title {}//project-title
+  .project-title {
+    font-family: $secondaryFont;
+    font-size: $fontSizeParagraph;
+    line-height: $lineHeightParagraph;
+  }//project-title
   .project-year {
     text-align: right;
     font-family: $secondaryFont;
     font-size: $fontSizeCaption;
+    line-height: $lineHeightCaption;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
   }//project-year
 }//project-container

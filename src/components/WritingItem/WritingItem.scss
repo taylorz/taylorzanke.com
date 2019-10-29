@@ -9,8 +9,10 @@
   .writing-item {
     padding: 0;
   }//writing-item
-  .writing-id {
+  .writing-type {
     font-size: $fontSizeCaption;
+    line-height: $lineHeightCaption;
+    font-family: $primaryFont;
   }
   .writing-title {
   }//writing-header

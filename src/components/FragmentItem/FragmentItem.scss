@@ -1,0 +1,14 @@
+@import "../../styles/styles.scss";
+
+.fragments-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  .fragment-id {
+    font-size: $fontSizeCaption;
+    line-height: $lineHeightCaption;
+    font-weight: 600;
+  }//fragment-id
+  .fragment-description {
+  }//fragment-description
+}//fragments-wrapper

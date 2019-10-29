@@ -111,17 +111,7 @@ class Homepage extends Component {
               one
               fragment1={FRAGMENTS[2]}
             />
-            <Whole
-              matte
-              dark
-              workId={HardMatter.id}
-              workTitle={HardMatter.title}
-              workYear={HardMatter.year}
-              workObject={HardMatter.object}
-              workDims={HardMatter.dimensions}
-              workDetails={HardMatter.details}
-              workImage={HardMatter.images[0]}
-            />
+            
           </PageContainer>
           <Menu/>
         </SiteWrapper>

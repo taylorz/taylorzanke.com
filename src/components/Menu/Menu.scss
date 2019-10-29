@@ -5,6 +5,7 @@
   z-index: $zIndex1;
   width: calc(100% - 16px);
   flex-basis: auto;
+  color: $darkFontColor;
   @include breakpoint(lg) {
     transform: translateX(100%);
     background: white;
@@ -12,13 +13,18 @@
     width: 40vw;
     right: 0;
     position: fixed;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
   }
   @include breakpoint(md) { width: 45vw; }
   @include breakpoint(sm) { width: 70vw; }
   @include breakpoint(xs) { width: 80vw; }
   .menu-section {
     padding-bottom: $buffer*4;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $darkFontColor;
     &.menu-headline {
         border-bottom: 0;
         font-family: $primaryFont;
@@ -29,8 +35,11 @@
       font-family: $secondaryFont;
       font-size: $fontSizeParagraph;
       line-height: $lineHeightParagraph;
+      // font-weight: 500;
       sup {
+        font-family: $primaryFont;
         font-size: $fontSizeCaption;
+        line-height: $lineHeightCaption;
         font-weight: 600;
       }
     }//menu-description
@@ -40,5 +49,8 @@
     &.menu-projects {
       padding-top: $buffer*4;
     }//menu-projects
+    &.menu-fragments {
+      padding-top: $buffer*4;
+    }//menu-fragments
   }//menu-section
 }//menu
