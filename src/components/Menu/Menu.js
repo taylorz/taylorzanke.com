@@ -15,7 +15,7 @@ class Menu extends Component {
     return (
         <Grid item lg={4} md={12} className={`menu ${className}`}>
           <div className="menu-section menu-headline">
-            Taylor Zanke is an artist and designer who makes drawings, models, books, photographs, and recordings. He seeks to uncover the ways in which Space travels through Time, revealing potential, dismantling the inevitable.
+            Taylor Zanke is an artist and designer who makes drawings, models, books, photographs, and recordings. He seeks to uncover the ways in which Space travels through Time, revealing potential, dismantling inevitability.
           </div>
           <div className="menu-section menu-description">
             This website is a collection of works <sup>ABC</sup> and fragments <sup>123</sup> waiting to be both put together and taken apart. An infinity is discovered through their psychic re-assembly and material re-organization. I store them in boxes, envelopes, and closets, in memories, anticipations, and fantasies.
