@@ -1,0 +1,20 @@
+@import "../../styles/styles.scss";
+
+.project-container {
+  font-family: $secondaryFont;
+  font-size: $fontSizeStatement;
+  line-height: $lineHeightStatement;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  .project-id {
+    font-size: $fontSizeCaption;
+    font-weight: 600;
+  }//project-id
+  .project-title {}//project-title
+  .project-year {
+    text-align: right;
+    font-family: $secondaryFont;
+    font-size: $fontSizeCaption;
+  }//project-year
+}//project-container

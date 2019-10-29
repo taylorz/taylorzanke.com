@@ -15,6 +15,7 @@ const TwoCitiesDiary = WORKS[0];
 const SeveralSpeculative = WORKS[1];
 const DirectionZine = WORKS[2];
 const GraftedSpaces = WORKS[3];
+const HardMatter = WORKS[4];
 
 class Homepage extends Component {
   state = {
@@ -113,24 +114,13 @@ class Homepage extends Component {
             <Whole
               matte
               dark
-              workId={SeveralSpeculative.id}
-              workTitle={SeveralSpeculative.title}
-              workYear={SeveralSpeculative.year}
-              workObject={SeveralSpeculative.object}
-              workDims={SeveralSpeculative.dimensions}
-              workDetails={SeveralSpeculative.details}
-              workImage={SeveralSpeculative.images[2]}
-            />
-            <Whole
-              matte
-              light
-              workId={GraftedSpaces.id}
-              workTitle={GraftedSpaces.title}
-              workYear={GraftedSpaces.year}
-              workObject={GraftedSpaces.object}
-              workDims={GraftedSpaces.dimensions}
-              workDetails={GraftedSpaces.details}
-              workImage={GraftedSpaces.images[1]}
+              workId={HardMatter.id}
+              workTitle={HardMatter.title}
+              workYear={HardMatter.year}
+              workObject={HardMatter.object}
+              workDims={HardMatter.dimensions}
+              workDetails={HardMatter.details}
+              workImage={HardMatter.images[0]}
             />
           </PageContainer>
           <Menu/>

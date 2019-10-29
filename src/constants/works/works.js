@@ -20,6 +20,8 @@ import Model2 from '../../assets/images/works/Model/4b.jpg'
 import Model3 from '../../assets/images/works/Model/4c.jpg'
 import Model4 from '../../assets/images/works/Model/4d.jpg'
 
+import HardMatter1 from '../../assets/images/works/HardMatter/test1.png'
+
 
 const WORKS = [
   {
@@ -78,6 +80,17 @@ const WORKS = [
       Model2,
       Model3,
       Model4,
+    ]
+  },
+  {
+    id: "E",
+    title: "Hard Matter",
+    year: "2019",
+    object: "Drawing",
+    dimensions: "12 x 14 inches",
+    details: "Graphite and Printed Ink on Bond, 1 of 103",
+    images: [
+      HardMatter1
     ]
   },
 ]

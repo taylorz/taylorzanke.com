@@ -1,0 +1,23 @@
+@import "../../styles/styles.scss";
+
+.writing-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  font-size: $fontSizeParagraph;
+  font-family: $secondaryFont;
+  .writing-item {
+    padding: 0;
+  }//writing-item
+  .writing-id {
+    font-size: $fontSizeCaption;
+  }
+  .writing-title {
+  }//writing-header
+  .writing-wordCount {
+    line-height: $lineHeightParagraph;
+    text-align: right;
+    font-family: $secondaryFont;
+    font-size: $fontSizeCaption;
+  }//writing-wordCount
+}//writing-container

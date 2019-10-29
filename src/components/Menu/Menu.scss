@@ -13,18 +13,32 @@
     right: 0;
     position: fixed;
   }
-  @include breakpoint(md) { width: 50vw; }
+  @include breakpoint(md) { width: 45vw; }
   @include breakpoint(sm) { width: 70vw; }
   @include breakpoint(xs) { width: 80vw; }
-  .menu-headline {
-      font-family: $primaryFont;
-      font-size: $fontSizeStatement;
-      line-height: $lineHeightStatement;
-  }//menu-headline
-  .menu-description {
-    font-family: $secondaryFont;
-    font-size: $fontSize;
-    line-height: $lineHeight;
-    margin-top: $lineHeight;
-  }//menu-description
+  .menu-section {
+    padding-bottom: $buffer*4;
+    border-bottom: 1px solid black;
+    &.menu-headline {
+        border-bottom: 0;
+        font-family: $primaryFont;
+        font-size: $fontSizeStatement;
+        line-height: $lineHeightStatement;
+    }//menu-headline
+    &.menu-description {
+      font-family: $secondaryFont;
+      font-size: $fontSizeParagraph;
+      line-height: $lineHeightParagraph;
+      sup {
+        font-size: $fontSizeCaption;
+        font-weight: 600;
+      }
+    }//menu-description
+    &.menu-writing {
+      padding-top: $buffer*4;
+    }//menu-writing
+    &.menu-projects {
+      padding-top: $buffer*4;
+    }//menu-projects
+  }//menu-section
 }//menu

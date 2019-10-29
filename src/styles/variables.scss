@@ -11,12 +11,14 @@ $primaryFont:                        "GT Sectra Trial", serif;
 $secondaryFont:                      "Atlas Grotesk", sans-serif;
 
 $fontSize:                           12px;
+$fontSizeParagraph:                  $fontSize*1.25;
 $fontSizeStatement:                  $fontSize*2.5;
 $fontSizeHero:                       $fontSize*5;
 $fontSizeCaption:                    $fontSize*.8;
 
 $lineHeight:                         16px;
-$lineHeightStatement:                $lineHeight*2;
+$lineHeightParagraph:                $lineHeight*1.35;
+$lineHeightStatement:                $lineHeight*2.15;
 $lineHeightHero:                     $lineHeight*3;
 $lineHeightCaption:                  $lineHeight*.8;
 
