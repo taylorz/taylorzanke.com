@@ -111,7 +111,7 @@ class Homepage extends Component {
               one
               fragment1={FRAGMENTS[2]}
             />
-            
+
           </PageContainer>
           <Menu/>
         </SiteWrapper>

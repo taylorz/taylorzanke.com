@@ -23,8 +23,16 @@
   @include breakpoint(sm) { width: 70vw; }
   @include breakpoint(xs) { width: 80vw; }
   .menu-section {
-    padding-bottom: $buffer*2;
+    padding-bottom: $buffer*4;
     // border-bottom: 1px solid $darkFontColor;
+    .section-header {
+      font-family: $secondaryFont;
+      font-size: $fontSizeParagraph;
+      text-transform: uppercase;
+      margin-bottom: $buffer*4;
+      text-align: center;
+      width: 100%;
+    }
     &.menu-headline {
         border-bottom: 0;
         font-family: $primaryFont;
@@ -52,5 +60,18 @@
     &.menu-fragments {
       padding-top: $buffer*2;
     }//menu-fragments
+    &.menu-imprint {
+      font-family: $secondaryFont;
+      font-size: $fontSizeParagraph;
+      line-height: $lineHeightParagraph;
+      .imprint-technical {
+        @include breakpoint(lg) {
+          width: 60%;
+        }
+        width: 40%;
+        font-size: $fontSizeCaption;
+        line-height: $lineHeightCaption;
+      }
+    }//menu-imprint
   }//menu-section
 }//menu

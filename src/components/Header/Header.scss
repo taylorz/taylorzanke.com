@@ -8,7 +8,6 @@
   z-index: $zIndex1;
   width: calc(100% - 16px);
   .header-contents {
-    margin-right: $buffer*4;
     display: flex;
     justify-content: space-between;
     .name {

@@ -18,7 +18,7 @@ class Menu extends Component {
             Taylor Zanke is an artist and designer who makes drawings, models, books, photographs, and recordings. He seeks to uncover the ways in which Space travels through Time, revealing potential, dismantling inevitability.
           </div>
           <div className="menu-section menu-description">
-            This website is a collection of works <sup>ABC</sup> and fragments <sup>123</sup> waiting to be both put together and taken apart. An infinity is discovered through their psychic re-assembly and material re-organization. I store them in boxes, envelopes, and closets, in memories, anticipations, and fantasies.
+            This website is a growing collection of writings, works <sup>ABC</sup>, and fragments <sup>123</sup> waiting to be both put together and taken apart. An infinity is discovered through their re-assembly and material re-organization. I store them in boxes, envelopes, and closets, in memories, anticipations, and fantasies.
           </div>
           <Grid container className="menu-section menu-writing">
             {WRITING.map((writing) =>
@@ -34,6 +34,13 @@ class Menu extends Component {
           {FRAGMENTS.map((fragment) =>
             <FragmentItem description={fragment.description} id={fragment.id}/>
           )}
+          </Grid>
+          <Grid container className="menu-section menu-imprint">
+            <Grid item xs={2}/>
+            <Grid item xs={10}>
+              <p>taylor@taylorzankeoffice.com<br/>@taylorzanke</p>
+              <p className="imprint-technical">This website was built in React and set in GT Sectra and Marr Sans.</p>
+            </Grid>
           </Grid>
         </Grid>
     );
