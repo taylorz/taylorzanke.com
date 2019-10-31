@@ -77,7 +77,7 @@ class Homepage extends Component {
             <Fragments
               two
               fragment1={FRAGMENTS[6]}
-              fragment2={FRAGMENTS[15]}
+              fragment2={FRAGMENTS[12]}
             />
             <Whole
               matte
