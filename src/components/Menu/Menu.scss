@@ -43,7 +43,6 @@
       font-family: $secondaryFont;
       font-size: $fontSizeParagraph;
       line-height: $lineHeightParagraph;
-      // font-weight: 500;
       sup {
         font-family: $primaryFont;
         font-size: $fontSizeCaption;
@@ -66,12 +65,12 @@
       line-height: $lineHeightParagraph;
       .imprint-technical {
         @include breakpoint(lg) {
-          width: 60%;
+          width: 100%;
         }
-        width: 40%;
+        width: 60%;
         font-size: $fontSizeCaption;
         line-height: $lineHeightCaption;
-      }
+      }//imprint-technical
     }//menu-imprint
   }//menu-section
 }//menu

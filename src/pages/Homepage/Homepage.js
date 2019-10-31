@@ -75,10 +75,9 @@ class Homepage extends Component {
               workImage={TwoCitiesDiary.images[1]}
             />
             <Fragments
-              three
-              fragment1={FRAGMENTS[5]}
-              fragment2={FRAGMENTS[2]}
-              fragment3={FRAGMENTS[3]}
+              two
+              fragment1={FRAGMENTS[6]}
+              fragment2={FRAGMENTS[15]}
             />
             <Whole
               matte
@@ -109,7 +108,7 @@ class Homepage extends Component {
             />
             <Fragments
               one
-              fragment1={FRAGMENTS[2]}
+              fragment1={FRAGMENTS[15]}
             />
 
           </PageContainer>

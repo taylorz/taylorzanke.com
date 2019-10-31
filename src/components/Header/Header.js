@@ -12,7 +12,7 @@ class Header extends Component {
       <Grid item xs={12} className="header-container">
         <div className="header-contents">
           <div className="name">&copy; {this.showCurrentYear()}</div>
-          <div className="menu-toggler" onClick={onClick}>ABOUT</div>
+          <div className="menu-toggler" onClick={onClick}>INFO</div>
         </div>
       </Grid>
     );

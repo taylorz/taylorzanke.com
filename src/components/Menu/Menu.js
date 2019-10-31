@@ -36,8 +36,8 @@ class Menu extends Component {
           )}
           </Grid>
           <Grid container className="menu-section menu-imprint">
-            <Grid item xs={2}/>
-            <Grid item xs={10}>
+            <Grid item xs={4}/>
+            <Grid item xs={6}>
               <p>taylor@taylorzankeoffice.com<br/>@taylorzanke</p>
               <p className="imprint-technical">This website was built in React and set in GT Sectra and Marr Sans.</p>
             </Grid>
