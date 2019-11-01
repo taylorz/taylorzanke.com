@@ -34,8 +34,11 @@
   }//matte
   &.full {
     padding: 0;
+    margin-bottom: $buffer*4;
     .whole-image-container {
+      position: relative;
       background-size: cover;
+      background-position: right;
     }//whole-image-container
   }//full
 }//whole

@@ -96,7 +96,7 @@ const FRAGMENTS = [
   },
   {
     id: "14",
-    description: "Detail of a test print from CALIFORNIA RESIDENCE.",
+    description: "Skewed Worms Eye View, Detail of a test print from SPLICED TRACT HOME.",
     image: F14
   },
   {

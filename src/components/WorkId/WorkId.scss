@@ -8,7 +8,7 @@
   width: $captionHeight;
   position: absolute;
   right: -$captionHeight;
-  bottom: 0;
+  bottom: $buffer*1;
   z-index: $zIndex2;
   display: flex;
   justify-content: center;

@@ -17,6 +17,11 @@
     font-family: $secondaryFont;
     font-size: $fontSizeParagraph;
     line-height: $lineHeightParagraph;
+    .status-marker {
+      margin-left: $buffer*2;
+      font-family: $primaryFont;
+      color: red;
+    }
   }//project-title
   .project-year {
     text-align: right;

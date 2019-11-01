@@ -16,7 +16,7 @@ class Fragments extends Component {
             <Grid item md={4} className="fragment">
               <div className="fragments-wrapper">
                 <img src={fragment1.image}/>
-                <Caption title={fragment1.description}/>
+                {/*<Caption title={fragment1.description}/>*/}
               </div>
             </Grid>
             <WorkId workId={[fragment1.id]} onClick={onClick}/>
@@ -27,13 +27,13 @@ class Fragments extends Component {
             <Grid item md={4} className="fragment">
               <div className="fragments-wrapper">
                 <img src={fragment1.image}/>
-                <Caption title={fragment1.description}/>
+                {/*<Caption title={fragment1.description}/>*/}
               </div>
             </Grid>
-            <Grid item md={7} className="fragment">
+            <Grid item md={6} className="fragment">
               <div className="fragments-wrapper">
                 <img src={fragment2.image}/>
-                <Caption title={fragment2.description}/>
+                {/*<Caption title={fragment2.description}/>*/}
               </div>
             </Grid>
             <WorkId workId={[fragment1.id, fragment2.id]} onClick={onClick}/>
@@ -44,19 +44,19 @@ class Fragments extends Component {
             <Grid item md={3} className="fragment">
               <div className="fragments-wrapper">
                 <img src={fragment1.image}/>
-                <Caption title={fragment1.description}/>
+                {/*<Caption title={fragment1.description}/>*/}
               </div>
             </Grid>
             <Grid item md={5} className="fragment">
               <div className="fragments-wrapper">
                 <img src={fragment2.image}/>
-                <Caption title={fragment2.description}/>
+                {/*<Caption title={fragment2.description}/>*/}
               </div>
             </Grid>
             <Grid item md={4} className="fragment">
               <div className="fragments-wrapper">
                 <img src={fragment3.image}/>
-                <Caption title={fragment3.description}/>
+                {/*<Caption title={fragment3.description}/>*/}
               </div>
             </Grid>
             <WorkId workId={[fragment1.id, fragment2.id, fragment3.id]} onClick={onClick}/>

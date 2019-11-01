@@ -13,6 +13,10 @@
     .name {
     }//name
     .menu-toggler {
+      display: none;
+      @include breakpoint(lg) {
+        display: block;
+      }
       &:hover {
         cursor: pointer;
       }

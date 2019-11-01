@@ -27,16 +27,18 @@ class Menu extends Component {
           </Grid>
           <Grid container className="menu-section menu-projects">
           {WORKS.map((project) =>
-            <ProjectItem title={project.title} id={project.id} year={project.year}/>
+            <ProjectItem title={project.title} id={project.id} year={project.year} status={project.status}/>
           )}
           </Grid>
-          <Grid container className="menu-section menu-fragments">
-          {FRAGMENTS.map((fragment) =>
-            <FragmentItem description={fragment.description} id={fragment.id}/>
-          )}
-          </Grid>
+          {/*
+            <Grid container className="menu-section menu-fragments">
+            {FRAGMENTS.map((fragment) =>
+              <FragmentItem description={fragment.description} id={fragment.id}/>
+            )}
+            </Grid>
+          */}
           <Grid container className="menu-section menu-imprint">
-            <Grid item xs={0} md={4}/>
+            <Grid item xs={0} md={2}/>
             <Grid item xs={12} md={6}>
               <p>taylor@taylorzankeoffice.com<br/>@taylorzanke</p>
               <p className="imprint-technical">This website was built in React and set in GT Sectra and Marr Sans.</p>
