@@ -43,7 +43,7 @@ const WORKS = [
   {
     status: "Upcoming",
     id: "H",
-    title: "Hard Matter",
+    title: "Transmissions from Rare Space",
     year: "2019",
     object: "Drawing",
     dimensions: "12 x 14 inches",

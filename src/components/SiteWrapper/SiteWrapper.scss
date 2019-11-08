@@ -10,7 +10,7 @@
     // overflow-y: hidden;
     position: fixed;
     &::-webkit-scrollbar {
-      // width: 0;
+      width: 0;
       background: transparent;
     }
     .page-container {
@@ -18,9 +18,16 @@
         pointer-events: auto;
         opacity: .5;
         @include transition;
+        display: none;
+        @include breakpoint(lg) {
+          display: block;
+        }
       }
       &:hover {
-        cursor: pointer;
+        cursor: default;
+        @include breakpoint(lg) {
+          cursor: pointer;
+        }
       }
     }
     .menu {

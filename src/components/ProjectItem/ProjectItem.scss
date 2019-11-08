@@ -17,10 +17,13 @@
     font-family: $secondaryFont;
     font-size: $fontSizeParagraph;
     line-height: $lineHeightParagraph;
+    position: relative;
     .status-marker {
       margin-left: $buffer*2;
       font-family: $primaryFont;
-      color: red;
+      color: pink;
+      position: absolute;
+      margin-top: -$buffer*2;
     }
   }//project-title
   .project-year {
