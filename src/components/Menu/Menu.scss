@@ -3,21 +3,18 @@
 .menu {
   padding: $buffer*4 $buffer*4 $buffer*4 $buffer*4;
   z-index: $zIndex1;
-  width: calc(100% - 16px);
   flex-basis: auto;
   color: $darkFontColor;
-  @include breakpoint(lg) {
-    transform: translateX(100%);
-    background: white;
-    height: 100vh;
-    width: 40vw;
-    right: 0;
-    position: fixed;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    &::-webkit-scrollbar {
-      width: 0;
-    }
+  transform: translateX(100%);
+  background: white;
+  height: 100vh;
+  width: 40vw;
+  right: 0;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+    width: 0;
   }
   @include breakpoint(md) { width: 45vw; }
   @include breakpoint(sm) { width: 70vw; }

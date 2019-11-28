@@ -7,7 +7,6 @@
   overflow-x: hidden;
   margin: 0; padding: 0;
   &.menu-opened {
-    // overflow-y: hidden;
     position: fixed;
     &::-webkit-scrollbar {
       width: 0;
@@ -18,10 +17,6 @@
         pointer-events: auto;
         opacity: .5;
         @include transition;
-        display: none;
-        @include breakpoint(lg) {
-          display: block;
-        }
       }
       &:hover {
         cursor: default;
@@ -31,18 +26,14 @@
       }
     }
     .menu {
-      @include breakpoint(lg) {
-        transform: translateX(0%);
-        transition: transform $timing $easingCubic;
-      }
+      transform: translateX(0%);
+      transition: transform $timing $easingCubic;
     }
   }//menu-opened
   &.menu-closed {
     .menu {
-      @include breakpoint(lg) {
-        transform: translateX(100%);
-        transition: transform $timing $easingCubic;
-      }
+      transform: translateX(100%);
+      transition: transform $timing $easingCubic;
     }
   }//menu-closed
 }//page-wrapper

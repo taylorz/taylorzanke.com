@@ -6,17 +6,14 @@
   position: fixed;
   color: white;
   z-index: $zIndex1;
-  width: calc(100% - 16px);
+  width: inherit;
+  max-width: inherit !important;
   .header-contents {
     display: flex;
     justify-content: space-between;
     .name {
     }//name
     .menu-toggler {
-      display: none;
-      @include breakpoint(lg) {
-        display: block;
-      }
       &:hover {
         cursor: pointer;
       }

@@ -6,7 +6,7 @@ class SiteWrapper extends Component {
   render() {
     const { children, className, menuState } = this.props
     return (
-      <Grid container className={`site-wrapper ${className} ${menuState}`}>
+      <Grid container className={`site-wrapper ${className} ${menuState}`} justify="center">
         {children}
       </Grid>
     );
