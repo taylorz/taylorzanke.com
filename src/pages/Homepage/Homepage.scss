@@ -1,5 +1,17 @@
 @import "../../styles/styles.scss";
 
 .homepage {
-
+  .homepage-hero {
+    padding: $buffer*32 0;
+    @include breakpoint(md) {
+      padding: $buffer*32 $buffer*4;
+    }
+    .hero-taylor {
+      font-size: $fontSizeStatement;
+      line-height: $lineHeightStatement;
+      p {
+        margin-top: 0;
+      }
+    }//hero-taylor
+  }//homepage-hero
 }//homepage-container

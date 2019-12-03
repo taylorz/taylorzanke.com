@@ -12,8 +12,6 @@
 
 *{
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }//*
 body {
   margin: 0; padding: 0;
@@ -21,4 +19,8 @@ body {
   font-size: $fontSize;
   line-height: $lineHeight;
   background: $bgBody;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
 }//body

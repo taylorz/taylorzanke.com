@@ -1,13 +1,17 @@
 @import "../../styles/styles.scss";
 
 .header-container {
-  font-family: $secondaryFont;
-  padding: $buffer*4;
+  font-family: $primaryFont;
+  background: white;
+  padding: $buffer*4 0;
   position: fixed;
-  color: white;
+  color: black;
   z-index: $zIndex1;
   width: inherit;
   max-width: inherit !important;
+  @include breakpoint(md) {
+    padding: $buffer*4;
+  }
   .header-contents {
     display: flex;
     justify-content: space-between;

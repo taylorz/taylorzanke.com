@@ -1,7 +1,7 @@
 @import "../../styles/styles.scss";
 
 .page-container {
-  width: calc(100% - 16px);
+  width: 100%;
   flex-basis: auto !important;
   z-index: $zIndex1;
   .menu-dark-overlay {

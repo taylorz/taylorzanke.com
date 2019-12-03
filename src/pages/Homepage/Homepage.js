@@ -35,6 +35,15 @@ class Homepage extends Component {
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <PageContainer className="homepage" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
           <Header onClick={() => this.toggleMenu()}/>
+          <Grid container className="homepage-hero">
+            <Grid item md={6} lg={5} className="hero-taylor">
+              <p>Taylor Zanke is an artist and designer who makes drawings, models, books, photographs, and recordings. He seeks to uncover the ways in which Space travels through Time, revealing potential, dismantling inevitability.</p>
+            </Grid>
+            <Grid item md={1} lg={1}></Grid>
+            <Grid item md={6} lg={5} className="hero-contact">
+              <p>This website is a growing collection of writings, works ABC, and fragments 123 waiting to be both put together and taken apart. An infinity is discovered through their re-assembly and material re-organization. I store them in boxes, envelopes, and closets, in memories, anticipations, and fantasies.</p>
+            </Grid>
+          </Grid>
           <Grid container className="homepage-works">
             <Grid item md={3}></Grid>
           </Grid>
