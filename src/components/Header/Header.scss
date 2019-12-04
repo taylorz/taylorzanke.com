@@ -2,13 +2,12 @@
 
 .header-container {
   font-family: $primaryFont;
-  background: white;
   padding: $buffer*4 0;
   position: fixed;
   color: black;
   z-index: $zIndex1;
-  width: inherit;
-  max-width: inherit !important;
+  max-width: $sm;
+  width: 100%;
   @include breakpoint(md) {
     padding: $buffer*4;
   }

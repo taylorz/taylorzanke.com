@@ -9,12 +9,12 @@ class Header extends Component {
   render() {
     const { onClick } = this.props
     return (
-      <Grid item xs={12} className="header-container">
+      <div className="header-container">
         <div className="header-contents">
           <div className="name">&copy; {this.showCurrentYear()}</div>
-          <div className="menu-toggler" onClick={onClick}>INFO</div>
+          <div className="menu-toggler" onClick={onClick}>MENU</div>
         </div>
-      </Grid>
+      </div>
     );
   }
 }

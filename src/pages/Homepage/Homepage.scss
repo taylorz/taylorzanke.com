@@ -1,17 +1,32 @@
 @import "../../styles/styles.scss";
 
 .homepage {
+  padding-bottom: $buffer*4;
+  // background: blue;
   .homepage-hero {
-    padding: $buffer*32 0;
+    padding: $buffer*24 0;
     @include breakpoint(md) {
       padding: $buffer*24 $buffer*4;
     }
     .hero-taylor {
       font-size: $fontSizeStatement;
       line-height: $lineHeightStatement;
-      p {
-        margin-top: 0;
-      }
     }//hero-taylor
+    p {
+      margin-top: 0;
+    }
   }//homepage-hero
-}//homepage-container
+  .works-grid {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    .work-item {
+      .item-container {
+        width: 100%;
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}//homepage
