@@ -4,7 +4,7 @@
   .homepage-hero {
     padding: $buffer*32 0;
     @include breakpoint(md) {
-      padding: $buffer*32 $buffer*4;
+      padding: $buffer*24 $buffer*4;
     }
     .hero-taylor {
       font-size: $fontSizeStatement;

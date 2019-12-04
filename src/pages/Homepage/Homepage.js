@@ -44,14 +44,15 @@ class Homepage extends Component {
               <p>This website is a growing collection of writings, works ABC, and fragments 123 waiting to be both put together and taken apart. An infinity is discovered through their re-assembly and material re-organization. I store them in boxes, envelopes, and closets, in memories, anticipations, and fantasies.</p>
             </Grid>
           </Grid>
-          <Grid container className="homepage-works">
-            <Grid item md={3}></Grid>
+          <Grid container className="works-grid">
+            <Grid item md={4} className="work-item">
+              <div className="item-container">
+                <img src={NightDrawings.}
+              </div>
+            </Grid>
+            <Grid item md={4} className="work-item">1</Grid>
+            <Grid item md={4} className="work-item">1</Grid>
           </Grid>
-            <Work
-              matte
-              hasCaption={false}
-              workImage={SplicedHouse.images[0]}
-            />
           </PageContainer>
           <Menu/>
         </SiteWrapper>
