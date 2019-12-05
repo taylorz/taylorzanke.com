@@ -2,20 +2,23 @@
 
 .header-container {
   font-family: $primaryFont;
-  padding: $buffer*4 0;
+  font-size: $fontSize;
+  height: $buffer*8;
+  display: flex;
+  align-items: center;
   position: fixed;
-  color: black;
-  z-index: $zIndex1;
+  color: $darkFontColor;
+  z-index: $zIndex2;
   max-width: $sm;
   width: 100%;
-  @include breakpoint(md) {
-    padding: $buffer*4;
-  }
   .header-contents {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     .name {
     }//name
+    .what {
+    }//what
     .menu-toggler {
       &:hover {
         cursor: pointer;

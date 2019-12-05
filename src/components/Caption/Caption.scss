@@ -4,18 +4,19 @@
   list-style-type: none;
   margin: 0;
   position: absolute;
-  bottom: 0;
+  bottom: -$captionHeight;
+  height: $captionHeight;
   left: 0;
   width: 100%;
   background: white;
   opacity: 0;
   font-family: $secondaryFont;
-  font-size: $fontSizeCaption;
-  line-height: $lineHeightCaption;
-  padding: $buffer 0;
+  font-size: $fontSize;
   display: flex;
+  align-items: center;
+  padding: 0;
   li {
-    padding-left: $buffer*4;
+    padding-left: $buffer*8;
     &:first-child {
       padding-left: 0;
     }

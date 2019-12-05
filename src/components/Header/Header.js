@@ -11,7 +11,7 @@ class Header extends Component {
     return (
       <div className="header-container">
         <div className="header-contents">
-          <div className="name"><a href="/">Taylor Zanke</a></div>
+          <div className="name"><a href="/">TAYLOR ZANKE</a></div>
           <div className="menu-toggler" onClick={onClick}>Menu</div>
         </div>
       </div>

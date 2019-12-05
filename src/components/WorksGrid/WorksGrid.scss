@@ -1,0 +1,9 @@
+@import "../../styles/styles.scss";
+
+.works-grid {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+  margin-top: $buffer*8;
+}//works-grid

@@ -63,7 +63,8 @@ const WORKS = [
       GraftedSpaces2,
       GraftedSpaces3,
       GraftedSpaces4,
-    ]
+    ],
+    link: "/grafted-spaces"
   },
   {
     id: "F",

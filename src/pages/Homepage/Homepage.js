@@ -6,6 +6,7 @@ import Header from '../../components/Header/Header';
 import Menu from '../../components/Menu/Menu';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import Work from '../../components/Work/Work';
+import WorksGrid from '../../components/WorksGrid/WorksGrid';
 import Fragments from '../../components/Fragments/Fragments';
 
 import WORKS from '../../constants/works/works';
@@ -33,32 +34,95 @@ class Homepage extends Component {
     return (
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
-          <PageContainer className="homepage" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
           <Header onClick={() => this.toggleMenu()}/>
-          <Grid container className="homepage-hero">
-            <Grid item md={6} lg={12} className="hero-taylor">
-              {/*<p>Taylor Zanke is an artist and designer who makes drawings, models, books, photographs, and recordings. He seeks to uncover the ways in which Space travels through Time, revealing potential, dismantling inevitability.</p>*/}
+          <PageContainer className="homepage" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
+          <WorksGrid>
+            <Grid item md={12} className="work-item">
+              <Work
+                full
+                light
+                hasCaption
+                workId={GraftedSpaces.id}
+                workTitle={GraftedSpaces.title}
+                workYear={GraftedSpaces.year}
+                workObject={GraftedSpaces.object}
+                workDims={GraftedSpaces.dimensions}
+                workDetails={GraftedSpaces.details}
+                workImage={GraftedSpaces.images[3]}
+                workLink={GraftedSpaces.link}
+              />
             </Grid>
-            <Grid item md={6} lg={4} className="hero-contact">
-
+            <Grid item md={12} className="work-item">
+              <Work
+                matte
+                light
+                hasCaption
+                workId={NightDrawings.id}
+                workTitle={NightDrawings.title}
+                workYear={NightDrawings.year}
+                workObject={NightDrawings.object}
+                workDims={NightDrawings.dimensions}
+                workDetails={NightDrawings.details}
+                workImage={NightDrawings.images[0]}
+              />
             </Grid>
-          </Grid>
-          <Grid container className="works-grid">
             <Grid item md={12} className="work-item">
               <Work
                 matte
                 dark
-                workImage={TwoCitiesDiary.images[0]}
+                hasCaption
+                workId={SplicedHouse.id}
+                workTitle={SplicedHouse.title}
+                workYear={SplicedHouse.year}
+                workObject={SplicedHouse.object}
+                workDims={SplicedHouse.dimensions}
+                workDetails={SplicedHouse.details}
+                workImage={SplicedHouse.images[0]}
               />
             </Grid>
             <Grid item md={12} className="work-item">
-            <Work
-              matte
-              light
-              workImage={NightDrawings.images[1]}
-            />
+              <Work
+                matte
+                light
+                hasCaption
+                workId={DirectionZine.id}
+                workTitle={DirectionZine.title}
+                workYear={DirectionZine.year}
+                workObject={DirectionZine.object}
+                workDims={DirectionZine.dimensions}
+                workDetails={DirectionZine.details}
+                workImage={DirectionZine.images[0]}
+              />
             </Grid>
-          </Grid>
+            <Grid item md={12} className="work-item">
+              <Work
+                matte
+                dark
+                hasCaption
+                workId={SeveralSpeculative.id}
+                workTitle={SeveralSpeculative.title}
+                workYear={SeveralSpeculative.year}
+                workObject={SeveralSpeculative.object}
+                workDims={SeveralSpeculative.dimensions}
+                workDetails={SeveralSpeculative.details}
+                workImage={SeveralSpeculative.images[0]}
+              />
+            </Grid>
+            <Grid item md={12} className="work-item">
+              <Work
+                matte
+                light
+                hasCaption
+                workId={TwoCitiesDiary.id}
+                workTitle={TwoCitiesDiary.title}
+                workYear={TwoCitiesDiary.year}
+                workObject={TwoCitiesDiary.object}
+                workDims={TwoCitiesDiary.dimensions}
+                workDetails={TwoCitiesDiary.details}
+                workImage={TwoCitiesDiary.images[0]}
+              />
+            </Grid>
+          </WorksGrid>
           </PageContainer>
           <Menu onClick={() => this.toggleMenu()}/>
         </SiteWrapper>
