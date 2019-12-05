@@ -2,11 +2,11 @@
 
 .homepage {
   padding-bottom: $buffer*4;
-  // background: blue;
+  width: 100%;
   .homepage-hero {
-    padding: $buffer*24 0;
+    padding: $buffer*6 0;
     @include breakpoint(md) {
-      padding: $buffer*24 $buffer*4;
+      padding: $buffer*16 $buffer*4;
     }
     .hero-taylor {
       font-size: $fontSizeStatement;
@@ -20,13 +20,9 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    width: 100%;
     .work-item {
-      .item-container {
-        width: 100%;
-        img {
-          max-width: 100%;
-        }
-      }
+      margin-bottom: $buffer*4;
     }
   }
 }//homepage

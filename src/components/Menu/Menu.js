@@ -11,39 +11,10 @@ import FRAGMENTS from '../../constants/fragments/fragments';
 
 class Menu extends Component {
   render() {
-    const { className } = this.props
+    const { className, onClick } = this.props
     return (
-        <Grid item lg={4} md={12} className={`menu ${className}`}>
-          <div className="menu-section menu-headline">
-            Taylor Zanke is an artist and designer who makes drawings, models, books, photographs, and recordings. He seeks to uncover the ways in which Space travels through Time, revealing potential, dismantling inevitability.
-          </div>
-          <div className="menu-section menu-description">
-            This website is a growing collection of writings, works <sup>ABC</sup>, and fragments <sup>123</sup> waiting to be both put together and taken apart. An infinity is discovered through their re-assembly and material re-organization. I store them in boxes, envelopes, and closets, in memories, anticipations, and fantasies.
-          </div>
-          <Grid container className="menu-section menu-writing">
-            {WRITING.map((writing) =>
-              <WritingItem title={writing.title} type={writing.type} year={writing.year}/>
-            )}
-          </Grid>
-          <Grid container className="menu-section menu-projects">
-          {WORKS.map((project) =>
-            <ProjectItem title={project.title} id={project.id} year={project.year} status={project.status}/>
-          )}
-          </Grid>
-          {/*
-            <Grid container className="menu-section menu-fragments">
-            {FRAGMENTS.map((fragment) =>
-              <FragmentItem description={fragment.description} id={fragment.id}/>
-            )}
-            </Grid>
-          */}
-          <Grid container className="menu-section menu-imprint">
-            <Grid item xs={0} md={2}/>
-            <Grid item xs={12} md={6}>
-              <p>taylor@taylorzankeoffice.com<br/>@taylorzanke</p>
-              <p className="imprint-technical">This website was built in React and set in GT Sectra and Marr Sans.</p>
-            </Grid>
-          </Grid>
+        <Grid item xs={12} className={`menu ${className}`}>
+          <div className="menu-toggler" onClick={onClick}>Close</div>
         </Grid>
     );
   }

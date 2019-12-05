@@ -2,7 +2,8 @@
 
 .Work {
   width: 100%;
-  height: 80vh;
+  // height: 80vh;
+  height: 60vh;
   position: relative;
   @include breakpoint(sm) {
     height: 50vh;
@@ -37,8 +38,8 @@
     margin-bottom: $buffer*4;
     .Work-image-container {
       position: relative;
-      background-size: cover;
-      background-position: right;
+      background-size: contain;
+      background-position: center center;
     }//Work-image-container
   }//full
 }//Work

@@ -36,53 +36,31 @@ class Homepage extends Component {
           <PageContainer className="homepage" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
           <Header onClick={() => this.toggleMenu()}/>
           <Grid container className="homepage-hero">
-            <Grid item md={6} lg={6} className="hero-taylor">
-              <p>Taylor Zanke is an artist and designer who makes drawings, models, books, photographs, and recordings. He seeks to uncover the ways in which Space travels through Time, revealing potential, dismantling inevitability.</p>
+            <Grid item md={6} lg={12} className="hero-taylor">
+              {/*<p>Taylor Zanke is an artist and designer who makes drawings, models, books, photographs, and recordings. He seeks to uncover the ways in which Space travels through Time, revealing potential, dismantling inevitability.</p>*/}
             </Grid>
-            <Grid item md={0} lg={1}/>
             <Grid item md={6} lg={4} className="hero-contact">
-              <p>This website is a growing collection of writings, works, and fragments waiting to be both put together and taken apart. An infinity is discovered through their re-assembly and material re-organization. I store them in boxes, envelopes, and closets, in memories, anticipations, and fantasies.</p>
+
             </Grid>
           </Grid>
-          <Grid container className="works-grid" spacing={2}>
-            <Grid item md={4} className="work-item">
-              <div className="item-container">
-                <img src={NightDrawings.images[1]}/>
-              </div>
+          <Grid container className="works-grid">
+            <Grid item md={12} className="work-item">
+              <Work
+                matte
+                dark
+                workImage={TwoCitiesDiary.images[0]}
+              />
             </Grid>
-            <Grid item md={4} className="work-item">
-              <div className="item-container">
-                <img src={TwoCitiesDiary.images[3]}/>
-              </div>
-            </Grid>
-            <Grid item md={4} className="work-item">
-              <div className="item-container">
-                <img src={GraftedSpaces.images[3]}/>
-              </div>
-            </Grid>
-            <Grid item md={4} className="work-item">
-            <div className="item-container">
-              <img src={DirectionZine.images[1]}/>
-            </div>
-            </Grid>
-            <Grid item md={6} className="work-item">
-            <div className="item-container">
-              <img src={SplicedHouse.images[3]}/>
-            </div>
-            </Grid>
-            <Grid item md={8} className="work-item">
-            <div className="item-container">
-              <img src={SeveralSpeculative.images[3]}/>
-            </div>
-            </Grid>
-            <Grid item md={4} className="work-item">
-            <div className="item-container">
-              <img src={HardMatter.images[1]}/>
-            </div>
+            <Grid item md={12} className="work-item">
+            <Work
+              matte
+              light
+              workImage={NightDrawings.images[1]}
+            />
             </Grid>
           </Grid>
           </PageContainer>
-          <Menu/>
+          <Menu onClick={() => this.toggleMenu()}/>
         </SiteWrapper>
       </>
     );

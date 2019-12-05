@@ -8,7 +8,7 @@
   transform: translateX(100%);
   background: white;
   height: 100vh;
-  width: 40vw;
+  width: 50vw;
   right: 0;
   position: fixed;
   overflow-y: scroll;
@@ -19,55 +19,10 @@
   @include breakpoint(md) { width: 45vw; }
   @include breakpoint(sm) { width: 70vw; }
   @include breakpoint(xs) { width: 80vw; }
-  .menu-section {
-    padding-bottom: $buffer*4;
-    // border-bottom: 1px solid $darkFontColor;
-    .section-header {
-      font-family: $secondaryFont;
-      font-size: $fontSizeParagraph;
-      text-transform: uppercase;
-      margin-bottom: $buffer*4;
-      text-align: center;
-      width: 100%;
+  .menu-toggler {
+    display: inline-block;
+    &:hover {
+      cursor: pointer;
     }
-    &.menu-headline {
-        border-bottom: 0;
-        font-family: $primaryFont;
-        font-size: $fontSizeStatement;
-        line-height: $lineHeightStatement;
-    }//menu-headline
-    &.menu-description {
-      font-family: $secondaryFont;
-      font-size: $fontSizeParagraph;
-      line-height: $lineHeightParagraph;
-      sup {
-        font-family: $primaryFont;
-        font-size: $fontSizeCaption;
-        line-height: $lineHeightCaption;
-        font-weight: 600;
-      }
-    }//menu-description
-    &.menu-writing {
-      padding-top: $buffer*2;
-    }//menu-writing
-    &.menu-projects {
-      padding-top: $buffer*2;
-    }//menu-projects
-    &.menu-fragments {
-      padding-top: $buffer*2;
-    }//menu-fragments
-    &.menu-imprint {
-      font-family: $secondaryFont;
-      font-size: $fontSizeParagraph;
-      line-height: $lineHeightParagraph;
-      .imprint-technical {
-        @include breakpoint(lg) {
-          width: 100%;
-        }
-        width: 60%;
-        font-size: $fontSizeCaption;
-        line-height: $lineHeightCaption;
-      }//imprint-technical
-    }//menu-imprint
-  }//menu-section
+  }
 }//menu

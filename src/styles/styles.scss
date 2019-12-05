@@ -19,8 +19,16 @@ body {
   font-size: $fontSize;
   line-height: $lineHeight;
   background: $bgBody;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
+  a {
+    color: $darkFontColor;
+    text-decoration: none;
+    &:link {}
+    &:visited {}
+    &:hover { cursor: pointer;}
+    &:active {}
+  }
+
 }//body
