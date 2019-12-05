@@ -5,11 +5,12 @@
   margin-bottom: $captionHeight;
   height: 100%;
   position: relative;
-  @include breakpoint(sm) {
-    height: 50vh;
-  }
+  // @include breakpoint(sm) {
+  //   height: 50vh;
+  // }
   .caption {
-    // padding: $buffer;
+    position: absolute;
+    opacity: 0;
   }//caption
   &:hover {
     .caption {
@@ -20,9 +21,14 @@
     height: 100%;
     width: 100%;
     .work-image {
-      width: auto;
-      max-height: 90vh;
+      width: 100%;
+      max-height: 70vh;
     }//work-image
+    &:hover {
+      transform: translateY($buffer);
+      @include transition;
+    }
+    @include transition;
   }//Work-image-container
   &.matte {
     background: $bgColorDark;
@@ -43,11 +49,10 @@
   }//matte
   &.full {
     padding: 0;
-    // height: 80vh;
     .work-image-container {
       position: relative;
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-start;
     }//Work-image-container
   }//full
 }//Work

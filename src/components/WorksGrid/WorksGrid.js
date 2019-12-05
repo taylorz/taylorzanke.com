@@ -4,9 +4,9 @@ import './WorksGrid.scss'
 
 class WorksGrid extends Component {
   render() {
-    const { className, children } = this.props
+    const { className, spacing, children } = this.props
     return (
-      <Grid container className={`works-grid ${className}`}>
+      <Grid container className={`works-grid ${className}`} spacing={spacing}>
         {children}
       </Grid>
     );

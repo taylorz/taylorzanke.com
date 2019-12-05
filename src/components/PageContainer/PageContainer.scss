@@ -5,6 +5,9 @@
   max-width: $sm !important;
   flex-basis: auto !important;
   z-index: $zIndex1;
+  @include breakpoint(lg) {
+    padding: 0 $buffer*4;
+  }
   .menu-dark-overlay {
     width: 100vw;
     height: 100vh;

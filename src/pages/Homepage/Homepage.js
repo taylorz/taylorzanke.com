@@ -34,14 +34,32 @@ class Homepage extends Component {
     return (
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
-          <Header onClick={() => this.toggleMenu()}/>
           <PageContainer className="homepage" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <WorksGrid>
-            <Grid item md={12} className="work-item">
+          <Header onClick={() => this.toggleMenu()}/>
+          <Grid container className="hero-container">
+            <Grid item xs={12} className="hero-writing">
+              <p>It also considers travel to and from the site, and the uprooting of the practitioner in the pursuit of visits to the site, to be a critical and evolving aspect of the project. This method of practice allows the intimate past of the building to be coincident with the intimate past of the practitioner.</p>
+            </Grid>
+          </Grid>
+          <WorksGrid spacing={4}>
+            <Grid item md={4} className="work-item">
               <Work
                 full
                 light
-                hasCaption
+                workId={NightDrawings.id}
+                workTitle={NightDrawings.title}
+                workYear={NightDrawings.year}
+                workObject={NightDrawings.object}
+                workDims={NightDrawings.dimensions}
+                workDetails={NightDrawings.details}
+                workImage={NightDrawings.images[0]}
+                workLink={NightDrawings.link}
+              />
+            </Grid>
+            <Grid item md={5} className="work-item">
+              <Work
+                full
+                light
                 workId={GraftedSpaces.id}
                 workTitle={GraftedSpaces.title}
                 workYear={GraftedSpaces.year}
@@ -52,25 +70,10 @@ class Homepage extends Component {
                 workLink={GraftedSpaces.link}
               />
             </Grid>
-            <Grid item md={12} className="work-item">
+            <Grid item md={8} className="work-item">
               <Work
-                matte
+                full
                 light
-                hasCaption
-                workId={NightDrawings.id}
-                workTitle={NightDrawings.title}
-                workYear={NightDrawings.year}
-                workObject={NightDrawings.object}
-                workDims={NightDrawings.dimensions}
-                workDetails={NightDrawings.details}
-                workImage={NightDrawings.images[0]}
-              />
-            </Grid>
-            <Grid item md={12} className="work-item">
-              <Work
-                matte
-                dark
-                hasCaption
                 workId={SplicedHouse.id}
                 workTitle={SplicedHouse.title}
                 workYear={SplicedHouse.year}
@@ -78,13 +81,18 @@ class Homepage extends Component {
                 workDims={SplicedHouse.dimensions}
                 workDetails={SplicedHouse.details}
                 workImage={SplicedHouse.images[0]}
+                workLink={SplicedHouse.link}
               />
             </Grid>
-            <Grid item md={12} className="work-item">
+            <Grid item md={5} className="work-item">
+              <Fragments
+
+              />
+            </Grid>
+            <Grid item md={4} className="work-item">
               <Work
-                matte
+                full
                 light
-                hasCaption
                 workId={DirectionZine.id}
                 workTitle={DirectionZine.title}
                 workYear={DirectionZine.year}
@@ -92,13 +100,13 @@ class Homepage extends Component {
                 workDims={DirectionZine.dimensions}
                 workDetails={DirectionZine.details}
                 workImage={DirectionZine.images[0]}
+                workLink={DirectionZine.link}
               />
             </Grid>
-            <Grid item md={12} className="work-item">
+            <Grid item md={6} className="work-item">
               <Work
-                matte
-                dark
-                hasCaption
+                full
+                light
                 workId={SeveralSpeculative.id}
                 workTitle={SeveralSpeculative.title}
                 workYear={SeveralSpeculative.year}
@@ -106,13 +114,13 @@ class Homepage extends Component {
                 workDims={SeveralSpeculative.dimensions}
                 workDetails={SeveralSpeculative.details}
                 workImage={SeveralSpeculative.images[0]}
+                workLink={SeveralSpeculative.link}
               />
             </Grid>
-            <Grid item md={12} className="work-item">
+            <Grid item md={8} className="work-item">
               <Work
-                matte
+                full
                 light
-                hasCaption
                 workId={TwoCitiesDiary.id}
                 workTitle={TwoCitiesDiary.title}
                 workYear={TwoCitiesDiary.year}
@@ -120,6 +128,7 @@ class Homepage extends Component {
                 workDims={TwoCitiesDiary.dimensions}
                 workDetails={TwoCitiesDiary.details}
                 workImage={TwoCitiesDiary.images[0]}
+                workLink={TwoCitiesDiary.link}
               />
             </Grid>
           </WorksGrid>

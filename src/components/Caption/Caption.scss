@@ -3,14 +3,13 @@
 .caption {
   list-style-type: none;
   margin: 0;
-  position: absolute;
+  // position: absolute;
   bottom: -$captionHeight;
   height: $captionHeight;
-  left: 0;
+  // left: 0;
   width: 100%;
   background: white;
-  opacity: 0;
-  font-family: $secondaryFont;
+  // opacity: 0;
   font-size: $fontSize;
   display: flex;
   align-items: center;

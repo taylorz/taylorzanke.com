@@ -49,7 +49,8 @@ const WORKS = [
     dimensions: "12 x 14 inches",
     details: "Graphite and inkjet printed line on bond, 1 of 103.",
     images: [
-    ]
+    ],
+    link: "/transmissions-from-rare-space"
   },
   {
     id: "G",
@@ -82,7 +83,8 @@ const WORKS = [
       NightDrawings6,
       NightDrawings7,
       NightDrawings8
-    ]
+    ],
+    link: "/night-drawings"
   },
   {
     id: "E",
@@ -115,7 +117,8 @@ const WORKS = [
       DirectionZine4,
       DirectionZine5,
       DirectionZine6,
-    ]
+    ],
+    link: "/direction-zine"
   },
   {
     id: "C",
@@ -129,7 +132,8 @@ const WORKS = [
       SeveralSpeculative2,
       SeveralSpeculative3,
       SeveralSpeculative4,
-    ]
+    ],
+    link: "/several-speculative-improvements"
   },
   {
     id: "B",
@@ -139,7 +143,8 @@ const WORKS = [
     dimensions: "Roughly 8.5 x 11 x 2 inches",
     details: "Laser printed letter paper.",
     images: [
-    ]
+    ],
+    link: "/stack-works"
   },
   {
     id: "A",
@@ -153,7 +158,8 @@ const WORKS = [
       TwoCitiesDiary2,
       TwoCitiesDiary3,
       TwoCitiesDiary4,
-    ]
+    ],
+    link: "/two-cities-diary"
   },
 ]
 

@@ -3,17 +3,15 @@
 .grafted-spaces {
   .work-overview {
     margin-top: $buffer*8;
-    padding: $buffer*32 0;
     p {
       margin: 0;
     }
-    .overview-detail {
-      font-size: $fontSize;
-      line-height: $lineHeight;
+    .overview-data {
     }
     .overview-description {
-      font-size: $fontSizeParagraph;
-      line-height: $lineHeightParagraph;
+      margin: $buffer*32 0;
+      font-size: $fontSizeStatement;
+      line-height: $lineHeightStatement;
     }
   }
 }

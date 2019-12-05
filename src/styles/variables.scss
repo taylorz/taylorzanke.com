@@ -22,9 +22,9 @@ $lineHeightStatement:                $lineHeight*2;
 $lineHeightHero:                     $lineHeight*3;
 $lineHeightCaption:                  $lineHeight*.9;
 
-$captionHeight:                      $buffer*8;
+$captionHeight:                      $buffer*4;
 
-$timing:                             .25s;
+$timing:                             .5s;
 $easingCubic:                        cubic-bezier(0.77, 0, 0.175, 1);
 $easingRegular:                      ease-in-out;
 $transitionCubic:                    all $timing $easingCubic;
