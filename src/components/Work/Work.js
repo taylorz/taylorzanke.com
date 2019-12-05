@@ -19,6 +19,7 @@ class Work extends Component {
               {full && hasCaption && <Caption title={workTitle} year={workYear} object={workObject} dimension={workDims} details={workDetails}/>}
               {matte && hasCaption && <Caption title={workTitle} year={workYear} object={workObject} dimension={workDims} details={workDetails}/>}
             </Grid>
+            <WorkId workId={[workId]} onClick={onClick}/>
         </Grid>
         </Link>
         : (

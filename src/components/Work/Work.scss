@@ -27,6 +27,7 @@
     &:hover {
       transform: translateY($buffer);
       @include transition;
+      cursor: pointer;
     }
     @include transition;
   }//Work-image-container

@@ -101,7 +101,8 @@ const WORKS = [
       SplicedHouse5,
       SplicedHouse6,
       SplicedHouse7
-    ]
+    ],
+    link: "/spliced-house"
   },
   {
     id: "D",

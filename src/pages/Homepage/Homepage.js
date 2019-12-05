@@ -80,14 +80,17 @@ class Homepage extends Component {
                 workObject={SplicedHouse.object}
                 workDims={SplicedHouse.dimensions}
                 workDetails={SplicedHouse.details}
-                workImage={SplicedHouse.images[0]}
+                workImage={SplicedHouse.images[2]}
                 workLink={SplicedHouse.link}
               />
             </Grid>
             <Grid item md={5} className="work-item">
-              <Fragments
-
-              />
+            <Fragments
+              three
+              fragment1={FRAGMENTS[5]}
+              fragment2={FRAGMENTS[6]}
+              fragment3={FRAGMENTS[14]}
+            />
             </Grid>
             <Grid item md={4} className="work-item">
               <Work
