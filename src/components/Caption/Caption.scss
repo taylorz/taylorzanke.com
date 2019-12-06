@@ -3,14 +3,10 @@
 .caption {
   list-style-type: none;
   margin: 0;
-  // position: absolute;
   bottom: -$captionHeight;
   height: $captionHeight;
-  // left: 0;
   width: 100%;
-  background: white;
-  // opacity: 0;
-  font-size: $fontSize;
+  font-size: $fontSizeParagraph;
   display: flex;
   align-items: center;
   padding: 0;
@@ -19,9 +15,6 @@
     &:first-child {
       padding-left: 0;
     }
-    &.title {
-      text-transform: uppercase;
-    }//title
   }//li
   &.light {
     color: $lightFontColor;

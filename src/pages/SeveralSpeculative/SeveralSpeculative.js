@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import './GraftedSpaces.scss';
+import './SeveralSpeculative.scss';
 import SiteWrapper from '../../components/SiteWrapper/SiteWrapper';
 import Header from '../../components/Header/Header';
 import Menu from '../../components/Menu/Menu';
@@ -10,9 +10,9 @@ import WorksGrid from '../../components/WorksGrid/WorksGrid';
 import Caption from '../../components/Caption/Caption';
 import WORKS from '../../constants/works/works';
 
-const GraftedSpacesWork = WORKS[1];
+const SeveralSpeculativeWork = WORKS[1];
 
-class GraftedSpaces extends Component {
+class SeveralSpeculative extends Component {
   state = {
     menuOpened: false,
   }
@@ -35,4 +35,4 @@ class GraftedSpaces extends Component {
   }
 }
 
-export default GraftedSpaces;
+export default SeveralSpeculative;

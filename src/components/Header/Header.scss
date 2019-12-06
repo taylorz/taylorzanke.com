@@ -2,14 +2,14 @@
 
 .header-container {
   font-family: $primaryFont;
-  font-size: $fontSize;
+  font-size: $fontSizeParagraph;
   height: $buffer*8;
   display: flex;
   align-items: center;
   position: fixed;
   color: $darkFontColor;
   z-index: $zIndex2;
-  max-width: $sm;
+  max-width: $md;
   width: 100%;
   .header-contents {
     width: 100%;
@@ -18,6 +18,7 @@
     .name {
     }//name
     .what {
+      font-style: italic;
     }//what
     .menu-toggler {
       &:hover {

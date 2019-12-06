@@ -13,13 +13,12 @@ class Work extends Component {
       <>
       {workLink ?
         <Link to={workLink}>
-        <Grid container className={`work ${className} ${matte && "matte"} ${full && "full"} ${light && "light"} ${dark && "dark"}`} justify={`${matte ? "center" : "flex-end"}`} alignItems="center">
+        <Grid container className={`work work-link ${className} ${matte && "matte"} ${full && "full"} ${light && "light"} ${dark && "dark"}`} justify={`${matte ? "center" : "flex-end"}`} alignItems="center">
             <Grid item md={12} className="work-image-container">
             <img className="work-image" src={workImage}/>
               {full && hasCaption && <Caption title={workTitle} year={workYear} object={workObject} dimension={workDims} details={workDetails}/>}
-              {matte && hasCaption && <Caption title={workTitle} year={workYear} object={workObject} dimension={workDims} details={workDetails}/>}
             </Grid>
-            <WorkId workId={[workId]} onClick={onClick}/>
+            {matte && hasCaption && <Caption title={workTitle} year={workYear} object={workObject} dimension={workDims} details={workDetails}/>}
         </Grid>
         </Link>
         : (
@@ -27,8 +26,8 @@ class Work extends Component {
               <Grid item md={12} className="work-image-container">
               <img className="work-image" src={workImage}/>
                 {full && hasCaption && <Caption title={workTitle} year={workYear} object={workObject} dimension={workDims} details={workDetails}/>}
-                {matte && hasCaption && <Caption title={workTitle} year={workYear} object={workObject} dimension={workDims} details={workDetails}/>}
               </Grid>
+              {matte && hasCaption && <Caption title={workTitle} year={workYear} object={workObject} dimension={workDims} details={workDetails}/>}
           </Grid>
         )
       }

@@ -1,12 +1,4 @@
 @import "../../styles/styles.scss";
 
 .homepage {
-  .hero-writing {
-    margin-top: $buffer*8; //compensate for nav
-    padding: $buffer*8 0;
-    p {
-      font-size: $fontSizeParagraph;
-      line-height: $lineHeightParagraph;
-    }
-  }
 }//homepage

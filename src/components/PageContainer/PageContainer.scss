@@ -2,7 +2,7 @@
 
 .page-container {
   width: 100%;
-  max-width: $sm !important;
+  max-width: $md !important;
   flex-basis: auto !important;
   z-index: $zIndex1;
   @include breakpoint(lg) {
@@ -17,7 +17,7 @@
     z-index: $zIndex3;
     pointer-events: none;
     opacity: 0;
-    background: $bgColorDark;
+    background: #ccc;
     @include transition;
   }//menu-dark-overlay
 }//page-container

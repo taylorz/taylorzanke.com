@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import './GraftedSpaces.scss';
+import './TransmissionsFrom.scss';
 import SiteWrapper from '../../components/SiteWrapper/SiteWrapper';
 import Header from '../../components/Header/Header';
 import Menu from '../../components/Menu/Menu';
@@ -10,9 +10,9 @@ import WorksGrid from '../../components/WorksGrid/WorksGrid';
 import Caption from '../../components/Caption/Caption';
 import WORKS from '../../constants/works/works';
 
-const GraftedSpacesWork = WORKS[1];
+const TransmissionsFromWork = WORKS[0];
 
-class GraftedSpaces extends Component {
+class TransmissionsFrom extends Component {
   state = {
     menuOpened: false,
   }
@@ -27,6 +27,17 @@ class GraftedSpaces extends Component {
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <PageContainer className="work-page grafted-spaces" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
           <Header onClick={() => this.toggleMenu()}/>
+          <WorksGrid>
+            <Grid item xs={12} className="work-item">
+            { TransmissionsFromWork.images.map((workImage) =>
+              <Work
+                matte
+                light
+                workImage={workImage}
+              />
+            )}
+            </Grid>
+          </WorksGrid>
           </PageContainer>
           <Menu onClick={() => this.toggleMenu()}/>
         </SiteWrapper>
@@ -35,4 +46,4 @@ class GraftedSpaces extends Component {
   }
 }
 
-export default GraftedSpaces;
+export default TransmissionsFrom;

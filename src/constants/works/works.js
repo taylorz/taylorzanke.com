@@ -37,6 +37,7 @@ import SplicedHouse5 from '../../assets/images/works/SplicedHouse/SplicedHouse5.
 import SplicedHouse6 from '../../assets/images/works/SplicedHouse/SplicedHouse6.jpg'
 import SplicedHouse7 from '../../assets/images/works/SplicedHouse/SplicedHouse7.jpg'
 
+import TransmissionsFrom1 from '../../assets/images/works/TransmissionsFrom/TransmissionsFrom1.png'
 
 
 const WORKS = [
@@ -49,6 +50,7 @@ const WORKS = [
     dimensions: "12 x 14 inches",
     details: "Graphite and inkjet printed line on bond, 1 of 103.",
     images: [
+      TransmissionsFrom1,
     ],
     link: "/transmissions-from-rare-space"
   },

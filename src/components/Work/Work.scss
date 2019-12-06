@@ -2,46 +2,45 @@
 
 .work {
   width: 100%;
-  margin-bottom: $captionHeight;
+  // margin-bottom: $captionHeight;
   height: 100%;
   position: relative;
-  // @include breakpoint(sm) {
-  //   height: 50vh;
-  // }
   .caption {
     position: absolute;
     opacity: 0;
+    @include transition;
   }//caption
-  &:hover {
-    .caption {
-      opacity: 1;
-    }
-  }//hover
+  @include transition;
+  &.work-link {
+    &:hover {
+      transform: translateY($buffer);
+      cursor: pointer;
+      @include transition;
+      .caption {
+        @include transition;
+        opacity: 1;
+      }
+    }//hover  
+  }
   .work-image-container {
     height: 100%;
     width: 100%;
     .work-image {
       width: 100%;
-      max-height: 70vh;
     }//work-image
-    &:hover {
-      transform: translateY($buffer);
-      @include transition;
-      cursor: pointer;
-    }
-    @include transition;
-  }//Work-image-container
+  }//work-image-container
   &.matte {
     background: $bgColorDark;
-    height: 60vh;
+    height: 80vh;
     &.light {background: $bgColorLight;}
     &.dark {background: $bgColorDark;}
     .work-image-container {
-      max-width: 80%;
-      max-height: 80%;
+      max-width: 60%;
+      max-height: 60%;
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
       .work-image {
         max-height: 100%;
         width: auto;

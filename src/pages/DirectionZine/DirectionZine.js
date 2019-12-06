@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import './GraftedSpaces.scss';
+import './DirectionZine.scss';
 import SiteWrapper from '../../components/SiteWrapper/SiteWrapper';
 import Header from '../../components/Header/Header';
 import Menu from '../../components/Menu/Menu';
@@ -10,9 +10,9 @@ import WorksGrid from '../../components/WorksGrid/WorksGrid';
 import Caption from '../../components/Caption/Caption';
 import WORKS from '../../constants/works/works';
 
-const GraftedSpacesWork = WORKS[1];
+const DirectionZineWork = WORKS[1];
 
-class GraftedSpaces extends Component {
+class DirectionZine extends Component {
   state = {
     menuOpened: false,
   }
@@ -35,4 +35,4 @@ class GraftedSpaces extends Component {
   }
 }
 
-export default GraftedSpaces;
+export default DirectionZine;
