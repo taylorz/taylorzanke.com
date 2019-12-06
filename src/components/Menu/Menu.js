@@ -16,7 +16,7 @@ class Menu extends Component {
         <Grid item xs={12} className={`menu ${className}`}>
           <div className="menu-header" onClick={onClick}>
             <div className="menu-title">Site Map</div>
-            <div className="menu-what">Works, texts, contact.</div>
+            <div className="menu-what">Something like Navigation, Works, Texts, Contact.</div>
             <div className="menu-toggler">Close</div>
           </div>
         </Grid>

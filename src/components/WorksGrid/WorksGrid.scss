@@ -6,4 +6,7 @@
   justify-content: center;
   width: 100%;
   padding-top: $buffer*8;
+  @include breakpoint(lg) {
+    padding: $buffer*8 $buffer*4;
+  }
 }//works-grid

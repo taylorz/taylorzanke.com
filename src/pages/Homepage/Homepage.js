@@ -35,7 +35,7 @@ class Homepage extends Component {
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <PageContainer className="homepage" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <Header onClick={() => this.toggleMenu()} pageDescription="Mainly books, drawings, models, and photographs."/>
+          <Header onClick={() => this.toggleMenu()} pageDescription="Making Books, Drawings, Models, and Photographs."/>
           <WorksGrid spacing={5}>
             <Grid item md={12} className="work-item">
               <Work

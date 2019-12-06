@@ -6,7 +6,7 @@
   flex-basis: auto !important;
   z-index: $zIndex1;
   @include breakpoint(lg) {
-    padding: 0 $buffer*4;
+    // padding: 0 $buffer*4;
   }
   .menu-dark-overlay {
     width: 100vw;
@@ -17,7 +17,16 @@
     z-index: $zIndex3;
     pointer-events: none;
     opacity: 0;
-    background: #ccc;
+    background: $bgColorDark;
+    .overlay-content {
+      padding: $buffer*8;
+      height: auto;
+      .overlay-text {
+        color: white;
+        font-size: $fontSizeHero*2;
+        line-height: $lineHeightHero*3;
+      }
+    }
     @include transition;
   }//menu-dark-overlay
 }//page-container
