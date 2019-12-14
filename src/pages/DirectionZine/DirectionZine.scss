@@ -1,17 +1,3 @@
 @import "../../styles/styles.scss";
 
-.grafted-spaces {
-  .work-overview {
-    margin-top: $buffer*8;
-    p {
-      margin: 0;
-    }
-    .overview-data {
-    }
-    .overview-description {
-      margin: $buffer*32 0;
-      font-size: $fontSizeStatement;
-      line-height: $lineHeightStatement;
-    }
-  }
-}
+.direction-zine {}

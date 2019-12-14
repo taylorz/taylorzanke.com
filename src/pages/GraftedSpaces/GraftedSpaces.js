@@ -6,10 +6,7 @@ import Header from '../../components/Header/Header';
 import Menu from '../../components/Menu/Menu';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import Work from '../../components/Work/Work';
-import WorksGrid from '../../components/WorksGrid/WorksGrid';
-import Caption from '../../components/Caption/Caption';
 import WORKS from '../../constants/works/works';
-
 const GraftedSpacesWork = WORKS[1];
 
 class GraftedSpaces extends Component {
