@@ -7,13 +7,13 @@ class Header extends Component {
     return new Date().getFullYear();
   }
   render() {
-    const { onClick, pageDescription } = this.props
+    const { onClick, contextDescription } = this.props
     return (
       <div className="header-container">
         <div className="header-contents">
           <div className="name"><a href="/">Taylor Zanke</a></div>
-          <div className="what">{pageDescription}</div>
-          <div className="menu-toggler" onClick={onClick}>Site Map</div>
+          <div className="what">{contextDescription}</div>
+          <div className="menu-toggler" onClick={onClick}>Information</div>
         </div>
       </div>
     );

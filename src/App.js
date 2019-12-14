@@ -9,6 +9,7 @@ import SplicedHouse from './pages/SplicedHouse/SplicedHouse';
 import DirectionZine from './pages/DirectionZine/DirectionZine';
 import SeveralSpeculative from './pages/SeveralSpeculative/SeveralSpeculative';
 import TwoCitiesDiary from './pages/TwoCitiesDiary/TwoCitiesDiary';
+import TwoCitiesDiaryMP from './pages/TwoCitiesDiaryMP/TwoCitiesDiaryMP';
 import './App.css';
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
           <Route exact path="/direction-zine" component={DirectionZine}/>
           <Route exact path="/several-speculative-improvements" component={SeveralSpeculative}/>
           <Route exact path="/two-cities-diary" component={TwoCitiesDiary}/>
+          <Route exact path="/two-cities-diary-mumbai-paris" component={TwoCitiesDiaryMP}/>
         </Router>
       </div>
     );

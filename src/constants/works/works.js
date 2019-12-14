@@ -3,10 +3,23 @@ import TwoCitiesDiary2 from '../../assets/images/works/TwoCitiesDiary/TwoCitiesD
 import TwoCitiesDiary3 from '../../assets/images/works/TwoCitiesDiary/TwoCitiesDiary3.png'
 import TwoCitiesDiary4 from '../../assets/images/works/TwoCitiesDiary/TwoCitiesDiary4.png'
 
-import SeveralSpeculative1 from '../../assets/images/works/SeveralSpeculative/SeveralSpeculative1.png'
-import SeveralSpeculative2 from '../../assets/images/works/SeveralSpeculative/SeveralSpeculative2.png'
-import SeveralSpeculative3 from '../../assets/images/works/SeveralSpeculative/SeveralSpeculative3.png'
-import SeveralSpeculative4 from '../../assets/images/works/SeveralSpeculative/SeveralSpeculative4.png'
+import TwoCitiesDiaryMP1 from '../../assets/images/works/TwoCitiesDiaryMP/01.png'
+import TwoCitiesDiaryMP2 from '../../assets/images/works/TwoCitiesDiaryMP/02.png'
+import TwoCitiesDiaryMP3 from '../../assets/images/works/TwoCitiesDiaryMP/03.png'
+import TwoCitiesDiaryMP4 from '../../assets/images/works/TwoCitiesDiaryMP/04.png'
+import TwoCitiesDiaryMP5 from '../../assets/images/works/TwoCitiesDiaryMP/05.png'
+import TwoCitiesDiaryMP6 from '../../assets/images/works/TwoCitiesDiaryMP/06.png'
+
+import SeveralSpeculative1 from '../../assets/images/works/SeveralSpeculative/01.png'
+import SeveralSpeculative2 from '../../assets/images/works/SeveralSpeculative/02.png'
+import SeveralSpeculative3 from '../../assets/images/works/SeveralSpeculative/03.png'
+import SeveralSpeculative4 from '../../assets/images/works/SeveralSpeculative/04.png'
+import SeveralSpeculative5 from '../../assets/images/works/SeveralSpeculative/05.png'
+import SeveralSpeculative6 from '../../assets/images/works/SeveralSpeculative/06.png'
+import SeveralSpeculative7 from '../../assets/images/works/SeveralSpeculative/07.png'
+import SeveralSpeculative8 from '../../assets/images/works/SeveralSpeculative/08.png'
+import SeveralSpeculative9 from '../../assets/images/works/SeveralSpeculative/09.png'
+import SeveralSpeculative10 from '../../assets/images/works/SeveralSpeculative/10.png'
 
 import DirectionZine1 from '../../assets/images/works/DirectionZine/DirectionZine1.png'
 import DirectionZine2 from '../../assets/images/works/DirectionZine/DirectionZine2.png'
@@ -37,7 +50,13 @@ import SplicedHouse5 from '../../assets/images/works/SplicedHouse/SplicedHouse5.
 import SplicedHouse6 from '../../assets/images/works/SplicedHouse/SplicedHouse6.jpg'
 import SplicedHouse7 from '../../assets/images/works/SplicedHouse/SplicedHouse7.jpg'
 
-import TransmissionsFrom1 from '../../assets/images/works/TransmissionsFrom/TransmissionsFrom1.png'
+import TransmissionsFrom1 from '../../assets/images/works/TransmissionsFrom/01.png'
+import TransmissionsFrom2 from '../../assets/images/works/TransmissionsFrom/02.png'
+import TransmissionsFrom3 from '../../assets/images/works/TransmissionsFrom/03.png'
+import TransmissionsFrom4 from '../../assets/images/works/TransmissionsFrom/04.png'
+import TransmissionsFrom5 from '../../assets/images/works/TransmissionsFrom/05.png'
+import TransmissionsFrom6 from '../../assets/images/works/TransmissionsFrom/06.png'
+import TransmissionsFrom7 from '../../assets/images/works/TransmissionsFrom/07.png'
 
 
 const WORKS = [
@@ -51,6 +70,12 @@ const WORKS = [
     details: "Graphite and inkjet printed line on bond, 1 of 103.",
     images: [
       TransmissionsFrom1,
+      TransmissionsFrom2,
+      TransmissionsFrom3,
+      TransmissionsFrom4,
+      TransmissionsFrom5,
+      TransmissionsFrom6,
+      TransmissionsFrom7,
     ],
     link: "/transmissions-from-rare-space"
   },
@@ -135,6 +160,12 @@ const WORKS = [
       SeveralSpeculative2,
       SeveralSpeculative3,
       SeveralSpeculative4,
+      SeveralSpeculative5,
+      SeveralSpeculative6,
+      SeveralSpeculative7,
+      SeveralSpeculative8,
+      SeveralSpeculative9,
+      SeveralSpeculative10,
     ],
     link: "/several-speculative-improvements"
   },
@@ -163,6 +194,23 @@ const WORKS = [
       TwoCitiesDiary4,
     ],
     link: "/two-cities-diary"
+  },
+  {
+
+    title: "Two Cities Diary: Mumbai-Paris",
+    year: "2014",
+    object: "Book",
+    dimensions: "12 x 10 inches",
+    details: "Self, Single Edition.",
+    images: [
+      TwoCitiesDiaryMP1,
+      TwoCitiesDiaryMP2,
+      TwoCitiesDiaryMP3,
+      TwoCitiesDiaryMP4,
+      TwoCitiesDiaryMP5,
+      TwoCitiesDiaryMP6,
+    ],
+    link: "/two-cities-diary-mumbai-paris"
   },
 ]
 

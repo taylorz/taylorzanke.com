@@ -17,6 +17,13 @@
         pointer-events: auto;
         opacity: 1;
         @include transition;
+        .overlay-content {
+          .overlay-text {
+            // opacity: 1;
+            // transform: translateY($buffer*0);
+            // @include transition;
+          }
+        }
       }
       &:hover {
         cursor: default;
@@ -28,12 +35,28 @@
     .menu {
       transform: translateX(0%);
       transition: transform $timing $easingCubic;
+      transition-delay: .25s;
     }
   }//menu-opened
   &.menu-closed {
     .menu {
       transform: translateX(100%);
       transition: transform $timing $easingCubic;
+    }
+    .page-container {
+      .menu-dark-overlay {
+        @include transition;
+        opacity: 0;
+        transition-delay: .25s;
+        .overlay-context {
+          .overlay-text {
+            // opacity: 0;
+            // transform: translateY($buffer*8);
+            // transition-delay: .25s;
+            // @include transition;
+          }
+        }
+      }
     }
   }//menu-closed
 }//page-wrapper

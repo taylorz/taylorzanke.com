@@ -2,7 +2,7 @@
 
 .page-container {
   width: 100%;
-  max-width: $md !important;
+  max-width: $sm !important;
   flex-basis: auto !important;
   z-index: $zIndex1;
   @include breakpoint(lg) {
@@ -16,17 +16,15 @@
     left: 0;
     z-index: $zIndex3;
     pointer-events: none;
-    opacity: 0;
     background: $bgColorDark;
     .overlay-content {
       padding: $buffer*8;
       height: auto;
       .overlay-text {
-        color: white;
-        font-size: $fontSizeHero*2;
-        line-height: $lineHeightHero*3;
+        color: $lightFontColor;
+        font-size: $fontSizeHero;
+        line-height: $lineHeightHero;
       }
     }
-    @include transition;
   }//menu-dark-overlay
 }//page-container

@@ -9,4 +9,7 @@
   @include breakpoint(lg) {
     padding: $buffer*8 $buffer*4;
   }
+  .work-item {
+    // margin-bottom: $buffer*8;
+  }
 }//works-grid

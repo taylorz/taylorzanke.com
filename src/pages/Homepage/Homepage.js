@@ -20,6 +20,7 @@ const DirectionZine = WORKS[4];
 const SeveralSpeculative = WORKS[5];
 const StackWorks = WORKS[6];
 const TwoCitiesDiary = WORKS[7];
+const TwoCitiesDiaryMP = WORKS[8];
 
 class Homepage extends Component {
   state = {
@@ -35,11 +36,11 @@ class Homepage extends Component {
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <PageContainer className="homepage" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <Header onClick={() => this.toggleMenu()} pageDescription="Making Books, Drawings, Models, and Photographs."/>
+          <Header onClick={() => this.toggleMenu()} contextDescription="Collected Works, Fragments, and Writings."/>
           <WorksGrid spacing={5}>
             <Grid item md={12} className="work-item">
               <Work
-                matte
+                full
                 light
                 hasCaption
                 workId={TransmissionsFrom.id}
@@ -49,7 +50,7 @@ class Homepage extends Component {
                 workLink={TransmissionsFrom.link}
               />
             </Grid>
-            <Grid item md={4} className="work-item">
+            <Grid item md={5} className="work-item">
               <Work
                 full
                 light
@@ -97,7 +98,7 @@ class Homepage extends Component {
                 workLink={DirectionZine.link}
               />
             </Grid>
-            <Grid item md={6} className="work-item">
+            <Grid item md={7} className="work-item">
               <Work
                 full
                 light
@@ -109,7 +110,7 @@ class Homepage extends Component {
                 workLink={SeveralSpeculative.link}
               />
             </Grid>
-            <Grid item md={12} className="work-item">
+            <Grid item md={6} className="work-item">
               <Work
                 matte
                 light
@@ -119,6 +120,18 @@ class Homepage extends Component {
                 workYear={TwoCitiesDiary.year}
                 workImage={TwoCitiesDiary.images[0]}
                 workLink={TwoCitiesDiary.link}
+              />
+            </Grid>
+            <Grid item md={6} className="work-item">
+              <Work
+                full
+                light
+                hasCaption
+                workId={TwoCitiesDiaryMP.id}
+                workTitle={TwoCitiesDiaryMP.title}
+                workYear={TwoCitiesDiaryMP.year}
+                workImage={TwoCitiesDiaryMP.images[0]}
+                workLink={TwoCitiesDiaryMP.link}
               />
             </Grid>
           </WorksGrid>

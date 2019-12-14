@@ -20,7 +20,7 @@
         @include transition;
         opacity: 1;
       }
-    }//hover  
+    }//hover
   }
   .work-image-container {
     height: 100%;
@@ -31,18 +31,19 @@
   }//work-image-container
   &.matte {
     background: $bgColorDark;
-    height: 80vh;
     &.light {background: $bgColorLight;}
     &.dark {background: $bgColorDark;}
     .work-image-container {
-      max-width: 60%;
-      max-height: 60%;
+      padding: 10%;
+      max-width: 90%;
+      max-height: 90%;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       .work-image {
         max-height: 100%;
+        max-width: 80%;
         width: auto;
       }
     }//Work-image-container

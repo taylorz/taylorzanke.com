@@ -19,12 +19,12 @@ $fontSizeCaption:                    $fontSize*.9;
 $lineHeight:                         14px;
 $lineHeightParagraph:                $lineHeight*1.45;
 $lineHeightStatement:                $lineHeight*2;
-$lineHeightHero:                     $lineHeight*3;
+$lineHeightHero:                     $lineHeight*4.5;
 $lineHeightCaption:                  $lineHeight*.9;
 
 $captionHeight:                      $buffer*8;
 
-$timing:                             .5s;
+$timing:                             .25s;
 $easingCubic:                        cubic-bezier(0.77, 0, 0.175, 1);
 $easingRegular:                      ease-in-out;
 $transitionCubic:                    all $timing $easingCubic;

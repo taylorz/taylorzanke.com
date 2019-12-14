@@ -26,17 +26,16 @@ class TransmissionsFrom extends Component {
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <PageContainer className="work-page grafted-spaces" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <Header onClick={() => this.toggleMenu()}/>
+          <Header onClick={() => this.toggleMenu()} contextDescription="About Architecture, Gestures, Time, Ruin."/>
           <WorksGrid>
-            <Grid item xs={12} className="work-item">
             { TransmissionsFromWork.images.map((workImage) =>
+              <Grid item xs={12} className="work-item">
               <Work
-                matte
-                light
+                full
                 workImage={workImage}
               />
+              </Grid>
             )}
-            </Grid>
           </WorksGrid>
           </PageContainer>
           <Menu onClick={() => this.toggleMenu()}/>
