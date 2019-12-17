@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import './Menu.scss';
-import WritingItem from '../../components/WritingItem/WritingItem';
-import ProjectItem from '../../components/ProjectItem/ProjectItem';
-import FragmentItem from '../../components/FragmentItem/FragmentItem';
 
 import WRITING from '../../constants/writing/writing';
 import WORKS from '../../constants/works/works';
