@@ -4,7 +4,6 @@ import './Homepage.scss';
 import SiteWrapper from '../../components/SiteWrapper/SiteWrapper';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import Header from '../../components/Header/Header';
-import Menu from '../../components/Menu/Menu';
 
 import WORKS from '../../constants/works/works';
 import FRAGMENTS from '../../constants/fragments/fragments';
@@ -35,7 +34,6 @@ class Homepage extends Component {
           <PageContainer className="homepage" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
           <Header onClick={() => this.toggleMenu()} contextDescription="Collected Works, Fragments, and Writings."/>
           </PageContainer>
-          <Menu onClick={() => this.toggleMenu()}/>
         </SiteWrapper>
       </>
     );

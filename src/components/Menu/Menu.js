@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
+import Header from '../../components/Header/Header';
 import './Menu.scss';
 
 import WRITING from '../../constants/writing/writing';
@@ -11,11 +12,7 @@ class Menu extends Component {
     const { className, onClick } = this.props
     return (
         <Grid item xs={12} className={`menu ${className}`}>
-          <div className="menu-header">
-            <div className="menu-title">Information</div>
-            <div className="menu-what">Something like Navigation, Works, Texts, Contact.</div>
-            <div className="menu-toggler" onClick={onClick}>Close</div>
-          </div>
+          <Header onClick={() => this.toggleMenu()} contextDescription="1"/>
         </Grid>
     );
   }

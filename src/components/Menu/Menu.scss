@@ -1,39 +1,5 @@
 @import "../../styles/styles.scss";
 
 .menu {
-  z-index: $zIndex3;
-  flex-basis: auto;
-  color: $darkFontColor;
-  transform: translateX(100%);
-  background: white;
-  height: 100vh;
-  width: 50vw;
-  right: 0;
-  position: fixed;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  font-size: $fontSizeParagraph;
-  // border-left: 2px solid $bgColorDark;
-  &::-webkit-scrollbar {
-    width: 0;
-  }
-  @include breakpoint(md) { width: 45vw; }
-  @include breakpoint(sm) { width: 70vw; }
-  @include breakpoint(xs) { width: 80vw; }
-  .menu-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: $buffer*8;
-    padding: 0 $buffer*2;
-    .menu-what {
-      font-style: italic;
-    }
-    .menu-toggler {
-      display: inline-block;
-      &:hover {
-        cursor: pointer;
-      }
-    }//menu-toggler
-  }
-}//menu
+  height: 50vh;
+}
