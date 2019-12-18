@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-import Menu from '../../components/Menu/Menu';
 import './PageContainer.scss'
 
 class PageContainer extends Component {
@@ -8,7 +7,6 @@ class PageContainer extends Component {
     const { children, className, onClick } = this.props
     return (
       <Grid item xs={12} className={`page-container ${className}`} onClick={onClick}>
-      <Menu onClick={() => this.toggleMenu()}/>
         {children}
       </Grid>
     );

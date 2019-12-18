@@ -1,5 +1,8 @@
 @import "../../styles/styles.scss";
 
 .page-container {
-  background: blue;
+  background: #ccc;
+  .work {
+    width: 100vw;
+  }
 }//page-container

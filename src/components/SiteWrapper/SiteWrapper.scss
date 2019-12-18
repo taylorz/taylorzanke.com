@@ -7,27 +7,23 @@
   overflow-x: hidden;
   margin: 0; padding: 0;
   &.menu-opened {
-    // &::-webkit-scrollbar {
-    //   width: 0;
-    //   background: transparent;
-    // }
     .menu {
       transform: translateY(0);
-      transition: transform $timing $easingCubic;
+      transition: transform $timing*5 $easingRegular;
     }
     .page-container {
       transform: translateY(0);
-      transition: transform $timing $easingCubic;
+      transition: transform $timing*5 $easingRegular;
     }
   }//menu-opened
   &.menu-closed {
     .menu {
-      transform: translateY(-50vh);
-      transition: transform $timing $easingCubic;
+      transform: translateY(-$menuHeight);
+      transition: transform $timing*5 $easingRegular;
     }
     .page-container {
-      transform: translateY(-50vh);
-      transition: transform $timing $easingCubic;
+      transform: translateY(-$menuHeight);
+      transition: transform $timing*5 $easingRegular;
     }
   }//menu-closed
 }//page-wrapper

@@ -32,7 +32,8 @@ class Homepage extends Component {
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <PageContainer className="homepage" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <Header onClick={() => this.toggleMenu()} contextDescription="Collected Works, Fragments, and Writings."/>
+            <Header onClick={() => this.toggleMenu()} what="Collected Works, Fragments, and Writings." toggler="Information"/>
+            
           </PageContainer>
         </SiteWrapper>
       </>

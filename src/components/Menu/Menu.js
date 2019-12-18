@@ -12,7 +12,7 @@ class Menu extends Component {
     const { className, onClick } = this.props
     return (
         <Grid item xs={12} className={`menu ${className}`}>
-          <Header onClick={() => this.toggleMenu()} contextDescription="1"/>
+          <Header onClick={onClick} what="Collected Works, Fragments, and Writings." toggler="Close"/>
         </Grid>
     );
   }
