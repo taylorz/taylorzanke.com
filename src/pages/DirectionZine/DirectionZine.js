@@ -28,12 +28,10 @@ class DirectionZine extends Component {
           <Menu onClick={() => this.toggleMenu()}/>
           <PageContainer className="work-page direction-zine" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
           <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" what="Direction Zine." toggler="Information"/>
-          <WorkImage matte image={DirectionZineWork.images[0]}/>
-          <WorkImage matte image={DirectionZineWork.images[1]}/>
-          <WorkImage matte image={DirectionZineWork.images[2]}/>
-          <WorkImage matte image={DirectionZineWork.images[3]}/>
-          <WorkImage matte image={DirectionZineWork.images[4]}/>
-          <WorkImage matte image={DirectionZineWork.images[5]}/>
+          {DirectionZineWork.images.map((image) =>
+            <WorkImage matte image={DirectionZineWork.images[image]}/>
+          )}
+
           <TextBlock
             blockOne='1'
             blockTwo='2'
