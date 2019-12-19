@@ -7,24 +7,16 @@
   overflow-x: hidden;
   margin: 0; padding: 0;
   &.menu-opened {
+    overflow-y: scroll;
+    position: fixed;
     .menu {
-      transform: translateY(0);
+      transform: translateX(0%);
       transition: transform $timing $easingCubic;
-    }
-    .page-container {
-      transform: translateY(0);
-      transition: transform $timing $easingCubic;
-      pointer-events: none;
-      opacity: .5;
     }
   }//menu-opened
   &.menu-closed {
     .menu {
-      transform: translateY(-$menuHeight);
-      transition: transform $timing $easingCubic;
-    }
-    .page-container {
-      transform: translateY(-$menuHeight);
+      transform: translateX(100%);
       transition: transform $timing $easingCubic;
     }
   }//menu-closed

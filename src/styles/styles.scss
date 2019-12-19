@@ -23,7 +23,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
   a {
-    color: $darkFontColor;
+    color: inherit;
     text-decoration: none;
     &:link {}
     &:visited {}
