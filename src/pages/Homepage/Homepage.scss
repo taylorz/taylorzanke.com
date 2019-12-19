@@ -1,4 +1,14 @@
 @import "../../styles/styles.scss";
 
 .homepage {
+  background: #eaeaea;
+  .work-image-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    .work-image {
+      height: 100%;
+      width:auto;
+    }
+  }
 }//homepage

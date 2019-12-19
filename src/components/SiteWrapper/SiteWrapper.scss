@@ -9,21 +9,23 @@
   &.menu-opened {
     .menu {
       transform: translateY(0);
-      transition: transform $timing*5 $easingRegular;
+      transition: transform $timing $easingCubic;
     }
     .page-container {
       transform: translateY(0);
-      transition: transform $timing*5 $easingRegular;
+      transition: transform $timing $easingCubic;
+      pointer-events: none;
+      opacity: .5;
     }
   }//menu-opened
   &.menu-closed {
     .menu {
       transform: translateY(-$menuHeight);
-      transition: transform $timing*5 $easingRegular;
+      transition: transform $timing $easingCubic;
     }
     .page-container {
       transform: translateY(-$menuHeight);
-      transition: transform $timing*5 $easingRegular;
+      transition: transform $timing $easingCubic;
     }
   }//menu-closed
 }//page-wrapper

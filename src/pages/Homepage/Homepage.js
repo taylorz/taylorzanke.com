@@ -4,6 +4,7 @@ import './Homepage.scss';
 import SiteWrapper from '../../components/SiteWrapper/SiteWrapper';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import Header from '../../components/Header/Header';
+import Menu from '../../components/Menu/Menu';
 
 import WORKS from '../../constants/works/works';
 import FRAGMENTS from '../../constants/fragments/fragments';
@@ -31,9 +32,10 @@ class Homepage extends Component {
     return (
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
-          <PageContainer className="homepage" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
+          <Menu onClick={() => this.toggleMenu()}/>
+          <PageContainer className="homepage">
             <Header onClick={() => this.toggleMenu()} what="Collected Works, Fragments, and Writings." toggler="Information"/>
-            
+            <div className="work-image-wrapper"><img className="work-image" src={SeveralSpeculative.images[2]}/></div>
           </PageContainer>
         </SiteWrapper>
       </>
