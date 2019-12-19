@@ -23,10 +23,10 @@ class SplicedHouse extends Component {
     return (
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
-          <PageContainer className="work-page spliced-house" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <Header onClick={() => this.toggleMenu()}/>
-          </PageContainer>
           <Menu onClick={() => this.toggleMenu()}/>
+          <PageContainer className="work-page spliced-house" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
+          <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" what="Spliced House." toggler="Information"/>
+          </PageContainer>
         </SiteWrapper>
       </>
     );

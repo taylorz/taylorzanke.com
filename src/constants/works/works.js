@@ -62,7 +62,7 @@ import TransmissionsFrom7 from '../../assets/images/works/TransmissionsFrom/07.p
 const WORKS = [
   {
     status: "Upcoming",
-    id: "H",
+    id: "0",
     title: "Transmissions from Rare Space",
     year: "2019",
     object: "Drawing",
@@ -80,7 +80,7 @@ const WORKS = [
     link: "/transmissions-from-rare-space"
   },
   {
-    id: "G",
+    id: "1",
     title: "Models of Grafted Spaces, Los Angeles CA",
     year: "2018",
     object: "Model",
@@ -95,7 +95,7 @@ const WORKS = [
     link: "/grafted-spaces"
   },
   {
-    id: "F",
+    id: "2",
     title: "Night Drawings",
     year: "2018",
     object: "Drawing",
@@ -114,7 +114,7 @@ const WORKS = [
     link: "/night-drawings"
   },
   {
-    id: "E",
+    id: "3",
     title: "Spliced House, Concord CA",
     year: "2017",
     object: "Drawing",
@@ -132,7 +132,7 @@ const WORKS = [
     link: "/spliced-house"
   },
   {
-    id: "D",
+    id: "4",
     title: "Direction Zine",
     year: "2017",
     object: "Zine",
@@ -149,7 +149,7 @@ const WORKS = [
     link: "/direction-zine"
   },
   {
-    id: "C",
+    id: "5",
     title: "Several Speculative Improvements To My Family Home",
     year: "2016",
     object: "Book",
@@ -170,7 +170,7 @@ const WORKS = [
     link: "/several-speculative-improvements"
   },
   {
-    id: "B",
+    id: "6",
     title: "Stack Works",
     year: "2016",
     object: "Stacks of US Letter Paper",
@@ -181,7 +181,7 @@ const WORKS = [
     link: "/stack-works"
   },
   {
-    id: "A",
+    id: "7",
     title: "Two Cities Diary: Honolulu-New York",
     year: "2013",
     object: "Book",
@@ -196,7 +196,7 @@ const WORKS = [
     link: "/two-cities-diary"
   },
   {
-
+    id: "8",
     title: "Two Cities Diary: Mumbai-Paris",
     year: "2014",
     object: "Book",

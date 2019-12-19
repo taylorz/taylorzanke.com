@@ -8,22 +8,24 @@
   position: fixed;
   color: $darkFontColor;
   z-index: $zIndex2;
-  width: 100%;
-  left:0;
+  left: 0px;
+  right: 10px;
   .header-contents {
     width: 100%;
     padding: $buffer*8;
     display: flex;
     justify-content: space-between;
-    .name {
-    }//name
-    .what {
-      font-style: italic;
-    }//what
-    .menu-toggler {
-      &:hover {
-        cursor: pointer;
-      }
-    }//menu-toggler
+    .header-item {
+      margin-left: $buffer*8;
+      &.name {}//name
+      &.what {
+        font-style: italic;
+      }//what
+      &.menu-toggler {
+        &:hover {
+          cursor: pointer;
+        }
+      }//menu-toggler
+    }
   }//header-contents
 }//header-container

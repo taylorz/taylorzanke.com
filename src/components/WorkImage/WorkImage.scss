@@ -1,0 +1,31 @@
+@import "../../styles/styles.scss";
+
+.work-image {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background: $bgColorLight;
+  margin-bottom: $buffer*4;
+  &.matte {
+    // padding: 10%;
+    align-items: center;
+    .image-item {
+      height: 80%;
+      width: auto;
+    }
+  }
+  &.dark {
+    background: $bgColorDark;
+  }
+  &.has-link {
+    .image-item {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .image-item {
+    height: 100%;
+    width: auto;
+  }
+}

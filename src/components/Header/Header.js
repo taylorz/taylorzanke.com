@@ -11,9 +11,9 @@ class Header extends Component {
     return (
       <div className="header-container">
         <div className="header-contents">
-          <div className="name"><a href={contextLink}>{context}</a></div>
-          <div className="what">{what}</div>
-          <div className="menu-toggler" onClick={onClick}>{toggler}</div>
+          <div className="header-item name"><a href={contextLink}>{context}</a></div>
+          <div className="header-item what">{what}</div>
+          <div className="header-item menu-toggler" onClick={onClick}>{toggler}</div>
         </div>
       </div>
     );

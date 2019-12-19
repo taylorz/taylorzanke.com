@@ -15,13 +15,13 @@
     }
     .menu {
       transform: translateX(0%);
-      transition: transform $timing*10 linear;
+      transition: transform $timing*5 linear;
     }
   }//menu-opened
   &.menu-closed {
     .menu {
       transform: translateX(100%);
-      transition: transform $timing*10 linear;
+      transition: transform $timing*5 linear;
     }
   }//menu-closed
 }//page-wrapper

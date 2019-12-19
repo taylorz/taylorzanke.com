@@ -1,0 +1,15 @@
+@import "../../styles/styles.scss";
+
+.text-block {
+  padding: $buffer*8;
+  font-size: $fontSizeParagraph;
+  line-height: $lineHeightParagraph;
+  display: flex;
+  flex-direction: column;
+  .block {
+    margin-bottom: $lineHeightParagraph;
+    &.one {}
+    &.two {margin-left: $buffer*24;}
+    &.three {margin-left: $buffer*48;}
+  }
+}

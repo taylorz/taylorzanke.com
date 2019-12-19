@@ -23,10 +23,10 @@ class TransmissionsFrom extends Component {
     return (
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
-          <PageContainer className="work-page transmissions-from" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <Header onClick={() => this.toggleMenu()} contextDescription="About Architecture, Gestures, Time, Ruin."/>
-          </PageContainer>
           <Menu onClick={() => this.toggleMenu()}/>
+          <PageContainer className="work-page transmissions-from" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
+          <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" what="Transmissions From Rare Space." toggler="Information"/>
+          </PageContainer>
         </SiteWrapper>
       </>
     );
