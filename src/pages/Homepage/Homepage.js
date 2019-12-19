@@ -34,9 +34,10 @@ class Homepage extends Component {
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
           <PageContainer className="homepage">
-            <Header onClick={() => this.toggleMenu()} what="Collected Works, Fragments, and Writings." toggler="Information"/>
-            <div className="work-image-wrapper"><img className="work-image" src={SeveralSpeculative.images[2]}/></div>
+            <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" what="Collected Works, Fragments, and Writings." toggler="Information"/>
+            <div className="work-image-wrapper"><img className="work-image" src={SeveralSpeculative.images[6]}/></div>
             <div className="work-image-wrapper"><img className="work-image" src={TransmissionsFrom.images[1]}/></div>
+
           </PageContainer>
         </SiteWrapper>
       </>

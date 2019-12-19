@@ -9,15 +9,19 @@
   &.menu-opened {
     overflow-y: scroll;
     position: fixed;
+    &::-webkit-scrollbar {
+      width: 0;
+      background: transparent;
+    }
     .menu {
       transform: translateX(0%);
-      transition: transform $timing $easingCubic;
+      transition: transform $timing*10 linear;
     }
   }//menu-opened
   &.menu-closed {
     .menu {
       transform: translateX(100%);
-      transition: transform $timing $easingCubic;
+      transition: transform $timing*10 linear;
     }
   }//menu-closed
 }//page-wrapper
