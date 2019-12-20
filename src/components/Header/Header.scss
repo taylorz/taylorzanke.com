@@ -3,25 +3,31 @@
 .header-container {
   font-family: $primaryFont;
   font-size: $fontSizeParagraph;
+  line-height:$lineHeightParagraph;
   display: flex;
   align-items: center;
   position: fixed;
   color: $darkFontColor;
   z-index: $zIndex2;
   left: 0px;
-  right: 10px;
+  right: 14px;
+  &.light {
+    color: $lightFontColor;
+  }
   .header-contents {
     width: 100%;
     padding: $buffer*8;
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     .header-item {
-      margin-left: $buffer*8;
-      &.name {}//name
-      &.what {
-        font-style: italic;
-      }//what
+      &.name {
+        .detail-copy {
+          // font-style: italic;
+          text-align: center;
+        }
+      }//name
       &.menu-toggler {
+        text-align: right;
         &:hover {
           cursor: pointer;
         }

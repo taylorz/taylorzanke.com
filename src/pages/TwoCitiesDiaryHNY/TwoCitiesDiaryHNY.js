@@ -5,10 +5,12 @@ import SiteWrapper from '../../components/SiteWrapper/SiteWrapper';
 import Header from '../../components/Header/Header';
 import Menu from '../../components/Menu/Menu';
 import PageContainer from '../../components/PageContainer/PageContainer';
+import WorkImage from '../../components/WorkImage/WorkImage';
+import TextBlock from '../../components/TextBlock/TextBlock';
 
 import WORKS from '../../constants/works/works';
 
-const TwoCitiesDiaryWork = WORKS[1];
+const TwoCitiesDiaryHNYWork = WORKS[7];
 
 class TwoCitiesDiary extends Component {
   state = {
@@ -23,10 +25,30 @@ class TwoCitiesDiary extends Component {
     return (
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
-          <PageContainer className="work-page two-cities-hny" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <Header onClick={() => this.toggleMenu()}/>
-          </PageContainer>
           <Menu onClick={() => this.toggleMenu()}/>
+          <PageContainer className="work-page two-cities-hny" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
+          <Header
+            onClick={() => this.toggleMenu()}
+            context="Taylor Zanke"
+            contextLink="/"
+            workDetail={`
+              ${TwoCitiesDiaryHNYWork.title},
+              ${TwoCitiesDiaryHNYWork.year},
+              ${TwoCitiesDiaryHNYWork.object}.
+              ${TwoCitiesDiaryHNYWork.dimensions}.
+              ${TwoCitiesDiaryHNYWork.details}
+            `}
+            toggler="Menu"
+          />
+          {TwoCitiesDiaryHNYWork.images.map((image) =>
+            <WorkImage matte image={image}/>
+          )}
+          <TextBlock
+            blockOne='1'
+            blockTwo='2'
+            blockThree='3'
+          />
+          </PageContainer>
         </SiteWrapper>
       </>
     );

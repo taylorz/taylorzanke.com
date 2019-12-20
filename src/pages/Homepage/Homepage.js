@@ -36,13 +36,13 @@ class Homepage extends Component {
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
           <PageContainer className="homepage">
-            <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" what="Index" toggler="Menu"/>
+            <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" what="1. Works" toggler="Menu"/>
             <WorkImage
-              image={TransmissionsFrom.images[4]}
+              image={TransmissionsFrom.images[1]}
               link={TransmissionsFrom.link}
             />
             <WorkImage
-              matte
+              light
               image={GraftedSpaces.images[2]}
               link={GraftedSpaces.link}
             />
@@ -56,27 +56,31 @@ class Homepage extends Component {
               image={SplicedHouse.images[0]}
               link={SplicedHouse.link}
             />
+            {/*
+              <WorkImage
+                matte
+                image={DirectionZine.images[0]}
+                link={DirectionZine.link}
+              />
+            */}
             <WorkImage
-              matte
-              image={DirectionZine.images[0]}
-              link={DirectionZine.link}
-            />
-            <WorkImage
-              image={SeveralSpeculative.images[0]}
+              image={SeveralSpeculative.images[2]}
               link={SeveralSpeculative.link}
             />
+            {/*
+              <WorkImage
+                matte
+                image={TwoCitiesDiaryHNY.images[0]}
+                link={TwoCitiesDiaryHNY.link}
+              />
+            */}
             <WorkImage
-              matte
-              image={TwoCitiesDiaryHNY.images[0]}
-              link={TwoCitiesDiaryHNY.link}
-            />
-            <WorkImage
-              image={TwoCitiesDiaryMP.images[0]}
+              image={TwoCitiesDiaryMP.images[1]}
               link={TwoCitiesDiaryMP.link}
             />
             <TextBlock
               blockOne='Taylor Zanke is an artist and designer who makes drawings, models, books, photographs, and recordings. He seeks to uncover the ways in which Space travels through Time, revealing potential, dismantling inevitability.'
-              blockTwo='He holds a BFA from Parsons The New School for Design, and a Masters of Architecture and Masters of Science in Real Estate Development from Columbia University.'
+              blockTwo='He holds a BFA from Parsons The New School for Design, a Masters of Architecture and Masters of Science in Real Estate Development from Columbia University.'
               blockThree='This website is a depository which contains found and invented artefacts of a varied type presented within a rigid bounds. The 8.5" x 11" (US Letter) page, in its physical spatial dimensionality, is helpfully understood here to also bear conceptual significance. Fragments of a processual imaginary are materially indexed, and as a result are conceptually demarcated.'
             />
           </PageContainer>

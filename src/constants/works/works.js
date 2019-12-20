@@ -1,7 +1,7 @@
-import TwoCitiesDiary1 from '../../assets/images/works/TwoCitiesDiary/TwoCitiesDiary1.png'
-import TwoCitiesDiary2 from '../../assets/images/works/TwoCitiesDiary/TwoCitiesDiary2.png'
-import TwoCitiesDiary3 from '../../assets/images/works/TwoCitiesDiary/TwoCitiesDiary3.png'
-import TwoCitiesDiary4 from '../../assets/images/works/TwoCitiesDiary/TwoCitiesDiary4.png'
+import TwoCitiesDiaryHNY1 from '../../assets/images/works/TwoCitiesDiary/TwoCitiesDiary1.png'
+import TwoCitiesDiaryHNY2 from '../../assets/images/works/TwoCitiesDiary/TwoCitiesDiary2.png'
+import TwoCitiesDiaryHNY3 from '../../assets/images/works/TwoCitiesDiary/TwoCitiesDiary3.png'
+import TwoCitiesDiaryHNY4 from '../../assets/images/works/TwoCitiesDiary/TwoCitiesDiary4.png'
 
 import TwoCitiesDiaryMP1 from '../../assets/images/works/TwoCitiesDiaryMP/01.png'
 import TwoCitiesDiaryMP2 from '../../assets/images/works/TwoCitiesDiaryMP/02.png'
@@ -61,13 +61,12 @@ import TransmissionsFrom7 from '../../assets/images/works/TransmissionsFrom/07.p
 
 const WORKS = [
   {
-    status: "Upcoming",
     id: "0",
     title: "Transmissions from Rare Space",
     year: "2019",
-    object: "Drawing",
-    dimensions: "12 x 14 inches",
-    details: "Graphite and inkjet printed line on bond, 1 of 103.",
+    object: "Book",
+    dimensions: "7 x 9 inches",
+    details: "Self, Collected drawings, inkjet printed, single edition.",
     images: [
       TransmissionsFrom1,
       TransmissionsFrom2,
@@ -83,9 +82,9 @@ const WORKS = [
     id: "1",
     title: "Models of Grafted Spaces, Los Angeles CA",
     year: "2018",
-    object: "Model",
+    object: "Models",
     dimensions: "Roughly 16 x 18 x 12 inches",
-    details: "1 in = 1 ft, Interior Section.",
+    details: "1 in = 1 ft, Interior Sections.",
     images: [
       GraftedSpaces1,
       GraftedSpaces2,
@@ -98,9 +97,9 @@ const WORKS = [
     id: "2",
     title: "Night Drawings",
     year: "2018",
-    object: "Drawing",
+    object: "Drawings",
     dimensions: "8.5 x 11 inches",
-    details: "Inkjet printed line on letter paper, 1 of 8.",
+    details: "Inkjet printed line and graphite on letter paper, 1 of 8.",
     images: [
       NightDrawings1,
       NightDrawings2,
@@ -117,7 +116,7 @@ const WORKS = [
     id: "3",
     title: "Spliced House, Concord CA",
     year: "2017",
-    object: "Drawing",
+    object: "Drawings",
     dimensions: "8.5 x 11 inches for presentation",
     details: "Inkjet printed on bond.",
     images: [
@@ -188,10 +187,10 @@ const WORKS = [
     dimensions: "6 x 8 inches",
     details: "Self, Single Edition.",
     images: [
-      TwoCitiesDiary1,
-      TwoCitiesDiary2,
-      TwoCitiesDiary3,
-      TwoCitiesDiary4,
+      TwoCitiesDiaryHNY1,
+      TwoCitiesDiaryHNY2,
+      TwoCitiesDiaryHNY3,
+      TwoCitiesDiaryHNY4,
     ],
     link: "/two-cities-diary"
   },

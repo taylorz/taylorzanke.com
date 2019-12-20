@@ -4,17 +4,17 @@ import './WorkImage.scss';
 
 class WorkImage extends Component {
   render() {
-    const { image, matte, dark, link } = this.props
+    const { image, matte, full, dark, light, link } = this.props
     return (
       <>
         {link ?
           <a href={link}>
-            <div className={`work-image has-link ${matte && "matte"} ${dark && "dark"}`}>
+            <div className={`work-image has-link ${matte && "matte"} ${full && "full"} ${dark && "dark"} ${light && "light"}`}>
               <img className="image-item" src={image}/>
             </div>
           </a>
           : (
-          <div className={`work-image ${matte && "matte"} ${dark && "dark"}`}>
+          <div className={`work-image ${matte && "matte"} ${full && "full"} ${dark && "dark"} ${light && "light"}`}>
             <img className="image-item" src={image}/>
           </div>
         )}

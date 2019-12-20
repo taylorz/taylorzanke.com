@@ -27,15 +27,22 @@ class NightDrawings extends Component {
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
           <PageContainer className="work-page night-drawings" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" what="Night Drawings." toggler="Information"/>
-          <WorkImage matte image={NightDrawingsWork.images[0]}/>
-          <WorkImage matte image={NightDrawingsWork.images[1]}/>
-          <WorkImage matte image={NightDrawingsWork.images[2]}/>
-          <WorkImage matte image={NightDrawingsWork.images[3]}/>
-          <WorkImage matte image={NightDrawingsWork.images[4]}/>
-          <WorkImage matte image={NightDrawingsWork.images[5]}/>
-          <WorkImage matte image={NightDrawingsWork.images[6]}/>
-          <WorkImage matte image={NightDrawingsWork.images[7]}/>
+          <Header
+            onClick={() => this.toggleMenu()}
+            context="Taylor Zanke"
+            contextLink="/"
+            workDetail={`
+              ${NightDrawingsWork.title},
+              ${NightDrawingsWork.year},
+              ${NightDrawingsWork.object}.
+              ${NightDrawingsWork.dimensions}.
+              ${NightDrawingsWork.details}
+            `}
+            toggler="Menu"
+          />
+          {NightDrawingsWork.images.map((image) =>
+            <WorkImage light image={image}/>
+          )}
           <TextBlock
             blockOne='1'
             blockTwo='2'

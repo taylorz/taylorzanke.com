@@ -7,9 +7,12 @@
   display: flex;
   flex-direction: column;
   .block {
-    margin-bottom: $lineHeightParagraph;
+    margin-bottom: $lineHeight;
     &.one {}
     &.two {margin-left: $buffer*24;}
     &.three {margin-left: $buffer*48;}
+    &.four {margin-left: $buffer*72;}
+    &.five {margin-left: $buffer*96;}
+    &.six {margin-left: $buffer*120;}
   }
 }

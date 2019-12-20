@@ -3,18 +3,19 @@ import Grid from '@material-ui/core/Grid';
 import './Header.scss';
 
 class Header extends Component {
-  showCurrentYear() {
-    return new Date().getFullYear();
-  }
   render() {
-    const { onClick, context, contextLink, what, toggler } = this.props
+    const { onClick, context, close, contextLink, workDetail, light } = this.props
     return (
-      <div className="header-container">
-        <div className="header-contents">
-          <div className="header-item name"><a href={contextLink}>{context}</a></div>
-          <div className="header-item what">{what}</div>
-          <div className="header-item menu-toggler" onClick={onClick}>{toggler}</div>
-        </div>
+      <div className={`header-container ${light && "light"}`}>
+        <Grid container className="header-contents">
+          <Grid item xs={2} className="header-item name">
+            <a href={contextLink}>{context}</a>
+          </Grid>
+          <Grid item xs={6} className="header-item name">
+            <span className="detail-copy">{workDetail}</span>
+          </Grid>
+          {/*<Grid item xs={4} className="header-item menu-toggler"><span onClick={onClick}>{close ? "Close" : "Menu"}</span></Grid>*/}
+        </Grid>
       </div>
     );
   }

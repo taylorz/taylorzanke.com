@@ -12,7 +12,7 @@ class Menu extends Component {
     const { className, onClick } = this.props
     return (
         <Grid item xs={12} className={`menu ${className}`}>
-          <Header onClick={onClick} context="Menu" what="" toggler="Close"/>
+          <Header onClick={onClick} context="Menu" what="" close/>
         </Grid>
     );
   }

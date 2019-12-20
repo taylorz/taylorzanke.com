@@ -27,11 +27,25 @@ class GraftedSpaces extends Component {
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
           <PageContainer className="work-page grafted-spaces" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" what="Models of Grafted Spaces." toggler="Information"/>
-          <WorkImage matte image={GraftedSpacesWork.images[0]}/>
-          <WorkImage matte image={GraftedSpacesWork.images[1]}/>
-          <WorkImage matte image={GraftedSpacesWork.images[2]}/>
-          <WorkImage matte image={GraftedSpacesWork.images[3]}/>
+          <Header
+            onClick={() => this.toggleMenu()}
+            context="Taylor Zanke"
+            contextLink="/"
+            workDetail={`
+              ${GraftedSpacesWork.title},
+              ${GraftedSpacesWork.year},
+              ${GraftedSpacesWork.object}.
+              ${GraftedSpacesWork.dimensions}.
+              ${GraftedSpacesWork.details}
+            `}
+            toggler="Menu"
+          />
+          {GraftedSpacesWork.images.map((image) =>
+            <WorkImage
+              light
+              image={image}
+            />
+          )}
           <TextBlock
             blockOne='1'
             blockTwo='2'

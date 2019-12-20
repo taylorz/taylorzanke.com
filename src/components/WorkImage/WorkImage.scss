@@ -6,16 +6,30 @@
   height: 100vh;
   background: $bgColorLight;
   margin-bottom: $buffer*4;
+  // margin: 0 $buffer*4 $buffer*4 $buffer*4 ;
   &.matte {
     // padding: 10%;
     align-items: center;
     .image-item {
       height: 80%;
       width: auto;
+      // box-shadow: 0px 5px 40px #ccc;
+    }
+  }
+  &.full {
+    margin: 0 $buffer*4 $buffer*4 $buffer*4 ;
+    overflow: hidden;
+    align-items: center;
+    .image-item {
+      width: 100%;
+      height: auto;
     }
   }
   &.dark {
     background: $bgColorDark;
+  }
+  &.light {
+    background: $bgBody;
   }
   &.has-link {
     .image-item {

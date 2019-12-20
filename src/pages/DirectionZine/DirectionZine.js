@@ -27,11 +27,22 @@ class DirectionZine extends Component {
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
           <PageContainer className="work-page direction-zine" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" what="Direction Zine." toggler="Information"/>
+          <Header
+            onClick={() => this.toggleMenu()}
+            context="Taylor Zanke"
+            contextLink="/"
+            workDetail={`
+              ${DirectionZineWork.title},
+              ${DirectionZineWork.year},
+              ${DirectionZineWork.object}.
+              ${DirectionZineWork.dimensions}.
+              ${DirectionZineWork.details}
+            `}
+            toggler="Menu"
+          />
           {DirectionZineWork.images.map((image) =>
-            <WorkImage matte image={DirectionZineWork.images[image]}/>
+            <WorkImage matte image={image}/>
           )}
-
           <TextBlock
             blockOne='1'
             blockTwo='2'
