@@ -4,9 +4,13 @@
   font-size: $fontSizeParagraph;
   line-height: $lineHeightParagraph;
   padding: $buffer*8;
-  // border-top: 1px solid $bgColorLight;
+  border-top: 1px solid $bgColorDark;
+  .footer-link {
+    &:hover {
+      cursor: pointer;
+    }
+  }
   .header {
-    // margin-bottom: $buffer*4;
     &.copyright {
       text-align: right;
       @include breakpoint(md) {
@@ -16,6 +20,9 @@
   }
   .list {
     // margin-bottom: $buffer*4;
+    @include breakpoint(md) {
+      margin: $buffer*8 0;
+    }
     ul {
       list-style-type: none;
       margin:0;padding:0;

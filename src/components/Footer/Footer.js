@@ -13,19 +13,10 @@ class Footer extends Component {
         <Grid item className="footer-section header" xs={12} md={2}>
           Contact
         </Grid>
-        <Grid item className="footer-section list" xs={12} md={3}>
+        <Grid item className="footer-section list" xs={12} md={8}>
           <ul>
-            <li>mail@taylorzanke.com</li>
-            <li>@taylorzanke</li>
-          </ul>
-        </Grid>
-        <Grid item className="footer-section header" xs={12} md={2}>
-          Information
-        </Grid>
-        <Grid item className="footer-section list" xs={12} md={3}>
-          <ul>
-            <li>Website set in Fann Grotesque</li>
-            <li>Built in React</li>
+            <li><a className="footer-link" href="mailto:mail@taylorzanke.com">mail@taylorzanke.com</a></li>
+            <li><a className="footer-link" href="https://www.instagram.com/taylorzanke/">@taylorzanke</a></li>
           </ul>
         </Grid>
         <Grid item className="footer-section header copyright" xs={12} md={2}>

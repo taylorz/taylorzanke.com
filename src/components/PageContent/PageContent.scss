@@ -1,0 +1,7 @@
+@import "../../styles/styles.scss";
+
+.page-content-wrapper {
+  @include breakpoint(sm) {
+    margin-top: 30vh;
+  }
+}//page-content-wrapper

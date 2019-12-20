@@ -20,7 +20,11 @@
     display: flex;
     // justify-content: space-between;
     .header-item {
-      &.name {
+      &.name {}
+      &.detail {
+        @include breakpoint(sm) {
+          margin-top: $lineHeightParagraph;
+        }
         .detail-copy {
           // font-style: italic;
           text-align: center;

@@ -7,6 +7,7 @@ import Header from '../../components/Header/Header';
 import Menu from '../../components/Menu/Menu';
 import WorkImage from '../../components/WorkImage/WorkImage';
 import TextBlock from '../../components/TextBlock/TextBlock';
+import PageContent from '../../components/PageContent/PageContent';
 
 import WORKS from '../../constants/works/works';
 
@@ -40,14 +41,11 @@ class DirectionZine extends Component {
             `}
             toggler="Menu"
           />
-          {DirectionZineWork.images.map((image) =>
-            <WorkImage matte image={image}/>
-          )}
-          <TextBlock
-            blockOne='1'
-            blockTwo='2'
-            blockThree='3'
-          />
+          <PageContent>
+            {DirectionZineWork.images.map((image) =>
+              <WorkImage matte image={image}/>
+            )}
+          </PageContent>
           </PageContainer>
         </SiteWrapper>
       </>

@@ -8,11 +8,14 @@
   flex-direction: column;
   .block {
     margin-bottom: $lineHeight;
+    @include breakpoint(sm) {
+      margin-left: 0 !important;
+    }
     &.one {}
-    &.two {margin-left: $buffer*24;}
-    &.three {margin-left: $buffer*48;}
-    &.four {margin-left: $buffer*72;}
-    &.five {margin-left: $buffer*96;}
-    &.six {margin-left: $buffer*120;}
+    &.two {}
+    &.three {}
+    &.four {}
+    &.five {}
+    &.six {}
   }
 }

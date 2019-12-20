@@ -7,6 +7,7 @@ import Menu from '../../components/Menu/Menu';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import WorkImage from '../../components/WorkImage/WorkImage';
 import TextBlock from '../../components/TextBlock/TextBlock';
+import PageContent from '../../components/PageContent/PageContent';
 
 import WORKS from '../../constants/works/works';
 
@@ -40,17 +41,14 @@ class GraftedSpaces extends Component {
             `}
             toggler="Menu"
           />
-          {GraftedSpacesWork.images.map((image) =>
-            <WorkImage
-              light
-              image={image}
-            />
-          )}
-          <TextBlock
-            blockOne='1'
-            blockTwo='2'
-            blockThree='3'
-          />
+          <PageContent>
+            {GraftedSpacesWork.images.map((image) =>
+              <WorkImage
+                light
+                image={image}
+              />
+            )}
+          </PageContent>
           </PageContainer>
         </SiteWrapper>
       </>
