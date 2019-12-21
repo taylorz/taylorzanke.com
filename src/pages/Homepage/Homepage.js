@@ -37,7 +37,7 @@ class Homepage extends Component {
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
           <PageContainer className="homepage">
-            <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" what="1. Works" toggler="Menu"/>
+            <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" workDetail="Books and drawings"/>
             <PageContent>
             <WorkImage
               image={TransmissionsFrom.images[1]}
@@ -77,15 +77,17 @@ class Homepage extends Component {
                 link={DirectionZine.link}
               />
             */}
-            {/*
+
               <WorkImage
                 matte
                 image={TwoCitiesDiaryHNY.images[0]}
                 link={TwoCitiesDiaryHNY.link}
               />
-            */}
+
             <TextBlock
               blockOne='Taylor Zanke is an artist and designer working in New York City. He seeks to uncover the ways in which Space travels through Time, revealing potential, dismantling inevitability.'
+              blockTwo='He holds a BFA from Parsons the New School for Design, and a Masters of Architecture and Masters of Science in Real Estate Development from Columbia University.'
+              blockThree='“The mason was struck by the fact that expended energy does not get lost; it remains stored for many years, never diminished, latent in the block of stone, until one day it happens that the block slides off the roof and falls on the head of a passerby, killing him.”'
             />
             </PageContent>
           </PageContainer>
