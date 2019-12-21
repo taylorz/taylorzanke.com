@@ -48,6 +48,9 @@ class SplicedHouse extends Component {
                 image={image}
               />
             )}
+            <TextBlock
+              blockOne='By irregularly cutting a vernacular structure, and inserting space between, a house with definite extents and clear use becomes a space of infinite size and possibility. A new site is found, ready to be addressed, in between what was previously boundaried.'
+            />
           </PageContent>
           </PageContainer>
         </SiteWrapper>
