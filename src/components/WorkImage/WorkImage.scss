@@ -7,7 +7,7 @@
   background: $bgColorLight;
   margin-bottom: $buffer*4;
   // margin: 0 $buffer*4 $buffer*4 $buffer*4 ;
-  @include breakpoint(md) {
+  @include breakpoint(sm) {
     height: auto;
     width: 100vw !important;
     .image-item {
@@ -20,6 +20,10 @@
     .image-item {
       height: 70%;
       width: auto;
+      @include breakpoint(sm) {
+        max-width: 60%;
+        padding: 10% 30% 10% 30%;
+      }
       // box-shadow: 0px 5px 40px #ccc;
     }
   }
