@@ -44,8 +44,7 @@ class SplicedHouse extends Component {
           <PageContent>
             {SplicedHouseWork.images.map((image) =>
               <WorkImage
-
-                light
+                matte
                 image={image}
               />
             )}

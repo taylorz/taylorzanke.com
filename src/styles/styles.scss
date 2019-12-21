@@ -27,7 +27,9 @@ body {
     text-decoration: none;
     &:link {}
     &:visited {}
-    &:hover { cursor: pointer; }
+    &:hover {
+      cursor: pointer;
+    }
     &:active {}
   }
 
