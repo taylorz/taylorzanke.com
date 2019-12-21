@@ -18,14 +18,14 @@ class App extends Component {
       <div className="App" >
         <Router>
           <Route exact path="/" component={Homepage}/>
-          <Route exact path="/transmissions-from-rare-space" component={TransmissionsFrom}/>
-          <Route exact path="/grafted-spaces" component={GraftedSpaces}/>
-          <Route exact path="/night-drawings" component={NightDrawings}/>
-          <Route exact path="/spliced-house" component={SplicedHouse}/>
-          <Route exact path="/direction-zine" component={DirectionZine}/>
-          <Route exact path="/several-speculative-improvements" component={SeveralSpeculative}/>
-          <Route exact path="/two-cities-diary" component={TwoCitiesDiaryHNY}/>
-          <Route exact path="/two-cities-diary-mumbai-paris" component={TwoCitiesDiaryMP}/>
+          <Route path="/transmissions-from-rare-space" component={TransmissionsFrom}/>
+          <Route path="/grafted-spaces" component={GraftedSpaces}/>
+          <Route path="/night-drawings" component={NightDrawings}/>
+          <Route path="/spliced-house" component={SplicedHouse}/>
+          <Route path="/direction-zine" component={DirectionZine}/>
+          <Route path="/several-speculative-improvements" component={SeveralSpeculative}/>
+          <Route path="/two-cities-diary" component={TwoCitiesDiaryHNY}/>
+          <Route path="/two-cities-diary-mumbai-paris" component={TwoCitiesDiaryMP}/>
         </Router>
       </div>
     );
