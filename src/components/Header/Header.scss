@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   position: fixed;
+  pointer-events: none;
   color: $darkFontColor;
   z-index: $zIndex2;
   left: 0px;
@@ -22,7 +23,9 @@
     display: flex;
     // justify-content: space-between;
     .header-item {
-      &.name {}
+      &.name {
+        pointer-events: all;
+      }
       &.detail {
         @include breakpoint(sm) {
           margin-top: $lineHeightParagraph;
@@ -34,8 +37,11 @@
       }//name
       &.menu-toggler {
         text-align: right;
-        &:hover {
-          cursor: pointer;
+        span {
+          pointer-events: all;
+          &:hover {
+            cursor: pointer;
+          }
         }
       }//menu-toggler
     }
