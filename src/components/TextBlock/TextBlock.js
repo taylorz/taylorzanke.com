@@ -4,7 +4,7 @@ import './TextBlock.scss';
 
 class TextBlock extends Component {
   render() {
-    const { blockOne, blockTwo, blockThree } = this.props
+    const { blockOne, blockTwo, blockThree, blockFour } = this.props
     return (
       <Grid container className="text-block">
         {blockOne &&
@@ -20,6 +20,11 @@ class TextBlock extends Component {
         {blockThree &&
           <Grid item className="block three" xs={12} md={7}>
             {blockThree}
+          </Grid>
+        }
+        {blockFour &&
+          <Grid item className="block four" xs={12} md={7}>
+            {blockFour}
           </Grid>
         }
       </Grid>
