@@ -59,12 +59,10 @@ class Homepage extends Component {
               image={NightDrawings.images[0]}
               link={NightDrawings.link}
             />
-            {/*
             <WorkImage
-              image={TwoCitiesDiaryMP.images[1]}
+              image={TwoCitiesDiaryMP.images[2]}
               link={TwoCitiesDiaryMP.link}
             />
-            */}
             <WorkImage
               matte
               image={SplicedHouse.images[0]}

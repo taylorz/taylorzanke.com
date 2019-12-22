@@ -43,8 +43,13 @@ class TwoCitiesDiaryMP extends Component {
         />
         <PageContent>
           {TwoCitiesDiaryMPWork.images.map((image) =>
-            <WorkImage image={image}/>
+            <WorkImage
+              image={image}
+            />
           )}
+          <TextBlock
+            blockOne='Images were printed onto sheets of paper which were placed onto a table. A camera captured video of overlapping sheets of paper settling into place. Stills from the video make up the book, collapsing great phsyical distances and duplicating lingering frames.'
+          />
         </PageContent>
         </PageContainer>
         </SiteWrapper>
