@@ -25,10 +25,13 @@ body {
   a {
     color: inherit;
     text-decoration: none;
+    @include transitionRegular;
     &:link {}
     &:visited {}
     &:hover {
       cursor: pointer;
+      color: $lightFontColor;
+      @include transitionRegular;
     }
     &:active {}
   }

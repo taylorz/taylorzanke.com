@@ -8,7 +8,6 @@ import TwoCitiesDiaryMP2 from '../../assets/images/works/TwoCitiesDiaryMP/02.png
 import TwoCitiesDiaryMP3 from '../../assets/images/works/TwoCitiesDiaryMP/03.png'
 import TwoCitiesDiaryMP4 from '../../assets/images/works/TwoCitiesDiaryMP/04.png'
 import TwoCitiesDiaryMP5 from '../../assets/images/works/TwoCitiesDiaryMP/05.png'
-import TwoCitiesDiaryMP6 from '../../assets/images/works/TwoCitiesDiaryMP/06.png'
 
 import SeveralSpeculative1 from '../../assets/images/works/SeveralSpeculative/01.png'
 import SeveralSpeculative2 from '../../assets/images/works/SeveralSpeculative/02.png'
@@ -207,7 +206,6 @@ const WORKS = [
       TwoCitiesDiaryMP3,
       TwoCitiesDiaryMP4,
       TwoCitiesDiaryMP5,
-      TwoCitiesDiaryMP6,
     ],
     link: "/two-cities-diary-mumbai-paris"
   },

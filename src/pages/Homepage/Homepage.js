@@ -59,25 +59,21 @@ class Homepage extends Component {
               image={NightDrawings.images[0]}
               link={NightDrawings.link}
             />
-            {/*
             <WorkImage
-              image={TwoCitiesDiaryMP.images[2]}
+              image={TwoCitiesDiaryMP.images[3]}
               link={TwoCitiesDiaryMP.link}
             />
-            */}
             <WorkImage
               matte
               image={SplicedHouse.images[0]}
               link={SplicedHouse.link}
             />
-            {/*
+
               <WorkImage
                 matte
                 image={DirectionZine.images[0]}
                 link={DirectionZine.link}
               />
-            */}
-
               <WorkImage
                 matte
                 image={TwoCitiesDiaryHNY.images[0]}
@@ -85,8 +81,8 @@ class Homepage extends Component {
               />
 
             <TextBlock
-              blockOne='Taylor Zanke is an artist and designer working in New York City. He seeks to uncover the ways in which Space travels through Time, revealing potential, dismantling inevitability.'
-              blockTwo='He produces drawings, models, or photographs of imagined or real spaces, some of which are included in singular books. Like a diary or journal might, these books expose a thinking—making through the unique idiosyncracies that arise out of their individual production. Like the model does in architectural practice, these books outline an idea, and approximate a reality, demonstrating this through particular material, imagistic, or compositional choices.'
+              blockOne='Taylor Zanke is an artist and designer working in New York City. He seeks to uncover the ways in which space travels through time, revealing potential, dismantling inevitability.'
+              blockTwo='He produces drawings, models, or photographs of imagined or real spaces, some of which are included in singular books. Like a diary or journal might, these books expose a thinking-through-making. This is shown by the unique idiosyncrasies that arise from their individual form. As the model does in architectural practice, these books outline an idea and approximate a particular reality.'
               blockThree='He holds a BFA from Parsons the New School for Design, and a Masters of Architecture and Masters of Science in Real Estate Development from Columbia University.'
               blockFour='“The mason was struck by the fact that expended energy does not get lost; it remains stored for many years, never diminished, latent in the block of stone, until one day it happens that the block slides off the roof and falls on the head of a passerby, killing him.”'
             />
