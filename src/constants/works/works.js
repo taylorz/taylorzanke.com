@@ -1,7 +1,8 @@
-import TwoCitiesDiaryHNY1 from '../../assets/images/works/TwoCitiesDiary/TwoCitiesDiary1.png'
-import TwoCitiesDiaryHNY2 from '../../assets/images/works/TwoCitiesDiary/TwoCitiesDiary2.png'
-import TwoCitiesDiaryHNY3 from '../../assets/images/works/TwoCitiesDiary/TwoCitiesDiary3.png'
-import TwoCitiesDiaryHNY4 from '../../assets/images/works/TwoCitiesDiary/TwoCitiesDiary4.png'
+import TwoCitiesDiaryHNY1 from '../../assets/images/works/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY1.png'
+import TwoCitiesDiaryHNY2 from '../../assets/images/works/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY2.png'
+import TwoCitiesDiaryHNY3 from '../../assets/images/works/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY3.png'
+import TwoCitiesDiaryHNY4 from '../../assets/images/works/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY4.png'
+import TwoCitiesDiaryHNY5 from '../../assets/images/works/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY5.png'
 
 import TwoCitiesDiaryMP1 from '../../assets/images/works/TwoCitiesDiaryMP/01.png'
 import TwoCitiesDiaryMP2 from '../../assets/images/works/TwoCitiesDiaryMP/02.png'
@@ -190,13 +191,14 @@ const WORKS = [
       TwoCitiesDiaryHNY2,
       TwoCitiesDiaryHNY3,
       TwoCitiesDiaryHNY4,
+      TwoCitiesDiaryHNY5,
     ],
     link: "/two-cities-diary"
   },
   {
     id: "8",
     title: "Two Cities Diary: Mumbai-Paris",
-    year: "2014",
+    year: "2015",
     object: "Book",
     dimensions: "12 x 10 inches",
     details: "Self, Single Edition.",

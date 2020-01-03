@@ -43,7 +43,7 @@ class TwoCitiesDiary extends Component {
           />
           <PageContent>
             {TwoCitiesDiaryHNYWork.images.map((image) =>
-              <WorkImage matte image={image}/>
+              <WorkImage image={image}/>
             )}
           </PageContent>
           </PageContainer>
