@@ -63,6 +63,7 @@ import TransmissionsFrom_D_2 from '../../assets/images/works/TransmissionsFrom/d
 import TransmissionsFrom_D_3 from '../../assets/images/works/TransmissionsFrom/details/03.png'
 import TransmissionsFrom_D_4 from '../../assets/images/works/TransmissionsFrom/details/04.png'
 import TransmissionsFrom_D_5 from '../../assets/images/works/TransmissionsFrom/details/05.png'
+import TransmissionsFrom_D_6 from '../../assets/images/works/TransmissionsFrom/details/06.png'
 
 
 const WORKS = [
@@ -88,6 +89,7 @@ const WORKS = [
       TransmissionsFrom_D_3,
       TransmissionsFrom_D_4,
       TransmissionsFrom_D_5,
+      TransmissionsFrom_D_6,
     ],
     link: "/transmissions-from-rare-space"
   },
