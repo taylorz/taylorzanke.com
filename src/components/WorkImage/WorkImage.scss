@@ -2,6 +2,7 @@
 
 .work-image {
   display: flex;
+  position: relative;
   justify-content: center;
   height: 100vh;
   background: $bgColorLight;
@@ -43,8 +44,13 @@
     background: $bgBody;
   }
   &.has-link {
-    .image-item {
-      &:hover {
+    &:hover {
+      .image-count {
+        opacity: 1;
+        color: $darkFontColor;
+        @include transition;
+      }
+      .image-item {
         cursor: pointer;
       }
     }
@@ -52,5 +58,15 @@
   .image-item {
     height: 100%;
     width: auto;
+  }
+  .image-count {
+    opacity: 0;
+    font-size: $fontSizeParagraph;
+    line-height:$lineHeightParagraph;
+    position: absolute;
+    z-index: $zIndex3;
+    top: $buffer*8;
+    right: $buffer*8;
+    @include transition;
   }
 }

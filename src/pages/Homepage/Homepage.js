@@ -41,10 +41,12 @@ class Homepage extends Component {
             <PageContent>
             <WorkImage
               image={TransmissionsFrom.images[1]}
+              imageCount={TransmissionsFrom.images.length}
               link={TransmissionsFrom.link}
             />
             <WorkImage
               image={SeveralSpeculative.images[2]}
+              imageCount={SeveralSpeculative.images.length}
               link={SeveralSpeculative.link}
             />
             {/*
@@ -57,25 +59,30 @@ class Homepage extends Component {
             <WorkImage
               matte
               image={NightDrawings.images[0]}
+              imageCount={NightDrawings.images.length}
               link={NightDrawings.link}
             />
             <WorkImage
               image={TwoCitiesDiaryMP.images[3]}
+              imageCount={TwoCitiesDiaryMP.images.length}
               link={TwoCitiesDiaryMP.link}
             />
             <WorkImage
               matte
               image={SplicedHouse.images[0]}
+              imageCount={SplicedHouse.images.length}
               link={SplicedHouse.link}
             />
 
               <WorkImage
                 matte
                 image={DirectionZine.images[0]}
+                imageCount={DirectionZine.images.length}
                 link={DirectionZine.link}
               />
               <WorkImage
                 image={TwoCitiesDiaryHNY.images[0]}
+                imageCount={TwoCitiesDiaryHNY.images.length}
                 link={TwoCitiesDiaryHNY.link}
               />
 
