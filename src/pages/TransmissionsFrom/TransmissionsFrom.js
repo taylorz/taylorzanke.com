@@ -6,6 +6,7 @@ import Header from '../../components/Header/Header';
 import Menu from '../../components/Menu/Menu';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import WorkImage from '../../components/WorkImage/WorkImage';
+import WorkDetail from '../../components/WorkDetail/WorkDetail';
 import TextBlock from '../../components/TextBlock/TextBlock';
 import PageContent from '../../components/PageContent/PageContent';
 
@@ -37,7 +38,7 @@ class TransmissionsFrom extends Component {
               ${TransmissionsFromWork.year},
               ${TransmissionsFromWork.object}.
               ${TransmissionsFromWork.dimensions}.
-              ${TransmissionsFromWork.details}
+              ${TransmissionsFromWork.information}
             `}
             toggler="Menu"
           />
@@ -45,6 +46,12 @@ class TransmissionsFrom extends Component {
               {TransmissionsFromWork.images.map((image) =>
                 <WorkImage image={image}/>
               )}
+              <Grid container className="work-details-container" spacing={2}>
+                {TransmissionsFromWork.details.map((detail) =>
+                  <WorkDetail detail={detail}/>
+                )}
+              </Grid>
+
               <TextBlock
                 blockOne='Like a building turning to ruin, a gesture is the result of many unseen forces. My gestures start as lines on the page, I am making uncertain boundaries, shaped by feeling, guided by anticipation. The building feels time, its structure turns to gesture by weight of gravity, and by use. Rough edges replace smooth ones and what was previously concealed becomes visible. In serendipitous co-incidence a building and a gesture: registers of unseen force, transmissions from rare space.'
                 blockTwo='Here is the site for sensitive treatment of a delicate balance. It is the site for an exercise in preservation. Left any longer the building could turn to dust, and the feeling which shapes my line could pass. Both are thresholds where, once crossed, it is difficult to return. Simple strucutres turning into dust, turning into gesture. Gestures suggesting solidity, revealing potential.'

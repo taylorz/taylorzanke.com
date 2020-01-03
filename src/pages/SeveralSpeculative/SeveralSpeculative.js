@@ -38,7 +38,7 @@ class SeveralSpeculative extends Component {
               ${SeveralSpeculativeWork.year},
               ${SeveralSpeculativeWork.object}.
               ${SeveralSpeculativeWork.dimensions}.
-              ${SeveralSpeculativeWork.details}
+              ${SeveralSpeculativeWork.information}
             `}
             toggler="Menu"
           />

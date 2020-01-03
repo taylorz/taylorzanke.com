@@ -37,7 +37,7 @@ class NightDrawings extends Component {
               ${NightDrawingsWork.year},
               ${NightDrawingsWork.object}.
               ${NightDrawingsWork.dimensions}.
-              ${NightDrawingsWork.details}
+              ${NightDrawingsWork.information}
             `}
             toggler="Menu"
           />

@@ -58,6 +58,11 @@ import TransmissionsFrom5 from '../../assets/images/works/TransmissionsFrom/05.p
 import TransmissionsFrom6 from '../../assets/images/works/TransmissionsFrom/06.png'
 import TransmissionsFrom7 from '../../assets/images/works/TransmissionsFrom/07.png'
 
+import TransmissionsFrom_D_1 from '../../assets/images/works/TransmissionsFrom/details/01.png'
+import TransmissionsFrom_D_2 from '../../assets/images/works/TransmissionsFrom/details/02.png'
+import TransmissionsFrom_D_3 from '../../assets/images/works/TransmissionsFrom/details/03.png'
+import TransmissionsFrom_D_4 from '../../assets/images/works/TransmissionsFrom/details/04.png'
+
 
 const WORKS = [
   {
@@ -66,7 +71,7 @@ const WORKS = [
     year: "2019",
     object: "Book",
     dimensions: "7 x 9 inches",
-    details: "Self, Collected drawings, inkjet printed, single edition.",
+    information: "Self, Collected drawings, inkjet printed, single edition.",
     images: [
       TransmissionsFrom1,
       TransmissionsFrom2,
@@ -76,6 +81,12 @@ const WORKS = [
       TransmissionsFrom6,
       TransmissionsFrom7,
     ],
+    details: [
+      TransmissionsFrom_D_1,
+      TransmissionsFrom_D_2,
+      TransmissionsFrom_D_3,
+      TransmissionsFrom_D_4,
+    ],
     link: "/transmissions-from-rare-space"
   },
   {
@@ -84,7 +95,7 @@ const WORKS = [
     year: "2018",
     object: "Models",
     dimensions: "Roughly 16 x 18 x 12 inches",
-    details: "1 in = 1 ft, Interior Sections.",
+    information: "1 in = 1 ft, Interior Sections.",
     images: [
       GraftedSpaces1,
       GraftedSpaces2,
@@ -99,7 +110,7 @@ const WORKS = [
     year: "2018",
     object: "Drawings",
     dimensions: "8.5 x 11 inches",
-    details: "Inkjet printed line and graphite on letter paper, 1 of 8.",
+    information: "Inkjet printed line and graphite on letter paper, 1 of 8.",
     images: [
       NightDrawings1,
       NightDrawings2,
@@ -118,7 +129,7 @@ const WORKS = [
     year: "2017",
     object: "Drawings",
     dimensions: "8.5 x 11 inches for presentation",
-    details: "Inkjet printed on bond.",
+    information: "Inkjet printed on bond.",
     images: [
       SplicedHouse1,
       SplicedHouse2,
@@ -136,7 +147,7 @@ const WORKS = [
     year: "2017",
     object: "Zine",
     dimensions: "5.5 x 7 inches",
-    details: "Self, Edition of 10.",
+    information: "Self, Edition of 10.",
     images: [
       DirectionZine1,
       DirectionZine2,
@@ -153,7 +164,7 @@ const WORKS = [
     year: "2016",
     object: "Book",
     dimensions: "6 x 8.5 inches",
-    details: "Self, Single Edition.",
+    information: "Self, Single Edition.",
     images: [
       SeveralSpeculative1,
       SeveralSpeculative2,
@@ -174,7 +185,7 @@ const WORKS = [
     year: "2016",
     object: "Stacks of US Letter Paper",
     dimensions: "Roughly 8.5 x 11 x 2 inches",
-    details: "Laser printed letter paper.",
+    information: "Laser printed letter paper.",
     images: [
     ],
     link: "/stack-works"
@@ -185,7 +196,7 @@ const WORKS = [
     year: "2013",
     object: "Book",
     dimensions: "6 x 8 inches",
-    details: "Self, Single Edition.",
+    information: "Self, Single Edition.",
     images: [
       TwoCitiesDiaryHNY1,
       TwoCitiesDiaryHNY2,
@@ -201,7 +212,7 @@ const WORKS = [
     year: "2015",
     object: "Book",
     dimensions: "12 x 10 inches",
-    details: "Self, Single Edition.",
+    information: "Self, Single Edition.",
     images: [
       TwoCitiesDiaryMP1,
       TwoCitiesDiaryMP2,

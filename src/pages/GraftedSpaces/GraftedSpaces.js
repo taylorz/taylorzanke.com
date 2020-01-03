@@ -37,7 +37,7 @@ class GraftedSpaces extends Component {
               ${GraftedSpacesWork.year},
               ${GraftedSpacesWork.object}.
               ${GraftedSpacesWork.dimensions}.
-              ${GraftedSpacesWork.details}
+              ${GraftedSpacesWork.information}
             `}
             toggler="Menu"
           />

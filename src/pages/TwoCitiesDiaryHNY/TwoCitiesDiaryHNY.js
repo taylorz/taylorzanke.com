@@ -37,7 +37,7 @@ class TwoCitiesDiary extends Component {
               ${TwoCitiesDiaryHNYWork.year},
               ${TwoCitiesDiaryHNYWork.object}.
               ${TwoCitiesDiaryHNYWork.dimensions}.
-              ${TwoCitiesDiaryHNYWork.details}
+              ${TwoCitiesDiaryHNYWork.information}
             `}
             toggler="Menu"
           />

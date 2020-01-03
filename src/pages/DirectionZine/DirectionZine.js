@@ -37,7 +37,7 @@ class DirectionZine extends Component {
               ${DirectionZineWork.year},
               ${DirectionZineWork.object}.
               ${DirectionZineWork.dimensions}.
-              ${DirectionZineWork.details}
+              ${DirectionZineWork.information}
             `}
             toggler="Menu"
           />

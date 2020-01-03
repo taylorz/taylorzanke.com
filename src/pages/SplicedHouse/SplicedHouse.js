@@ -37,7 +37,7 @@ class SplicedHouse extends Component {
               ${SplicedHouseWork.year},
               ${SplicedHouseWork.object}.
               ${SplicedHouseWork.dimensions}.
-              ${SplicedHouseWork.details}
+              ${SplicedHouseWork.information}
             `}
             toggler="Menu"
           />

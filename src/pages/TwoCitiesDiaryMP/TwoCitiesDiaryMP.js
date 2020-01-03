@@ -37,7 +37,7 @@ class TwoCitiesDiaryMP extends Component {
             ${TwoCitiesDiaryMPWork.year},
             ${TwoCitiesDiaryMPWork.object}.
             ${TwoCitiesDiaryMPWork.dimensions}.
-            ${TwoCitiesDiaryMPWork.details}
+            ${TwoCitiesDiaryMPWork.information}
           `}
           toggler="Menu"
         />
