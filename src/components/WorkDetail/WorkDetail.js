@@ -6,7 +6,7 @@ class WorkDetail extends Component {
   render() {
     const { detail } = this.props
     return (
-      <Grid item xs={12} md={4} className="work-detail">
+      <Grid item xs={12} md={6} lg={4} className="work-detail">
         <img className="detail-image" src={detail}/>
       </Grid>
     );
