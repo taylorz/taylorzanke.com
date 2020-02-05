@@ -8,22 +8,22 @@ class TextBlock extends Component {
     return (
       <Grid container className="text-block">
         {blockOne &&
-          <Grid item className="block one" xs={12} md={7}>
+          <Grid item className="block one" xs={12} md={8}>
             {blockOne}
           </Grid>
         }
         {blockTwo &&
-          <Grid item className="block two" xs={12} md={7}>
+          <Grid item className="block two" xs={12} md={8}>
             {blockTwo}
           </Grid>
         }
         {blockThree &&
-          <Grid item className="block three" xs={12} md={7}>
+          <Grid item className="block three" xs={12} md={8}>
             {blockThree}
           </Grid>
         }
         {blockFour &&
-          <Grid item className="block four" xs={12} md={7}>
+          <Grid item className="block four" xs={12} md={8}>
             {blockFour}
           </Grid>
         }

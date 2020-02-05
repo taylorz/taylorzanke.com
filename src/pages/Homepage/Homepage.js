@@ -73,25 +73,23 @@ class Homepage extends Component {
               imageCount={SplicedHouse.images.length}
               link={SplicedHouse.link}
             />
-
-              <WorkImage
-                matte
-                image={DirectionZine.images[0]}
-                imageCount={DirectionZine.images.length}
-                link={DirectionZine.link}
-              />
-              <WorkImage
-                image={TwoCitiesDiaryHNY.images[0]}
-                imageCount={TwoCitiesDiaryHNY.images.length}
-                link={TwoCitiesDiaryHNY.link}
-              />
-
-            <TextBlock
-              blockOne='Taylor Zanke is an artist and designer working in New York City. He seeks to uncover the ways in which space travels through time, revealing potential, dismantling inevitability.'
+            <WorkImage
+              matte
+              image={DirectionZine.images[0]}
+              imageCount={DirectionZine.images.length}
+              link={DirectionZine.link}
+            />
+            <WorkImage
+              image={TwoCitiesDiaryHNY.images[0]}
+              imageCount={TwoCitiesDiaryHNY.images.length}
+              link={TwoCitiesDiaryHNY.link}
+            />
+            {/*<TextBlock
+              blockOne='Taylor Zanke is an artist and designer based in Los Angeles. He seeks to uncover the ways in which space travels through time, revealing potential, dismantling inevitability.'
               blockTwo='He produces drawings, models, or photographs of imagined or real spaces, some of which are included in singular books. Like a diary or journal might, these books articulate a personal perspective and way of looking. This is shown by the unique idiosyncrasies that arise from their individual form. As the model does in architectural practice, these books outline an idea and approximate a particular reality.'
               blockThree='He holds a BFA from Parsons the New School for Design, and a Masters of Architecture and Masters of Science in Real Estate Development from Columbia University.'
               blockFour='“The mason was struck by the fact that expended energy does not get lost; it remains stored for many years, never diminished, latent in the block of stone, until one day it happens that the block slides off the roof and falls on the head of a passerby, killing him.”'
-            />
+            />*/}
             </PageContent>
           </PageContainer>
         </SiteWrapper>

@@ -11,7 +11,7 @@
   }
   .header {
     &.copyright {
-      text-align: right;
+      // text-align: right;
       @include breakpoint(md) {
         text-align: left;
       }
