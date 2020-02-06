@@ -8,7 +8,7 @@ class Header extends Component {
     return (
       <div className={`header-container ${light && "light"}`}>
         <Grid container className="header-contents">
-          <Grid item xs={12} md={2} className="header-item name">
+          <Grid item xs={12} md={6} className="header-item name">
             <a href={contextLink}>{context}</a>
           </Grid>
           <Grid item xs={12} md={5} className="header-item detail">

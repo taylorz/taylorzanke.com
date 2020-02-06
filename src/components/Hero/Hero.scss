@@ -1,0 +1,14 @@
+@import "../../styles/styles.scss";
+
+.hero-container {
+  padding: $buffer*8;
+  .hero-contents {
+    margin: 20vh 0;
+    .hero-text-area {
+      p {
+        font-size: $fontSizeStatement;
+        line-height: $lineHeightStatement;
+      }
+    }
+  }
+}//hero-container

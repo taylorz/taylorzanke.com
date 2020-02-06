@@ -1,9 +1,11 @@
+
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import './Homepage.scss';
 import SiteWrapper from '../../components/SiteWrapper/SiteWrapper';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import Header from '../../components/Header/Header';
+import Hero from '../../components/Hero/Hero';
 import Menu from '../../components/Menu/Menu';
 import WorkImage from '../../components/WorkImage/WorkImage';
 import TextBlock from '../../components/TextBlock/TextBlock';
@@ -37,7 +39,11 @@ class Homepage extends Component {
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
           <PageContainer className="homepage">
-            <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" workDetail="Books and drawings"/>
+            <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" workDetail="Art and architecture"/>
+            <Hero
+              className="homepage-hero"
+              heroText="Taylor Zanke is an artist and designer based in Los Angeles, CA. He produces drawings, models, or photographs of imagined or real spaces, some of which are included in singular books."
+            />
             <PageContent>
             <WorkImage
               image={TransmissionsFrom.images[1]}
