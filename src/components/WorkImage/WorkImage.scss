@@ -45,8 +45,8 @@
   }
   &.has-link {
     &:hover {
-      .image-count {
-        opacity: 1;
+      .image-info {
+        // opacity: 1;
         color: $darkFontColor;
         @include transition;
       }
@@ -59,14 +59,24 @@
     height: 100%;
     width: auto;
   }
-  .image-count {
-    opacity: 0;
-    font-size: $fontSizeParagraph;
-    line-height:$lineHeightParagraph;
-    position: absolute;
-    z-index: $zIndex3;
-    top: $buffer*8;
-    right: $buffer*8;
+  .image-info {
     @include transition;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: $buffer;
+    pointer-events: none;
+    display: flex;
+    justify-content: space-between;
+    .image-work-name {
+      font-size: $fontSize;
+      line-height:$lineHeight;
+    }
+    .image-count {
+      font-size: $fontSize;
+      line-height:$lineHeight;
+    }
   }
 }

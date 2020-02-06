@@ -48,11 +48,13 @@ class Homepage extends Component {
             <WorkImage
               image={TransmissionsFrom.images[1]}
               imageCount={TransmissionsFrom.images.length}
+              workName={TransmissionsFrom.title}
               link={TransmissionsFrom.link}
             />
             <WorkImage
               image={SeveralSpeculative.images[2]}
               imageCount={SeveralSpeculative.images.length}
+              workName={SeveralSpeculative.title}
               link={SeveralSpeculative.link}
             />
             {/*
@@ -66,28 +68,33 @@ class Homepage extends Component {
               matte
               image={NightDrawings.images[0]}
               imageCount={NightDrawings.images.length}
+              workName={NightDrawings.title}
               link={NightDrawings.link}
             />
             <WorkImage
               image={TwoCitiesDiaryMP.images[3]}
               imageCount={TwoCitiesDiaryMP.images.length}
+              workName={TwoCitiesDiaryMP.title}
               link={TwoCitiesDiaryMP.link}
             />
             <WorkImage
               matte
               image={SplicedHouse.images[0]}
               imageCount={SplicedHouse.images.length}
+              workName={SplicedHouse.title}
               link={SplicedHouse.link}
             />
             <WorkImage
               matte
               image={DirectionZine.images[0]}
               imageCount={DirectionZine.images.length}
+              workName={DirectionZine.title}
               link={DirectionZine.link}
             />
             <WorkImage
               image={TwoCitiesDiaryHNY.images[0]}
               imageCount={TwoCitiesDiaryHNY.images.length}
+              workName={TwoCitiesDiaryHNY.title}
               link={TwoCitiesDiaryHNY.link}
             />
             {/*<TextBlock
