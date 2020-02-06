@@ -3,7 +3,7 @@
 .footer {
   font-size: $fontSizeParagraph;
   line-height: $lineHeightParagraph;
-  padding: $buffer*4 $buffer*8 $buffer*8 $buffer*8;
+  padding: 20vh $buffer*8 $buffer*8 $buffer*8;
   .footer-link {
     &:hover {
       cursor: pointer;

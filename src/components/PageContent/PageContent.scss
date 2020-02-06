@@ -1,6 +1,13 @@
 @import "../../styles/styles.scss";
 
 .page-content-wrapper {
-  @include breakpoint(sm) {
+  &.homepage-page-content {
+    .page-content-end-link {
+      display: none;
+    }
+  }
+  .page-content-end-link {
+    padding: 20vh $buffer*8 0 $buffer*8;
+    font-size: $fontSizeParagraph;
   }
 }//page-content-wrapper

@@ -11,7 +11,7 @@ class Header extends Component {
           <Grid item xs={12} md={6} className="header-item name">
             <a href={contextLink}>{context}</a>
           </Grid>
-          <Grid item xs={12} md={5} className="header-item detail">
+          <Grid item xs={12} md={4} className="header-item detail">
             <span className="detail-copy">{workDetail}</span>
           </Grid>
           {/*<Grid item xs={4} md={5} className="header-item menu-toggler"><span onClick={onClick}>{close ? "Close" : "Menu"}</span></Grid>*/}

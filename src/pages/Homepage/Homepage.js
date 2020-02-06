@@ -42,9 +42,10 @@ class Homepage extends Component {
             <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" workDetail="Art and architecture"/>
             <Hero
               className="homepage-hero"
-              heroText="Taylor Zanke is an artist and designer based in Los Angeles, CA. He produces drawings, models, or photographs of imagined or real spaces, some of which are included in singular books."
+              heroText="Taylor Zanke is a Canadian artist and designer living in Los Angeles, CA. He produces drawings, models, photographs, and singluar books in order to consider new potentials for space."
+              heroLink="/about"
             />
-            <PageContent>
+            <PageContent className="homepage-page-content">
             <WorkImage
               image={TransmissionsFrom.images[1]}
               imageCount={TransmissionsFrom.images.length}

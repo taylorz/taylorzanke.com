@@ -12,8 +12,6 @@
   z-index: $zIndex2;
   left: 0px;
   right: 14px;
-  @include breakpoint(sm) {
-  }
   &.light {
     color: $lightFontColor;
   }

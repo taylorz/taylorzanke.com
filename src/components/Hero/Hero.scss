@@ -4,10 +4,17 @@
   padding: $buffer*8;
   .hero-contents {
     margin: 20vh 0;
+    @include breakpoint(sm) {
+      margin: 20vh 0 0 0;
+    }
     .hero-text-area {
-      p {
+      .hero-text-paragraph {
         font-size: $fontSizeStatement;
         line-height: $lineHeightStatement;
+      }
+      .hero-text-link {
+        font-size: $fontSizeParagraph;
+        line-height: $lineHeightParagraph;
       }
     }
   }
