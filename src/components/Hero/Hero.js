@@ -10,7 +10,7 @@ class Hero extends Component {
       <div className={`hero-container ${className}`}>
         <Grid container className="hero-contents">
           <Grid item xs={12} md={6} className="hero-spacer"/>
-          <Grid item xs={12} md={6} className="hero-text-area">
+          <Grid item xs={12} md={5} sm={6} className="hero-text-area">
             <p className="hero-text-paragraph">{heroText}</p>
           </Grid>
         </Grid>
