@@ -4,6 +4,7 @@ import './DirectionZine.scss';
 import SiteWrapper from '../../components/SiteWrapper/SiteWrapper';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import Header from '../../components/Header/Header';
+import Hero from '../../components/Hero/Hero';
 import Menu from '../../components/Menu/Menu';
 import WorkImage from '../../components/WorkImage/WorkImage';
 import TextBlock from '../../components/TextBlock/TextBlock';
@@ -32,14 +33,16 @@ class DirectionZine extends Component {
             onClick={() => this.toggleMenu()}
             context="Taylor Zanke"
             contextLink="/"
-            workDetail={`
-              ${DirectionZineWork.title},
-              ${DirectionZineWork.year},
-              ${DirectionZineWork.object}.
-              ${DirectionZineWork.dimensions}.
-              ${DirectionZineWork.information}
-            `}
+            workDetail={`Work`}
             toggler="Menu"
+          />
+          <Hero
+            className="homepage-hero"
+            workTitle={DirectionZineWork.title}
+            workYear={DirectionZineWork.year}
+            workObject={DirectionZineWork.object}
+            workDims={DirectionZineWork.dimensions}
+            workInfo={DirectionZineWork.information}
           />
           <PageContent>
             {DirectionZineWork.images.map((image) =>

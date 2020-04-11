@@ -1,16 +1,38 @@
 @import "../../styles/styles.scss";
 
 .hero-container {
-  padding: $buffer*8;
   .hero-contents {
-    margin: 20vh 0;
+    height: 80vh;
+    padding: $buffer*8;
     @include breakpoint(sm) {
-      margin: 20vh 0 0 0;
+      height: 60vh;
+    }
+    .hero-spacer {
+      @include breakpoint(sm) {
+        display: none;
+      }
+    }
+    .hero-extra {
+      display: flex;
+      align-items: center;
+      @include breakpoint(sm) {
+        align-items: flex-end;
+        // display: none;
+      }
     }
     .hero-text-area {
+      display: flex;
+      align-items: flex-end;
+      font-size: $fontSizeStatement;
+      line-height: $lineHeightStatement;
+      .work-title {}
+      .work-data {
+        margin: 0;
+        font-size: $fontSizeParagraph;
+        line-height: $lineHeightParagraph;
+      }
       .hero-text-paragraph {
-        font-size: $fontSizeStatement;
-        line-height: $lineHeightStatement;
+        margin-bottom: 0;
       }
       .hero-text-link {
         font-size: $fontSizeParagraph;

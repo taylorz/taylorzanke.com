@@ -5,6 +5,7 @@ import SiteWrapper from '../../components/SiteWrapper/SiteWrapper';
 import Header from '../../components/Header/Header';
 import Menu from '../../components/Menu/Menu';
 import PageContainer from '../../components/PageContainer/PageContainer';
+import Hero from '../../components/Hero/Hero';
 import WorkImage from '../../components/WorkImage/WorkImage';
 import TextBlock from '../../components/TextBlock/TextBlock';
 import PageContent from '../../components/PageContent/PageContent';
@@ -32,14 +33,16 @@ class NightDrawings extends Component {
             onClick={() => this.toggleMenu()}
             context="Taylor Zanke"
             contextLink="/"
-            workDetail={`
-              ${NightDrawingsWork.title},
-              ${NightDrawingsWork.year},
-              ${NightDrawingsWork.object}.
-              ${NightDrawingsWork.dimensions}.
-              ${NightDrawingsWork.information}
-            `}
+            workDetail={`Work`}
             toggler="Menu"
+          />
+          <Hero
+            className="homepage-hero"
+            workTitle={NightDrawingsWork.title}
+            workYear={NightDrawingsWork.year}
+            workObject={NightDrawingsWork.object}
+            workDims={NightDrawingsWork.dimensions}
+            workInfo={NightDrawingsWork.information}
           />
           <PageContent>
             {NightDrawingsWork.images.map((image) =>

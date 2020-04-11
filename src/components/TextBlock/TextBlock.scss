@@ -2,21 +2,16 @@
 
 .text-block {
   padding: $buffer*8;
-  font-size: $fontSizeStatement;
-  line-height: $lineHeightStatement;
+  font-size: $fontSizeParagraph;
+  line-height: $lineHeightParagraph;
   display: flex;
-  color: $lightFontColor;
-  @include breakpoint(sm) {
-    font-size: $fontSizeParagraph;
-    line-height: $lineHeightParagraph;
+  color: $darkFontColor;
+  .block-label {
+    margin-bottom: $lineHeightParagraph;
   }
-  .block {
-    margin-bottom: $lineHeight;
+  .block-content {
     @include breakpoint(sm) {
       margin-left: 0 !important;
     }
-    &.one {}
-    &.two {}
-    &.three {}
   }
 }

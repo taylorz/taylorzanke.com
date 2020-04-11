@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import './SplicedHouse.scss';
 import SiteWrapper from '../../components/SiteWrapper/SiteWrapper';
 import Header from '../../components/Header/Header';
+import Hero from '../../components/Hero/Hero';
 import Menu from '../../components/Menu/Menu';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import WorkImage from '../../components/WorkImage/WorkImage';
@@ -32,14 +33,16 @@ class SplicedHouse extends Component {
             onClick={() => this.toggleMenu()}
             context="Taylor Zanke"
             contextLink="/"
-            workDetail={`
-              ${SplicedHouseWork.title},
-              ${SplicedHouseWork.year},
-              ${SplicedHouseWork.object}.
-              ${SplicedHouseWork.dimensions}.
-              ${SplicedHouseWork.information}
-            `}
+            workDetail={`Work`}
             toggler="Menu"
+          />
+          <Hero
+            className="homepage-hero"
+            workTitle={SplicedHouseWork.title}
+            workYear={SplicedHouseWork.year}
+            workObject={SplicedHouseWork.object}
+            workDims={SplicedHouseWork.dimensions}
+            workInfo={SplicedHouseWork.information}
           />
           <PageContent>
             {SplicedHouseWork.images.map((image) =>

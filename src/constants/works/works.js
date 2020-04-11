@@ -20,6 +20,18 @@ import SeveralSpeculative7 from '../../assets/images/works/SeveralSpeculative/07
 import SeveralSpeculative8 from '../../assets/images/works/SeveralSpeculative/08.png'
 import SeveralSpeculative9 from '../../assets/images/works/SeveralSpeculative/09.png'
 import SeveralSpeculative10 from '../../assets/images/works/SeveralSpeculative/10.png'
+import SeveralSpeculative11 from '../../assets/images/works/SeveralSpeculative/11.png'
+import SeveralSpeculative12 from '../../assets/images/works/SeveralSpeculative/12.png'
+import SeveralSpeculative13 from '../../assets/images/works/SeveralSpeculative/13.png'
+import SeveralSpeculative14 from '../../assets/images/works/SeveralSpeculative/14.png'
+import SeveralSpeculative15 from '../../assets/images/works/SeveralSpeculative/15.png'
+import SeveralSpeculative16 from '../../assets/images/works/SeveralSpeculative/16.png'
+import SeveralSpeculative17 from '../../assets/images/works/SeveralSpeculative/17.png'
+import SeveralSpeculative18 from '../../assets/images/works/SeveralSpeculative/18.png'
+import SeveralSpeculative19 from '../../assets/images/works/SeveralSpeculative/19.png'
+import SeveralSpeculative20 from '../../assets/images/works/SeveralSpeculative/20.png'
+import SeveralSpeculative21 from '../../assets/images/works/SeveralSpeculative/21.png'
+import SeveralSpeculative22 from '../../assets/images/works/SeveralSpeculative/22.png'
 
 import DirectionZine1 from '../../assets/images/works/DirectionZine/DirectionZine1.png'
 import DirectionZine2 from '../../assets/images/works/DirectionZine/DirectionZine2.png'
@@ -73,7 +85,7 @@ const WORKS = [
     year: "2019",
     object: "Book",
     dimensions: "7 x 9 inches",
-    information: "Self, Collected drawings, inkjet printed, single edition.",
+    information: "Self, Collected drawings, Inkjet printed line and graphite, single edition",
     images: [
       TransmissionsFrom1,
       TransmissionsFrom2,
@@ -99,7 +111,7 @@ const WORKS = [
     year: "2018",
     object: "Models",
     dimensions: "Roughly 16 x 18 x 12 inches",
-    information: "1 in = 1 ft, Interior Sections.",
+    information: "1 in = 1 ft, Interior Sections",
     images: [
       GraftedSpaces1,
       GraftedSpaces2,
@@ -114,7 +126,7 @@ const WORKS = [
     year: "2018",
     object: "Drawings",
     dimensions: "8.5 x 11 inches",
-    information: "Inkjet printed line and graphite on letter paper, 1 of 8.",
+    information: "Inkjet printed line and graphite on letter paper, 1 of 8",
     images: [
       NightDrawings1,
       NightDrawings2,
@@ -133,7 +145,7 @@ const WORKS = [
     year: "2017",
     object: "Drawings",
     dimensions: "8.5 x 11 inches for presentation",
-    information: "Inkjet printed on bond.",
+    information: "Inkjet printed on bond",
     images: [
       SplicedHouse1,
       SplicedHouse2,
@@ -151,7 +163,7 @@ const WORKS = [
     year: "2017",
     object: "Zine",
     dimensions: "5.5 x 7 inches",
-    information: "Self, Edition of 10.",
+    information: "Self, Single Edition",
     images: [
       DirectionZine1,
       DirectionZine2,
@@ -168,7 +180,7 @@ const WORKS = [
     year: "2016",
     object: "Book",
     dimensions: "6 x 8.5 inches",
-    information: "Self, Single Edition.",
+    information: "Self, Single Edition",
     images: [
       SeveralSpeculative1,
       SeveralSpeculative2,
@@ -181,6 +193,18 @@ const WORKS = [
       SeveralSpeculative9,
       SeveralSpeculative10,
     ],
+    details: [
+      SeveralSpeculative14,
+      SeveralSpeculative15,
+      SeveralSpeculative16,
+      SeveralSpeculative17,
+      SeveralSpeculative18,
+      SeveralSpeculative19,
+      SeveralSpeculative20,
+      SeveralSpeculative21,
+      SeveralSpeculative22,
+
+    ],
     link: "/several-speculative-improvements"
   },
   {
@@ -189,7 +213,7 @@ const WORKS = [
     year: "2016",
     object: "Stacks of US Letter Paper",
     dimensions: "Roughly 8.5 x 11 x 2 inches",
-    information: "Laser printed letter paper.",
+    information: "Laser printed letter paper",
     images: [
     ],
     link: "/stack-works"
@@ -200,7 +224,7 @@ const WORKS = [
     year: "2013",
     object: "Book",
     dimensions: "6 x 8 inches",
-    information: "Self, Single Edition.",
+    information: "Self, Single Edition",
     images: [
       TwoCitiesDiaryHNY1,
       TwoCitiesDiaryHNY2,
@@ -216,7 +240,7 @@ const WORKS = [
     year: "2015",
     object: "Book",
     dimensions: "12 x 10 inches",
-    information: "Self, Single Edition.",
+    information: "Self, Single Edition",
     images: [
       TwoCitiesDiaryMP1,
       TwoCitiesDiaryMP2,

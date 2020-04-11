@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import './TwoCitiesDiaryMP.scss';
 import SiteWrapper from '../../components/SiteWrapper/SiteWrapper';
 import Header from '../../components/Header/Header';
+import Hero from '../../components/Hero/Hero';
 import Menu from '../../components/Menu/Menu';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import WorkImage from '../../components/WorkImage/WorkImage';
@@ -32,14 +33,16 @@ class TwoCitiesDiaryMP extends Component {
           onClick={() => this.toggleMenu()}
           context="Taylor Zanke"
           contextLink="/"
-          workDetail={`
-            ${TwoCitiesDiaryMPWork.title},
-            ${TwoCitiesDiaryMPWork.year},
-            ${TwoCitiesDiaryMPWork.object}.
-            ${TwoCitiesDiaryMPWork.dimensions}.
-            ${TwoCitiesDiaryMPWork.information}
-          `}
+          workDetail={`Work`}
           toggler="Menu"
+        />
+        <Hero
+          className="homepage-hero"
+          workTitle={TwoCitiesDiaryMPWork.title}
+          workYear={TwoCitiesDiaryMPWork.year}
+          workObject={TwoCitiesDiaryMPWork.object}
+          workDims={TwoCitiesDiaryMPWork.dimensions}
+          workInfo={TwoCitiesDiaryMPWork.information}
         />
         <PageContent>
           {TwoCitiesDiaryMPWork.images.map((image) =>

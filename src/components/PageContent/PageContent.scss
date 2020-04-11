@@ -7,7 +7,12 @@
     }
   }
   .page-content-end-link {
-    padding: 20vh $buffer*8 0 $buffer*8;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-size: $fontSizeParagraph;
+    border-top: 2px solid $darkFontColor;
   }
 }//page-content-wrapper

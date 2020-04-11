@@ -6,7 +6,7 @@
   line-height:$lineHeightParagraph;
   display: flex;
   align-items: center;
-  position: fixed;
+  // position: fixed;
   pointer-events: none;
   color: $darkFontColor;
   z-index: $zIndex2;
@@ -19,15 +19,15 @@
     width: 100%;
     padding: $buffer*8;
     display: flex;
-    // justify-content: space-between;
     .header-item {
+      @include breakpoint(sm) {
+        font-size: $fontSize;
+        line-height: $lineHeight;
+      }
       &.name {
         pointer-events: all;
       }
       &.detail {
-        @include breakpoint(sm) {
-          margin-top: $lineHeightParagraph;
-        }
         .detail-copy {
           // font-style: italic;
           text-align: center;

@@ -3,7 +3,8 @@
 .footer {
   font-size: $fontSizeParagraph;
   line-height: $lineHeightParagraph;
-  padding: 20vh $buffer*8 $buffer*8 $buffer*8;
+  padding: $buffer*8;
+  border-top: 2px solid $darkFontColor;
   .footer-link {
     &:hover {
       cursor: pointer;
@@ -20,7 +21,7 @@
   .list {
     // margin-bottom: $buffer*4;
     @include breakpoint(md) {
-      margin: $buffer*8 0;
+      margin: $buffer*8 0 0 0;
     }
     ul {
       list-style-type: none;

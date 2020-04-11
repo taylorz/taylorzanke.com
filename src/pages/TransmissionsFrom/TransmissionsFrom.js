@@ -3,6 +3,7 @@ import Grid from '@material-ui/core/Grid';
 import './TransmissionsFrom.scss';
 import SiteWrapper from '../../components/SiteWrapper/SiteWrapper';
 import Header from '../../components/Header/Header';
+import Hero from '../../components/Hero/Hero';
 import Menu from '../../components/Menu/Menu';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import WorkImage from '../../components/WorkImage/WorkImage';
@@ -33,14 +34,16 @@ class TransmissionsFrom extends Component {
             onClick={() => this.toggleMenu()}
             context="Taylor Zanke"
             contextLink="/"
-            workDetail={`
-              ${TransmissionsFromWork.title},
-              ${TransmissionsFromWork.year},
-              ${TransmissionsFromWork.object}.
-              ${TransmissionsFromWork.dimensions}.
-              ${TransmissionsFromWork.information}
-            `}
+            workDetail={`Work`}
             toggler="Menu"
+          />
+          <Hero
+            className="homepage-hero"
+            workTitle={TransmissionsFromWork.title}
+            workYear={TransmissionsFromWork.year}
+            workObject={TransmissionsFromWork.object}
+            workDims={TransmissionsFromWork.dimensions}
+            workInfo={TransmissionsFromWork.information}
           />
           <PageContent>
               {TransmissionsFromWork.images.map((image) =>
@@ -51,13 +54,10 @@ class TransmissionsFrom extends Component {
                   <WorkDetail detail={detail}/>
                 )}
               </Grid>
-              {/*
               <TextBlock
-                blockOne='Like a building turning to ruin, a gesture is the result of many unseen forces. My gestures start as lines on the page, I am making uncertain boundaries, shaped by feeling, guided by anticipation. The building feels time, its structure turns to gesture by weight of gravity, and by use. Rough edges replace smooth ones and what was previously concealed becomes visible. In serendipitous co-incidence a building and a gesture: registers of unseen force, transmissions from rare space.'
-                blockTwo='Here is the site for sensitive treatment of a delicate balance. It is the site for an exercise in preservation. Left any longer the building could turn to dust, and the feeling which shapes my line could pass. Both are thresholds where, once crossed, it is difficult to return. Simple strucutres turning into dust, turning into gesture. Gestures suggesting solidity, revealing potential.'
-                blockThree='It’s impossible to replace what is there. To survey and rationalize would be to destroy. The decaying building and the gesture are worth looking at together precisely because of their proneness to entropy. The task is not to suppress the ruining of the building or prevent the fleetingness of feeling, but to observe and respond to their path. What can remain visible of a decaying gesture even once its source has long disappeared?'
+                textLabel="Work statement"
+                textContent='The 93 composite drawings included in this project were produced in order to achieve two outcomes, each of which relates to the broader exercise of expanding the forms of architectural practice which I am committed to. The first desired outcome was to provide a context for the practice of architectural intuitions and sensibility. The second desired outcome was to generate drawn conditions which could encourage further spatial development, to produce possibility. The first outcome is addressed through both the volume of drawings, the fast speed with which they were produced, and the order of operations used to render the layered composition seen in the final works. For each drawing an intuitive, graphite, line was first used to introduce a gestural context and was followed by several inkjet printed layers of hard line drawing. Layers of black ink were deposited on the page as the drawing was run through a printer several times, each time receiving more depth through the use of several types of line. This encouraged the practice of architectural intuition through a “call and response” process, embodied in the dialogue between the two qualities of line and the process of their realization, printing. The second outcome is achieved through the interpretation of each drawing’s final composition, where, as intuitions accrete in progressively more stable manifestations, proposals for space emerge. The composition of each drawing suggests a different spatial reality ready for further analysis, each formulating boundaries, enclosures, or masses by its own gravitational pull. My intention for these drawings is that they are revisited when needed and become characters in my practice for years to come. I bound these by hand into a singular book, which I printed at home, as a mode of further stabilizing a precarious intuition, and transmitting the decaying gesture into the future.'
               />
-              */}
             </PageContent>
           </PageContainer>
         </SiteWrapper>
