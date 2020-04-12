@@ -41,7 +41,7 @@ class Homepage extends Component {
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
           <PageContainer className="homepage">
-            <Header light onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" workDetail="Art books and drawings"/>
+            <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" workDetail="Art books and drawings"/>
             <div className="temp-hero">
               <Grid container className="hero-container">
                 <Grid item md={3} xs={12} className="hero-work-preview">
@@ -54,7 +54,16 @@ class Homepage extends Component {
                   <img className="work-preview-img" src={TransmissionsFrom.images[7]}></img>
                 </Grid>
                 <Grid item md={4} xs={12} className="hero-work-preview">
+                  <img className="work-preview-img" src={DirectionZine.images[2]}></img>
+                </Grid>
+                <Grid item md={5} xs={12} className="hero-work-preview">
+                  <img className="work-preview-img" src={TwoCitiesDiaryHNY.images[5]}></img>
+                </Grid>
+                <Grid item md={5} xs={12} className="hero-work-preview">
                   <img className="work-preview-img" src={SeveralSpeculative.images[10]}></img>
+                </Grid>
+                <Grid item md={5} xs={12} className="hero-work-preview">
+                  <img className="work-preview-img" src={TransmissionsFrom.details[4]}></img>
                 </Grid>
               </Grid>
             </div>

@@ -7,6 +7,7 @@ import TwoCitiesDiaryHNY2 from '../../assets/images/works/TwoCitiesDiaryHNY/TwoC
 import TwoCitiesDiaryHNY3 from '../../assets/images/works/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY3.png'
 import TwoCitiesDiaryHNY4 from '../../assets/images/works/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY4.png'
 import TwoCitiesDiaryHNY5 from '../../assets/images/works/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY5.png'
+import TwoCitiesDiaryHNY6 from '../../assets/images/works/TwoCitiesDiaryHNY/6.png'
 
 import TwoCitiesDiaryMP1 from '../../assets/images/works/TwoCitiesDiaryMP/01.png'
 import TwoCitiesDiaryMP2 from '../../assets/images/works/TwoCitiesDiaryMP/02.png'
@@ -239,6 +240,7 @@ const WORKS = [
       TwoCitiesDiaryHNY3,
       TwoCitiesDiaryHNY4,
       TwoCitiesDiaryHNY5,
+      TwoCitiesDiaryHNY6,
     ],
     link: "/two-cities-diary"
   },
