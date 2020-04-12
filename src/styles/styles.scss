@@ -9,6 +9,14 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Fann Grotesque Semibold';
+  src: url(../assets/fonts/fann/fann-grotesque-semibold-pro.eot);
+  src: url(../assets/fonts/fann/fann-grotesque-semibold-pro.woff2) format('woff2'),
+       url(../assets/fonts/fann/fann-grotesque-semibold-pro.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 *{
   -webkit-tap-highlight-color: rgba(0,0,0,0);

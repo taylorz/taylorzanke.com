@@ -23,6 +23,7 @@ const SeveralSpeculative = WORKS[5];
 const StackWorks = WORKS[6];
 const TwoCitiesDiaryHNY = WORKS[7];
 const TwoCitiesDiaryMP = WORKS[8];
+const Reformulations1 = WORKS[9];
 
 class Homepage extends Component {
   state = {
@@ -39,7 +40,14 @@ class Homepage extends Component {
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
           <PageContainer className="homepage">
-            <Header onClick={() => this.toggleMenu()} context="Hello, welcome to my website. It is currently under construction as I've produced new work which has influenced the way I wish to present things. Check back in a bit! Thanks, Taylor." contextLink="/" workDetail=""/>
+            <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" workDetail="Art books and drawings"/>
+            <div className="temp-hero">
+              <Grid container className="hero-container">
+                <Grid item md={6} xs={12} className="hero-work-preview">
+                  <img src={Reformulations1.image.[1]}></img>
+                </Grid>
+              </Grid>
+            </div>
           </PageContainer>
         </SiteWrapper>
       </>

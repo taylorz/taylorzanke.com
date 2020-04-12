@@ -1,3 +1,5 @@
+import Reformulations1_1 from '../../assets/images/works/Reformulations1/Reformulations1_1.png'
+
 import TwoCitiesDiaryHNY1 from '../../assets/images/works/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY1.png'
 import TwoCitiesDiaryHNY2 from '../../assets/images/works/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY2.png'
 import TwoCitiesDiaryHNY3 from '../../assets/images/works/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY3.png'
@@ -247,6 +249,18 @@ const WORKS = [
       TwoCitiesDiaryMP3,
       TwoCitiesDiaryMP4,
       TwoCitiesDiaryMP5,
+    ],
+    link: "/two-cities-diary-mumbai-paris"
+  },
+  {
+    id: "9",
+    title: "Reformulations 1",
+    year: "2020",
+    object: "Book",
+    dimensions: "12 x 10 inches",
+    information: "Self, Single Edition",
+    images: [
+      Reformulations1_1,
     ],
     link: "/two-cities-diary-mumbai-paris"
   },

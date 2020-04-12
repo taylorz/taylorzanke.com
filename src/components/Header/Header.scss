@@ -17,7 +17,7 @@
   }
   .header-contents {
     width: 100%;
-    padding: $buffer*8;
+    padding: $buffer*2 $buffer*4;
     display: flex;
     .header-item {
       @include breakpoint(sm) {
@@ -26,6 +26,7 @@
       }
       &.name {
         pointer-events: all;
+        font-family: "Fann Grotesque Semibold";
       }
       &.detail {
         .detail-copy {
