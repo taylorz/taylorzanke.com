@@ -24,6 +24,7 @@ const StackWorks = WORKS[6];
 const TwoCitiesDiaryHNY = WORKS[7];
 const TwoCitiesDiaryMP = WORKS[8];
 const Reformulations1 = WORKS[9];
+const PhotographBook = WORKS[10];
 
 class Homepage extends Component {
   state = {
@@ -40,11 +41,20 @@ class Homepage extends Component {
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
           <PageContainer className="homepage">
-            <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" workDetail="Art books and drawings"/>
+            <Header light onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" workDetail="Art books and drawings"/>
             <div className="temp-hero">
               <Grid container className="hero-container">
-                <Grid item md={6} xs={12} className="hero-work-preview">
-                  <img src={Reformulations1.image.[1]}></img>
+                <Grid item md={3} xs={12} className="hero-work-preview">
+                  <img className="work-preview-img" src={Reformulations1.images[0]}></img>
+                </Grid>
+                <Grid item md={3} xs={12} className="hero-work-preview">
+                  <img className="work-preview-img" src={PhotographBook.images[0]}></img>
+                </Grid>
+                <Grid item md={4} xs={12} className="hero-work-preview">
+                  <img className="work-preview-img" src={TransmissionsFrom.images[7]}></img>
+                </Grid>
+                <Grid item md={4} xs={12} className="hero-work-preview">
+                  <img className="work-preview-img" src={SeveralSpeculative.images[10]}></img>
                 </Grid>
               </Grid>
             </div>

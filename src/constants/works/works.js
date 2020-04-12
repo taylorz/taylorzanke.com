@@ -1,3 +1,5 @@
+import PhotographBook1 from '../../assets/images/works/PhotographBook/PhotographBook1.png'
+
 import Reformulations1_1 from '../../assets/images/works/Reformulations1/Reformulations1_1.png'
 
 import TwoCitiesDiaryHNY1 from '../../assets/images/works/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY1.png'
@@ -34,6 +36,7 @@ import SeveralSpeculative19 from '../../assets/images/works/SeveralSpeculative/1
 import SeveralSpeculative20 from '../../assets/images/works/SeveralSpeculative/20.png'
 import SeveralSpeculative21 from '../../assets/images/works/SeveralSpeculative/21.png'
 import SeveralSpeculative22 from '../../assets/images/works/SeveralSpeculative/22.png'
+import SeveralSpeculative23 from '../../assets/images/works/SeveralSpeculative/23.png'
 
 import DirectionZine1 from '../../assets/images/works/DirectionZine/DirectionZine1.png'
 import DirectionZine2 from '../../assets/images/works/DirectionZine/DirectionZine2.png'
@@ -71,6 +74,7 @@ import TransmissionsFrom4 from '../../assets/images/works/TransmissionsFrom/04.p
 import TransmissionsFrom5 from '../../assets/images/works/TransmissionsFrom/05.png'
 import TransmissionsFrom6 from '../../assets/images/works/TransmissionsFrom/06.png'
 import TransmissionsFrom7 from '../../assets/images/works/TransmissionsFrom/07.png'
+import TransmissionsFrom8 from '../../assets/images/works/TransmissionsFrom/08.png'
 
 import TransmissionsFrom_D_1 from '../../assets/images/works/TransmissionsFrom/details/01.png'
 import TransmissionsFrom_D_2 from '../../assets/images/works/TransmissionsFrom/details/02.png'
@@ -96,6 +100,7 @@ const WORKS = [
       TransmissionsFrom5,
       TransmissionsFrom6,
       TransmissionsFrom7,
+      TransmissionsFrom8,
     ],
     details: [
       TransmissionsFrom_D_1,
@@ -194,6 +199,7 @@ const WORKS = [
       SeveralSpeculative8,
       SeveralSpeculative9,
       SeveralSpeculative10,
+      SeveralSpeculative23,
     ],
     details: [
       SeveralSpeculative14,
@@ -261,6 +267,18 @@ const WORKS = [
     information: "Self, Single Edition",
     images: [
       Reformulations1_1,
+    ],
+    link: "/two-cities-diary-mumbai-paris"
+  },
+  {
+    id: "10",
+    title: "Photograph Book",
+    year: "2020",
+    object: "Book",
+    dimensions: "12 x 10 inches",
+    information: "Self, Single Edition",
+    images: [
+      PhotographBook1,
     ],
     link: "/two-cities-diary-mumbai-paris"
   },
