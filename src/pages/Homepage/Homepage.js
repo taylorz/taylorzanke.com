@@ -39,72 +39,7 @@ class Homepage extends Component {
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
           <PageContainer className="homepage">
-            <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" workDetail="Art and architecture"/>
-            <Hero
-              className="homepage-hero"
-              heroText="Taylor Zanke is a Canadian artist and designer living in the Los Angeles, CA area. He produces drawings, models, photographs, and singular books in order to consider new potentials for space."
-              heroLink="/about"
-            />
-            <PageContent className="homepage-page-content">
-            <WorkImage
-              image={TransmissionsFrom.images[1]}
-              imageCount={TransmissionsFrom.images.length}
-              workName={TransmissionsFrom.title}
-              link={TransmissionsFrom.link}
-            />
-            <WorkImage
-              image={SeveralSpeculative.images[2]}
-              imageCount={SeveralSpeculative.images.length}
-              workName={SeveralSpeculative.title}
-              link={SeveralSpeculative.link}
-            />
-            {/*
-            <WorkImage
-              light
-              image={GraftedSpaces.images[2]}
-              link={GraftedSpaces.link}
-            />
-            */}
-            <WorkImage
-              matte
-              image={NightDrawings.images[0]}
-              imageCount={NightDrawings.images.length}
-              workName={NightDrawings.title}
-              link={NightDrawings.link}
-            />
-            <WorkImage
-              image={TwoCitiesDiaryMP.images[3]}
-              imageCount={TwoCitiesDiaryMP.images.length}
-              workName={TwoCitiesDiaryMP.title}
-              link={TwoCitiesDiaryMP.link}
-            />
-            <WorkImage
-              matte
-              image={SplicedHouse.images[0]}
-              imageCount={SplicedHouse.images.length}
-              workName={SplicedHouse.title}
-              link={SplicedHouse.link}
-            />
-            <WorkImage
-              matte
-              image={DirectionZine.images[0]}
-              imageCount={DirectionZine.images.length}
-              workName={DirectionZine.title}
-              link={DirectionZine.link}
-            />
-            <WorkImage
-              image={TwoCitiesDiaryHNY.images[0]}
-              imageCount={TwoCitiesDiaryHNY.images.length}
-              workName={TwoCitiesDiaryHNY.title}
-              link={TwoCitiesDiaryHNY.link}
-            />
-            {/*<TextBlock
-              blockOne='Taylor Zanke is an artist and designer based in Los Angeles. He seeks to uncover the ways in which space travels through time, revealing potential, dismantling inevitability.'
-              blockTwo='He produces drawings, models, or photographs of imagined or real spaces, some of which are included in singular books. Like a diary or journal might, these books articulate a personal perspective and way of looking. This is shown by the unique idiosyncrasies that arise from their individual form. As the model does in architectural practice, these books outline an idea and approximate a particular reality.'
-              blockThree='He holds a BFA from Parsons the New School for Design, and a Masters of Architecture and Masters of Science in Real Estate Development from Columbia University.'
-              blockFour='“The mason was struck by the fact that expended energy does not get lost; it remains stored for many years, never diminished, latent in the block of stone, until one day it happens that the block slides off the roof and falls on the head of a passerby, killing him.”'
-            />*/}
-            </PageContent>
+            <Header onClick={() => this.toggleMenu()} context="Hello, welcome to my website. It is currently under construction as I've produced new work which has influenced the way I wish to present things. Check back in a bit! Thanks, Taylor." contextLink="/" workDetail=""/>
           </PageContainer>
         </SiteWrapper>
       </>

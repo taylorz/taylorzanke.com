@@ -10,7 +10,6 @@ class PageContainer extends Component {
     return (
       <Grid item xs={12} className={`page-container ${className}`} onClick={onClick}>
         {children}
-        <Footer/>
       </Grid>
     );
   }
