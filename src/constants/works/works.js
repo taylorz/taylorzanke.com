@@ -1,6 +1,11 @@
 import PhotographBook1 from '../../assets/images/works/PhotographBook/PhotographBook1.png'
+import PhotographBook2 from '../../assets/images/works/PhotographBook/PhotographBook2.png'
+import PhotographBook3 from '../../assets/images/works/PhotographBook/PhotographBook3.png'
+import PhotographBook4 from '../../assets/images/works/PhotographBook/PhotographBook4.png'
 
 import Reformulations1_1 from '../../assets/images/works/Reformulations1/Reformulations1_1.png'
+import Reformulations1_2 from '../../assets/images/works/Reformulations1/Reformulations1_2.png'
+import Reformulations1_3 from '../../assets/images/works/Reformulations1/Reformulations1_3.png'
 
 import TwoCitiesDiaryHNY1 from '../../assets/images/works/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY1.png'
 import TwoCitiesDiaryHNY2 from '../../assets/images/works/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY2.png'
@@ -269,6 +274,8 @@ const WORKS = [
     information: "Self, Single Edition",
     images: [
       Reformulations1_1,
+      Reformulations1_2,
+      Reformulations1_3,
     ],
     link: "/two-cities-diary-mumbai-paris"
   },
@@ -281,6 +288,9 @@ const WORKS = [
     information: "Self, Single Edition",
     images: [
       PhotographBook1,
+      PhotographBook2,
+      PhotographBook3,
+      PhotographBook4,
     ],
     link: "/two-cities-diary-mumbai-paris"
   },

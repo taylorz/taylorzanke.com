@@ -5,6 +5,9 @@
     padding: $buffer*2;
     display: flex;
     align-items: flex-end;
+    justify-content: center;
+    max-width: $lg;
+    margin: 0 auto;
     .hero-work-preview {
       padding: $buffer*2;
       .work-preview-img {
