@@ -29,7 +29,7 @@ class Aboutpage extends Component {
             <Header onClick={() => this.toggleMenu()} linkName="HOME" link="/"/>
             <Grid container className="about-content">
               <Grid item xs={12} md={6} lg={5} className="artist-statement">Taylor Zanke is a Canadian artist living in Los Angeles, CA. He produces books, models, drawings, and recordings, in an effort to investigate and reveal new potentials for space.</Grid>
-              <Grid item xs={12} md={4} lg={3} className="about-details">
+              <Grid item xs={12} md={5} lg={4} xl={3} className="about-details">
                 <div className="details-section">
                   <div className="section-title">CONTACT</div>
                   <ul className="section-item">
