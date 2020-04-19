@@ -1,0 +1,29 @@
+@import "../../styles/styles.scss";
+
+.aboutpage {
+  .about-content {
+    padding: $buffer*4;
+    .artist-statement {
+      font-size: $fontSizeStatement;
+      line-height: $lineHeightStatement;
+    }
+    .about-details {
+      padding-left: $buffer*4;
+      .details-section {
+        font-family: $secondaryFont;
+        margin-bottom: $lineHeight*2;
+        .section-title {
+          font-size: $fontSize;
+          font-family: $primaryFontBold;
+          margin-bottom: $lineHeight;
+        }//section-title
+        .section-item {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          li {}
+        }
+      }
+    }
+  }
+}//homepage

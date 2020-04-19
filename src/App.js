@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link} from "react-router-dom";
 import './styles/styles.scss';
 import Homepage from './pages/Homepage/Homepage';
+import Aboutpage from './pages/Aboutpage/Aboutpage';
 import TransmissionsFrom from './pages/TransmissionsFrom/TransmissionsFrom';
 import GraftedSpaces from './pages/GraftedSpaces/GraftedSpaces';
 import NightDrawings from './pages/NightDrawings/NightDrawings';
@@ -18,6 +19,7 @@ class App extends Component {
       <div className="App" >
         <Router>
           <Route exact path="/" component={Homepage}/>
+          <Route path="/about" component={Aboutpage}/>
           <Route path="/transmissions-from-rare-space" component={TransmissionsFrom}/>
           <Route path="/grafted-spaces" component={GraftedSpaces}/>
           <Route path="/night-drawings" component={NightDrawings}/>

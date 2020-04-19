@@ -4,10 +4,12 @@ import './Header.scss';
 
 class Header extends Component {
   render() {
-    const { onClick, context, close, contextLink, workDetail, light } = this.props
+    const { onClick, context, close, linkName, link, light } = this.props
     return (
       <div className={`header-container ${light && "light"}`}>
-        <Grid container className="header-contents"></Grid>
+        <Grid container className="header-contents">
+          <a href={link}>{linkName}</a>
+        </Grid>
       </div>
     );
   }

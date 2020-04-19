@@ -1,4 +1,4 @@
-$buffer:                            4px;
+$buffer:                            5px;
 
 $bgBody:                             #ffffff;
 $bgColorLight:                       #eaeaea;
@@ -11,14 +11,14 @@ $primaryFont:                        "Fann Grotesque", sans-serif;
 $primaryFontBold:                    "Fann Grotesque Semibold", sans-serif;
 $secondaryFont:                      "Times New Roman", serif;
 
-$fontSize:                           12px;
+$fontSize:                           14px;
 $fontSizeParagraph:                  $fontSize*1.35;
-$fontSizeStatement:                  $fontSize*2;
+$fontSizeStatement:                  $fontSize*1.75;
 $fontSizeHero:                       $fontSize*5;
 $fontSizeCaption:                    $fontSize*.9;
 
 $lineHeight:                         18px;
-$lineHeightParagraph:                $lineHeight*1.45;
+$lineHeightParagraph:                $lineHeight*1.15;
 $lineHeightStatement:                $lineHeight*1.75;
 $lineHeightHero:                     $lineHeight*4.5;
 $lineHeightCaption:                  $lineHeight*.9;

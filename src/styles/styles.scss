@@ -37,8 +37,6 @@ body {
     &:visited {}
     &:hover {
       cursor: pointer;
-      color: $lightFontColor;
-      @include transitionRegular;
     }
     &:active {}
   }
