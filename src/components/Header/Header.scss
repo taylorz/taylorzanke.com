@@ -6,7 +6,6 @@
   line-height:$lineHeightParagraph;
   display: flex;
   align-items: center;
-  // position: fixed;
   pointer-events: none;
   color: $darkFontColor;
   z-index: $zIndex2;
@@ -16,33 +15,6 @@
     color: $lightFontColor;
   }
   .header-contents {
-    width: 100%;
-    padding: $buffer*2 $buffer*4;
-    display: flex;
-    .header-item {
-      @include breakpoint(sm) {
-        font-size: $fontSize;
-        line-height: $lineHeight;
-      }
-      &.name {
-        pointer-events: all;
-        font-family: "Fann Grotesque Semibold";
-      }
-      &.detail {
-        .detail-copy {
-          // font-style: italic;
-          text-align: center;
-        }
-      }//name
-      &.menu-toggler {
-        text-align: right;
-        span {
-          pointer-events: all;
-          &:hover {
-            cursor: pointer;
-          }
-        }
-      }//menu-toggler
-    }
-  }//header-contents
+    padding: $buffer*4;
+  }
 }//header-container

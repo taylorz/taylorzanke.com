@@ -7,18 +7,7 @@ class Header extends Component {
     const { onClick, context, close, contextLink, workDetail, light } = this.props
     return (
       <div className={`header-container ${light && "light"}`}>
-        <Grid container className="header-contents">
-          <Grid item xs={4} md={2} md={2}  lg={1} className="header-item name">
-            {/*<a href={contextLink}>{context}</a>*/}
-            {context}
-          </Grid>
-          <Grid item xs={4} md={3} lg={3} className="header-item detail">
-            <span className="detail-copy">{workDetail}</span>
-          </Grid>
-          {/*
-          <Grid item xs={1} className="header-item menu-toggler"><span onClick={onClick}>{close ? "Close" : "Menu"}</span></Grid>
-          */}
-        </Grid>
+        <Grid container className="header-contents"></Grid>
       </div>
     );
   }

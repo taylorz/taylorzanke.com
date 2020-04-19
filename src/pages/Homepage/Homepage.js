@@ -42,46 +42,6 @@ class Homepage extends Component {
           <Menu onClick={() => this.toggleMenu()}/>
           <PageContainer className="homepage">
             <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" workDetail="Books, drawings, and models"/>
-            <div className="temp-hero">
-              <Grid container className="hero-container">
-                <Grid item md={3} xs={12} className="hero-work-preview">
-                  <img className="work-preview-img" src={Reformulations1.images[0]}></img>
-                </Grid>
-                <Grid item md={6} xs={12} className="hero-work-preview">
-                  <img className="work-preview-img" src={Reformulations1.images[1]}></img>
-                </Grid>
-                <Grid item md={6} xs={12} className="hero-work-preview">
-                  <img className="work-preview-img" src={Reformulations1.images[2]}></img>
-                </Grid>
-                <Grid item md={3} xs={12} className="hero-work-preview">
-                  <img className="work-preview-img" src={PhotographBook.images[0]}></img>
-                </Grid>
-                <Grid item md={6} xs={12} className="hero-work-preview">
-                  <img className="work-preview-img" src={PhotographBook.images[1]}></img>
-                </Grid>
-                <Grid item md={6} xs={12} className="hero-work-preview">
-                  <img className="work-preview-img" src={PhotographBook.images[2]}></img>
-                </Grid>
-                <Grid item md={6} xs={12} className="hero-work-preview">
-                  <img className="work-preview-img" src={PhotographBook.images[3]}></img>
-                </Grid>
-                <Grid item md={5} xs={12} className="hero-work-preview">
-                  <img className="work-preview-img" src={TransmissionsFrom.images[7]}></img>
-                </Grid>
-                <Grid item md={5} xs={12} className="hero-work-preview">
-                  <img className="work-preview-img" src={DirectionZine.images[2]}></img>
-                </Grid>
-                <Grid item md={7} xs={12} className="hero-work-preview">
-                  <img className="work-preview-img" src={TwoCitiesDiaryHNY.images[5]}></img>
-                </Grid>
-                <Grid item md={6} xs={12} className="hero-work-preview">
-                  <img className="work-preview-img" src={SeveralSpeculative.images[10]}></img>
-                </Grid>
-                <Grid item md={4} xs={12} className="hero-work-preview">
-                  <img className="work-preview-img" src={TransmissionsFrom.details[4]}></img>
-                </Grid>
-              </Grid>
-            </div>
           </PageContainer>
         </SiteWrapper>
       </>
