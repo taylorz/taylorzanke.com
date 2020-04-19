@@ -8,9 +8,9 @@ $darkFontColor:                      $bgColorDark;
 $lightFontColor:                     #ffffff;
 
 $primaryFont:                        "Fann Grotesque", sans-serif;
-$secondaryFont:                      "Fann Grotesque", sans-serif;
+$secondaryFont:                      "Times New Roman", serif;
 
-$fontSize:                           10px;
+$fontSize:                           12px;
 $fontSizeParagraph:                  $fontSize*1.35;
 $fontSizeStatement:                  $fontSize*2;
 $fontSizeHero:                       $fontSize*5;
@@ -18,7 +18,7 @@ $fontSizeCaption:                    $fontSize*.9;
 
 $lineHeight:                         18px;
 $lineHeightParagraph:                $lineHeight*1.45;
-$lineHeightStatement:                $lineHeight*2;
+$lineHeightStatement:                $lineHeight*1.75;
 $lineHeightHero:                     $lineHeight*4.5;
 $lineHeightCaption:                  $lineHeight*.9;
 

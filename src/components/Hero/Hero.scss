@@ -1,43 +1,21 @@
 @import "../../styles/styles.scss";
 
 .hero-container {
+  height: 100vh;
   .hero-contents {
-    height: 80vh;
-    padding: $buffer*8;
-    @include breakpoint(sm) {
-      height: 60vh;
-    }
-    .hero-spacer {
-      @include breakpoint(sm) {
-        display: none;
-      }
-    }
-    .hero-extra {
-      display: flex;
-      align-items: center;
-      @include breakpoint(sm) {
-        align-items: flex-end;
-        // display: none;
-      }
-    }
-    .hero-text-area {
-      display: flex;
-      align-items: flex-end;
-      font-size: $fontSizeStatement;
-      line-height: $lineHeightStatement;
-      .work-title {}
-      .work-data {
-        margin: 0;
-        font-size: $fontSizeParagraph;
-        line-height: $lineHeightParagraph;
-      }
-      .hero-text-paragraph {
-        margin-bottom: 0;
-      }
-      .hero-text-link {
-        font-size: $fontSizeParagraph;
-        line-height: $lineHeightParagraph;
-      }
-    }
-  }
+    padding: $buffer*4;
+    height: 100%;
+    .hero-image-section {
+      background: $bgColorLight;
+    }//hero-image-section
+    .hero-statement-section {
+      padding-left: $buffer*4;
+      .statement-wrapper {
+        .statement-copy {
+          font-size: $fontSizeStatement;
+          line-height: $lineHeightStatement;
+        }//statement-copy
+      }//statement-wrapper
+    }//hero-statement-section
+  }//hero-contents
 }//hero-container

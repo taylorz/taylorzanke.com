@@ -41,7 +41,8 @@ class Homepage extends Component {
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
           <PageContainer className="homepage">
-            <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" workDetail="Books, drawings, and models"/>
+            <Header onClick={() => this.toggleMenu()}/>
+            <Hero/>
           </PageContainer>
         </SiteWrapper>
       </>
