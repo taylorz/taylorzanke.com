@@ -41,7 +41,7 @@ class Homepage extends Component {
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
           <PageContainer className="homepage">
-            <Header light onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" workDetail="Books, drawings, and models"/>
+            <Header onClick={() => this.toggleMenu()} context="Taylor Zanke" contextLink="/" workDetail="Books, drawings, and models"/>
             <div className="temp-hero">
               <Grid container className="hero-container">
                 <Grid item md={3} xs={12} className="hero-work-preview">
