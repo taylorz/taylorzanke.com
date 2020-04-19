@@ -2,33 +2,52 @@
 
 .hero-container {
   height: 100vh;
+  overflow: hidden;
   .hero-contents {
     padding: $buffer*4;
     height: 100%;
     .hero-image-section {
       background: $bgColorLight;
       height: 100%;
-      overflow: hidden;
-      .carousel {
-        .slider {
-          &.animated {
-              transition: none;
+      .slide-container {
+        height: 100%;
+        div:first-child {
+          height: 100%;
+        }
+        .react-slideshow-container {
+          height: 100%;
+          .react-slideshow-fade-wrapper {
+            overflow: visible;
           }
-          .slide {
+          .each-slide {
             height: 100%;
-            background: $bgColorLight;
-            img {
+            .slide-image {
               max-height: 100vh;
               width: 100%;
-            }//img
-            .caption-wrapper {
-              position: absolute;
-              bottom: 20px;
-              right: -1px;
+              background-size: cover;
+              background-position: center center;
             }
-          }//slide
-        }//sliders
-      }//carousel
+            .caption {
+              height: auto;
+              width: 200px;
+              position: absolute;
+              bottom: 0;
+              right: calc(-216px);
+              font-family: $secondaryFont;
+              line-height: $lineHeight/1.25;
+              span {
+                &.detail-id {
+                  margin-right: $buffer*4;
+                  font-family: $primaryFontBold;
+                }
+                &.detail-caption {}
+                &.detail-work { font-style: italic; }
+                &.detail-year { font-style: italic; }
+              }
+            }
+          }
+        }//react-slideshow-container
+      }
     }//hero-image-section
     .hero-statement-section {
       padding-left: $buffer*4;

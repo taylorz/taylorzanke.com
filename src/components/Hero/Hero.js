@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { BrowserRouter as Router, Route, Link} from "react-router-dom";
-import { Carousel } from 'react-responsive-carousel';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Fade } from 'react-slideshow-image';
 import './Hero.scss';
 
 import TestImage from "../../assets/images/works/NightDrawings/NightDrawings3.jpeg"
-import TestImage2 from "../../assets/images/works/NightDrawings/NightDrawings1.jpeg"
-import TestImage3 from "../../assets/images/works/NightDrawings/NightDrawings2.jpeg"
+import TestImage2 from "../../assets/images/works/Reformulations1/Reformulations1_2.png"
+import TestImage3 from "../../assets/images/works/SplicedHouse/SplicedHouse2.jpg"
 
 class Hero extends Component {
   render() {
@@ -24,36 +23,46 @@ class Hero extends Component {
     return (
       <div className={`hero-container ${className}`}>
         <Grid container className="hero-contents">
-          <Grid item xs={12} md={6} lg={5} className="hero-image-section">
-            <Carousel
-              showThumbs={false}
-              showIndicators={false}
-              showArrows={false}
-              showStatus={false}
-              autoPlay={true}
-              interval={3000}
-              slide={false}
-              infiniteLoop={true}
-            >
-                <div>
-                    <img src={TestImage} />
-                    <div className="caption-wrapper">
-                    hij lk;jas dlfkj askljdf; aj
-                    </div>
-                </div>
-                <div>
-                    <img src={TestImage2} />
-                    <div className="caption-wrapper">
-                    2 kjasd ;lfjka
-                    </div>
-                </div>
-                <div>
-                    <img src={TestImage3} />
-                    <div className="caption-wrapper">
-                    3 kjsad ;fjkla
-                    </div>
-                </div>
-            </Carousel>
+          <Grid item xs={12} md={6} lg={5} xl={4} className="hero-image-section">
+
+        <div className="slide-container">
+          <Fade
+            arrows={false}
+            transitionDuration={0}
+            duration={5000}
+            infinite={true}
+            autoplay={true}
+          >
+            <div className="each-slide">
+              <div className="slide-image" style={{'backgroundImage': `url(${TestImage})`}}></div>
+              <div className="caption">
+                <span className="detail-id">1</span>
+                <span className="detail-caption">Domestic space is studied within itself.</span>
+                <span className="detail-work"> Night Drawings.</span>
+                <span className="detail-year"> (2018)</span>
+              </div>
+            </div>
+            <div className="each-slide">
+              <div className="slide-image" style={{'backgroundImage': `url(${TestImage2})`}}></div>
+              <div className="caption">
+                <span className="detail-id">2</span>
+                <span className="detail-caption">A spread showing a textured image.</span>
+                <span className="detail-work"> Two Cities Reader.</span>
+                <span className="detail-year"> (2020)</span>
+              </div>
+            </div>
+            <div className="each-slide">
+              <div className="slide-image" style={{'backgroundImage': `url(${TestImage3})`}}></div>
+              <div className="caption">
+                <span className="detail-id">3</span>
+                <span className="detail-caption">Details of something.</span>
+                <span className="detail-work"> Reformulations 1.</span>
+                <span className="detail-year"> (2020)</span>
+              </div>
+            </div>
+          </Fade>
+        </div>
+
           </Grid>
           <Grid item xs={12} md={6} className="hero-statement-section">
             <Grid container className="statement-wrapper">
