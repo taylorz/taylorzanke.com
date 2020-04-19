@@ -7,6 +7,27 @@
     height: 100%;
     .hero-image-section {
       background: $bgColorLight;
+      height: 100%;
+      overflow-y: hidden;
+      .carousel {
+        .slider {
+          &.animated {
+              transition: none;
+          }
+          .slide {
+            height: 100%;
+            img {
+              max-height: 100vh;
+              width: auto;
+            }//img
+            .caption-wrapper {
+              position: absolute;
+              bottom: 5%;
+              right: -1px;
+            }
+          }//slide
+        }//sliders
+      }//carousel
     }//hero-image-section
     .hero-statement-section {
       padding-left: $buffer*4;
