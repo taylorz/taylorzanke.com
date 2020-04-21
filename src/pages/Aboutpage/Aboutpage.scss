@@ -26,6 +26,28 @@
           padding: 0;
           li {}
         }
+        .section-reference {
+          .reference-quote {
+            p {
+              // margin-bottom: 0;
+            }
+            span {
+              font-family: $primaryFontBold;
+              font-size: $fontSizeCaption;
+              margin-right: $buffer*4;
+            }
+          }//reference-quote
+          .reference-citation {
+            margin-left: 25%;
+            .author {
+              // font-family: $primaryFontBold;
+              // font-weight: bold;
+            }
+            .title {
+              font-style: italic;
+            }
+          }
+        }
       }
     }
   }
