@@ -6,6 +6,9 @@
     .artist-statement {
       font-size: $fontSizeStatement;
       line-height: $lineHeightStatement;
+      p:first-child {
+        margin-top: 0;
+      }
     }
     .about-details {
       padding-left: $buffer*4;
