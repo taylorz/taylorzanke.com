@@ -3,12 +3,23 @@
 .hero-container {
   height: 100vh;
   overflow: hidden;
+  @include breakpoint(sm) {
+    height: auto;
+    overflow-y: visible;
+    margin-top: $buffer*8;
+  }
   .hero-contents {
     padding: $buffer*4;
     height: 100%;
+    @include breakpoint(sm) {
+      height: auto;
+    }
     .hero-image-section {
       background: $bgColorLight;
       height: 100%;
+      @include breakpoint(sm) {
+        height: 80vh;
+      }
       .slide-container {
         height: 100%;
         div:first-child {
@@ -22,11 +33,14 @@
           .each-slide {
             height: 100%;
             .slide-image {
-              max-height: 100vh;
+              max-height: 80vh;
               width: 100%;
               background-size: 250%;
               background-repeat: no-repeat;
               background-position: center center;
+              @include breakpoint(sm) {
+                width: 150%;
+              }
             }
             .caption {
               height: auto;
@@ -37,6 +51,11 @@
               font-family: $secondaryFont;
               font-size: $fontSizeParagraph;
               line-height: $lineHeightParagraph;
+              @include breakpoint(sm) {
+                bottom: -76px;
+                left: 0;
+                width: 300px;
+              }
               span {
                 &.detail-id {
                   margin-right: $buffer*4;
@@ -54,6 +73,9 @@
     }//hero-image-section
     .hero-statement-section {
       padding-left: $buffer*4;
+      @include breakpoint(sm) {
+        padding: $buffer*24 0 0 0;
+      }
       .statement-wrapper {
         .statement-copy {
           font-size: $fontSizeStatement;

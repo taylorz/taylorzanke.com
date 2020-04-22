@@ -197,8 +197,8 @@ const REFERENCES = [
   {
     id: "16",
     type: "quote",
-    authorLast: "Aldo",
-    authorFirst: "Rossi",
+    authorLast: "Rossi",
+    authorFirst: "Aldo",
     title: "A Scientific Autobiography",
     source: "",
     year: "1981",
@@ -206,6 +206,19 @@ const REFERENCES = [
     publisher: "The MIT Press",
     pageNumber: "1",
     quote: "Certainly a very important point of reference is Max Planck's Scientific Autobiography. In this book, Planck returns to the discoveries of modern physics, recapturing the impression made on him by the enunciation of the principle of the conservation of energy; he always recalled this principle in connection with his schoolmaster Muller's story about a mason who with great effort heaved a block of stone up on the roof of a house. The mason was struck by the fact that expended energy does not get lost; it remains stored for many years, never diminished, latent in the block of stone, until one day it happens that the block slides off the roof and falls on the head of a passerby, killing him."
+  },
+  {
+    id: "17",
+    type: "quote",
+    authorLast: "Ayache",
+    authorFirst: "Elie",
+    title: "The End of Probability",
+    source: "",
+    year: "2010",
+    publicationPlace: "London",
+    publisher: "Wilmott Magazine",
+    pageNumber: "42",
+    quote: "The market is the medium of contingent claims, and it translates them into prices. As I have said, contingent claims are recognizable by their written formula. It is because they are written that they can dispense with possibility and its underlying states of the world. Even though the written formula may have a hundered provisions, it will remain ONE written formula, which will be interpreted the next day, and the day after the next, etc., and it will admit of a price every day. At no point do we need to decompose it into states. Now the other side of something being written is that this something will then be exchanged. It is not a coincidence if writing enables us to collect the contingent claim in one undivided formula and if, on the other hand, it lends itself to the exchange. It is the same matter (the material sheet) on which the formula is written which is subsequently exchanged. This might even act as the definition of writing: something that collects the difference of the contingent claim on one side and for this reason admits of a price (i.e., is exchanged) on the other side."
   },
 ]
 

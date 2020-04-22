@@ -3,6 +3,9 @@
 .aboutpage {
   .about-content {
     padding: $buffer*4;
+    @include breakpoint(sm) {
+      margin-top: $buffer*8;
+    }
     .artist-statement {
       font-size: $fontSizeStatement;
       line-height: $lineHeightStatement;
@@ -12,6 +15,9 @@
     }
     .about-details {
       padding-left: $buffer*4;
+      @include breakpoint(sm) {
+        padding: $buffer*4 0 0 0;
+      }
       .details-section {
         font-family: $secondaryFont;
         margin-bottom: $lineHeight;
