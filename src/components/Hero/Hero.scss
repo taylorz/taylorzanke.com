@@ -38,9 +38,6 @@
               background-size: 250%;
               background-repeat: no-repeat;
               background-position: center center;
-              @include breakpoint(sm) {
-                width: 150%;
-              }
             }
             .caption {
               height: auto;

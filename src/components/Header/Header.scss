@@ -18,5 +18,8 @@
     padding: $buffer*4;
     display: flex;
     justify-content: flex-end;
+    @include breakpoint(sm) {
+      justify-content: flex-start;
+    }
   }
 }//header-container
