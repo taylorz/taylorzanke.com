@@ -37,6 +37,8 @@
               font-family: $secondaryFont;
               font-size: $fontSize;
               line-height: $lineHeight;
+              font-size: $fontSizeParagraph;
+              line-height: $lineHeightParagraph;
               span {
                 &.detail-id {
                   margin-right: $buffer*4;

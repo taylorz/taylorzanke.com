@@ -12,16 +12,16 @@ $primaryFontBold:                    "Fann Grotesque Semibold", sans-serif;
 $secondaryFont:                      "Times New Roman", serif;
 
 $fontSize:                           14px;
-$fontSizeParagraph:                  $fontSize*1.35;
+$fontSizeParagraph:                  $fontSize*1.15;
 $fontSizeStatement:                  $fontSize*1.75;
 $fontSizeHero:                       $fontSize*5;
-$fontSizeCaption:                    $fontSize*.9;
+$fontSizeCaption:                    $fontSize*.8;
 
 $lineHeight:                         18px;
 $lineHeightParagraph:                $lineHeight*1.15;
 $lineHeightStatement:                $lineHeight*1.75;
 $lineHeightHero:                     $lineHeight*4.5;
-$lineHeightCaption:                  $lineHeight*.9;
+$lineHeightCaption:                  $lineHeight*.8;
 
 $captionHeight:                      $buffer*8;
 $menuHeight:                         50vh;

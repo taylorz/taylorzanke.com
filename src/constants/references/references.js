@@ -28,8 +28,8 @@ const REFERENCES = [
   {
     id: "3",
     type: "quote",
-    authorLast: "Franco",
-    authorFirst: "'Bifo' Berardi",
+    authorLast: "Berardi",
+    authorFirst: "Franco 'Bifo'",
     title: "The Uprising: On Poetry and Finance",
     source: "",
     year: "2012",
@@ -41,8 +41,8 @@ const REFERENCES = [
   {
     id: "4",
     type: "quote",
-    authorLast: "Franco",
-    authorFirst: "'Bifo' Berardi",
+    authorLast: "Berardi",
+    authorFirst: "Franco 'Bifo'",
     title: "The Uprising: On Poetry and Finance",
     source: "",
     year: "2012",
@@ -147,7 +147,7 @@ const REFERENCES = [
     type: "quote",
     authorLast: "Experimental Jetset",
     authorFirst: "Studio",
-    title: "Statement and Counterstatement: Notes on Experimental Jetset",
+    title: "Statement and Counter-Statement: Notes on Experimental Jetset",
     source: "",
     year: "2015",
     publicationPlace: "Amsterdam",
@@ -180,6 +180,32 @@ const REFERENCES = [
     publisher: "Birkhäuser - Publishers for Architecture",
     pageNumber: "6",
     quote: "Future forcasters have a conservative role, predicting patterns of behavior in relation to technological developments. They draw from what we already know about people, and weave new ideas into existing realities. The resulting scenarios extend pre-existant reality into the future and so reinforce the status quo rather than challenging it. Their slick surface distracts us from the dystopian vision of life they wish for. By designing the props for the videos produced to show us what the future could be like, design works to keep official values in place."
+  },
+  {
+    id: "15",
+    type: "quote",
+    authorLast: "Smithson",
+    authorFirst: "Robert",
+    title: "A Tour of the Monuments of Passaic, New Jersey",
+    source: "",
+    year: "1967",
+    publicationPlace: "New York",
+    publisher: "Artforum",
+    pageNumber: "56",
+    quote: "I am convinced that the future is lost somewhere in the dumps of the non-historical past; it is in yesterday's newspapers, in the jajune advertisements of science-fiction movies, in the false mirror of our rejected dreams. Time turns metaphors into things, and stacks them up in cold rooms, or places them in the celestial playgrounds of the suburbs."
+  },
+  {
+    id: "16",
+    type: "quote",
+    authorLast: "Aldo",
+    authorFirst: "Rossi",
+    title: "A Scientific Autobiography",
+    source: "",
+    year: "1981",
+    publicationPlace: "Cambridge MA",
+    publisher: "The MIT Press",
+    pageNumber: "1",
+    quote: "Certainly a very important point of reference is Max Planck's Scientific Autobiography. In this book, Planck returns to the discoveries of modern physics, recapturing the impression made on him by the enunciation of the principle of the conservation of energy; he always recalled this principle in connection with his schoolmaster Muller's story about a mason who with great effort heaved a block of stone up on the roof of a house. The mason was struck by the fact that expended energy does not get lost; it remains stored for many years, never diminished, latent in the block of stone, until one day it happens that the block slides off the roof and falls on the head of a passerby, killing him."
   },
 ]
 

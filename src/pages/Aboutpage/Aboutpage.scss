@@ -14,7 +14,9 @@
       padding-left: $buffer*4;
       .details-section {
         font-family: $secondaryFont;
-        margin-bottom: $lineHeight*2;
+        margin-bottom: $lineHeight;
+        font-size: $fontSizeParagraph;
+        line-height: $lineHeightParagraph;
         .section-title {
           font-size: $fontSize;
           font-family: $primaryFontBold;
@@ -29,7 +31,8 @@
         .section-reference {
           .reference-quote {
             p {
-              // margin-bottom: 0;
+              font-size: $fontSizeParagraph;
+              line-height: $lineHeightParagraph;
             }
             span {
               font-family: $primaryFontBold;
@@ -38,14 +41,18 @@
             }
           }//reference-quote
           .reference-citation {
-            margin-left: 25%;
+            margin-left: $buffer*8;
+            width: 50%;
+            font-family: $primaryFontBold;
+            font-size: $fontSizeCaption;
+            line-height: $lineHeightCaption;
             .author {
               // font-family: $primaryFontBold;
               // font-weight: bold;
-            }
+            }//authro
             .title {
               font-style: italic;
-            }
+            }//title
           }
         }
       }
