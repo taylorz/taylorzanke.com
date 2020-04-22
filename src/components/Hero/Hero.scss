@@ -30,13 +30,11 @@
             }
             .caption {
               height: auto;
-              width: 300px;
+              width: 400px;
               position: absolute;
               bottom: 0;
-              right: calc(-316px);
+              right: -416px;
               font-family: $secondaryFont;
-              font-size: $fontSize;
-              line-height: $lineHeight;
               font-size: $fontSizeParagraph;
               line-height: $lineHeightParagraph;
               span {

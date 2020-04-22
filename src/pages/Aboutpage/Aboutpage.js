@@ -31,7 +31,7 @@ class Aboutpage extends Component {
             <Header onClick={() => this.toggleMenu()} linkName="HOME" link="/"/>
             <Grid container className="about-content">
               <Grid item xs={12} md={6} lg={5} className="artist-statement">
-              <p>Taylor Zanke is an artist and designer living in Los Angeles, CA. He takes a multi-format approach to art making, producing models, drawings, photographs, and recordings, many of which are represented in singular artist books. Taylor’s practice studies the shifting nature of potential in space, and develops long-form methodologies for reflecting on and revealing it. He develops ways in which our inner lives can be supported by the material world around us by grafting personal reflections into common forms and proposals.</p>
+              <p>Taylor Zanke is an artist and designer living in Los Angeles, CA. He takes a multi-format approach to art making: producing models, drawings, photographs, and recordings, many of which are represented in singular artist books. Taylor’s practice studies the shifting nature of potential in space, and develops long-form methodologies for reflecting on and revealing it. He develops ways in which our inner lives can be supported by the material realities around us, grafting personal reflections into common forms and proposals.</p>
               <p>Taylor holds a BFA from Parsons the New School for Design, and a Masters of Architecture and Masters of Science in Real Estate Development from Columbia University.</p>
               </Grid>
               <Grid item xs={12} md={5} lg={4} xl={3} className="about-details">
