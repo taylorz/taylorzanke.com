@@ -33,25 +33,27 @@
           .each-slide {
             height: 100%;
             .slide-image {
-              max-height: 80vh;
+              max-height: 150vh;
               width: 100%;
               background-size: 250%;
               background-repeat: no-repeat;
               background-position: center center;
+              @include breakpoint(sm) {
+                max-height: 80vh;
+              }
             }
             .caption {
               height: auto;
-              width: 400px;
+              width: 300px;
               position: absolute;
               bottom: 0;
-              right: -416px;
+              right: -316px;
               font-family: $secondaryFont;
               font-size: $fontSizeParagraph;
               line-height: $lineHeightParagraph;
               @include breakpoint(sm) {
                 bottom: -76px;
                 left: 0;
-                width: 300px;
               }
               span {
                 &.detail-id {

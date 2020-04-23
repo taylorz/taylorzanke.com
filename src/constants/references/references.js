@@ -220,6 +220,19 @@ const REFERENCES = [
     pageNumber: "42",
     quote: "The market is the medium of contingent claims, and it translates them into prices. As I have said, contingent claims are recognizable by their written formula. It is because they are written that they can dispense with possibility and its underlying states of the world. Even though the written formula may have a hundered provisions, it will remain ONE written formula, which will be interpreted the next day, and the day after the next, etc., and it will admit of a price every day. At no point do we need to decompose it into states. Now the other side of something being written is that this something will then be exchanged. It is not a coincidence if writing enables us to collect the contingent claim in one undivided formula and if, on the other hand, it lends itself to the exchange. It is the same matter (the material sheet) on which the formula is written which is subsequently exchanged. This might even act as the definition of writing: something that collects the difference of the contingent claim on one side and for this reason admits of a price (i.e., is exchanged) on the other side."
   },
+  {
+    id: "18",
+    type: "quote",
+    authorLast: "Blasser",
+    authorFirst: "Peter",
+    title: "Ieaskul F. Mobenthey---Mocante Manual",
+    source: "",
+    year: "c. 2000-2010",
+    publicationPlace: "Baltimore",
+    publisher: "Synthmall",
+    pageNumber: "2",
+    quote: "The toucher is a body without organs-it is not filled with knobs and switches that demand legends, but rather the cryptic runes inspired by sensor fields. As such, it is a place for bumbling fingers, not the precise en-goaled tweaker."
+  },
 ]
 
 export default REFERENCES
