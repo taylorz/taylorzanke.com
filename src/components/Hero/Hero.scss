@@ -13,12 +13,13 @@
     height: 100%;
     @include breakpoint(sm) {
       height: auto;
+      margin-bottom: $buffer*8;
     }
     .hero-image-section {
       background: $bgColorLight;
       height: 100%;
       @include breakpoint(sm) {
-        height: 80vh;
+        height: 60vh;
       }
       .slide-container {
         height: 100%;
@@ -35,11 +36,12 @@
             .slide-image {
               max-height: 150vh;
               width: 100%;
-              background-size: 250%;
+              background-size: cover;
               background-repeat: no-repeat;
               background-position: center center;
               @include breakpoint(sm) {
-                max-height: 80vh;
+                max-height: 70vh;
+                // background-size: cover;
               }
             }
             .caption {
@@ -52,7 +54,8 @@
               font-size: $fontSizeParagraph;
               line-height: $lineHeightParagraph;
               @include breakpoint(sm) {
-                bottom: -76px;
+                bottom: -100-$buffer*4;
+                height: 100px;
                 left: 0;
               }
               span {

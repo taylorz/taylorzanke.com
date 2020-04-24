@@ -5,8 +5,10 @@ import { Fade } from 'react-slideshow-image';
 import './Hero.scss';
 
 import TestImage from "../../assets/images/works/TransmissionsFrom/details/05.png"
-import TestImage2 from "../../assets/images/works/Reformulations1/Reformulations1_2.png"
+import TestImage2 from "../../assets/images/works/_TEMP/04.png"
 import TestImage3 from "../../assets/images/works/PhotographBook/PhotographBook4.png"
+import TestImage4 from "../../assets/images/works/_TEMP/01.png"
+import TestImage5 from "../../assets/images/works/_TEMP/03.png"
 
 class Hero extends Component {
   render() {
@@ -28,7 +30,7 @@ class Hero extends Component {
               <Fade
                 arrows={false}
                 transitionDuration={0}
-                duration={10000}
+                duration={5000}
                 infinite={true}
                 autoplay={true}
               >
@@ -36,25 +38,34 @@ class Hero extends Component {
                   <div className="slide-image" style={{'backgroundImage': `url(${TestImage})`}}></div>
                   <div className="caption">
                     <span className="detail-id">Detail 1</span>
-                    <span className="detail-caption">Two qualities of line, drawn in counterpoint, reveal a map of potential.</span>
+                    <span className="detail-caption">Two qualities of line, drawn in counterpoint, reveal a map of potential.</span> <br/>
                     <span className="detail-work"> Transmissions From Rare Space.</span>
                     <span className="detail-year"> (2019)</span>
                   </div>
                 </div>
                 <div className="each-slide">
-                  <div className="slide-image" style={{'backgroundImage': `url(${TestImage2})`}}></div>
+                  <div className="slide-image" style={{'backgroundImage': `url(${TestImage4})`}}></div>
                   <div className="caption">
                     <span className="detail-id">Detail 2</span>
-                    <span className="detail-caption">A spread from the volume displays two images coincidentally creating a new space.</span>
+                    <span className="detail-caption">A crashing wave occupies the center of a signature.</span>
+                    <span className="detail-work"> Two Visitations Reader.</span>
+                    <span className="detail-year"> (2020)</span>
+                  </div>
+                </div>
+                <div className="each-slide">
+                  <div className="slide-image" style={{'backgroundImage': `url(${TestImage2})`}}></div>
+                  <div className="caption">
+                    <span className="detail-id">Detail 3</span>
+                    <span className="detail-caption">Images are overprinted with drawings and mass.</span>
                     <span className="detail-work"> Reformulations 1.</span>
                     <span className="detail-year"> (2020)</span>
                   </div>
                 </div>
                 <div className="each-slide">
-                  <div className="slide-image" style={{'backgroundImage': `url(${TestImage3})`}}></div>
+                  <div className="slide-image" style={{'backgroundImage': `url(${TestImage5})`}}></div>
                   <div className="caption">
-                    <span className="detail-id">Detail 3</span>
-                    <span className="detail-caption">The center of a hand stitched signature shows a sweeping landscape in color.</span>
+                    <span className="detail-id">Detail 4</span>
+                    <span className="detail-caption">Two trees reach toward each other, one year apart.</span>
                     <span className="detail-work"> Two Visitations Reader.</span>
                     <span className="detail-year"> (2020)</span>
                   </div>
