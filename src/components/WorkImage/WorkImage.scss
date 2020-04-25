@@ -4,28 +4,27 @@
   display: flex;
   position: relative;
   justify-content: center;
-  height: 100vh;
-  background: $bgColorLight;
-  margin-bottom: $buffer*4;
-  // margin: 0 $buffer*4 $buffer*4 $buffer*4 ;
+  height: 60vh;
+  background: #f1f1f1;
+  // margin-bottom: $buffer*4;
+  overflow: hidden;
   @include breakpoint(sm) {
     height: auto;
-    width: 100vw !important;
+    // width: 100vw !important;
     .image-item {
-      width: 100% !important;
+      // width: 100% !important;
     }
   }
   &.matte {
     // padding: 10%;
     align-items: center;
     .image-item {
-      height: 55%;
+      height: 80%;
       width: auto;
       @include breakpoint(sm) {
         max-width: 50%;
         padding: 10% 30% 10% 30%;
       }
-      // box-shadow: 0px 5px 40px #ccc;
     }
   }
   &.full {

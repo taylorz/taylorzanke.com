@@ -43,6 +43,20 @@ class Homepage extends Component {
           <PageContainer className="homepage">
             <Header onClick={() => this.toggleMenu()} link="/about" linkName="INFO"/>
             <Hero/>
+            <div className="project-item">
+              <Grid container className="project-wrapper">
+                <Grid item md={1}/>
+                <Grid item md={5} className="project-preview-image">
+                  <WorkImage
+                    matte
+                    image={Reformulations1.images[0]}
+                  />
+                </Grid>
+                <Grid item md={4} className="project-preview-name">
+                  Reformulations 1
+                </Grid>
+              </Grid>
+            </div>
           </PageContainer>
         </SiteWrapper>
       </>
