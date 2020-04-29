@@ -3,12 +3,17 @@
 .aboutpage {
   .about-content {
     padding: $buffer*4;
+    // padding-top: $buffer*16;
     @include breakpoint(sm) {
-      margin-top: $buffer*8;
+      // margin-top: $buffer*8;
     }
     .artist-statement {
       font-size: $fontSizeStatement;
       line-height: $lineHeightStatement;
+      @include breakpoint(sm) {
+        font-size: $fontSizeParagraph;
+        line-height: $lineHeightParagraph;
+      }
       p:first-child {
         margin-top: 0;
       }

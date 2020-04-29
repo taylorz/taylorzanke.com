@@ -24,7 +24,7 @@ const StackWorks = WORKS[6];
 const TwoCitiesDiaryHNY = WORKS[7];
 const TwoCitiesDiaryMP = WORKS[8];
 const Reformulations1 = WORKS[9];
-const PhotographBook = WORKS[10];
+const TwoVisitations = WORKS[10];
 
 class Homepage extends Component {
   state = {
@@ -41,21 +41,138 @@ class Homepage extends Component {
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
           <PageContainer className="homepage">
-            <Header onClick={() => this.toggleMenu()} link="/about" linkName="INFO"/>
+            {/*<Header onClick={() => this.toggleMenu()} link="/about" linkName="Info"/>*/}
             <Hero/>
-            <div className="project-item">
-              <Grid container className="project-wrapper">
-                <Grid item md={1}/>
-                <Grid item md={5} className="project-preview-image">
-                  <WorkImage
-                    matte
-                    image={Reformulations1.images[0]}
-                  />
+            {/*{WORKS.map((work) =>
+              <div className="project-item">
+                <Grid container className="project-wrapper">
+                  <Grid item xs={12} md={6} className="project-preview-image">
+                    <WorkImage
+                      matte
+                      image={work.images[0]}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={4} className="project-preview-name">
+                    {work.title}
+                  </Grid>
                 </Grid>
-                <Grid item md={4} className="project-preview-name">
-                  Reformulations 1
+              </div>
+            )}*/}
+              <div className="project-list">
+              <div className="project-item">
+                <Grid container className="project-wrapper">
+                  <Grid item xs={12} md={6} className="project-preview-image">
+                    <WorkImage
+                      matte
+                      image={Reformulations1.images[0]}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={4} lg={3}  className="project-preview-name">
+                    <div className="project-caption">
+                      <div className="caption-title">{Reformulations1.title}</div>
+                      <div className="caption-information">{Reformulations1.object}, {Reformulations1.dimensions}, <span>{Reformulations1.information}</span>. ({Reformulations1.year})</div>
+                    </div>
+                  </Grid>
                 </Grid>
-              </Grid>
+              </div>
+              <div className="project-item">
+                <Grid container className="project-wrapper">
+                  <Grid item xs={12} md={6} className="project-preview-image">
+                    <WorkImage
+                      matte
+                      dark
+                      image={TwoVisitations.images[1]}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={4} lg={3}  className="project-preview-name">
+                    <div className="project-caption">
+                      <div className="caption-title">{TwoVisitations.title}</div>
+                      <div className="caption-information">{TwoVisitations.object}, {TwoVisitations.dimensions}, <span>{TwoVisitations.information}</span>. ({TwoVisitations.year})</div>
+                    </div>
+                  </Grid>
+                </Grid>
+              </div>
+              <div className="project-item">
+                <Grid container className="project-wrapper">
+                  <Grid item xs={12} md={6} className="project-preview-image">
+                    <WorkImage
+                      full
+                      image={TransmissionsFrom.images[3]}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={4} lg={3}  className="project-preview-name">
+                    <div className="project-caption">
+                      <div className="caption-title">{TransmissionsFrom.title}</div>
+                      <div className="caption-information">{TransmissionsFrom.object}, {TransmissionsFrom.dimensions}, <span>{TransmissionsFrom.information}</span>. ({TransmissionsFrom.year})</div>
+                    </div>
+                  </Grid>
+                </Grid>
+              </div>
+              <div className="project-item">
+                <Grid container className="project-wrapper">
+                  <Grid item xs={12} md={6} className="project-preview-image">
+                    <WorkImage
+                      full
+                      image={SeveralSpeculative.images[6]}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={4} lg={3}  className="project-preview-name">
+                    <div className="project-caption">
+                      <div className="caption-title">{SeveralSpeculative.title}</div>
+                      <div className="caption-information">{SeveralSpeculative.object}, {SeveralSpeculative.dimensions}, <span>{SeveralSpeculative.information}</span>. ({SeveralSpeculative.year})</div>
+                    </div>
+                  </Grid>
+                </Grid>
+              </div>
+              <div className="project-item">
+                <Grid container className="project-wrapper">
+                  <Grid item xs={12} md={6} className="project-preview-image">
+                    <WorkImage
+                      full
+                      image={TwoCitiesDiaryHNY.images[1]}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={4} lg={3}  className="project-preview-name">
+                    <div className="project-caption">
+                      <div className="caption-title">{TwoCitiesDiaryHNY.title}</div>
+                      <div className="caption-information">{TwoCitiesDiaryHNY.object}, {TwoCitiesDiaryHNY.dimensions}, <span>{TwoCitiesDiaryHNY.information}</span>. ({TwoCitiesDiaryHNY.year})</div>
+                    </div>
+                  </Grid>
+                </Grid>
+              </div>
+              <div className="project-item">
+                <Grid container className="project-wrapper">
+                  <Grid item xs={12} md={6} className="project-preview-image">
+                    <WorkImage
+                      full
+                      image={TwoCitiesDiaryMP.images[4]}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={4} lg={3}  className="project-preview-name">
+                    <div className="project-caption">
+                      <div className="caption-title">{TwoCitiesDiaryMP.title}</div>
+                      <div className="caption-information">{TwoCitiesDiaryMP.object}, {TwoCitiesDiaryMP.dimensions}, <span>{TwoCitiesDiaryMP.information}</span>. ({TwoCitiesDiaryMP.year})</div>
+                    </div>
+                  </Grid>
+                </Grid>
+              </div>
+              <div className="project-item">
+                <Grid container className="project-wrapper">
+                  <Grid item xs={12} md={6} className="project-preview-image">
+                    <WorkImage
+                      matte
+                      dark
+                      image={DirectionZine.images[2]}
+                    />
+                  </Grid>
+                  <Grid item xs={12} md={4} lg={3}  className="project-preview-name">
+                    <div className="project-caption">
+                      <div className="caption-title">{DirectionZine.title}</div>
+                      <div className="caption-information">{DirectionZine.object}, {DirectionZine.dimensions}, <span>{DirectionZine.information}</span>. ({DirectionZine.year})</div>
+                    </div>
+                  </Grid>
+                </Grid>
+              </div>
             </div>
           </PageContainer>
         </SiteWrapper>

@@ -11,15 +11,17 @@
   left: 0px;
   right: 0px;
   position: fixed;
+  // background: white;
+  // border-bottom: 1px solid $bgColorLight;
+  @include breakpoint(sm) {
+    // position: relative;
+  }
   &.light {
     color: $lightFontColor;
   }
   .header-contents {
     padding: $buffer*4;
     display: flex;
-    justify-content: flex-end;
-    @include breakpoint(sm) {
-      justify-content: flex-start;
-    }
+    justify-content: space-between;
   }
 }//header-container

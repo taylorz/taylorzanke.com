@@ -1,7 +1,7 @@
-import PhotographBook1 from '../../assets/images/works/PhotographBook/PhotographBook1.png'
-import PhotographBook2 from '../../assets/images/works/PhotographBook/PhotographBook2.png'
-import PhotographBook3 from '../../assets/images/works/PhotographBook/PhotographBook3.png'
-import PhotographBook4 from '../../assets/images/works/PhotographBook/PhotographBook4.png'
+import TwoVisitations1 from '../../assets/images/works/TwoVisitations/TwoVisitations1.png'
+import TwoVisitations2 from '../../assets/images/works/TwoVisitations/TwoVisitations2.png'
+import TwoVisitations3 from '../../assets/images/works/TwoVisitations/TwoVisitations3.png'
+import TwoVisitations4 from '../../assets/images/works/TwoVisitations/TwoVisitations4.png'
 
 import Reformulations1_1 from '../../assets/images/works/Reformulations1/Reformulations1_1.png'
 import Reformulations1_2 from '../../assets/images/works/Reformulations1/Reformulations1_2.png'
@@ -270,8 +270,8 @@ const WORKS = [
     title: "Reformulations 1",
     year: "2020",
     object: "Book",
-    dimensions: "12 x 10 inches",
-    information: "Self, Single Edition",
+    dimensions: "5.25 x 7.5 inches",
+    information: "Self, single sdition",
     images: [
       Reformulations1_1,
       Reformulations1_2,
@@ -281,16 +281,16 @@ const WORKS = [
   },
   {
     id: "10",
-    title: "Photograph Book",
+    title: "Two Visitations",
     year: "2020",
     object: "Book",
-    dimensions: "12 x 10 inches",
-    information: "Self, Single Edition",
+    dimensions: "5 x 7 inches",
+    information: "Self, single sdition",
     images: [
-      PhotographBook1,
-      PhotographBook2,
-      PhotographBook3,
-      PhotographBook4,
+      TwoVisitations1,
+      TwoVisitations2,
+      TwoVisitations3,
+      TwoVisitations4,
     ],
     link: "/two-cities-diary-mumbai-paris"
   },

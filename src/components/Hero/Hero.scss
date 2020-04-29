@@ -5,21 +5,18 @@
   overflow: hidden;
   @include breakpoint(sm) {
     height: auto;
-    overflow-y: visible;
-    margin-top: $buffer*8;
   }
   .hero-contents {
-    padding: $buffer*4;
     height: 100%;
     @include breakpoint(sm) {
       height: auto;
-      margin-bottom: $buffer*8;
+      // margin-bottom: $buffer*8;
     }
     .hero-image-section {
       background: $bgColorLight;
       height: 100%;
       @include breakpoint(sm) {
-        height: 60vh;
+        height: 80vh;
       }
       .slide-container {
         height: 100%;
@@ -40,23 +37,25 @@
               background-repeat: no-repeat;
               background-position: center center;
               @include breakpoint(sm) {
-                max-height: 70vh;
+                max-height: 100vh;
                 // background-size: cover;
               }
             }
             .caption {
               height: auto;
-              width: 300px;
+              width: 400px;
               position: absolute;
               bottom: 0;
-              right: -316px;
+              padding-bottom: $buffer*4;
+              right: -416px;
               font-family: $secondaryFont;
-              font-size: $fontSizeParagraph;
-              line-height: $lineHeightParagraph;
+              font-size: $fontSize;
+              line-height: $lineHeight;
               @include breakpoint(sm) {
-                bottom: -100-$buffer*4;
+                bottom: -132px;
                 height: 100px;
-                left: 0;
+                left: $buffer*4;
+                width: 90vw;
               }
               span {
                 &.detail-id {
@@ -74,14 +73,21 @@
       }
     }//hero-image-section
     .hero-statement-section {
-      padding-left: $buffer*4;
+      padding: $buffer*4 $buffer*4 0 $buffer*4;
       @include breakpoint(sm) {
-        padding: $buffer*24 0 0 0;
+        // padding: $buffer*24 0 0 0;
+        padding: $buffer*4 $buffer*4 0 $buffer*4;
+        margin-top: $lineHeightParagraph*3;
       }
       .statement-wrapper {
         .statement-copy {
+          font-family: $primaryFont;
           font-size: $fontSizeStatement;
           line-height: $lineHeightStatement;
+          @include breakpoint(sm) {
+            font-size: $fontSizeParagraph;
+            line-height: $lineHeightParagraph;
+          }
         }//statement-copy
       }//statement-wrapper
     }//hero-statement-section

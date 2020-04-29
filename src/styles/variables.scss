@@ -1,7 +1,7 @@
-$buffer:                            5px;
+$buffer:                            4px;
 
 $bgBody:                             #ffffff;
-$bgColorLight:                       #f1f1f1;
+$bgColorLight:                       #eaeaea;
 $bgColorDark:                        #11111a;
 
 $darkFontColor:                      $bgColorDark;
@@ -14,13 +14,13 @@ $secondaryFont:                      "Times New Roman", serif;
 $fontSize:                           14px;
 $fontSizeParagraph:                  $fontSize*1.15;
 $fontSizeStatement:                  $fontSize*1.85;
-$fontSizeHero:                       $fontSize*5;
+$fontSizeHero:                       $fontSize*3;
 $fontSizeCaption:                    $fontSize*.8;
 
-$lineHeight:                         18px;
-$lineHeightParagraph:                $lineHeight*1.05;
-$lineHeightStatement:                $lineHeight*1.85;
-$lineHeightHero:                     $lineHeight*4.5;
+$lineHeight:                         16px;
+$lineHeightParagraph:                $lineHeight*1.25;
+$lineHeightStatement:                $lineHeight*2;
+$lineHeightHero:                     $lineHeight*3.25;
 $lineHeightCaption:                  $lineHeight*.8;
 
 $captionHeight:                      $buffer*8;

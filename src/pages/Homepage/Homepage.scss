@@ -1,14 +1,37 @@
 @import "../../styles/styles.scss";
 
 .homepage {
-  .project-item {
-    padding: 0 $buffer*4 $buffer*4 $buffer*4;
-    .project-preview-name {
-      display: flex;
-      align-items: flex-end;
-      padding-left: $buffer*4;
-      font-size: $fontSizeParagraph;
-      
-    }
-  }
+  .project-list {
+    // border-top: 1px solid $bgColorLight;
+    padding-top: $buffer*4;
+    .project-item {
+      padding: 0 $buffer*4 $buffer*4 $buffer*4;
+      .project-preview-name {
+        display: flex;
+        align-items: flex-end;;
+        padding-left: $buffer*4;
+        @include breakpoint(sm) {
+          padding: $buffer*4 0 0 0;
+
+        }
+        .project-caption {
+          .caption-title {
+            display: inline;
+            margin-right: $buffer*4;
+            font-family: $primaryFontBold;
+            font-size: $fontSizeCaption;
+          }
+          .caption-information {
+            font-family: $secondaryFont;
+            font-size: $fontSizeParagraph;
+            line-height: $lineHeightParagraph;
+            display: inline;
+            span {
+              font-style: italic;
+            }
+          }
+        }
+      }
+    }//project-item
+  }//project-list
 }//homepage

@@ -5,35 +5,32 @@
   position: relative;
   justify-content: center;
   height: 60vh;
-  background: #f1f1f1;
+  background: $bgColorLight;
   // margin-bottom: $buffer*4;
   overflow: hidden;
-  @include breakpoint(sm) {
-    height: auto;
-    // width: 100vw !important;
-    .image-item {
-      // width: 100% !important;
-    }
-  }
   &.matte {
     // padding: 10%;
     align-items: center;
     .image-item {
-      height: 80%;
+      height: 70%;
       width: auto;
       @include breakpoint(sm) {
-        max-width: 50%;
+        max-width: 60%;
+        height: auto;
         padding: 10% 30% 10% 30%;
       }
     }
   }
   &.full {
-    margin: 0 $buffer*4 $buffer*4 $buffer*4 ;
     overflow: hidden;
     align-items: center;
     .image-item {
       width: 100%;
       height: auto;
+      @include breakpoint(sm) {
+        // height: 100%;
+        width: 100%
+      }
     }
   }
   &.dark {
