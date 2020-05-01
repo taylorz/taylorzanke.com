@@ -11,6 +11,8 @@ import DirectionZine from './pages/DirectionZine/DirectionZine';
 import SeveralSpeculative from './pages/SeveralSpeculative/SeveralSpeculative';
 import TwoCitiesDiaryHNY from './pages/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY';
 import TwoCitiesDiaryMP from './pages/TwoCitiesDiaryMP/TwoCitiesDiaryMP';
+import Reformulations1 from './pages/Reformulations1/Reformulations1';
+import TwoVisitations from './pages/TwoVisitations/TwoVisitations';
 import './App.css';
 
 class App extends Component {
@@ -28,6 +30,8 @@ class App extends Component {
           <Route path="/several-speculative-improvements" component={SeveralSpeculative}/>
           <Route path="/two-cities-diary" component={TwoCitiesDiaryHNY}/>
           <Route path="/two-cities-diary-mumbai-paris" component={TwoCitiesDiaryMP}/>
+          <Route path="/reformulatons-1" component={Reformulations1}/>
+          <Route path="/two-visitations" component={TwoVisitations}/>
         </Router>
       </div>
     );

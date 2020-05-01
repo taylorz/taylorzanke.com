@@ -8,7 +8,7 @@ class Header extends Component {
     return (
       <div className={`header-container ${light && "light"}`}>
         <Grid container className="header-contents">
-          <div><a href="/">Taylor Zanke</a></div>
+          <div onClick={onClick}>Taylor Zanke</div>
           <a href={link}>{linkName}</a>
         </Grid>
       </div>

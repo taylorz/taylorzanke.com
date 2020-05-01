@@ -41,7 +41,7 @@ class Homepage extends Component {
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
           <PageContainer className="homepage">
-            {/*<Header onClick={() => this.toggleMenu()} link="/about" linkName="Info"/>*/}
+            <Header onClick={() => this.toggleMenu()} link="/about" linkName="Info"/>
             <Hero/>
             {/*{WORKS.map((work) =>
               <div className="project-item">
@@ -52,7 +52,7 @@ class Homepage extends Component {
                       image={work.images[0]}
                     />
                   </Grid>
-                  <Grid item xs={12} md={4} className="project-preview-name">
+                  <Grid item xs={12} md={3} className="project-preview-name">
                     {work.title}
                   </Grid>
                 </Grid>
@@ -67,10 +67,10 @@ class Homepage extends Component {
                       image={Reformulations1.images[0]}
                     />
                   </Grid>
-                  <Grid item xs={12} md={4} lg={3}  className="project-preview-name">
+                  <Grid item xs={12} md={2} className="project-preview-name">
                     <div className="project-caption">
                       <div className="caption-title">{Reformulations1.title}</div>
-                      <div className="caption-information">{Reformulations1.object}, {Reformulations1.dimensions}, <span>{Reformulations1.information}</span>. ({Reformulations1.year})</div>
+                      <div className="caption-information">{Reformulations1.object}. {Reformulations1.dimensions}. <span>{Reformulations1.information}</span>. ({Reformulations1.year})</div>
                     </div>
                   </Grid>
                 </Grid>
@@ -84,10 +84,10 @@ class Homepage extends Component {
                       image={TwoVisitations.images[1]}
                     />
                   </Grid>
-                  <Grid item xs={12} md={4} lg={3}  className="project-preview-name">
+                  <Grid item xs={12} md={2} className="project-preview-name">
                     <div className="project-caption">
                       <div className="caption-title">{TwoVisitations.title}</div>
-                      <div className="caption-information">{TwoVisitations.object}, {TwoVisitations.dimensions}, <span>{TwoVisitations.information}</span>. ({TwoVisitations.year})</div>
+                      <div className="caption-information">{TwoVisitations.object}. {TwoVisitations.dimensions}. <span>{TwoVisitations.information}</span>. ({TwoVisitations.year})</div>
                     </div>
                   </Grid>
                 </Grid>
@@ -100,10 +100,10 @@ class Homepage extends Component {
                       image={TransmissionsFrom.images[3]}
                     />
                   </Grid>
-                  <Grid item xs={12} md={4} lg={3}  className="project-preview-name">
+                  <Grid item xs={12} md={2} className="project-preview-name">
                     <div className="project-caption">
                       <div className="caption-title">{TransmissionsFrom.title}</div>
-                      <div className="caption-information">{TransmissionsFrom.object}, {TransmissionsFrom.dimensions}, <span>{TransmissionsFrom.information}</span>. ({TransmissionsFrom.year})</div>
+                      <div className="caption-information">{TransmissionsFrom.object}. {TransmissionsFrom.dimensions}. <span>{TransmissionsFrom.information}</span>. ({TransmissionsFrom.year})</div>
                     </div>
                   </Grid>
                 </Grid>
@@ -116,10 +116,10 @@ class Homepage extends Component {
                       image={SeveralSpeculative.images[6]}
                     />
                   </Grid>
-                  <Grid item xs={12} md={4} lg={3}  className="project-preview-name">
+                  <Grid item xs={12} md={2} className="project-preview-name">
                     <div className="project-caption">
                       <div className="caption-title">{SeveralSpeculative.title}</div>
-                      <div className="caption-information">{SeveralSpeculative.object}, {SeveralSpeculative.dimensions}, <span>{SeveralSpeculative.information}</span>. ({SeveralSpeculative.year})</div>
+                      <div className="caption-information">{SeveralSpeculative.object}. {SeveralSpeculative.dimensions}. <span>{SeveralSpeculative.information}</span>. ({SeveralSpeculative.year})</div>
                     </div>
                   </Grid>
                 </Grid>
@@ -132,10 +132,10 @@ class Homepage extends Component {
                       image={TwoCitiesDiaryHNY.images[1]}
                     />
                   </Grid>
-                  <Grid item xs={12} md={4} lg={3}  className="project-preview-name">
+                  <Grid item xs={12} md={2} className="project-preview-name">
                     <div className="project-caption">
                       <div className="caption-title">{TwoCitiesDiaryHNY.title}</div>
-                      <div className="caption-information">{TwoCitiesDiaryHNY.object}, {TwoCitiesDiaryHNY.dimensions}, <span>{TwoCitiesDiaryHNY.information}</span>. ({TwoCitiesDiaryHNY.year})</div>
+                      <div className="caption-information">{TwoCitiesDiaryHNY.object}. {TwoCitiesDiaryHNY.dimensions}. <span>{TwoCitiesDiaryHNY.information}</span>. ({TwoCitiesDiaryHNY.year})</div>
                     </div>
                   </Grid>
                 </Grid>
@@ -148,10 +148,10 @@ class Homepage extends Component {
                       image={TwoCitiesDiaryMP.images[4]}
                     />
                   </Grid>
-                  <Grid item xs={12} md={4} lg={3}  className="project-preview-name">
+                  <Grid item xs={12} md={2} className="project-preview-name">
                     <div className="project-caption">
                       <div className="caption-title">{TwoCitiesDiaryMP.title}</div>
-                      <div className="caption-information">{TwoCitiesDiaryMP.object}, {TwoCitiesDiaryMP.dimensions}, <span>{TwoCitiesDiaryMP.information}</span>. ({TwoCitiesDiaryMP.year})</div>
+                      <div className="caption-information">{TwoCitiesDiaryMP.object}. {TwoCitiesDiaryMP.dimensions}. <span>{TwoCitiesDiaryMP.information}</span>. ({TwoCitiesDiaryMP.year})</div>
                     </div>
                   </Grid>
                 </Grid>
@@ -165,10 +165,10 @@ class Homepage extends Component {
                       image={DirectionZine.images[2]}
                     />
                   </Grid>
-                  <Grid item xs={12} md={4} lg={3}  className="project-preview-name">
+                  <Grid item xs={12} md={2} className="project-preview-name">
                     <div className="project-caption">
                       <div className="caption-title">{DirectionZine.title}</div>
-                      <div className="caption-information">{DirectionZine.object}, {DirectionZine.dimensions}, <span>{DirectionZine.information}</span>. ({DirectionZine.year})</div>
+                      <div className="caption-information">{DirectionZine.object}. {DirectionZine.dimensions}. <span>{DirectionZine.information}</span>. ({DirectionZine.year})</div>
                     </div>
                   </Grid>
                 </Grid>

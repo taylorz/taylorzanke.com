@@ -8,21 +8,21 @@
   // overflow-x: hidden;
   margin: 0; padding: 0;
   &.menu-opened {
-    overflow-y: scroll;
+    overflow-y: hidden;
     position: fixed;
     &::-webkit-scrollbar {
-      width: 0;
+      // width: 0;
       background: transparent;
     }
     .menu {
       transform: translateX(0%);
-      transition: transform $timing*5 linear;
+      transition: transform $timing*2 linear;
     }
   }//menu-opened
   &.menu-closed {
     .menu {
       transform: translateX(100%);
-      transition: transform $timing*5 linear;
+      transition: transform $timing*2 linear;
     }
   }//menu-closed
 }//page-wrapper

@@ -2,6 +2,21 @@ import TwoVisitations1 from '../../assets/images/works/TwoVisitations/TwoVisitat
 import TwoVisitations2 from '../../assets/images/works/TwoVisitations/TwoVisitations2.png'
 import TwoVisitations3 from '../../assets/images/works/TwoVisitations/TwoVisitations3.png'
 import TwoVisitations4 from '../../assets/images/works/TwoVisitations/TwoVisitations4.png'
+import TwoVisitations5 from '../../assets/images/works/TwoVisitations/TwoVisitations5.png'
+import TwoVisitations6 from '../../assets/images/works/TwoVisitations/TwoVisitations6.png'
+import TwoVisitations7 from '../../assets/images/works/TwoVisitations/TwoVisitations7.png'
+import TwoVisitations8 from '../../assets/images/works/TwoVisitations/TwoVisitations8.png'
+import TwoVisitations9 from '../../assets/images/works/TwoVisitations/TwoVisitations9.png'
+import TwoVisitations10 from '../../assets/images/works/TwoVisitations/TwoVisitations10.png'
+import TwoVisitations11 from '../../assets/images/works/TwoVisitations/TwoVisitations11.png'
+import TwoVisitations12 from '../../assets/images/works/TwoVisitations/TwoVisitations12.png'
+import TwoVisitations13 from '../../assets/images/works/TwoVisitations/TwoVisitations13.png'
+import TwoVisitations14 from '../../assets/images/works/TwoVisitations/TwoVisitations14.png'
+import TwoVisitations15 from '../../assets/images/works/TwoVisitations/TwoVisitations15.png'
+import TwoVisitations16 from '../../assets/images/works/TwoVisitations/TwoVisitations16.png'
+import TwoVisitations17 from '../../assets/images/works/TwoVisitations/TwoVisitations17.png'
+import TwoVisitations18 from '../../assets/images/works/TwoVisitations/TwoVisitations18.png'
+import TwoVisitations19 from '../../assets/images/works/TwoVisitations/TwoVisitations19.png'
 
 import Reformulations1_1 from '../../assets/images/works/Reformulations1/Reformulations1_1.png'
 import Reformulations1_2 from '../../assets/images/works/Reformulations1/Reformulations1_2.png'
@@ -271,13 +286,13 @@ const WORKS = [
     year: "2020",
     object: "Book",
     dimensions: "5.25 x 7.5 inches",
-    information: "Self, single sdition",
+    information: "Hand sewn signatures of letter paper, newsprint, drawing paper, PVA glued spine, single edition",
     images: [
       Reformulations1_1,
       Reformulations1_2,
       Reformulations1_3,
     ],
-    link: "/two-cities-diary-mumbai-paris"
+    link: "/reformulations-1"
   },
   {
     id: "10",
@@ -285,14 +300,29 @@ const WORKS = [
     year: "2020",
     object: "Book",
     dimensions: "5 x 7 inches",
-    information: "Self, single sdition",
+    information: "French folded with hand sewn signatures, PVA glued spine, single edition",
     images: [
       TwoVisitations1,
       TwoVisitations2,
       TwoVisitations3,
       TwoVisitations4,
+      TwoVisitations5,
+      TwoVisitations6,
+      TwoVisitations7,
+      TwoVisitations8,
+      TwoVisitations9,
+      TwoVisitations10,
+      TwoVisitations11,
+      TwoVisitations12,
+      TwoVisitations13,
+      TwoVisitations14,
+      TwoVisitations15,
+      TwoVisitations16,
+      TwoVisitations17,
+      TwoVisitations18,
+      TwoVisitations19,
     ],
-    link: "/two-cities-diary-mumbai-paris"
+    link: "/two-visitations"
   },
 ]
 

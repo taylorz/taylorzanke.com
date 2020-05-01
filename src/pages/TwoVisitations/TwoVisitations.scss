@@ -1,0 +1,41 @@
+@import "../../styles/styles.scss";
+
+.two-visitations {
+  .project-content {
+    .project-images-list {
+      padding: $buffer*4 0 $buffer*4 $buffer*4;
+      .project-item {
+        padding-top: $buffer*4;
+        &:first-child {
+          padding: 0;
+        }
+      }
+    }//project-images-list
+    .project-information {
+      padding: $buffer*4 0 0 $buffer*4;
+      .project-statement {
+        font-size: $fontSizeStatement;
+        line-height: $lineHeightStatement;
+        p:first-child {
+          margin-top: 0;
+        }
+      }
+      .project-data {
+        .data-copy {
+          font-family: $secondaryFont;
+          font-size: $fontSize;
+          line-height: $lineHeight;
+          .project-name {
+            font-size: $fontSizeCaption;
+            line-height: $lineHeightCaption;
+            font-family: $primaryFontBold;
+            margin-right: $buffer*4;
+          }
+          .data-information {
+            font-style: italic;
+          }
+        }
+      }
+    }//project-information
+  }
+}//two-visitations
