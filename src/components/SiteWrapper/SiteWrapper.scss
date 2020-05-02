@@ -17,17 +17,24 @@
     .menu {
       transform: translateX(0%);
       transition: transform $timing*2 $easingCubic;
+      &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
     }
     .page-container {
       transform: translateX($menuWidth);
       transition: transform $timing*2 $easingCubic;
+      @include breakpoint(sm) {
+        transform: translateX($menuWidthMobile);
+      }
       // overflow-y: hidden;
       // position: fixed;
     }
   }//menu-opened
   &.menu-closed {
     .menu {
-      transform: translateX(-100%);
+      transform: translateX(calc(-100% - 1px));
       transition: transform $timing*2 $easingCubic;
     }
     .page-container {

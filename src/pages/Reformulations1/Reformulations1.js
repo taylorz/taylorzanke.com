@@ -45,7 +45,7 @@ class Reformulations1 extends Component {
           </Grid>
           <Grid item xs={12} md={6} className="project-information">
             <div className="project-statement">
-              <p>Reformulations 1 combines many sources to create a whole.</p>
+              <p>Reformulations 1 combines many sources to create a whole. They are images and drawings completed across different times.</p>
             </div>
             <Grid container className="project-data">
               <Grid item xs={12} md={6} className="data-copy">
