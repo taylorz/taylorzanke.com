@@ -30,7 +30,7 @@ class App extends Component {
           <Route path="/several-speculative-improvements" component={SeveralSpeculative}/>
           <Route path="/two-cities-diary" component={TwoCitiesDiaryHNY}/>
           <Route path="/two-cities-diary-mumbai-paris" component={TwoCitiesDiaryMP}/>
-          <Route path="/reformulatons-1" component={Reformulations1}/>
+          <Route path="/reformulations-1" component={Reformulations1}/>
           <Route path="/two-visitations" component={TwoVisitations}/>
         </Router>
       </div>

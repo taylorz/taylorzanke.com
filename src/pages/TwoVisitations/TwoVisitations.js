@@ -45,9 +45,9 @@ class TwoVisitations extends Component {
                 <p>Two Visitations Reader is a collection of spaces revisited. I snapped the same picture on multiple occasions, often retracing my steps. Idieosyncratic alignment occurs not only on the page, but over time.</p>
               </div>
               <Grid container className="project-data">
-                <Grid item xs={12} md={4} className="data-copy">
+                <Grid item xs={12} md={6} className="data-copy">
                   <span className="project-name">{TwoVisitationsWork.title}</span>
-                  {TwoVisitationsWork.object}. {TwoVisitationsWork.dimensions}.
+                  {TwoVisitationsWork.object}. {TwoVisitationsWork.dimensions}. {TwoVisitationsWork.pages}.
                   <span className="data-information"> {TwoVisitationsWork.information}. </span>
                   ({TwoVisitationsWork.year})
                 </Grid>

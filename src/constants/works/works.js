@@ -21,6 +21,22 @@ import TwoVisitations19 from '../../assets/images/works/TwoVisitations/TwoVisita
 import Reformulations1_1 from '../../assets/images/works/Reformulations1/Reformulations1_1.png'
 import Reformulations1_2 from '../../assets/images/works/Reformulations1/Reformulations1_2.png'
 import Reformulations1_3 from '../../assets/images/works/Reformulations1/Reformulations1_3.png'
+import Reformulations1_4 from '../../assets/images/works/Reformulations1/Reformulations1_4.png'
+import Reformulations1_5 from '../../assets/images/works/Reformulations1/Reformulations1_5.png'
+import Reformulations1_6 from '../../assets/images/works/Reformulations1/Reformulations1_6.png'
+import Reformulations1_7 from '../../assets/images/works/Reformulations1/Reformulations1_7.png'
+import Reformulations1_8 from '../../assets/images/works/Reformulations1/Reformulations1_8.png'
+import Reformulations1_9 from '../../assets/images/works/Reformulations1/Reformulations1_9.png'
+import Reformulations1_10 from '../../assets/images/works/Reformulations1/Reformulations1_10.png'
+import Reformulations1_11 from '../../assets/images/works/Reformulations1/Reformulations1_11.png'
+import Reformulations1_12 from '../../assets/images/works/Reformulations1/Reformulations1_12.png'
+import Reformulations1_13 from '../../assets/images/works/Reformulations1/Reformulations1_13.png'
+import Reformulations1_14 from '../../assets/images/works/Reformulations1/Reformulations1_14.png'
+import Reformulations1_15 from '../../assets/images/works/Reformulations1/Reformulations1_15.png'
+import Reformulations1_16 from '../../assets/images/works/Reformulations1/Reformulations1_16.png'
+import Reformulations1_17 from '../../assets/images/works/Reformulations1/Reformulations1_17.png'
+import Reformulations1_18 from '../../assets/images/works/Reformulations1/Reformulations1_18.png'
+import Reformulations1_19 from '../../assets/images/works/Reformulations1/Reformulations1_19.png'
 
 import TwoCitiesDiaryHNY1 from '../../assets/images/works/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY1.png'
 import TwoCitiesDiaryHNY2 from '../../assets/images/works/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY2.png'
@@ -110,9 +126,9 @@ const WORKS = [
     id: "0",
     title: "Transmissions from Rare Space",
     year: "2019",
-    object: "Book",
+    object: "Book, Soft Cover",
     dimensions: "7 x 9 inches",
-    information: "Self, Collected drawings, Inkjet printed line and graphite, single edition",
+    information: "Inkjet printed, smythe sewn, PVA glued spine, single edition",
     images: [
       TransmissionsFrom1,
       TransmissionsFrom2,
@@ -187,11 +203,11 @@ const WORKS = [
   },
   {
     id: "4",
-    title: "Direction Zine",
+    title: "Untitled",
     year: "2017",
     object: "Zine",
     dimensions: "5.5 x 7 inches",
-    information: "Self, Single Edition",
+    information: "Laserjet printed, folded and unbound, single edition",
     images: [
       DirectionZine1,
       DirectionZine2,
@@ -206,9 +222,9 @@ const WORKS = [
     id: "5",
     title: "Several Speculative Improvements To My Family Home",
     year: "2016",
-    object: "Book",
+    object: "Book, Soft Cover",
     dimensions: "6 x 8.5 inches",
-    information: "Self, Single Edition",
+    information: "Laserjet printed, cold glue spine, single edition",
     images: [
       SeveralSpeculative1,
       SeveralSpeculative2,
@@ -251,9 +267,9 @@ const WORKS = [
     id: "7",
     title: "Two Cities Diary: Honolulu-New York",
     year: "2013",
-    object: "Book",
+    object: "Book, Soft Cover",
     dimensions: "6 x 8 inches",
-    information: "Self, Single Edition",
+    information: "Laser printed, cold glue spine, single edition",
     images: [
       TwoCitiesDiaryHNY1,
       TwoCitiesDiaryHNY2,
@@ -268,9 +284,9 @@ const WORKS = [
     id: "8",
     title: "Two Cities Diary: Mumbai-Paris",
     year: "2015",
-    object: "Book",
+    object: "Book, Soft Cover",
     dimensions: "12 x 10 inches",
-    information: "Self, Single Edition",
+    information: "Inkjet printed, cold glue spine, point sewn, single edition",
     images: [
       TwoCitiesDiaryMP1,
       TwoCitiesDiaryMP2,
@@ -284,13 +300,30 @@ const WORKS = [
     id: "9",
     title: "Reformulations 1",
     year: "2020",
-    object: "Book",
+    object: "Book, Soft Cover",
+    pages: "192 pages",
     dimensions: "5.25 x 7.5 inches",
-    information: "Hand sewn signatures of letter paper, newsprint, drawing paper, PVA glued spine, single edition",
+    information: "Laser and inkjet printed, smythe sewn, letter paper, newsprint, drawing paper, with original and printed graphite drawings, PVA glued spine, single edition",
     images: [
       Reformulations1_1,
       Reformulations1_2,
       Reformulations1_3,
+      Reformulations1_4,
+      Reformulations1_5,
+      Reformulations1_6,
+      Reformulations1_7,
+      Reformulations1_8,
+      Reformulations1_9,
+      Reformulations1_10,
+      Reformulations1_11,
+      Reformulations1_12,
+      Reformulations1_13,
+      Reformulations1_14,
+      Reformulations1_15,
+      Reformulations1_16,
+      Reformulations1_17,
+      Reformulations1_18,
+      Reformulations1_19,
     ],
     link: "/reformulations-1"
   },
@@ -298,9 +331,10 @@ const WORKS = [
     id: "10",
     title: "Two Visitations",
     year: "2020",
-    object: "Book",
+    object: "Book, Soft Cover",
+    pages: "104 pages",
     dimensions: "5 x 7 inches",
-    information: "French folded with hand sewn signatures, PVA glued spine, single edition",
+    information: "French folded, inkjet printed, smythe sewn, PVA glued spine, single edition",
     images: [
       TwoVisitations1,
       TwoVisitations2,

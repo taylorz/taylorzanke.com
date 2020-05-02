@@ -28,12 +28,36 @@ class Reformulations1 extends Component {
   render() {
     return (
       <>
-        <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
-          <Menu onClick={() => this.toggleMenu()}/>
-          <PageContainer className="reformulations-1">
-
-          </PageContainer>
-        </SiteWrapper>
+      <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
+        <Menu onClick={() => this.toggleMenu()}/>
+        <PageContainer className="two-visitations">
+        <Grid container className="project-content">
+          <Grid item xs={12} md={6} className="project-images-list">
+          {Reformulations1Work.images.map((image) =>
+            <div className="project-item">
+              <WorkImage
+                matte
+                image={image}
+              />
+            </div>
+          )}
+          </Grid>
+          <Grid item xs={12} md={6} className="project-information">
+            <div className="project-statement">
+              <p>Reformulations 1 combines many sources to create a whole.</p>
+            </div>
+            <Grid container className="project-data">
+              <Grid item xs={12} md={6} className="data-copy">
+                <span className="project-name">{Reformulations1Work.title}</span>
+                {Reformulations1Work.object}. {Reformulations1Work.dimensions}.
+                <span className="data-information"> {Reformulations1Work.information}. </span>
+                ({Reformulations1Work.year})
+              </Grid>
+            </Grid>
+          </Grid>
+        </Grid>
+        </PageContainer>
+      </SiteWrapper>
       </>
     );
   }

@@ -2,8 +2,14 @@
 
 .two-visitations {
   .project-content {
+    @include breakpoint(sm) {
+      margin-bottom: $buffer*4;
+    }
     .project-images-list {
       padding: $buffer*4 0 $buffer*4 $buffer*4;
+      @include breakpoint(sm) {
+        padding: $buffer*4;
+      }
       .project-item {
         padding-top: $buffer*4;
         &:first-child {

@@ -64,13 +64,13 @@ class Homepage extends Component {
                   <Grid item xs={12} md={6} className="project-preview-image">
                     <WorkImage
                       matte
-                      image={Reformulations1.images[0]}
+                      image={Reformulations1.images[5]}
                     />
                   </Grid>
-                  <Grid item xs={12} md={2} className="project-preview-name">
+                  <Grid item xs={12} md={3} className="project-preview-name">
                     <div className="project-caption">
                       <div className="caption-title">{Reformulations1.title}</div>
-                      <div className="caption-information">{Reformulations1.object}. {Reformulations1.dimensions}. <span>{Reformulations1.information}</span>. ({Reformulations1.year})</div>
+                      <div className="caption-information">{Reformulations1.object}. {Reformulations1.dimensions}. {Reformulations1.pages}. <span>{Reformulations1.information}</span>. ({Reformulations1.year})</div>
                     </div>
                   </Grid>
                 </Grid>
@@ -80,14 +80,13 @@ class Homepage extends Component {
                   <Grid item xs={12} md={6} className="project-preview-image">
                     <WorkImage
                       matte
-                      dark
                       image={TwoVisitations.images[1]}
                     />
                   </Grid>
-                  <Grid item xs={12} md={2} className="project-preview-name">
+                  <Grid item xs={12} md={3} className="project-preview-name">
                     <div className="project-caption">
                       <div className="caption-title">{TwoVisitations.title}</div>
-                      <div className="caption-information">{TwoVisitations.object}. {TwoVisitations.dimensions}. <span>{TwoVisitations.information}</span>. ({TwoVisitations.year})</div>
+                      <div className="caption-information">{TwoVisitations.object}. {TwoVisitations.dimensions}. {TwoVisitations.pages}. <span>{TwoVisitations.information}</span>. ({TwoVisitations.year})</div>
                     </div>
                   </Grid>
                 </Grid>
@@ -100,7 +99,7 @@ class Homepage extends Component {
                       image={TransmissionsFrom.images[3]}
                     />
                   </Grid>
-                  <Grid item xs={12} md={2} className="project-preview-name">
+                  <Grid item xs={12} md={3} className="project-preview-name">
                     <div className="project-caption">
                       <div className="caption-title">{TransmissionsFrom.title}</div>
                       <div className="caption-information">{TransmissionsFrom.object}. {TransmissionsFrom.dimensions}. <span>{TransmissionsFrom.information}</span>. ({TransmissionsFrom.year})</div>
@@ -116,7 +115,7 @@ class Homepage extends Component {
                       image={SeveralSpeculative.images[6]}
                     />
                   </Grid>
-                  <Grid item xs={12} md={2} className="project-preview-name">
+                  <Grid item xs={12} md={3} className="project-preview-name">
                     <div className="project-caption">
                       <div className="caption-title">{SeveralSpeculative.title}</div>
                       <div className="caption-information">{SeveralSpeculative.object}. {SeveralSpeculative.dimensions}. <span>{SeveralSpeculative.information}</span>. ({SeveralSpeculative.year})</div>
@@ -132,7 +131,7 @@ class Homepage extends Component {
                       image={TwoCitiesDiaryHNY.images[1]}
                     />
                   </Grid>
-                  <Grid item xs={12} md={2} className="project-preview-name">
+                  <Grid item xs={12} md={3} className="project-preview-name">
                     <div className="project-caption">
                       <div className="caption-title">{TwoCitiesDiaryHNY.title}</div>
                       <div className="caption-information">{TwoCitiesDiaryHNY.object}. {TwoCitiesDiaryHNY.dimensions}. <span>{TwoCitiesDiaryHNY.information}</span>. ({TwoCitiesDiaryHNY.year})</div>
@@ -148,7 +147,7 @@ class Homepage extends Component {
                       image={TwoCitiesDiaryMP.images[4]}
                     />
                   </Grid>
-                  <Grid item xs={12} md={2} className="project-preview-name">
+                  <Grid item xs={12} md={3} className="project-preview-name">
                     <div className="project-caption">
                       <div className="caption-title">{TwoCitiesDiaryMP.title}</div>
                       <div className="caption-information">{TwoCitiesDiaryMP.object}. {TwoCitiesDiaryMP.dimensions}. <span>{TwoCitiesDiaryMP.information}</span>. ({TwoCitiesDiaryMP.year})</div>
@@ -165,7 +164,7 @@ class Homepage extends Component {
                       image={DirectionZine.images[2]}
                     />
                   </Grid>
-                  <Grid item xs={12} md={2} className="project-preview-name">
+                  <Grid item xs={12} md={3} className="project-preview-name">
                     <div className="project-caption">
                       <div className="caption-title">{DirectionZine.title}</div>
                       <div className="caption-information">{DirectionZine.object}. {DirectionZine.dimensions}. <span>{DirectionZine.information}</span>. ({DirectionZine.year})</div>

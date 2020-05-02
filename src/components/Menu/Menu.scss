@@ -2,11 +2,11 @@
 
 .menu {
   height: $menuHeight;
-  background: $bgColorDark;
+  background: blue;
   width: 25vw;
   height: 100vh;
   position: fixed;
-  right: 0; top: 0;
+  left: 0; top: 0;
   z-index: $zIndex3;
   .header-container {
     right: 0;

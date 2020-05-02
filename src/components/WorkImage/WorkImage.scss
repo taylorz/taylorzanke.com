@@ -4,18 +4,20 @@
   display: flex;
   position: relative;
   justify-content: center;
-  height: 60vh;
+  height: 70vh;
+  @include breakpoint(sm) {
+    height: 40vh;
+  }
   background: $bgColorLight;
-  // margin-bottom: $buffer*4;
   overflow: hidden;
   &.matte {
-    // padding: 10%;
     align-items: center;
     .image-item {
       height: 70%;
       width: auto;
       @include breakpoint(sm) {
-        max-width: 60%;
+        max-width: 80%;
+        max-height: 60%;
         height: auto;
         padding: 10% 30% 10% 30%;
       }

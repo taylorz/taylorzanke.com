@@ -43,11 +43,11 @@
             }
             .caption {
               height: auto;
-              width: 400px;
+              width: 50%;
               position: absolute;
               bottom: 0;
               padding-bottom: $buffer*4;
-              right: -416px;
+              right: calc(-50% - 16px);
               font-family: $secondaryFont;
               font-size: $fontSize;
               line-height: $lineHeight;
@@ -87,6 +87,9 @@
           @include breakpoint(sm) {
             font-size: $fontSizeParagraph;
             line-height: $lineHeightParagraph;
+          }
+          p:first-child {
+            margin-top: 0;
           }
         }//statement-copy
       }//statement-wrapper
