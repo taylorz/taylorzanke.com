@@ -21,7 +21,7 @@
     color: $lightFontColor;
   }
   .header-contents {
-    padding: $buffer*2 $buffer*4;
+    padding: $buffer*4 $buffer*4;
     display: flex;
     justify-content: space-between;
     .menu-toggle {
