@@ -30,22 +30,8 @@ class SeveralSpeculative extends Component {
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
+          <Header onClick={() => this.toggleMenu()}/>
           <PageContainer className="work-page several-speculative" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <Header
-            onClick={() => this.toggleMenu()}
-            context="Taylor Zanke"
-            contextLink="/"
-            workDetail={`Work`}
-            toggler="Menu"
-          />
-          <Hero
-            className="homepage-hero"
-            workTitle={SeveralSpeculativeWork.title}
-            workYear={SeveralSpeculativeWork.year}
-            workObject={SeveralSpeculativeWork.object}
-            workDims={SeveralSpeculativeWork.dimensions}
-            workInfo={SeveralSpeculativeWork.information}
-          />
           <PageContent>
             {SeveralSpeculativeWork.images.map((image) =>
               <WorkImage image={image}/>

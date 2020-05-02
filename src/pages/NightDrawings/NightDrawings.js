@@ -28,22 +28,8 @@ class NightDrawings extends Component {
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
+          <Header onClick={() => this.toggleMenu()}/>
           <PageContainer className="work-page night-drawings" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <Header
-            onClick={() => this.toggleMenu()}
-            context="Taylor Zanke"
-            contextLink="/"
-            workDetail={`Work`}
-            toggler="Menu"
-          />
-          <Hero
-            className="homepage-hero"
-            workTitle={NightDrawingsWork.title}
-            workYear={NightDrawingsWork.year}
-            workObject={NightDrawingsWork.object}
-            workDims={NightDrawingsWork.dimensions}
-            workInfo={NightDrawingsWork.information}
-          />
           <PageContent>
             {NightDrawingsWork.images.map((image) =>
               <WorkImage light image={image}/>

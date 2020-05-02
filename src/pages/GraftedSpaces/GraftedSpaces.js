@@ -27,20 +27,8 @@ class GraftedSpaces extends Component {
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
+          <Header onClick={() => this.toggleMenu()}/>
           <PageContainer className="work-page grafted-spaces" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <Header
-            onClick={() => this.toggleMenu()}
-            context="Taylor Zanke"
-            contextLink="/"
-            workDetail={`
-              ${GraftedSpacesWork.title},
-              ${GraftedSpacesWork.year},
-              ${GraftedSpacesWork.object}.
-              ${GraftedSpacesWork.dimensions}.
-              ${GraftedSpacesWork.information}
-            `}
-            toggler="Menu"
-          />
           <PageContent>
             {GraftedSpacesWork.images.map((image) =>
               <WorkImage

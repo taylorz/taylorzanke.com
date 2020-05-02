@@ -30,6 +30,7 @@ class Reformulations1 extends Component {
       <>
       <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
         <Menu onClick={() => this.toggleMenu()}/>
+        <Header onClick={() => this.toggleMenu()}/>
         <PageContainer className="two-visitations">
         <Grid container className="project-content">
           <Grid item xs={12} md={6} className="project-images-list">

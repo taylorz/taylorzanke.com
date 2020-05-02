@@ -2,13 +2,36 @@
 
 .menu {
   height: $menuHeight;
-  background: blue;
-  width: 25vw;
+  padding: $buffer*8 0;
+  // background: blue;
+  width: $menuWidth;
   height: 100vh;
   position: fixed;
   left: 0; top: 0;
   z-index: $zIndex3;
-  .header-container {
-    right: 0;
+  border-right: 2px dotted $bgColorDark;
+  .menu-section {
+  font-size: $fontSizeParagraph;
+    ul {
+      list-style-type: none;
+      margin: 0; padding: 0;
+      li {
+        padding: $buffer*4;
+        border-bottom: 1px dotted $bgColorDark;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &.page-list {}
+      &.projects-list {
+        font-size: $fontSize;
+        font-family: $secondaryFont;
+        span {
+          font-size: $fontSizeCaption;
+          font-family: $primaryFontBold;
+          margin-right: $buffer*4;
+        }
+      }
+    }
   }
 }

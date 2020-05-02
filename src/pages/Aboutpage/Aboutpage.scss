@@ -26,8 +26,8 @@
       .details-section {
         font-family: $secondaryFont;
         margin-bottom: $lineHeight;
-        font-size: $fontSizeParagraph;
-        line-height: $lineHeightParagraph;
+        font-size: $fontSize;
+        line-height: $lineHeight;
         .section-title {
           font-size: $fontSize;
           font-family: $primaryFontBold;
@@ -42,8 +42,8 @@
         .section-reference {
           .reference-quote {
             p {
-              font-size: $fontSizeParagraph;
-              line-height: $lineHeightParagraph;
+              font-size: $fontSize;
+              line-height: $lineHeight;
             }
             span {
               font-family: $primaryFontBold;

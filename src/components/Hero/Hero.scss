@@ -1,7 +1,7 @@
 @import "../../styles/styles.scss";
 
 .hero-container {
-  height: 100vh;
+  height: calc(100vh - 32px);
   overflow: hidden;
   @include breakpoint(sm) {
     height: auto;
@@ -10,10 +10,8 @@
     height: 100%;
     @include breakpoint(sm) {
       height: auto;
-      // margin-bottom: $buffer*8;
     }
     .hero-image-section {
-      background: $bgColorLight;
       height: 100%;
       @include breakpoint(sm) {
         height: 80vh;

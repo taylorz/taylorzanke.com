@@ -30,7 +30,8 @@ class Homepage extends Component {
   state = {
     menuOpened: false,
   }
-  toggleMenu() {
+  toggleMenu(e) {
+    e.preventDefault();
     this.setState({
       menuOpened: !this.state.menuOpened,
     });
@@ -40,24 +41,9 @@ class Homepage extends Component {
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
+          <Header onClick={(e) => this.toggleMenu(e)}/>
           <PageContainer className="homepage">
-            <Header onClick={() => this.toggleMenu()} link="/about" linkName="Info"/>
             <Hero/>
-            {/*{WORKS.map((work) =>
-              <div className="project-item">
-                <Grid container className="project-wrapper">
-                  <Grid item xs={12} md={6} className="project-preview-image">
-                    <WorkImage
-                      matte
-                      image={work.images[0]}
-                    />
-                  </Grid>
-                  <Grid item xs={12} md={3} className="project-preview-name">
-                    {work.title}
-                  </Grid>
-                </Grid>
-              </div>
-            )}*/}
               <div className="project-list">
               <div className="project-item">
                 <Grid container className="project-wrapper">

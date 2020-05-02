@@ -12,7 +12,7 @@
   right: 0px;
   position: fixed;
   background: white;
-  border-bottom: 1px dashed $bgColorDark;
+  border-bottom: 2px dotted $bgColorDark;
   z-index: 100;
   @include breakpoint(sm) {
     // position: relative;
@@ -24,5 +24,10 @@
     padding: $buffer*2 $buffer*4;
     display: flex;
     justify-content: space-between;
+    .menu-toggle {
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 }//header-container

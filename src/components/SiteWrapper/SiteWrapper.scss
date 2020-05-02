@@ -1,25 +1,28 @@
 @import "../../styles/styles.scss";
 
 .site-wrapper {
-  width: 100vw;
-  height: 100vh;
-  overflow-y: scroll;
+  // width: 100vw;
+  // height: 100vh;
+  // overflow-y: scroll;
   overflow-x: hidden;
   margin: 0; padding: 0;
   &.menu-opened {
-    overflow-y: scroll;
-    position: fixed;
+    // overflow-y: hidden;
+    // overflow-x: hidden;
+    // position: fixed;
     &::-webkit-scrollbar {
-      width: 0;
-      background: transparent;
+      // width: 20px;
+      // background: transparent;
     }
     .menu {
       transform: translateX(0%);
       transition: transform $timing*2 $easingCubic;
     }
     .page-container {
-      transform: translateX(25vw);
+      transform: translateX($menuWidth);
       transition: transform $timing*2 $easingCubic;
+      // overflow-y: hidden;
+      // position: fixed;
     }
   }//menu-opened
   &.menu-closed {
@@ -28,7 +31,6 @@
       transition: transform $timing*2 $easingCubic;
     }
     .page-container {
-      transform: translateY(0%);
       transition: transform $timing*2 $easingCubic;
     }
   }//menu-closed

@@ -28,22 +28,8 @@ class TwoCitiesDiary extends Component {
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
+          <Header onClick={() => this.toggleMenu()}/>
           <PageContainer className="work-page two-cities-hny" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <Header
-            onClick={() => this.toggleMenu()}
-            context="Taylor Zanke"
-            contextLink="/"
-            workDetail={`Work`}
-            toggler="Menu"
-          />
-          <Hero
-            className="homepage-hero"
-            workTitle={TwoCitiesDiaryHNYWork.title}
-            workYear={TwoCitiesDiaryHNYWork.year}
-            workObject={TwoCitiesDiaryHNYWork.object}
-            workDims={TwoCitiesDiaryHNYWork.dimensions}
-            workInfo={TwoCitiesDiaryHNYWork.information}
-          />
           <PageContent>
             {TwoCitiesDiaryHNYWork.images.map((image) =>
               <WorkImage image={image}/>

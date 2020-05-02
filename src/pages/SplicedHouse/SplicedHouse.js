@@ -28,22 +28,8 @@ class SplicedHouse extends Component {
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
+          <Header onClick={() => this.toggleMenu()}/>
           <PageContainer className="work-page spliced-house" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <Header
-            onClick={() => this.toggleMenu()}
-            context="Taylor Zanke"
-            contextLink="/"
-            workDetail={`Work`}
-            toggler="Menu"
-          />
-          <Hero
-            className="homepage-hero"
-            workTitle={SplicedHouseWork.title}
-            workYear={SplicedHouseWork.year}
-            workObject={SplicedHouseWork.object}
-            workDims={SplicedHouseWork.dimensions}
-            workInfo={SplicedHouseWork.information}
-          />
           <PageContent>
             {SplicedHouseWork.images.map((image) =>
               <WorkImage

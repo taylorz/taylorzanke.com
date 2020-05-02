@@ -29,22 +29,8 @@ class TransmissionsFrom extends Component {
       <>
         <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
           <Menu onClick={() => this.toggleMenu()}/>
+          <Header onClick={() => this.toggleMenu()}/>
           <PageContainer className="work-page transmissions-from" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <Header
-            onClick={() => this.toggleMenu()}
-            context="Taylor Zanke"
-            contextLink="/"
-            workDetail={`Work`}
-            toggler="Menu"
-          />
-          <Hero
-            className="homepage-hero"
-            workTitle={TransmissionsFromWork.title}
-            workYear={TransmissionsFromWork.year}
-            workObject={TransmissionsFromWork.object}
-            workDims={TransmissionsFromWork.dimensions}
-            workInfo={TransmissionsFromWork.information}
-          />
           <PageContent>
               {TransmissionsFromWork.images.map((image) =>
                 <WorkImage image={image}/>
