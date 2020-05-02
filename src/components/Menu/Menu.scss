@@ -26,8 +26,18 @@
         }
       }
       &.page-list {
+        a.page-link-active {
+          li {
+            background: $bgColorDark;
+            color: $lightFontColor;
+          }
+        }
         li {
           border-bottom: 1px dotted $bgColorDark;
+          &:hover {
+            background: $bgColorDark;
+            color: $lightFontColor;
+          }
         }
       }
       &.projects-list {
@@ -35,6 +45,10 @@
         font-family: $secondaryFont;
         li {
           border-bottom: 1px dotted #ddd;
+          &:hover {
+            background: $bgColorLight;
+            color: $darkFontColor;
+          }
         }
         span {
           font-size: $fontSizeCaption;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link} from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch} from "react-router-dom";
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import './styles/styles.scss';
 import Homepage from './pages/Homepage/Homepage';
