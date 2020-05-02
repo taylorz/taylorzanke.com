@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link} from "react-router-dom";
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import './styles/styles.scss';
 import Homepage from './pages/Homepage/Homepage';
 import Aboutpage from './pages/Aboutpage/Aboutpage';
@@ -15,11 +16,13 @@ import Reformulations1 from './pages/Reformulations1/Reformulations1';
 import TwoVisitations from './pages/TwoVisitations/TwoVisitations';
 import './App.css';
 
+
 class App extends Component {
   render() {
     return (
       <div className="App" >
         <Router>
+          <ScrollToTop/>
           <Route exact path="/" component={Homepage}/>
           <Route path="/about" component={Aboutpage}/>
           <Route path="/transmissions-from-rare-space" component={TransmissionsFrom}/>

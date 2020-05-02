@@ -150,59 +150,7 @@ const WORKS = [
     link: "/transmissions-from-rare-space"
   },
   {
-    id: "1",
-    title: "Models of Grafted Spaces, Los Angeles CA",
-    year: "2018",
-    object: "Models",
-    dimensions: "Roughly 16 x 18 x 12 inches",
-    information: "1 in = 1 ft, Interior Sections",
-    images: [
-      GraftedSpaces1,
-      GraftedSpaces2,
-      GraftedSpaces3,
-      GraftedSpaces4,
-    ],
-    link: "/grafted-spaces"
-  },
-  {
     id: "2",
-    title: "Night Drawings",
-    year: "2018",
-    object: "Drawings",
-    dimensions: "8.5 x 11 inches",
-    information: "Inkjet printed line and graphite on letter paper, 1 of 8",
-    images: [
-      NightDrawings1,
-      NightDrawings2,
-      NightDrawings3,
-      NightDrawings4,
-      NightDrawings5,
-      NightDrawings6,
-      NightDrawings7,
-      NightDrawings8
-    ],
-    link: "/night-drawings"
-  },
-  {
-    id: "3",
-    title: "Spliced House, Concord CA",
-    year: "2017",
-    object: "Drawings",
-    dimensions: "8.5 x 11 inches for presentation",
-    information: "Inkjet printed on bond",
-    images: [
-      SplicedHouse1,
-      SplicedHouse2,
-      SplicedHouse3,
-      SplicedHouse4,
-      SplicedHouse5,
-      SplicedHouse6,
-      SplicedHouse7
-    ],
-    link: "/spliced-house"
-  },
-  {
-    id: "4",
     title: "Untitled",
     year: "2017",
     object: "Zine",
@@ -219,7 +167,7 @@ const WORKS = [
     link: "/direction-zine"
   },
   {
-    id: "5",
+    id: "3",
     title: "Several Speculative Improvements To My Family Home",
     year: "2016",
     object: "Book, Soft Cover",
@@ -253,18 +201,7 @@ const WORKS = [
     link: "/several-speculative-improvements"
   },
   {
-    id: "6",
-    title: "Stack Works",
-    year: "2016",
-    object: "Stacks of US Letter Paper",
-    dimensions: "Roughly 8.5 x 11 x 2 inches",
-    information: "Laser printed letter paper",
-    images: [
-    ],
-    link: "/stack-works"
-  },
-  {
-    id: "7",
+    id: "4",
     title: "Two Cities Diary: Honolulu-New York",
     year: "2013",
     object: "Book, Soft Cover",
@@ -281,7 +218,7 @@ const WORKS = [
     link: "/two-cities-diary"
   },
   {
-    id: "8",
+    id: "5",
     title: "Two Cities Diary: Mumbai-Paris",
     year: "2015",
     object: "Book, Soft Cover",
@@ -297,7 +234,7 @@ const WORKS = [
     link: "/two-cities-diary-mumbai-paris"
   },
   {
-    id: "9",
+    id: "6",
     title: "Reformulations 1",
     year: "2020",
     object: "Book, Soft Cover",
@@ -328,7 +265,7 @@ const WORKS = [
     link: "/reformulations-1"
   },
   {
-    id: "10",
+    id: "7",
     title: "Two Visitations",
     year: "2020",
     object: "Book, Soft Cover",

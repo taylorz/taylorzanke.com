@@ -14,7 +14,7 @@ import PageContent from '../../components/PageContent/PageContent';
 import WORKS from '../../constants/works/works';
 import FRAGMENTS from '../../constants/fragments/fragments';
 
-const Reformulations1Work = WORKS[9];
+const Reformulations1Work = WORKS[5];
 
 class Reformulations1 extends Component {
   state = {

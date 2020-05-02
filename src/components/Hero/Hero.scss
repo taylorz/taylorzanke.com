@@ -1,7 +1,7 @@
 @import "../../styles/styles.scss";
 
 .hero-container {
-  height: calc(100vh - 32px);
+  height: calc(100vh - 48px);
   overflow: hidden;
   @include breakpoint(sm) {
     height: auto;

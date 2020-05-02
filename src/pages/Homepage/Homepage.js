@@ -15,16 +15,12 @@ import WORKS from '../../constants/works/works';
 import FRAGMENTS from '../../constants/fragments/fragments';
 
 const TransmissionsFrom = WORKS[0];
-const GraftedSpaces = WORKS[1];
-const NightDrawings = WORKS[2];
-const SplicedHouse = WORKS[3];
-const DirectionZine = WORKS[4];
-const SeveralSpeculative = WORKS[5];
-const StackWorks = WORKS[6];
-const TwoCitiesDiaryHNY = WORKS[7];
-const TwoCitiesDiaryMP = WORKS[8];
-const Reformulations1 = WORKS[9];
-const TwoVisitations = WORKS[10];
+const DirectionZine = WORKS[1];
+const SeveralSpeculative = WORKS[2];
+const TwoCitiesDiaryHNY = WORKS[3];
+const TwoCitiesDiaryMP = WORKS[4];
+const Reformulations1 = WORKS[5];
+const TwoVisitations = WORKS[6];
 
 class Homepage extends Component {
   state = {

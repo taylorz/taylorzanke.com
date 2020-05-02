@@ -12,7 +12,7 @@ import PageContent from '../../components/PageContent/PageContent';
 
 import WORKS from '../../constants/works/works';
 
-const TwoVisitationsWork = WORKS[10];
+const TwoVisitationsWork = WORKS[6];
 
 class TwoVisitations extends Component {
   state = {
