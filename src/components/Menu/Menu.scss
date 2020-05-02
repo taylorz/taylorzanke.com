@@ -34,7 +34,7 @@
         font-size: $fontSize;
         font-family: $secondaryFont;
         li {
-          border-bottom: 1px solid $bgColorLight;
+          border-bottom: 1px dotted #ddd;
         }
         span {
           font-size: $fontSizeCaption;
