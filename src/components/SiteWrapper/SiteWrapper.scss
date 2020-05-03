@@ -25,14 +25,12 @@
     .page-container {
       transform: translateX($menuWidth);
       transition: transform $timing*2 $easingCubic;
-      @include breakpoint(sm) {
-        transform: translateX($menuWidthMobile);
-      }
       @include breakpoint(md) {
         transform: translateX($menuWidthMd);
       }
-      // overflow-y: hidden;
-      // position: fixed;
+      @include breakpoint(sm) {
+        transform: translateX($menuWidthMobile) !important;
+      }
     }
   }//menu-opened
   &.menu-closed {
