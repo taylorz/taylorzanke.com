@@ -15,7 +15,7 @@ class ProjectInformation extends Component {
           <Grid item xs={12} md={6} className="data-copy">
             <span className="project-name">{projectArray.title}</span>
             {projectArray.object}. {projectArray.dimensions}. {projectArray.pages ? `${projectArray.pages}.` : null }
-            <span className="data-information"> {projectArray.information}. </span>
+            <span className="data-information"> {projectArray.information ? projectArray.information : null}. </span>
             ({projectArray.year})
           </Grid>
         </Grid>

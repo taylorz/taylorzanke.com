@@ -12,7 +12,8 @@
   right: 0px;
   position: fixed;
   background: white;
-  border-bottom: 2px dotted $bgColorDark;
+  outline: 2px dotted $bgColorLight;
+  border-bottom: 1px dotted #ccc;
   z-index: 100;
   @include breakpoint(sm) {
     // position: relative;

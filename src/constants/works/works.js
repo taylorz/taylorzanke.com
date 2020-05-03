@@ -165,7 +165,7 @@ const WORKS = [
       DirectionZine6,
     ],
     link: "/direction-zine",
-    description: "Directions is a zine about going this way and that way."
+    description: ""
   },
   {
     id: "3",
@@ -216,7 +216,7 @@ const WORKS = [
       TwoCitiesDiaryHNY5,
     ],
     link: "/two-cities-diary-honolulu-newyork",
-    description: "Two Cities Reader Honolulu New York"
+    description: ""
   },
   {
     id: "5",
@@ -233,7 +233,7 @@ const WORKS = [
       TwoCitiesDiaryMP5,
     ],
     link: "/two-cities-diary-mumbai-paris",
-    description: "Two Cities Reader Mumbai Paris"
+    description: ""
   },
   {
     id: "6",
@@ -265,7 +265,7 @@ const WORKS = [
       Reformulations1_19,
     ],
     link: "/reformulations-1",
-    description: "Reformulations description"
+    description: ""
   },
   {
     id: "7",
@@ -297,7 +297,7 @@ const WORKS = [
       TwoVisitations19,
     ],
     link: "/two-visitations",
-    description: "Two Visitations Reader is a collection of spaces revisited. I snapped the same picture on multiple occasions, often retracing my steps. Idieosyncratic alignment occurs not only on the page, but over time."
+    description: ""
   },
 ]
 

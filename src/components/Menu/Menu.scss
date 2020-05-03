@@ -15,7 +15,8 @@
   position: fixed;
   left: 0; top: 0;
   z-index: $zIndex3;
-  border-right: 2px dotted $bgColorDark;
+  border-right: 1px dotted #ccc;
+  outline: 2px dotted $bgColorLight;
   .menu-section {
   font-size: $fontSize;
     ul {
@@ -35,7 +36,7 @@
           }
         }
         li {
-          border-bottom: 1px dotted $bgColorDark;
+          border-bottom: 1px dotted #ccc;
           &:hover {
             background: $bgColorDark;
             color: $lightFontColor;

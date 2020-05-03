@@ -35,7 +35,7 @@
   }//menu-opened
   &.menu-closed {
     .menu {
-      transform: translateX(calc(-100% - 1px));
+      transform: translateX(calc(-100% - 3px));
       transition: transform $timing*2 $easingCubic;
     }
     .page-container {

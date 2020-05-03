@@ -56,7 +56,7 @@ body {
   }
   .my-node-enter-active {
     .menu {
-      transform: translateX(calc(-100% - 1px)) !important;
+      transform: translateX(calc(-100% - 3px)) !important;
       transition: transform $timing*2 $easingCubic !important;
     }
     .page-container {
@@ -66,7 +66,7 @@ body {
   }
   .my-node-exit {
     .menu {
-      transform: translateX(calc(-100% - 1px)) !important;
+      transform: translateX(calc(-100% - 3px)) !important;
     }
     .page-container {
       transform: translateX(0%) !important;
@@ -74,7 +74,7 @@ body {
   }
   .my-node-exit-active {
     .menu {
-      transform: translateX(calc(-100% - 1px)) !important;
+      transform: translateX(calc(-100% - 3px)) !important;
       transition: transform $timing*2 $easingCubic !important;
     }
     .page-container {
