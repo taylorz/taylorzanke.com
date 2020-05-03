@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch} from "react-router-dom";
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
+import { CSSTransition, TransitionGroup, Transition } from 'react-transition-group';
 import './styles/styles.scss';
-import Homepage from './pages/Homepage/Homepage';
-import Aboutpage from './pages/Aboutpage/Aboutpage';
+import Home from './pages/Homepage/Homepage';
+import About from './pages/Aboutpage/Aboutpage';
 import TransmissionsFrom from './pages/TransmissionsFrom/TransmissionsFrom';
-import GraftedSpaces from './pages/GraftedSpaces/GraftedSpaces';
-import NightDrawings from './pages/NightDrawings/NightDrawings';
-import SplicedHouse from './pages/SplicedHouse/SplicedHouse';
 import DirectionZine from './pages/DirectionZine/DirectionZine';
 import SeveralSpeculative from './pages/SeveralSpeculative/SeveralSpeculative';
 import TwoCitiesDiaryHNY from './pages/TwoCitiesDiaryHNY/TwoCitiesDiaryHNY';
@@ -16,25 +14,52 @@ import Reformulations1 from './pages/Reformulations1/Reformulations1';
 import TwoVisitations from './pages/TwoVisitations/TwoVisitations';
 import './App.css';
 
+const routes = [
+  { path: '/', name: 'Home', Component: Home },
+  { path: '/about', name: 'About', Component: About },
+  { path: '/transmissions-from-rare-space', name: 'Transmissions From Rare Space', Component: TransmissionsFrom },
+  { path: '/direction-zine', name: 'Direction Zine', Component: DirectionZine },
+  { path: '/several-speculative-improvements', name: 'Several Speculative Improvements to my Family Home', Component: SeveralSpeculative },
+  { path: '/two-cities-diary-honolulu-newyork', name: 'Two Cities Diary Honolulu New York', Component: TwoCitiesDiaryHNY },
+  { path: '/two-cities-diary-mumbai-paris', name: 'Two Cities Diary Mumbai Paris', Component: TwoCitiesDiaryMP },
+  { path: '/reformulations-1', name: 'Reformulations 1', Component: Reformulations1 },
+  { path: '/two-visitations', name: 'Two Visitations', Component: TwoVisitations },
+]
 
 class App extends Component {
   render() {
     return (
       <div className="App" >
-        <Router>
+
+      <Router>
           <ScrollToTop/>
-          <Route exact path="/" component={Homepage}/>
-          <Route path="/about" component={Aboutpage}/>
-          <Route path="/transmissions-from-rare-space" component={TransmissionsFrom}/>
-          <Route path="/grafted-spaces" component={GraftedSpaces}/>
-          <Route path="/night-drawings" component={NightDrawings}/>
-          <Route path="/spliced-house" component={SplicedHouse}/>
-          <Route path="/direction-zine" component={DirectionZine}/>
-          <Route path="/several-speculative-improvements" component={SeveralSpeculative}/>
-          <Route path="/two-cities-diary" component={TwoCitiesDiaryHNY}/>
-          <Route path="/two-cities-diary-mumbai-paris" component={TwoCitiesDiaryMP}/>
-          <Route path="/reformulations-1" component={Reformulations1}/>
-          <Route path="/two-visitations" component={TwoVisitations}/>
+          <Route render={({location}) => {
+            const { key } = location
+            return (
+              <>
+              <TransitionGroup component={null}>
+              <CSSTransition
+                key={key}
+                appear={true}
+                classNames="my-node"
+                timeout={{enter: 250, exit: 250}}
+              >
+              <Switch location={location}>
+                {routes.map(({ path, Component }) => (
+                  <Route key={path} exact path={path}>
+                    {({ match }) => (
+                        <div className="my-node">
+                          <Component />
+                        </div>
+                    )}
+                  </Route>
+                ))}
+              </Switch>
+              </CSSTransition>
+              </TransitionGroup>
+              </>
+            )
+          }}/>
         </Router>
       </div>
     );

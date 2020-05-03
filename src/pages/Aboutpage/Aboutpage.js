@@ -14,20 +14,10 @@ import PageContent from '../../components/PageContent/PageContent';
 import REFERENCES from '../../constants/references/references';
 
 class Aboutpage extends Component {
-  state = {
-    menuOpened: false,
-  }
-  toggleMenu() {
-    this.setState({
-      menuOpened: !this.state.menuOpened,
-    });
-  }
   render() {
     return (
       <>
-        <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
-          <Menu onClick={() => this.toggleMenu()}/>
-          <Header onClick={() => this.toggleMenu()}/>
+        <SiteWrapper>
           <PageContainer className="aboutpage">
             <Grid container className="about-content">
               <Grid item xs={10} md={6} className="artist-statement">

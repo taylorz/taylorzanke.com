@@ -1,0 +1,28 @@
+@import "../../styles/styles.scss";
+
+.project-information {
+  padding: $buffer*4;
+  .project-statement {
+    font-size: $fontSizeStatement;
+    line-height: $lineHeightStatement;
+    p:first-child {
+      margin-top: 0;
+    }
+  }
+  .project-data {
+    .data-copy {
+      font-family: $secondaryFont;
+      font-size: $fontSize;
+      line-height: $lineHeight;
+      .project-name {
+        font-size: $fontSizeCaption;
+        line-height: $lineHeightCaption;
+        font-family: $primaryFontBold;
+        margin-right: $buffer*4;
+      }
+      .data-information {
+        font-style: italic;
+      }
+    }
+  }
+}//project-information

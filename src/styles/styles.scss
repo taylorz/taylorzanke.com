@@ -40,5 +40,40 @@ body {
     }
     &:active {}
   }
-
+  .my-node-enter {
+      .menu {
+        transform: translateX(0%) !important;
+      }
+      .page-container {
+        transform: translateX($menuWidth) !important;
+      }
+  }
+  .my-node-enter-active {
+    .menu {
+      transform: translateX(calc(-100% - 1px)) !important;
+      transition: transform $timing*2 $easingCubic !important;
+    }
+    .page-container {
+      transform: translateX(0%) !important;
+      transition: all $timing*2 $easingCubic !important;
+    }
+  }
+  .my-node-exit {
+    .menu {
+      transform: translateX(calc(-100% - 1px)) !important;
+    }
+    .page-container {
+      transform: translateX(0%) !important;
+    }
+  }
+  .my-node-exit-active {
+    .menu {
+      transform: translateX(calc(-100% - 1px)) !important;
+      transition: transform $timing*2 $easingCubic !important;
+    }
+    .page-container {
+      transform: translateX(0%) !important;
+      transition: all $timing*2 $easingCubic !important;
+    }
+  }
 }//body

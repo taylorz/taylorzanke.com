@@ -38,6 +38,7 @@
       transition: transform $timing*2 $easingCubic;
     }
     .page-container {
+      transform: translateX(0%);
       transition: transform $timing*2 $easingCubic;
     }
   }//menu-closed

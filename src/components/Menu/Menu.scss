@@ -21,6 +21,8 @@
       margin: 0; padding: 0;
       li {
         padding: $buffer*4;
+        display: flex;
+        justify-content: space-between;
         &:hover {
           cursor: pointer;
         }
@@ -43,6 +45,12 @@
       &.projects-list {
         font-size: $fontSize;
         font-family: $secondaryFont;
+        a.project-link-active {
+          li {
+            background: $bgColorLight;
+            color: $darkFontColor;
+          }
+        }
         li {
           border-bottom: 1px dotted #ddd;
           &:hover {

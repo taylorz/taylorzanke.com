@@ -147,7 +147,8 @@ const WORKS = [
       TransmissionsFrom_D_5,
       TransmissionsFrom_D_6,
     ],
-    link: "/transmissions-from-rare-space"
+    link: "/transmissions-from-rare-space",
+    description: "The 93 composite drawings included in this project were produced in order to achieve two outcomes, each of which relates to the broader exercise of expanding the forms of architectural practice which I am committed to. The first desired outcome was to provide a context for the practice of architectural intuitions and sensibility. The second desired outcome was to generate drawn conditions which could encourage further spatial development, to produce possibility. The first outcome is addressed through both the volume of drawings, the fast speed with which they were produced, and the order of operations used to render the layered composition seen in the final works. For each drawing an intuitive, graphite, line was first used to introduce a gestural context and was followed by several inkjet printed layers of hard line drawing. Layers of black ink were deposited on the page as the drawing was run through a printer several times, each time receiving more depth through the use of several types of line. This encouraged the practice of architectural intuition through a “call and response” process, embodied in the dialogue between the two qualities of line and the process of their realization, printing. The second outcome is achieved through the interpretation of each drawing’s final composition, where, as intuitions accrete in progressively more stable manifestations, proposals for space emerge. The composition of each drawing suggests a different spatial reality ready for further analysis, each formulating boundaries, enclosures, or masses by its own gravitational pull. My intention for these drawings is that they are revisited when needed and become characters in my practice for years to come. I bound these by hand into a singular book, which I printed at home, as a mode of further stabilizing a precarious intuition, and transmitting the decaying gesture into the future."
   },
   {
     id: "2",
@@ -164,7 +165,8 @@ const WORKS = [
       DirectionZine5,
       DirectionZine6,
     ],
-    link: "/direction-zine"
+    link: "/direction-zine",
+    description: "Direction"
   },
   {
     id: "3",
@@ -184,7 +186,6 @@ const WORKS = [
       SeveralSpeculative8,
       SeveralSpeculative9,
       SeveralSpeculative10,
-      SeveralSpeculative23,
     ],
     details: [
       SeveralSpeculative14,
@@ -198,7 +199,8 @@ const WORKS = [
       SeveralSpeculative22,
 
     ],
-    link: "/several-speculative-improvements"
+    link: "/several-speculative-improvements",
+    description: "This project explores the idea of developing spatial proposals for the place in which one resides and the ways in which one’s inner life can act in concert with processes of design. While my mother’s health ailed and recovered, I spent time at my family home as her sole caregiver. Throughout this period I developed 9 sectional models of my family home and a singular book. Through these works I sought to achieve a number of artistic and architectural outcomes. My primary investigations addressed the relationship which I had to the interior of the home from both an architectural and emotional perspective. Through a process of surveying the suburban home and constructing its boundary, in models, out of cardboard I created a psychic space which I could inhabit and manipulate. I designed variations of rooms through placement of internal structural members, interior cladding, and placement of apertures. I worked intuitively, allowing the materials I was using, many of which were found in the home, to guide the outcome of the design. In so doing I created “improvements” to a space representative of the interior in which I lived, while diaristically expressing my own interior life through a language of architecture. The models retain a fragmented quality, where misregistrations between interior openings and exterior openings occur, and structure creates rhythmic and layered effects. At the end of my stay at home the models were photographed and included in the project’s singular book. In addition to the photographs of the models I included several images which I had taken throughout the period of time at home, all of which evoke sensations of quiet and solitude."
   },
   {
     id: "4",
@@ -213,9 +215,9 @@ const WORKS = [
       TwoCitiesDiaryHNY3,
       TwoCitiesDiaryHNY4,
       TwoCitiesDiaryHNY5,
-      TwoCitiesDiaryHNY6,
     ],
-    link: "/two-cities-diary"
+    link: "/two-cities-diary-honolulu-newyork",
+    description: "Two Cities Reader Honolulu New York"
   },
   {
     id: "5",
@@ -231,7 +233,8 @@ const WORKS = [
       TwoCitiesDiaryMP4,
       TwoCitiesDiaryMP5,
     ],
-    link: "/two-cities-diary-mumbai-paris"
+    link: "/two-cities-diary-mumbai-paris",
+    description: "Two Cities Reader Mumbai Paris"
   },
   {
     id: "6",
@@ -262,7 +265,8 @@ const WORKS = [
       Reformulations1_18,
       Reformulations1_19,
     ],
-    link: "/reformulations-1"
+    link: "/reformulations-1",
+    description: "Reformulations description"
   },
   {
     id: "7",
@@ -293,7 +297,8 @@ const WORKS = [
       TwoVisitations18,
       TwoVisitations19,
     ],
-    link: "/two-visitations"
+    link: "/two-visitations",
+    description: "Two Visitations Reader is a collection of spaces revisited. I snapped the same picture on multiple occasions, often retracing my steps. Idieosyncratic alignment occurs not only on the page, but over time."
   },
 ]
 

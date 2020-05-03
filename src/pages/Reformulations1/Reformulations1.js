@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import './Reformulations1.scss';
@@ -10,6 +9,8 @@ import Menu from '../../components/Menu/Menu';
 import WorkImage from '../../components/WorkImage/WorkImage';
 import TextBlock from '../../components/TextBlock/TextBlock';
 import PageContent from '../../components/PageContent/PageContent';
+import ProjectImagesList from '../../components/ProjectImagesList/ProjectImagesList';
+import ProjectInformation from '../../components/ProjectInformation/ProjectInformation';
 
 import WORKS from '../../constants/works/works';
 import FRAGMENTS from '../../constants/fragments/fragments';
@@ -17,46 +18,20 @@ import FRAGMENTS from '../../constants/fragments/fragments';
 const Reformulations1Work = WORKS[5];
 
 class Reformulations1 extends Component {
-  state = {
-    menuOpened: false,
-  }
-  toggleMenu() {
-    this.setState({
-      menuOpened: !this.state.menuOpened,
-    });
-  }
   render() {
     return (
       <>
-      <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
-        <Menu onClick={() => this.toggleMenu()}/>
-        <Header onClick={() => this.toggleMenu()}/>
+      <SiteWrapper>
         <PageContainer className="two-visitations">
-        <Grid container className="project-content">
-          <Grid item xs={12} md={6} className="project-images-list">
-          {Reformulations1Work.images.map((image) =>
-            <div className="project-item">
-              <WorkImage
-                matte
-                image={image}
-              />
-            </div>
-          )}
-          </Grid>
-          <Grid item xs={12} md={6} className="project-information">
-            <div className="project-statement">
-              <p>Reformulations 1 combines many sources to create a whole. They are images and drawings completed across different times.</p>
-            </div>
-            <Grid container className="project-data">
-              <Grid item xs={12} md={6} className="data-copy">
-                <span className="project-name">{Reformulations1Work.title}</span>
-                {Reformulations1Work.object}. {Reformulations1Work.dimensions}.
-                <span className="data-information"> {Reformulations1Work.information}. </span>
-                ({Reformulations1Work.year})
-              </Grid>
-            </Grid>
-          </Grid>
-        </Grid>
+          <PageContent>
+            <ProjectImagesList
+              projectArray={Reformulations1Work}
+              isMatte={true}
+            />
+            <ProjectInformation
+              projectArray={Reformulations1Work}
+            />
+          </PageContent>
         </PageContainer>
       </SiteWrapper>
       </>

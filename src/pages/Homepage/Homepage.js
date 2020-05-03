@@ -23,21 +23,10 @@ const Reformulations1 = WORKS[5];
 const TwoVisitations = WORKS[6];
 
 class Homepage extends Component {
-  state = {
-    menuOpened: false,
-  }
-  toggleMenu(e) {
-    e.preventDefault();
-    this.setState({
-      menuOpened: !this.state.menuOpened,
-    });
-  }
   render() {
     return (
       <>
-        <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
-          <Menu onClick={() => this.toggleMenu()}/>
-          <Header onClick={(e) => this.toggleMenu(e)}/>
+        <SiteWrapper>
           <PageContainer className="homepage">
             <Hero/>
               <div className="project-list">

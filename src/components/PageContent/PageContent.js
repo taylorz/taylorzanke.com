@@ -7,12 +7,9 @@ class PageContent extends Component {
   render() {
     const { children, className, onClick } = this.props
     return (
-      <div className={`page-content-wrapper ${className}`}>
+      <Grid container className={`page-content-wrapper ${className}`}>
         {children}
-        <div className="page-content-end-link">
-          <Link to="/">Back to Home</Link>
-        </div>
-      </div>
+      </Grid>
     );
   }
 }

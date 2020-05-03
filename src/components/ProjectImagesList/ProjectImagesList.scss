@@ -1,0 +1,14 @@
+@import "../../styles/styles.scss";
+
+.project-images-list {
+  padding: $buffer*4 0 $buffer*4 $buffer*4;
+  @include breakpoint(sm) {
+    padding: $buffer*4;
+  }
+  .project-item {
+    padding-top: $buffer*4;
+    &:first-child {
+      padding: 0;
+    }
+  }
+}//project-images-list

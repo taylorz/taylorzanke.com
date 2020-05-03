@@ -16,14 +16,14 @@ class Menu extends Component {
           <Grid container className="menu-wrapper">
             <Grid item xs={12} className="menu-section menu-pages">
               <ul className="page-list">
-                <NavLink exact to="/" activeClassName="page-link-active"><li>Home</li></NavLink>
+                <NavLink to="/" exact activeClassName="page-link-active"><li>Home</li></NavLink>
                 <NavLink to="/about" activeClassName="page-link-active"><li>Information</li></NavLink>
               </ul>
             </Grid>
             <Grid item xs={12} className="menu-section menu-projects">
               <ul className="projects-list">
                 {WORKS.map((work) =>
-                  <Link to={work.link}><li><span>{work.title}</span>{work.object}. ({work.year})</li></Link>
+                  <NavLink to={work.link} activeClassName="project-link-active"><li><span>{work.title}</span>{work.object}. ({work.year})</li></NavLink>
                 )}
               </ul>
             </Grid>

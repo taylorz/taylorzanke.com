@@ -9,40 +9,29 @@ import Menu from '../../components/Menu/Menu';
 import WorkImage from '../../components/WorkImage/WorkImage';
 import TextBlock from '../../components/TextBlock/TextBlock';
 import PageContent from '../../components/PageContent/PageContent';
+import ProjectImagesList from '../../components/ProjectImagesList/ProjectImagesList';
+import ProjectInformation from '../../components/ProjectInformation/ProjectInformation';
 
 import WORKS from '../../constants/works/works';
 
-const DirectionZineWork = WORKS[4];
+const DirectionZineWork = WORKS[1];
 
 class DirectionZine extends Component {
-  state = {
-    menuOpened: false,
-  }
-  toggleMenu() {
-    this.setState({
-      menuOpened: !this.state.menuOpened,
-    });
-  }
   render() {
     return (
       <>
-        <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
-          <Menu onClick={() => this.toggleMenu()}/>
-          <Header onClick={() => this.toggleMenu()}/>
-          <PageContainer className="work-page direction-zine" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <Hero
-            className="homepage-hero"
-            workTitle={DirectionZineWork.title}
-            workYear={DirectionZineWork.year}
-            workObject={DirectionZineWork.object}
-            workDims={DirectionZineWork.dimensions}
-            workInfo={DirectionZineWork.information}
-          />
-          <PageContent>
-            {DirectionZineWork.images.map((image) =>
-              <WorkImage matte image={image}/>
-            )}
-          </PageContent>
+        <SiteWrapper>
+          <PageContainer className="work-page direction-zine">
+            <PageContent>
+              <ProjectImagesList
+                projectArray={DirectionZineWork}
+                isMatte={true}
+                isDark={true}
+              />
+              <ProjectInformation
+                projectArray={DirectionZineWork}
+              />
+            </PageContent>
           </PageContainer>
         </SiteWrapper>
       </>

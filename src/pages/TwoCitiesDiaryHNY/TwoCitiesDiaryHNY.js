@@ -9,32 +9,28 @@ import PageContainer from '../../components/PageContainer/PageContainer';
 import WorkImage from '../../components/WorkImage/WorkImage';
 import TextBlock from '../../components/TextBlock/TextBlock';
 import PageContent from '../../components/PageContent/PageContent';
+import ProjectImagesList from '../../components/ProjectImagesList/ProjectImagesList';
+import ProjectInformation from '../../components/ProjectInformation/ProjectInformation';
 
 import WORKS from '../../constants/works/works';
 
-const TwoCitiesDiaryHNYWork = WORKS[7];
+const TwoCitiesDiaryHNYWork = WORKS[3];
 
 class TwoCitiesDiary extends Component {
-  state = {
-    menuOpened: false,
-  }
-  toggleMenu() {
-    this.setState({
-      menuOpened: !this.state.menuOpened,
-    });
-  }
   render() {
     return (
       <>
-        <SiteWrapper menuState={this.state.menuOpened ? "menu-opened" : "menu-closed"}>
-          <Menu onClick={() => this.toggleMenu()}/>
-          <Header onClick={() => this.toggleMenu()}/>
-          <PageContainer className="work-page two-cities-hny" onClick={this.state.menuOpened ? () => this.toggleMenu() : null}>
-          <PageContent>
-            {TwoCitiesDiaryHNYWork.images.map((image) =>
-              <WorkImage image={image}/>
-            )}
-          </PageContent>
+        <SiteWrapper>
+          <PageContainer className="work-page two-cities-hny">
+            <PageContent>
+              <ProjectImagesList
+                projectArray={TwoCitiesDiaryHNYWork}
+                isMatte={false}
+              />
+              <ProjectInformation
+                projectArray={TwoCitiesDiaryHNYWork}
+              />
+            </PageContent>
           </PageContainer>
         </SiteWrapper>
       </>
