@@ -4,10 +4,12 @@
   padding: $buffer*12 0;
   background: white;
   width: $menuWidth;
+  overflow-y: scroll;
+  @include breakpoint(md) {
+    width: $menuWidthMd;
+  }
   @include breakpoint(sm) {
     width: $menuWidthMobile;
-    overflow-y: scroll;
-    // height: 10vh;
   }
   height: 100vh;
   position: fixed;

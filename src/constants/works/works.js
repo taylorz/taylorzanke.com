@@ -137,7 +137,6 @@ const WORKS = [
       TransmissionsFrom5,
       TransmissionsFrom6,
       TransmissionsFrom7,
-      TransmissionsFrom8,
     ],
     details: [
       TransmissionsFrom_D_1,

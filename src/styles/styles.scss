@@ -46,6 +46,12 @@ body {
       }
       .page-container {
         transform: translateX($menuWidth) !important;
+        @include breakpoint(sm) {
+          transform: translateX($menuWidthMobile) !important;
+        }
+        @include breakpoint(md) {
+          transform: translateX($menuWidthMd) !important;
+        }
       }
   }
   .my-node-enter-active {

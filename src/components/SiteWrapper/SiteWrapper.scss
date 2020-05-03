@@ -28,6 +28,9 @@
       @include breakpoint(sm) {
         transform: translateX($menuWidthMobile);
       }
+      @include breakpoint(md) {
+        transform: translateX($menuWidthMd);
+      }
       // overflow-y: hidden;
       // position: fixed;
     }
