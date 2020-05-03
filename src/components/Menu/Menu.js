@@ -22,8 +22,17 @@ class Menu extends Component {
             </Grid>
             <Grid item xs={12} className="menu-section menu-projects">
               <ul className="projects-list">
-                {WORKS.map((work) =>
-                  <NavLink to={work.link} activeClassName="project-link-active"><li><span>{work.title}</span>{work.object}. ({work.year})</li></NavLink>
+                {WORKS
+                  .sort(({ year: previousID }, { year: currentID }) => currentID - previousID)
+                  .map((work) =>
+                  <NavLink to={work.link} activeClassName="project-link-active">
+                    <li>
+                    <Grid container className="nav-link-content">
+                      <Grid item xs={9} className="title">{work.title}<span>{work.object}</span></Grid>
+                      <Grid item xs={3} className="details">({work.year})</Grid>
+                    </Grid>
+                    </li>
+                  </NavLink>
                 )}
               </ul>
             </Grid>

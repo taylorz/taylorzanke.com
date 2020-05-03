@@ -20,11 +20,11 @@ class Aboutpage extends Component {
         <SiteWrapper>
           <PageContainer className="aboutpage">
             <Grid container className="about-content">
-              <Grid item xs={10} md={6} className="artist-statement">
+              <Grid item xs={12} md={6} className="artist-statement">
               <p>Taylor Zanke is an artist and designer living in Los Angeles, CA. He takes a multi-format approach to art making: producing models, drawings, photographs, and recordings, many of which are represented in singular artist books. Taylor’s practice studies the shifting nature of potential in space, and develops long-form methodologies for reflecting on and revealing it. He uncovers ways in which our inner lives can be supported by the material realities around us, grafting personal reflections into common forms and proposals.</p>
               <p>Taylor holds a BFA from Parsons the New School for Design, and a Masters of Architecture and Masters of Science in Real Estate Development from Columbia University.</p>
               </Grid>
-              <Grid item xs={10} md={5} lg={4} className="about-details">
+              <Grid item xs={12} md={5} lg={4} className="about-details">
                 <div className="details-section">
                   <div className="section-title">CONTACT</div>
                   <ul className="section-item">

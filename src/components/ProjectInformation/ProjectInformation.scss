@@ -5,6 +5,10 @@
   .project-statement {
     font-size: $fontSizeStatement;
     line-height: $lineHeightStatement;
+    @include breakpoint(sm) {
+      font-size: $fontSizeParagraph;
+      line-height: $lineHeightParagraph;
+    }
     p:first-child {
       margin-top: 0;
     }

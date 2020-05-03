@@ -4,9 +4,6 @@
   .about-content {
     padding: $buffer*4;
     // padding-top: $buffer*16;
-    @include breakpoint(sm) {
-      // margin-top: $buffer*8;
-    }
     .artist-statement {
       font-size: $fontSizeStatement;
       line-height: $lineHeightStatement;

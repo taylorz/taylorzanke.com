@@ -151,7 +151,7 @@ const WORKS = [
   },
   {
     id: "2",
-    title: "Untitled",
+    title: "Directions",
     year: "2017",
     object: "Zine",
     dimensions: "5.5 x 7 inches",
@@ -165,7 +165,7 @@ const WORKS = [
       DirectionZine6,
     ],
     link: "/direction-zine",
-    description: "Direction"
+    description: "Directions is a zine about going this way and that way."
   },
   {
     id: "3",

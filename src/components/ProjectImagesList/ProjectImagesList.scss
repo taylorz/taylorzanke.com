@@ -3,7 +3,7 @@
 .project-images-list {
   padding: $buffer*4 0 $buffer*4 $buffer*4;
   @include breakpoint(sm) {
-    padding: $buffer*4;
+    padding: 0;
   }
   .project-item {
     padding-top: $buffer*4;
