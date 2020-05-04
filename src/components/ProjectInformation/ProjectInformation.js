@@ -9,7 +9,11 @@ class ProjectInformation extends Component {
     return (
       <Grid item xs={12} md={6} className="project-information">
         <div className="project-statement">
+        { projectArray.description ?
           <p>{projectArray.description}</p>
+        : (
+          null
+        )}
         </div>
         <Grid container className="project-data">
           <Grid item xs={12} md={6} className="data-copy">
