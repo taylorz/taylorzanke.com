@@ -76,7 +76,7 @@ class Hero extends Component {
           <Grid item xs={12} md={6} className="hero-statement-section">
             <Grid container className="statement-wrapper">
               <Grid item xs={12} className="statement-copy">
-                <p>Taylor Zanke is an artist and designer living in Los Angeles, CA. He takes a multi-format approach to art making: producing models, drawings, photographs, and recordings.</p>
+                <p>Taylor Zanke is an artist and designer living in Los Angeles, CA. He takes a multi-format approach to art making: producing models, drawings, photographs, and recordings, many of which are represented in singular artist books.</p>
               </Grid>
             </Grid>
           </Grid>

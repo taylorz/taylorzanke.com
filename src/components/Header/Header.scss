@@ -1,7 +1,7 @@
 @import "../../styles/styles.scss";
 
 .header-container {
-  font-family: $primaryFont;
+  font-family: $primaryFontBold;
   font-size: $fontSize;
   line-height:$lineHeight;
   display: flex;
@@ -12,8 +12,8 @@
   right: 0px;
   position: fixed;
   background: white;
-  outline: 2px dotted $bgColorLight;
-  border-bottom: 1px dotted #ccc;
+  // outline: 2px dotted $bgColorLight;
+  // border-bottom: 1px dotted #ccc;
   z-index: 100;
   @include breakpoint(sm) {
     // position: relative;

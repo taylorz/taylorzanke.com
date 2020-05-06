@@ -5,6 +5,7 @@
   background: white;
   width: $menuWidth;
   overflow-y: scroll;
+  font-family: $primaryFontBold;
   @include breakpoint(md) {
     width: $menuWidthMd;
   }
@@ -15,7 +16,7 @@
   position: fixed;
   left: 0; top: 0;
   z-index: $zIndex3;
-  border-right: 1px dotted #ccc;
+  // border-right: 1px solid #ccc;
   // outline: 2px dotted $bgColorLight;
   .menu-section {
   font-size: $fontSize;
@@ -29,17 +30,18 @@
         }
       }
       &.page-list {
+        margin-bottom: $buffer*12;
         a.page-link-active {
           li {
-            background: $bgColorDark;
-            color: $lightFontColor;
+            // background: $bgColorDark;
+            // color: $lightFontColor;
           }
         }
         li {
-          border-bottom: 1px dotted #ccc;
+          // border-bottom: 1px dotted #ccc;
           &:hover {
-            background: $bgColorDark;
-            color: $lightFontColor;
+            // background: $bgColorDark;
+            // color: $lightFontColor;
           }
         }
       }
@@ -48,15 +50,15 @@
         font-family: $secondaryFont;
         a.project-link-active {
           li {
-            background: $bgColorLight;
-            color: $darkFontColor;
+            // background: $bgColorDark;
+            // color: $lightFontColor;
           }
         }
         li {
-          border-bottom: 1px dotted #ddd;
+          // border-bottom: 1px dotted #ddd;
           &:hover {
-            background: $bgColorLight;
-            color: $darkFontColor;
+            // background: $bgColorDark;
+            // color: $lightFontColor;
           }
           .title {
             font-size: $fontSizeCaption;

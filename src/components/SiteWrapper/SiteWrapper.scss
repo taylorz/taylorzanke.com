@@ -18,8 +18,8 @@
       transform: translateX(0%);
       transition: transform $timing*2 $easingCubic;
       &::-webkit-scrollbar {
-        width: 0px;
-        background: transparent;
+        width: 0px !important;
+        background: transparent !important;
       }
     }
     .page-container {
@@ -37,6 +37,10 @@
     .menu {
       transform: translateX(calc(-100% - 3px));
       transition: transform $timing*2 $easingCubic;
+      &::-webkit-scrollbar {
+        width: 0px !important;
+        background: transparent !important;
+      }
     }
     .page-container {
       transform: translateX(0%);

@@ -5,6 +5,7 @@
     padding: $buffer*4;
     // padding-top: $buffer*16;
     .artist-statement {
+      font-family: $primaryFontBold;
       font-size: $fontSizeStatement;
       line-height: $lineHeightStatement;
       @include breakpoint(sm) {

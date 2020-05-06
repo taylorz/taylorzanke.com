@@ -5,6 +5,7 @@
   .project-statement {
     font-size: $fontSizeStatement;
     line-height: $lineHeightStatement;
+    font-family: $primaryFontBold;
     @include breakpoint(sm) {
       font-size: $fontSizeParagraph;
       line-height: $lineHeightParagraph;

@@ -1,7 +1,7 @@
 @import "../../styles/styles.scss";
 
 .hero-container {
-  height: calc(100vh - 48px);
+  height: calc(100vh - 32px);
   overflow: hidden;
   @include breakpoint(sm) {
     height: auto;
@@ -79,7 +79,7 @@
       }
       .statement-wrapper {
         .statement-copy {
-          font-family: $primaryFont;
+          font-family: $primaryFontBold;
           font-size: $fontSizeStatement;
           line-height: $lineHeightStatement;
           @include breakpoint(sm) {

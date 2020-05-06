@@ -1,7 +1,7 @@
 @import "../../styles/styles.scss";
 
 .page-container {
-  margin-top: $buffer*12 !important;
+  margin-top: $buffer*8 !important;
   @include breakpoint(sm) {
     margin-bottom: $buffer*12 !important;
   }
