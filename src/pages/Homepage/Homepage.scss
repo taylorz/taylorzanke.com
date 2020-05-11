@@ -1,6 +1,26 @@
 @import "../../styles/styles.scss";
 
 .homepage {
+  .statement-wrapper {
+    padding: $buffer*4;
+    margin-left: $buffer*4;
+    position: fixed;
+    @include breakpoint(sm) {
+      position: relative;
+      padding: $buffer*4;
+      padding-bottom: 0;
+      margin: 0;
+    }
+    .statement-copy {
+      font-family: $primaryFontBold;
+      font-size: $fontSizeStatement;
+      line-height: $lineHeightStatement;
+      @include breakpoint(sm) {
+        font-size: $fontSizeParagraph;
+        line-height: $lineHeightParagraph;
+      }
+    }
+  }
   .project-list {
     // border-top: 1px solid $bgColorLight;
     padding-top: $buffer*4;

@@ -28,7 +28,13 @@ class Homepage extends Component {
       <>
         <SiteWrapper>
           <PageContainer className="homepage">
-            <Hero/>
+            {/*<Hero/>*/}
+            <Grid container className="statement-wrapper">
+              <Grid item xs={0} md={6} className="statement-spacer"/>
+              <Grid item xs={12} md={6} className="statement-copy">
+                Taylor Zanke is an artist and designer living in Los Angeles, CA. He takes a multi-format approach to art making: producing models, drawings, photographs, and recordings, many of which are represented in singular artist books.
+              </Grid>
+            </Grid>
               <div className="project-list">
               <div className="project-item">
                 <Grid container className="project-wrapper">
