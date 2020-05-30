@@ -1,31 +1,43 @@
 @import "../../styles/styles.scss";
 
 .footer {
-  font-size: $fontSizeParagraph;
-  line-height: $lineHeightParagraph;
-  padding: $buffer*8;
-  border-top: 2px solid $darkFontColor;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  padding: $buffer*4;
+  @include breakpoint(sm) {
+    padding-top: $buffer*4;
+  }
   .footer-link {
     &:hover {
       cursor: pointer;
     }
   }
-  .header {
-    &.copyright {
-      // text-align: right;
-      @include breakpoint(md) {
-        text-align: left;
+  .sitemap {
+    margin-bottom: $buffer*8;
+    ul {
+      list-style-type: none;
+      margin: 0; padding: 0;
+      .nav-link-active {
+        color: #ccc;
+      }
+      li {
+        line-height: $lineHeight;
+        text-indent: -$buffer*4;
+        padding-left: $buffer*4;
+        &.site-index {
+          margin-bottom: $buffer*4;
+        }
       }
     }
   }
-  .list {
-    // margin-bottom: $buffer*4;
-    @include breakpoint(md) {
-      margin: $buffer*8 0 0 0;
-    }
+  .info {
+    margin-top: $buffer*8;
     ul {
       list-style-type: none;
       margin:0;padding:0;
     }
   }
-}
+  .footer-section {
+    margin-bottom: $buffer*4;
+  }
+}//footer

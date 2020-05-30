@@ -16,7 +16,7 @@
   position: fixed;
   left: 0; top: 0;
   z-index: $zIndex3;
-  // border-right: 1px solid #ccc;
+  border-right: 1px solid $bgColorLight;
   // outline: 2px dotted $bgColorLight;
   .menu-section {
   font-size: $fontSize;
@@ -38,7 +38,7 @@
           }
         }
         li {
-          // border-bottom: 1px dotted #ccc;
+          border-bottom: 1px solid $bgColorLight;
           &:hover {
             // background: $bgColorDark;
             // color: $lightFontColor;
@@ -55,7 +55,7 @@
           }
         }
         li {
-          // border-bottom: 1px dotted #ddd;
+          border-bottom: 1px solid $bgColorLight;
           &:hover {
             // background: $bgColorDark;
             // color: $lightFontColor;

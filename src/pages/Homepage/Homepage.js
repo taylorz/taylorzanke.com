@@ -5,6 +5,7 @@ import './Homepage.scss';
 import SiteWrapper from '../../components/SiteWrapper/SiteWrapper';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 import Hero from '../../components/Hero/Hero';
 import Menu from '../../components/Menu/Menu';
 import WorkImage from '../../components/WorkImage/WorkImage';
@@ -28,19 +29,20 @@ class Homepage extends Component {
       <>
         <SiteWrapper>
           <PageContainer className="homepage">
-            {/*<Hero/>*/}
-            <Grid container className="statement-wrapper">
+            <Hero/>
+            {/*<Grid container className="statement-wrapper">
               <Grid item xs={0} md={6} className="statement-spacer"/>
               <Grid item xs={12} md={6} className="statement-copy">
                 Taylor Zanke is an artist and designer living in Los Angeles, CA. He takes a multi-format approach to art making: producing models, drawings, photographs, and recordings, many of which are represented in singular artist books.
               </Grid>
-            </Grid>
+            </Grid>*/}
               <div className="project-list">
               <div className="project-item">
                 <Grid container className="project-wrapper">
                   <Grid item xs={12} md={6} className="project-preview-image">
                     <WorkImage
                       matte
+                      link={Reformulations1.link}
                       image={Reformulations1.images[5]}
                     />
                   </Grid>
@@ -57,6 +59,7 @@ class Homepage extends Component {
                   <Grid item xs={12} md={6} className="project-preview-image">
                     <WorkImage
                       matte
+                      link={TwoVisitations.link}
                       image={TwoVisitations.images[1]}
                     />
                   </Grid>
@@ -73,6 +76,7 @@ class Homepage extends Component {
                   <Grid item xs={12} md={6} className="project-preview-image">
                     <WorkImage
                       full
+                      link={TransmissionsFrom.link}
                       image={TransmissionsFrom.images[3]}
                     />
                   </Grid>
@@ -89,6 +93,7 @@ class Homepage extends Component {
                   <Grid item xs={12} md={6} className="project-preview-image">
                     <WorkImage
                       full
+                      link={SeveralSpeculative.link}
                       image={SeveralSpeculative.images[6]}
                     />
                   </Grid>
@@ -105,6 +110,7 @@ class Homepage extends Component {
                   <Grid item xs={12} md={6} className="project-preview-image">
                     <WorkImage
                       full
+                      link={TwoCitiesDiaryHNY.link}
                       image={TwoCitiesDiaryHNY.images[1]}
                     />
                   </Grid>
@@ -121,6 +127,7 @@ class Homepage extends Component {
                   <Grid item xs={12} md={6} className="project-preview-image">
                     <WorkImage
                       full
+                      link={TwoCitiesDiaryMP.link}
                       image={TwoCitiesDiaryMP.images[4]}
                     />
                   </Grid>
@@ -138,6 +145,7 @@ class Homepage extends Component {
                     <WorkImage
                       matte
                       dark
+                      link={DirectionZine.link}
                       image={DirectionZine.images[2]}
                     />
                   </Grid>

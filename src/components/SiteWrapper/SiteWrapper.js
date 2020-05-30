@@ -17,7 +17,7 @@ class SiteWrapper extends Component {
     const { children, className, menuState } = this.props
     return (
       <Grid container className={`site-wrapper ${className} ${this.state.menuOpened ? "menu-opened" : "menu-closed"}`}>
-        <Header onClick={() => this.toggleMenu()}/>
+        {/*<Header onClick={() => this.toggleMenu()}/>*/}
         <Menu/>
         {children}
       </Grid>

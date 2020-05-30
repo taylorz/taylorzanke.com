@@ -3,9 +3,9 @@
 .project-information {
   padding: $buffer*4;
   .project-statement {
-    font-size: $fontSizeStatement;
-    line-height: $lineHeightStatement;
-    font-family: $primaryFontBold;
+    font-size: $fontSizeParagraph;
+    line-height: $lineHeightParagraph;
+    font-family: $primaryFont;
     @include breakpoint(sm) {
       font-size: $fontSizeParagraph;
       line-height: $lineHeightParagraph;
@@ -23,7 +23,7 @@
         font-size: $fontSizeCaption;
         line-height: $lineHeightCaption;
         font-family: $primaryFontBold;
-        margin-right: $buffer*4;
+        margin-right: $buffer*8;
       }
       .data-information {
         font-style: italic;

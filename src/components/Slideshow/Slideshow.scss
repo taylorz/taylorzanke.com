@@ -1,0 +1,54 @@
+@import "../../styles/styles.scss";
+
+.slide-container {
+  height: 100%;
+  div:first-child {
+    height: 100%;
+  }
+  .react-slideshow-container {
+    height: 100%;
+    .react-slideshow-fade-wrapper {
+      overflow: visible;
+    }
+    .each-slide {
+      height: 100%;
+      .slide-image {
+        max-height: 110vh;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        @include breakpoint(sm) {
+          max-height: 100vh;
+        }
+      }
+      .caption {
+        height: auto;
+        width: 50%;
+        position: absolute;
+        bottom: 0;
+        padding-bottom: $buffer*4;
+        right: calc(-50% - 16px);
+        font-family: $secondaryFont;
+        font-size: $fontSize;
+        line-height: $lineHeight;
+        @include breakpoint(sm) {
+          bottom: -132px;
+          height: 100px;
+          left: $buffer*4;
+          width: 90vw;
+        }
+        span {
+          &.detail-id {
+            margin-right: $buffer*4;
+            font-family: $primaryFontBold;
+            font-size: $fontSizeCaption;
+          }
+          &.detail-caption {}
+          &.detail-work { font-style: italic; }
+          &.detail-year { font-style: italic; }
+        }
+      }
+    }
+  }//react-slideshow-container
+}//slide-container
