@@ -29,7 +29,7 @@ class Homepage extends Component {
       <>
         <SiteWrapper>
           <PageContainer className="homepage">
-            <Hero/>
+            {/* <Hero/> */}
             {/*<Grid container className="statement-wrapper">
               <Grid item xs={0} md={6} className="statement-spacer"/>
               <Grid item xs={12} md={6} className="statement-copy">
