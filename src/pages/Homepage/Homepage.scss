@@ -24,6 +24,9 @@
   .project-list {
     // border-top: 1px solid $bgColorLight;
     padding-top: $buffer*4;
+    @include breakpoint(sm) {
+      padding-top: 0;
+    }
     .project-item {
       padding: 0 $buffer*4 $buffer*4 $buffer*4;
       @include breakpoint(sm) {
