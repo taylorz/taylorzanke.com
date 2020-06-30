@@ -12,20 +12,19 @@ import WORKS from './constants/works/works'
 class App extends Component {
   render() {
     return (
-      <div className="App" >
       <Router>
-        <ScrollToTop/>
+      <ScrollToTop/>
         <Route render={({location}) => {
           const { key } = location
           return (
             <>
-            <TransitionGroup component={null}>
+            {/* <TransitionGroup component={null}>
               <CSSTransition
                 key={key}
                 appear={true}
                 classNames="my-node"
                 timeout={{enter: 1000, exit: 500}}
-              >
+              > */}
                 <Switch location={location}>
                   <Route key={"/"} exact path={"/"}>
                     <div className="my-node">
@@ -44,13 +43,12 @@ class App extends Component {
                     </Route>
                   ))}
                 </Switch>
-              </CSSTransition>
-            </TransitionGroup>
+              {/* </CSSTransition>
+            </TransitionGroup> */}
             </>
           )
         }}/>
         </Router>
-      </div>
     )
   }
 }
