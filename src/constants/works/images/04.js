@@ -3,6 +3,7 @@ import image04_2 from '../../../assets/works/04/04-2.png'
 import image04_3 from '../../../assets/works/04/04-3.png'
 import image04_4 from '../../../assets/works/04/04-4.png'
 import image04_5 from '../../../assets/works/04/04-5.png'
+import image04_6 from '../../../assets/works/04/04-6.png'
 
 const WORK_04 = [
     image04_1,
