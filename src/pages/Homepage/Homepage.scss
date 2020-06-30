@@ -8,5 +8,8 @@
   overflow-x: hidden;
   .image-item {
     height: 70vh;
+    @include breakpoint(xs) {
+      height: 50vh;
+    }
   }
 }//homepage

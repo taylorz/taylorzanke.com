@@ -1,4 +1,11 @@
 import WORK_01 from './images/01'
+import WORK_02 from './images/02'
+import WORK_03 from './images/03'
+import WORK_04 from './images/04'
+import WORK_05 from './images/05'
+import WORK_06 from './images/06'
+import WORK_07 from './images/07'
+import WORK_08 from './images/08'
 
 const WORKS = [
     {
@@ -11,7 +18,7 @@ const WORKS = [
         textStock: "",
         coverStock: "",
         year: "2013",
-        images: WORK_01
+        images: WORK_01,
     },
     {
         id: 2,
@@ -22,7 +29,8 @@ const WORKS = [
         productionInformation: "Inkjet printed, cold glue spine, point sewn",
         paperType: "",
         coverStock: "",
-        year: "2015"
+        year: "2015",
+        images: WORK_02
     },
     {
         id: 3,
@@ -33,7 +41,8 @@ const WORKS = [
         productionInformation: "Laser printed, cold glue spine",
         paperType: "",
         coverStock: "",
-        year: "2016"
+        year: "2016",
+        images: WORK_03
     },
     {
         id: 4,
@@ -44,7 +53,8 @@ const WORKS = [
         productionInformation: "Laser printed, folded and unbound",
         paperType: "US Letter, 24lb Text, White",
         coverStock: "",
-        year: "2017"
+        year: "2017",
+        images: WORK_04
     },
     {
         id: 5,
@@ -55,7 +65,8 @@ const WORKS = [
         productionInformation: "Inkjet printed, smythe sewn, PVA glued spine",
         paperType: "Red River, 26lb Text, Colorjet",
         coverStock: "Crest, 80lb Cover, Solar White",
-        year: "2019"
+        year: "2019",
+        images: WORK_05
     },
     {
         id: 6,
@@ -66,7 +77,8 @@ const WORKS = [
         productionInformation: "Inkjet printed, smythe sewn, PVA glued spine, french folded",
         paperType: "Red River, 26lb Text, Colorjet",
         coverStock: "Crest, 80lb Cover, Solar White",
-        year: "2020"
+        year: "2020",
+        images: WORK_06
     },
     {
         id: 7,
@@ -77,7 +89,8 @@ const WORKS = [
         productionInformation: "Laser and inkjet printed, smythe sewn, PVA glued spine, with original and printed graphite drawings",
         paperType: "US Letter, 24lb Text, White. Pacon, Standard Weight, Drawing Paper. Newsprint",
         coverStock: "Crest, 80lb Cover, Solar White",
-        year: "2020"
+        year: "2020",
+        images: WORK_07
     },
     {
         id: 8,
@@ -88,7 +101,8 @@ const WORKS = [
         productionInformation: "Laser and inkjet printed, smythe sewn, PVA glued spine",
         paperType: "US Letter, 24lb Text, White",
         coverStock: "Crest, 80lb Cover, Solar White",
-        year: "2020"
+        year: "2020",
+        images: WORK_08
     },
 ]
 
