@@ -6,7 +6,7 @@
   max-width: 100%;
   margin: 0 !important;
   overflow-x: hidden;
-  .image-item {
+  .image-display-item {
     height: 70vh;
     @include breakpoint(xs) {
       height: 50vh;

@@ -10,7 +10,7 @@ import WORKS from '../../constants/works/works'
 const Homepage = () => (
   <Grid container className="homepage-container" spacing={2}>
     {WORKS.reverse().map((work) => 
-      <Grid item xs={12} sm={6} className="image-item">
+      <Grid item xs={12} sm={6} className="image-display-item">
         <WorkImage
           image={work.images[1]}
         />

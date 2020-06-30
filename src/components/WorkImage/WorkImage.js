@@ -5,7 +5,7 @@ import './WorkImage.scss';
 const WorkImage = ({ image }) => (
     <Grid container className="work-image">
         <Grid item container className="image-block" xs={12} alignItems="center" justify="center">
-            <img src={image}/>
+            <div className="image-item" style={{backgroundImage: `url(${image})`}}/>
         </Grid>
     </Grid>
 )
