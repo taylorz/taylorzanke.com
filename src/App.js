@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <div className="App" >
       <Router>
-      <ScrollToTop/>
+        <ScrollToTop/>
         <Route render={({location}) => {
           const { key } = location
           return (

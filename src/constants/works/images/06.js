@@ -16,7 +16,6 @@ import image06_15 from '../../../assets/works/06/06-15.png'
 import image06_16 from '../../../assets/works/06/06-16.png'
 import image06_17 from '../../../assets/works/06/06-17.png'
 import image06_18 from '../../../assets/works/06/06-18.png'
-import image06_19 from '../../../assets/works/06/06-19.png'
 
 
 const WORK_06 = [
@@ -38,8 +37,7 @@ const WORK_06 = [
     image06_15,
     image06_16,
     image06_17,
-    image06_18,
-    image06_19
+    image06_18
 ]
 
 export default WORK_06
