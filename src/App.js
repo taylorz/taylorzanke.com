@@ -19,13 +19,13 @@ class App extends Component {
           const { key } = location
           return (
             <>
-            {/* <TransitionGroup component={null}>
+            <TransitionGroup component={null}>
               <CSSTransition
                 key={key}
                 appear={true}
                 classNames="my-node"
                 timeout={{enter: 1000, exit: 500}}
-              > */}
+              >
                 <Switch location={location}>
                   <Route key={"/"} exact path={"/"}>
                     <div className="my-node">
@@ -44,8 +44,8 @@ class App extends Component {
                     </Route>
                   ))}
                 </Switch>
-              {/* </CSSTransition>
-            </TransitionGroup> */}
+              </CSSTransition>
+            </TransitionGroup>
             </>
           )
         }}/>
