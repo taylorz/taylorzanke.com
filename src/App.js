@@ -24,7 +24,7 @@ class App extends Component {
                 key={key}
                 appear={true}
                 classNames="my-node"
-                timeout={{enter: 250, exit: 250}}
+                timeout={{enter: 0, exit: 0}}
               >
                 <Switch location={location}>
                   <Route key={"/"} exact path={"/"}>
@@ -36,7 +36,9 @@ class App extends Component {
                     <Route key={index} exact path={work.route}>
                       {({ match }) => (
                           <div className="my-node">
-                            <ProjectPage />
+                            <ProjectPage 
+                              work={work}
+                            />
                           </div>
                       )}
                     </Route>
