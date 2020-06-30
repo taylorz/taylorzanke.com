@@ -19,6 +19,7 @@ const WORKS = [
         coverStock: "",
         year: "2013",
         images: WORK_01,
+        route: "/01"
     },
     {
         id: 2,
@@ -30,7 +31,8 @@ const WORKS = [
         paperType: "",
         coverStock: "",
         year: "2015",
-        images: WORK_02
+        images: WORK_02,
+        route: "/02"
     },
     {
         id: 3,
@@ -42,7 +44,8 @@ const WORKS = [
         paperType: "",
         coverStock: "",
         year: "2016",
-        images: WORK_03
+        images: WORK_03,
+        route: "/03"
     },
     {
         id: 4,
@@ -54,7 +57,8 @@ const WORKS = [
         paperType: "US Letter, 24lb Text, White",
         coverStock: "",
         year: "2017",
-        images: WORK_04
+        images: WORK_04,
+        route: "/04"
     },
     {
         id: 5,
@@ -66,7 +70,8 @@ const WORKS = [
         paperType: "Red River, 26lb Text, Colorjet",
         coverStock: "Crest, 80lb Cover, Solar White",
         year: "2019",
-        images: WORK_05
+        images: WORK_05,
+        route: "/05"
     },
     {
         id: 6,
@@ -78,7 +83,8 @@ const WORKS = [
         paperType: "Red River, 26lb Text, Colorjet",
         coverStock: "Crest, 80lb Cover, Solar White",
         year: "2020",
-        images: WORK_06
+        images: WORK_06,
+        route: "/06"
     },
     {
         id: 7,
@@ -90,7 +96,8 @@ const WORKS = [
         paperType: "US Letter, 24lb Text, White. Pacon, Standard Weight, Drawing Paper. Newsprint",
         coverStock: "Crest, 80lb Cover, Solar White",
         year: "2020",
-        images: WORK_07
+        images: WORK_07,
+        route: "/07"
     },
     {
         id: 8,
@@ -102,7 +109,8 @@ const WORKS = [
         paperType: "US Letter, 24lb Text, White",
         coverStock: "Crest, 80lb Cover, Solar White",
         year: "2020",
-        images: WORK_08
+        images: WORK_08,
+        route: "/08"
     },
 ]
 
