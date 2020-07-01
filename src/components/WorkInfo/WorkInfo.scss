@@ -1,0 +1,13 @@
+@import "../../styles/styles.scss";
+
+.work-info {
+  font-family: $secondaryFont;
+  .information {
+    font-style: italic;
+  }
+  .name {
+    margin-right: $buffer*8;
+    font-family: $primaryFontBold;
+    font-size: $fontSizeCaption;
+  }
+}

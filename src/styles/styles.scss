@@ -38,20 +38,20 @@ body {
     &:hover { cursor: pointer; }
     &:active {}
   }
-  .my-node-appear {
-    opacity: 0;
-    @include animation($timing, $easingRegular, $delay2, fadeIn);
-  }
-  .my-node-enter {
-    opacity: 0;
-  }
-  .my-node-enter-active {
-    @include animation($timing, $easingRegular, $delay2, fadeIn);
-  }
-  .my-node-exit {
-    opacity: 1;
-  }
-  .my-node-exit-active {
-    @include animation($timing, $easingRegular, 0s, fadeOut);
-  }
+  // .my-node-appear {
+  //   opacity: 0;
+  //   @include animation($timing, $easingRegular, $delay2, fadeIn);
+  // }
+  // .my-node-enter {
+  //   opacity: 0;
+  // }
+  // .my-node-enter-active {
+  //   @include animation($timing, $easingRegular, $delay2, fadeIn);
+  // }
+  // .my-node-exit {
+  //   opacity: 1;
+  // }
+  // .my-node-exit-active {
+  //   @include animation($timing, $easingRegular, 0s, fadeOut);
+  // }
 }//body
