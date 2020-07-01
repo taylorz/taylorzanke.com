@@ -6,4 +6,14 @@
   max-width: 100%;
   margin: 0 !important;
   overflow-x: hidden;
+  @include breakpoint(xs) {
+    flex-direction: column-reverse;
+  }
+  // .mobile-home {
+  //   display: none;
+  //   font-family: $primaryFontBold;
+  //   @include breakpoint(xs) {
+  //     display: flex;
+  //   }
+  // }
 }

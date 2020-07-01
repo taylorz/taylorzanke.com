@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { Link, NavLink} from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import './Nav.scss'
 import WorkInfo from '../WorkInfo/WorkInfo'
 
@@ -8,8 +8,8 @@ import WORKS from '../../constants/works/works'
 
 const Nav = () => (
   <Grid container className="nav">
-    <Grid item xs={0} sm={1}/>
-    <Grid item xs={12} sm={11}>
+    <Grid item xs={1}/>
+    <Grid item xs={11}>
       <div className="home"><Link to="/">Taylor Zanke</Link></div>
     </Grid>
     <Grid item xs={12}>
@@ -18,13 +18,13 @@ const Nav = () => (
           <NavLink to={work.route} className="nav-link" activeClassName="nav-link-active">
             <li>
               <Grid container className="persistent-work-info">
-                <Grid item xs={0} sm={1} className="work-id">{work.id}</Grid>
-                <Grid item xs={12} sm={11} className="work-name">{work.name}</Grid>
+                <Grid item xs={1} className="work-id">{work.id}</Grid>
+                <Grid item xs={11} className="work-name">{work.name}</Grid>
                 {/* <Grid item container xs={1} justify="flex-end">{work.year}</Grid> */}
               </Grid>
               <Grid container className="active-work-info">
-                <Grid item xs={0} sm={1}></Grid>
-                <Grid item xs={12} sm={11}><WorkInfo work={work}/></Grid>
+                <Grid item xs={1}></Grid>
+                <Grid item xs={11}><WorkInfo work={work}/></Grid>
               </Grid>
             </li>
           </NavLink>
