@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { BrowserRouter as Router, Route, Link, Switch} from "react-router-dom"
+import {Link} from "react-router-dom"
 import './Homepage.scss';
 import PageContainer from '../../components/PageContainer/PageContainer'
 import WorkImage from '../../components/WorkImage/WorkImage'
