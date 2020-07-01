@@ -1,5 +1,16 @@
 @import "../../styles/styles.scss";
 
 .nav {
-  // padding: 0 $buffer*4;
+  .home {
+    font-family: $primaryFontBold;
+  }
+  ul {
+    list-style-type: none;
+    margin: $lineHeight 0;
+    padding: 0;
+    li {
+      padding-left: $buffer*11;
+      text-indent: -$buffer*11;
+    }
+  }
 }

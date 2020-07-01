@@ -15,15 +15,14 @@ const Nav = () => (
         {WORKS
           .sort(({ id: previousID }, { id: currentID }) => currentID - previousID)
           .map((work) =>
-          <Link to={work.url} activeClassName="nav-link-active">
-            <li>
-            <Grid container className="nav-link-content">
-              <Grid item xs={9} className="title">{work.name}</Grid>
-            </Grid>
-            </li>
-          </Link>
+          <NavLink to={work.route} activeClassName="nav-link-active">
+            <li><span>({work.year})</span> {work.name}</li>
+          </NavLink>
         )}
         </ul>
+    </Grid>
+    <Grid item xs={12}>
+      Taylor Zanke is an artist and designer living in Los Angeles, CA. He takes a multi-format approach to art making: producing models, drawings, photographs, and recordings, many of which are represented in singular artist books. Taylor’s practice studies the shifting nature of potential in space and develops long-form methodologies for reflecting on and revealing it. He uncovers ways in which our inner lives can be supported by the material realities around us, grafting personal reflections into common forms and proposals.
     </Grid>
   </Grid>
 )
