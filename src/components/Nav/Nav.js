@@ -24,7 +24,7 @@ const Nav = () => (
               </Grid>
               <Grid container className="active-work-info">
                 <Grid item xs={1}></Grid>
-                <Grid item xs={11}><WorkInfo work={work}/></Grid>
+                <Grid item xs={10}><WorkInfo work={work}/></Grid>
               </Grid>
             </li>
           </NavLink>
