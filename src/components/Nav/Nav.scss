@@ -15,13 +15,11 @@
       }
       li {
         .work-id {
-          // font-size: $fontSizeCaption;
           font-family: $secondaryFont;
         }
       }
       &.nav-link-active {
         .persistent-work-info {
-          // color: #aaa;
           font-family: $primaryFontBold;
         }
         .active-work-info {
