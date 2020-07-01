@@ -13,7 +13,7 @@ const Homepage = () => (
   <PageContainer className="homepage-container">
     <Grid container spacing={2}>
     {WORKS.sort(({ id: previousID }, { id: currentID }) => currentID - previousID).map((work) =>
-      <Grid item xs={12} sm={6} className="image-display-item">
+      <Grid item xs={12} lg={6} className="image-display-item">
         <Link to={work.route}>
           <WorkImage
             image={work.images[1]}
