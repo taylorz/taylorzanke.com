@@ -50,9 +50,9 @@ const WORKS = [
     {
         id: 4,
         name: "Untitled",
-        type: "Leaflet",
+        type: "Single Signature",
         dimensions: "5.5 x 7 inches",
-        pageCount: "24 pages",
+        pageCount: "16 pages",
         productionInformation: "Laser printed, folded and unbound",
         textStock: "US Letter, 24lb Text, White",
         coverStock: "",

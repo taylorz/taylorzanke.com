@@ -1,14 +1,8 @@
 @import "../../styles/styles.scss";
 
 .project-page{
-  font-size: $fontSizeParagraph;
-  .index-link {
-    position: fixed;
-    top: $buffer*2;
-    left: $buffer*2;
-  }
   .image-display-item {
-    height: 90vh;
+    height: 80vh;
     @include breakpoint(xs) {
       height: 50vh;
     }

@@ -1,10 +1,12 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import './PageContainer.scss';
+import Nav from '../Nav/Nav'
 
 const PageContainer = ({ className, children, center }) => (
-  <Grid container className={`page-container ${className}`} spacing={2} justify={`${center ? "center" : "flex-start"}`}>
-    {children}
+  <Grid container className={`page-container ${className}`} justify={`${center ? "center" : "flex-start"}`}>
+    <Grid item xs={12} sm={2}><Nav/></Grid>
+    <Grid item xs={12} sm={10}>{children}</Grid>
   </Grid>
 )
 

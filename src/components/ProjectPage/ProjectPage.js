@@ -8,18 +8,17 @@ import WorkInfo from '../../components/WorkInfo/WorkInfo'
 
 const ProjectPage = ({ work }) => (
   <PageContainer className="project-page" center>
-    <Grid item container xs={12} className="index-link">
-      <Link to="/">Index</Link>
-    </Grid>
-    {work.images.map((image) => 
-      <Grid item xs={12} sm={10} className="image-display-item">
-        <WorkImage
-          image={image}
-        />
+    <Grid container spacing={2}>
+      {work.images.map((image) => 
+        <Grid item xs={12} sm={12} className="image-display-item">
+          <WorkImage
+            image={image}
+          />
+        </Grid>
+      )}
+      <Grid item xs={12}>
+        <WorkInfo work={work}/>
       </Grid>
-    )}
-    <Grid item xs={12}>
-      <WorkInfo work={work}/>
     </Grid>
   </PageContainer>
 )
