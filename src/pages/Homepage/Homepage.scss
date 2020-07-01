@@ -1,15 +1,14 @@
 @import "../../styles/styles.scss";
 
 .homepage-container {
-  padding: $buffer*2;
-  position: absolute;
-  max-width: 100%;
-  margin: 0 !important;
-  overflow-x: hidden;
   .image-display-item {
     height: 70vh;
     @include breakpoint(xs) {
       height: 50vh;
     }
+  }
+  .bio {
+    font-size: $fontSizeParagraph;
+    line-height: $lineHeightParagraph;
   }
 }//homepage
