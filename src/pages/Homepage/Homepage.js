@@ -12,7 +12,7 @@ import WORKS from '../../constants/works/works'
 const Homepage = () => (
   <PageContainer className="homepage-container">
     <Grid container spacing={2}>
-    {WORKS.slice(0).reverse().map((work) => 
+    {WORKS.sort(({ id: previousID }, { id: currentID }) => currentID - previousID).map((work) =>
       <Grid item xs={12} sm={6} className="image-display-item">
         <Link to={work.route}>
           <WorkImage

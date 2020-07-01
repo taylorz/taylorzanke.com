@@ -1,8 +1,8 @@
 @import "../../styles/styles.scss";
 
 .work-info {
-  // font-family: $secondaryFont;
-  font-size: $fontSizeParagraph;
+  font-family: $secondaryFont;
+  font-size: $fontSize;
   .info-string {
     display: inline;
     .name {
@@ -11,7 +11,7 @@
       font-size: $fontSizeCaption;
     }
     .production-information {
-      // font-style: italic;
+      font-style: italic;
     }
   }
 }

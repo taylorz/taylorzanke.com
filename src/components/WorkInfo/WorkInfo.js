@@ -5,7 +5,7 @@ import './WorkInfo.scss';
 const WorkInfo = ({ className, work }) => (
   <Grid container className={`work-info ${className}`}>
     <Grid item xs={12} className="info-string">
-      <span className="name">{work.name}</span> 
+      {/* <span className="name">{work.name}</span>  */}
       <span className="type">{work.type}. </span>
       <span className="dimensions">{work.dimensions}. </span>
       <span className="page-count">{work.pageCount}. </span>

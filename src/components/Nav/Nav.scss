@@ -8,9 +8,26 @@
     list-style-type: none;
     margin: $lineHeight 0;
     padding: 0;
-    li {
-      padding-left: $buffer*11;
-      text-indent: -$buffer*11;
+    .nav-link {
+      .active-work-info {
+        display: none;
+        padding: $lineHeight 0;
+      }
+      li {
+        .work-id {
+          // font-size: $fontSizeCaption;
+          font-family: $secondaryFont;
+        }
+      }
+      &.nav-link-active {
+        .persistent-work-info {
+          // color: #aaa;
+          font-family: $primaryFontBold;
+        }
+        .active-work-info {
+          display: flex;
+        }
+      }
     }
   }
 }

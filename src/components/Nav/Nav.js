@@ -1,29 +1,36 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { BrowserRouter as Router, Route, Link, Switch, NavLink} from "react-router-dom"
-import './Nav.scss';
+import { Link, NavLink} from "react-router-dom"
+import './Nav.scss'
+import WorkInfo from '../WorkInfo/WorkInfo'
 
 import WORKS from '../../constants/works/works'
 
 const Nav = () => (
   <Grid container className="nav">
-    <Grid item xs={12}>
+    <Grid item xs={0} sm={1}/>
+    <Grid item xs={12} sm={11}>
       <div className="home"><Link to="/">Taylor Zanke</Link></div>
     </Grid>
     <Grid item xs={12}>
     <ul>
-        {WORKS
-          .sort(({ id: previousID }, { id: currentID }) => currentID - previousID)
-          .map((work) =>
-          <NavLink to={work.route} activeClassName="nav-link-active">
-            <li><span>({work.year})</span> {work.name}</li>
+        {WORKS.sort(({ id: previousID }, { id: currentID }) => currentID - previousID).map((work) =>
+          <NavLink to={work.route} className="nav-link" activeClassName="nav-link-active">
+            <li>
+              <Grid container className="persistent-work-info">
+                <Grid item xs={0} sm={1} className="work-id">{work.id}</Grid>
+                <Grid item xs={12} sm={11} className="work-name">{work.name}</Grid>
+                {/* <Grid item container xs={1} justify="flex-end">{work.year}</Grid> */}
+              </Grid>
+              <Grid container className="active-work-info">
+                <Grid item xs={0} sm={1}></Grid>
+                <Grid item xs={12} sm={11}><WorkInfo work={work}/></Grid>
+              </Grid>
+            </li>
           </NavLink>
         )}
         </ul>
     </Grid>
-    {/* <Grid item xs={12}>
-      Taylor Zanke is an artist and designer living in Los Angeles, CA. He takes a multi-format approach to art making: producing models, drawings, photographs, and recordings, many of which are represented in singular artist books. Taylor’s practice studies the shifting nature of potential in space and develops long-form methodologies for reflecting on and revealing it. He uncovers ways in which our inner lives can be supported by the material realities around us, grafting personal reflections into common forms and proposals.
-    </Grid> */}
   </Grid>
 )
 
