@@ -21,9 +21,9 @@ const Nav = () => (
         )}
         </ul>
     </Grid>
-    <Grid item xs={12}>
+    {/* <Grid item xs={12}>
       Taylor Zanke is an artist and designer living in Los Angeles, CA. He takes a multi-format approach to art making: producing models, drawings, photographs, and recordings, many of which are represented in singular artist books. Taylor’s practice studies the shifting nature of potential in space and develops long-form methodologies for reflecting on and revealing it. He uncovers ways in which our inner lives can be supported by the material realities around us, grafting personal reflections into common forms and proposals.
-    </Grid>
+    </Grid> */}
   </Grid>
 )
 
