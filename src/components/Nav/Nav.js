@@ -20,7 +20,7 @@ const Nav = () => (
               <Grid container className="persistent-work-info">
                 <Grid item xs={1} className="work-id">{work.id}</Grid>
                 <Grid item xs={10} className="work-name">{work.name}</Grid>
-                <Grid item container xs={1} className="work-id" justify="flex-end">{work.year}</Grid>
+                {/* <Grid item container xs={1} className="work-id" justify="flex-end">{work.year}</Grid> */}
               </Grid>
               <Grid container className="active-work-info">
                 <Grid item xs={1}></Grid>
