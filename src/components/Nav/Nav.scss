@@ -8,23 +8,29 @@
     list-style-type: none;
     margin: $lineHeight 0;
     padding: 0;
-    .nav-link {
+    li {
+      .persistent-work-info {
+        .work-details{
+          .nav-link {
+            &.nav-link-active {
+              font-family: $primaryFontBold;
+              .active-work-info {
+                display: flex;
+              }
+            }
+            .work-detail {
+              padding-right: $buffer*4;
+              &.work-year, &.work-id {
+                font-family: $secondaryFont;
+              }
+              &.work-name {}
+            }
+          }
+        }
+      }
       .active-work-info {
         display: none;
         padding: $lineHeight 0;
-      }
-      li {
-        .work-id {
-          font-family: $secondaryFont;
-        }
-      }
-      &.nav-link-active {
-        .persistent-work-info {
-          font-family: $primaryFontBold;
-        }
-        .active-work-info {
-          display: flex;
-        }
       }
     }
   }

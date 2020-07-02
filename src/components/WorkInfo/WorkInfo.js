@@ -8,13 +8,13 @@ const WorkInfo = ({ className, work }) => (
       {/* <span className="name">{work.name}</span>  */}
       <span className="type">{work.type}. </span>
       <span className="dimensions">{work.dimensions}. </span>
-      <span className="page-count">{work.pageCount}. </span>
+      <span className="page-count">{work.pageCount && work.pageCount + ". "} </span>
       <span className="production-information">
           {work.productionInformation}. 
           {work.textStock && " Text Stock: " + work.textStock + ". "} 
           {work.coverStock && "Cover Stock: " + work.coverStock + ". "} 
       </span>
-      <span className="year">({work.year})</span>
+      {/* <span className="year">({work.year})</span> */}
     </Grid>
   </Grid>
 )

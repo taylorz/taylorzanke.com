@@ -10,26 +10,26 @@ const Nav = () => (
   <Grid container className="nav">
     <Grid item xs={12} sm={10} lg={6}>
       <Grid container>
-        <Grid item xs={1}/>
-        <Grid item xs={11}>
+        <Grid item xs={12}>
           <div className="home"><Link to="/">Taylor Zanke</Link></div>
         </Grid>
       </Grid>
     <ul>
         {WORKS.sort(({ id: previousID }, { id: currentID }) => currentID - previousID).map((work) =>
-          <NavLink to={work.route} className="nav-link" activeClassName="nav-link-active">
             <li>
               <Grid container className="persistent-work-info">
-                <Grid item xs={1} className="work-id">{work.id}</Grid>
-                <Grid item xs={10} className="work-name">{work.name}</Grid>
-                {/* <Grid item container xs={1} className="work-id" justify="flex-end">{work.year}</Grid> */}
-              </Grid>
-              <Grid container className="active-work-info">
-                <Grid item xs={1}></Grid>
-                <Grid item xs={10}><WorkInfo work={work}/></Grid>
+                <Grid item container xs={12} className="work-details">
+                  <NavLink to={work.route} className="nav-link" activeClassName="nav-link-active">
+                    <span className="work-detail work-year">{work.year}</span>
+                    <span className="work-detail work-id">{work.id}</span>
+                    <span className="work-detail work-name">{work.name}</span>
+                    <Grid container className="active-work-info">
+                      <Grid item><WorkInfo work={work}/></Grid>
+                    </Grid>
+                  </NavLink>
+                </Grid>
               </Grid>
             </li>
-          </NavLink>
         )}
         </ul>
     </Grid>
