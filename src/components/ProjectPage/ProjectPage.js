@@ -14,6 +14,12 @@ const ProjectPage = ({ work }) => (
       {work.images.map((image) => 
         <Grid item xs={12} sm={12} className="image-display-item">
           <WorkImage
+            noMatte={
+              work.id === 1 || 
+              work.id === 2 || 
+              work.id === 3 ||
+              work.id === 5
+            }
             image={image}
           />
         </Grid>

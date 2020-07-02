@@ -5,7 +5,6 @@ import image05_4 from '../../../assets/works/05/05-4.png'
 import image05_5 from '../../../assets/works/05/05-5.png'
 import image05_6 from '../../../assets/works/05/05-6.png'
 import image05_7 from '../../../assets/works/05/05-7.png'
-import image05_8 from '../../../assets/works/05/05-8.png'
 
 
 const WORK_05 = [
@@ -16,8 +15,7 @@ const WORK_05 = [
     image05_5,
     image05_5,
     image05_6,
-    image05_7,
-    image05_8
+    image05_7
 ]
 
 export default WORK_05
