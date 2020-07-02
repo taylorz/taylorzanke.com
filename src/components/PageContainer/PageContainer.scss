@@ -9,4 +9,7 @@
   @include breakpoint(xs) {
     flex-direction: column-reverse;
   }
+  .home {
+    font-family: $primaryFontBold;
+  }
 }
