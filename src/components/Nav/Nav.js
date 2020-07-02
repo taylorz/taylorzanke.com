@@ -8,11 +8,13 @@ import WORKS from '../../constants/works/works'
 
 const Nav = () => (
   <Grid container className="nav">
-    <Grid item xs={1}/>
-    <Grid item xs={11}>
-      <div className="home"><Link to="/">Taylor Zanke</Link></div>
-    </Grid>
-    <Grid item xs={12}>
+    <Grid item xs={12} sm={10} lg={6}>
+      <Grid container>
+        <Grid item xs={1}/>
+        <Grid item xs={11}>
+          <div className="home"><Link to="/">Taylor Zanke</Link></div>
+        </Grid>
+      </Grid>
     <ul>
         {WORKS.sort(({ id: previousID }, { id: currentID }) => currentID - previousID).map((work) =>
           <NavLink to={work.route} className="nav-link" activeClassName="nav-link-active">
