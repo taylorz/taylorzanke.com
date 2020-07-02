@@ -6,6 +6,12 @@
     @include breakpoint(xs) {
       height: 50vh;
     }
+    @include breakpoint(sm) {
+      height: 50vh;
+    }
+    @include breakpoint(md) {
+      height: 60vh;
+    }
   }
   .bio {
     font-size: $fontSizeParagraph;
