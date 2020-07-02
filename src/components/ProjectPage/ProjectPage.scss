@@ -3,6 +3,11 @@
 .project-page{
   .image-display-item {
     height: 80vh;
+    .image-item {
+      &.no-matte {
+        background-size: cover;
+      }
+    }
     @include breakpoint(xs) {
       height: 50vh;
     }

@@ -16,6 +16,12 @@ const Homepage = () => (
       <Grid item xs={12} lg={6} className="image-display-item">
         <Link to={work.route}>
           <WorkImage
+            noMatte={
+              work.id === 1 || 
+              work.id === 2 || 
+              work.id === 3 ||
+              work.id === 5
+            }
             image={work.images[1]}
           />
         </Link>
