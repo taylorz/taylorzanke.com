@@ -24,7 +24,6 @@ const WORK_06 = [
     image06_3,
     image06_4,
     image06_5,
-    image06_5,
     image06_6,
     image06_7,
     image06_8,
