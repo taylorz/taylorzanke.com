@@ -6,8 +6,8 @@ import Nav from '../Nav/Nav'
 
 const PageContainer = ({ className, children, center }) => (
   <Grid container spacing={2} className={`page-container ${className}`} justify={`${center ? "center" : "flex-start"}`}>
-    <Grid item xs={12} sm={3}><Nav/></Grid>
-    <Grid item xs={12} sm={9}>{children}</Grid>
+    <Grid item xs={12} sm={4}><Nav/></Grid>
+    <Grid item xs={12} sm={8}>{children}</Grid>
     {/* <Grid item xs={11} className="mobile-home">
       <div className="home"><Link to="/">Taylor Zanke</Link></div>
     </Grid> */}
