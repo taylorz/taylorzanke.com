@@ -9,11 +9,4 @@
   @include breakpoint(xs) {
     flex-direction: column-reverse;
   }
-  // .mobile-home {
-  //   display: none;
-  //   font-family: $primaryFontBold;
-  //   @include breakpoint(xs) {
-  //     display: flex;
-  //   }
-  // }
 }
