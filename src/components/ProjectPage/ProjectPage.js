@@ -8,11 +8,8 @@ import WorkInfo from '../../components/WorkInfo/WorkInfo'
 const ProjectPage = ({ work }) => (
   <PageContainer className="project-page">
     <Grid container spacing={2}>
-      {/* <Grid item xs={12} sm={6} lg={4}>
-        <WorkInfo work={work}/>
-      </Grid> */}
       {work.images.map((image) => 
-        <Grid item xs={12} sm={12} className="image-display-item">
+        <Grid item xs={12} sm={8} className="image-display-item">
           <WorkImage
             noMatte={
               work.id === 1 || 

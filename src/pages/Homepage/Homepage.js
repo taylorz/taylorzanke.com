@@ -23,6 +23,9 @@ const Homepage = () => (
               work.id === 5
             }
             image={work.images[1]}
+            id={work.id}
+            name={work.name}
+            year={work.year}
           />
         </Link>
       </Grid>

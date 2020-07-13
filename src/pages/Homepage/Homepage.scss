@@ -2,7 +2,7 @@
 
 .homepage-container {
   .image-display-item {
-    height: 60vh;
+    height: 50vh;
     @include breakpoint(xs) {
       height: 50vh;
     }

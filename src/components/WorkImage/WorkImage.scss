@@ -3,8 +3,13 @@
 .work-image {
     height: 100%;
     background: $bgColorLight;
+    position: relative;
+    &:hover {
+        .image-caption { opacity: 1;}
+    }
     .image-block {
         height: 100%;
+        flex-direction: column;
         .image-item {
             background-size: contain;
             background-repeat: no-repeat;
@@ -26,5 +31,26 @@
                 max-height: 85%;
             }
         }
-    }
+    }//image-block
+    .image-caption {
+        position: absolute;
+        font-family: $secondaryFont; 
+        font-size: $fontSize;
+        opacity: 0;
+        background: white;
+        @include breakpoint(xs) {
+            opacity: 1;
+        }
+        .caption-item {
+            width: 100%;
+            text-align: left;
+            .caption-text {
+                margin-right: $buffer*4;
+                &.item-id {}
+                &.item-name {
+                    font-family: $primaryFont; 
+                }
+            }
+        }
+    }//image-caption
 }
