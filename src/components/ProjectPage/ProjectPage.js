@@ -7,7 +7,7 @@ import WorkInfo from '../../components/WorkInfo/WorkInfo'
 
 const ProjectPage = ({ work }) => (
   <PageContainer className="project-page">
-    <Grid container spacing={2}>
+    <Grid container spacing={2} justify="center">
       {work.images.map((image) => 
         <Grid item xs={12} sm={10} className="image-display-item">
           <WorkImage
