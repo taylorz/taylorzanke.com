@@ -23,11 +23,8 @@ $lineHeightStatement:                $lineHeight*1.95;
 $lineHeightHero:                     $lineHeight*3.25;
 $lineHeightCaption:                  $lineHeight*.8;
 
-$captionHeight:                      $buffer*8;
-$menuHeight:                         50vh;
-$menuWidth:                          30vw;
-$menuWidthMobile:                    90vw;
-$menuWidthMd:                        50vw;
+$captionHeight:                      $lineHeight*4;
+$captionBuffer:                      $captionHeight + $lineHeight;
 
 $timing:                             .25s;
 $easingCubic:                        cubic-bezier(0.77, 0, 0.175, 1);

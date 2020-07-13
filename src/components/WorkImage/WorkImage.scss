@@ -28,14 +28,15 @@
             }
             @include breakpoint(xs) {
                 max-width: 85%;
-                max-height: 85%;
+                max-height: 45%;
             }
         }
     }//image-block
     .image-caption {
         position: absolute;
+        bottom: -$captionBuffer;
+        height: $captionHeight;
         font-family: $secondaryFont; 
-        font-size: $fontSize;
         opacity: 0;
         background: white;
         @include breakpoint(xs) {

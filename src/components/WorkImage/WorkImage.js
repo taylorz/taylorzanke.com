@@ -8,7 +8,7 @@ const WorkImage = ({ image, year, id, name, noMatte }) => (
             <div className={`image-item ${noMatte && "no-matte"}`} style={{backgroundImage: `url(${image})`}}/>
         </Grid>
         { year && id && name && 
-            <Grid item container className="image-caption">
+            <Grid item container className="image-caption" alignItems="flex-start">
                 <div className="caption-item">
                     <span className="caption-text item-year">{year}</span>
                     <span className="caption-text item-id">{id}</span>

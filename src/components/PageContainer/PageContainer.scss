@@ -1,10 +1,9 @@
 @import "../../styles/styles.scss";
 
 .page-container {
-  padding: $buffer*2;
-  position: absolute;
-  max-width: 100%;
-  margin: 0 !important;
+  padding: $captionBuffer $buffer*4;
+  max-width: $md;
+  margin: 0 auto !important;
   overflow-x: hidden;
   // @include breakpoint(xs) {
   //   flex-direction: column-reverse;
