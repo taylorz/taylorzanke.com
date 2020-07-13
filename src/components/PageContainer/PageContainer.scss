@@ -6,9 +6,9 @@
   max-width: 100%;
   margin: 0 !important;
   overflow-x: hidden;
-  @include breakpoint(xs) {
-    flex-direction: column-reverse;
-  }
+  // @include breakpoint(xs) {
+  //   flex-direction: column-reverse;
+  // }
   .home {
     font-family: $primaryFontBold;
   }
