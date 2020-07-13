@@ -10,7 +10,7 @@ const PageContainer = ({ className, children, center }) => (
       <div className="home"><Link to="/">Taylor Zanke</Link></div>
     </Grid>
     <Grid item xs={12}>{children}</Grid>
-    <Grid item xs={12} sm={6}>
+    <Grid item xs={12} sm={6} className="list">
       <div className="home"><Link to="/">Taylor Zanke</Link></div>
       <WorkList/>
     </Grid>

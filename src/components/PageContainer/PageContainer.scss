@@ -8,6 +8,9 @@
   .header {
     margin-bottom: $captionBuffer;
   }
+  .list {
+    margin-top: $buffer*4;
+  }
   .home {
     font-family: $primaryFontBold;
   }
