@@ -6,9 +6,12 @@ import WorkList from '../WorkList/WorkList'
 
 const PageContainer = ({ className, children, center }) => (
   <Grid container className={`page-container ${className}`} justify={`${center ? "center" : "flex-start"}`}>
+    <Grid item xs={12} className="header">
+      <div className="home"><Link to="/">Taylor Zanke</Link></div>
+    </Grid>
     <Grid item xs={12}>{children}</Grid>
     <Grid item xs={12} sm={6}>
-      <div className="home"><Link to="/">Taylor Zanke (Index)</Link></div>
+      <div className="home"><Link to="/">Taylor Zanke</Link></div>
       <WorkList/>
     </Grid>
   </Grid>

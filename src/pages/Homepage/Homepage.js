@@ -11,9 +11,9 @@ import WORKS from '../../constants/works/works'
 
 const Homepage = () => (
   <PageContainer className="homepage-container">
-    <Grid container spacing={2}>
+    <Grid container spacing={2} justify="center">
     {WORKS.sort(({ id: previousID }, { id: currentID }) => currentID - previousID).map((work) =>
-      <Grid item xs={12} md={6} className="image-display-item">
+      <Grid item xs={12} md={10} className="image-display-item">
         <Link to={work.route}>
           <WorkImage
             noMatte={

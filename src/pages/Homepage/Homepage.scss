@@ -2,9 +2,9 @@
 
 .homepage-container {
   .image-display-item {
-    height: 60vh;
+    height: 70vh;
     min-height: 400px;
-    max-height: 600px;
+    // max-height: 600px;
     margin-bottom: $captionBuffer;
     @include breakpoint(xs) {
       height: 50vh;

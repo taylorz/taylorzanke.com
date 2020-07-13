@@ -1,13 +1,13 @@
 @import "../../styles/styles.scss";
 
 .page-container {
-  padding: $captionBuffer $buffer*4;
+  padding: $buffer*4 $buffer*4 $captionBuffer $buffer*4;
   max-width: $md;
   margin: 0 auto !important;
   overflow-x: hidden;
-  // @include breakpoint(xs) {
-  //   flex-direction: column-reverse;
-  // }
+  .header {
+    margin-bottom: $captionBuffer;
+  }
   .home {
     font-family: $primaryFontBold;
   }
