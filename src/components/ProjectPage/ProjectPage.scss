@@ -4,11 +4,6 @@
   .image-display-item {
     height: 70vh;
     margin-bottom: $captionHeight;
-    .image-item {
-      &.no-matte {
-        background-size: cover;
-      }
-    }
     @include breakpoint(xs) {
       height: 35vh;
       min-height: auto;

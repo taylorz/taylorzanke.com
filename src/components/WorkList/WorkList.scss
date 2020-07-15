@@ -13,6 +13,8 @@
               font-family: $primaryFontBold;
               .active-work-info {
                 display: flex;
+                line-height: $lineHeight;
+                font-size: $fontSize;
               }
             }
             .details-container {
