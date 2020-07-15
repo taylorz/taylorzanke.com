@@ -15,5 +15,9 @@
     line-height: $lineHeightStatement;
     font-family: $primaryFontBold;
     margin: $captionBuffer 0;
+    @include breakpoint(xs) {
+      font-size: $fontSizeParagraph;
+      line-height: $lineHeightParagraph;
+    }
   }
 }//homepage
