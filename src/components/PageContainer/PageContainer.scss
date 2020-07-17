@@ -1,7 +1,7 @@
 @import "../../styles/styles.scss";
 
 .page-container {
-  padding: $buffer*4 $buffer*4 $captionBuffer $buffer*4;
+  padding: $buffer*4;
   max-width: $md;
   margin: 0 auto !important;
   overflow-x: hidden;
@@ -13,5 +13,9 @@
   }
   .home {
     font-family: $primaryFontBold;
+  }
+  .copyright {
+    font-family: $primaryFontBold;
+    margin-top: $buffer*8;
   }
 }

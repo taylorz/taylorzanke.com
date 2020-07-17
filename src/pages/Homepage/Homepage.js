@@ -34,6 +34,8 @@ const Homepage = () => (
     </Grid>
     <Grid item xs={12} className="bio">
       <p>Taylor Zanke is an artist and designer living in Los Angeles, CA. He takes a multi-format approach to art making: producing models, drawings, and photographs, many of which are represented in singular artist books. Taylor’s practice studies the shifting nature of potential, present in familiar space, and develops long-form methodologies for reflecting on and revealing it. He uncovers ways in which our inner lives can be supported by the material realities around us, grafting personal reflections into common forms or proposals.</p>
+      <p>For more information:<br/>mail@taylorzanke.com</p>
+      <p>For collaborations:<br/><a href="https://taylorzankeoffice.com" target="_blank">taylorzankeoffice.com</a></p>
     </Grid>
   </PageContainer>
 )

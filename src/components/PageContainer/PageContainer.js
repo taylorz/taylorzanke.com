@@ -14,6 +14,9 @@ const PageContainer = ({ className, children, center }) => (
       <div className="home"><Link to="/">Index</Link></div>
       <WorkList/>
     </Grid>
+    <Grid item xs={12} className="copyright">
+      <div>All work &copy; 2020 by Taylor Zanke unless otherwise stated. Any redistribution or reproduction of part or all of the contents in any form is prohibited. You may not transmit it or store it in any other website or other form of electronic retrieval system without the prior written permission of Taylor Zanke.</div>
+    </Grid>
   </Grid>
 )
 

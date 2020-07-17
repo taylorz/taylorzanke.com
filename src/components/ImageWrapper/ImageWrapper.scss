@@ -3,6 +3,10 @@
 .image-wrapper {
     height: 85vh;
     margin-bottom: $captionBuffer !important;
+    @include breakpoint(sm) {
+      height: 60vh;
+      min-height: auto;
+    }
     @include breakpoint(xs) {
       height: 35vh;
       min-height: auto;
