@@ -37,7 +37,7 @@
         bottom: -$captionBuffer;
         height: $captionHeight;
         font-family: $secondaryFont; 
-        opacity: 0;
+        opacity: 1;
         background: white;
         @include breakpoint(xs) {
             opacity: 1;
