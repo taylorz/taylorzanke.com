@@ -2,7 +2,7 @@
 
 .project-page{
   .image-display-item {
-    height: 70vh;
+    height: 85vh;
     margin-bottom: $captionHeight;
     @include breakpoint(xs) {
       height: 35vh;
