@@ -1,12 +1,4 @@
 @import "../../styles/styles.scss";
 
 .project-page{
-  .image-display-item {
-    height: 85vh;
-    margin-bottom: $captionHeight;
-    @include breakpoint(xs) {
-      height: 35vh;
-      min-height: auto;
-    }
-  }
-}//project-page-container
+}//project-page

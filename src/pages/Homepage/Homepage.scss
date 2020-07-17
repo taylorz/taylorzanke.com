@@ -1,20 +1,11 @@
 @import "../../styles/styles.scss";
 
 .homepage-container {
-  .image-display-item {
-    height: 85vh;
-    min-height: 400px;
-    margin-bottom: $captionBuffer;
-    @include breakpoint(xs) {
-      height: 35vh;
-      min-height: auto;
-    }
-  }
   .bio {
     font-size: $fontSizeStatement;
     line-height: $lineHeightStatement;
     font-family: $primaryFontBold;
-    margin: $captionBuffer 0;
+    margin: $buffer*8 0;
     @include breakpoint(xs) {
       font-size: $fontSizeParagraph;
       line-height: $lineHeightParagraph;

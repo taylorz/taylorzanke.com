@@ -6,7 +6,7 @@
   margin: 0 auto !important;
   overflow-x: hidden;
   .header {
-    margin-bottom: $captionBuffer;
+    margin-bottom: $buffer*8;
   }
   .list {
     margin-top: $buffer*4;
