@@ -34,8 +34,8 @@
     }//image-block
     .image-caption {
         position: absolute;
-        bottom: -$captionBuffer;
-        height: $captionHeight;
+        top: 0;
+        height: $lineHeight*2;
         font-family: $secondaryFont; 
         opacity: 1;
         background: white;
@@ -44,10 +44,21 @@
         }
         .caption-item {
             width: 100%;
-            text-align: center;
+            margin-left: calc(-8.333% - #{$buffer*4});
+            @include breakpoint(sm) {
+                margin-left: auto;
+            } 
             .caption-text {
-                margin-right: $buffer*4;
-                &.item-id {}
+                &.item-year {
+                    max-width: $buffer*6;
+                    margin-right: $buffer*4;
+                }
+                &.item-id {
+                    font-family: $secondaryFont;
+                    text-align: right;
+                    max-width: $buffer*4;
+                    margin-right: $buffer*4;
+                }
                 &.item-name {
                     font-family: $primaryFont; 
                 }

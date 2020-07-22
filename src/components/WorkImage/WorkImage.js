@@ -4,9 +4,6 @@ import './WorkImage.scss';
 
 const WorkImage = ({ image, year, id, name, noMatte }) => (
     <Grid container className="work-image">
-        <Grid item container className="image-block" xs={12} alignItems="center" justify="center">
-            <div className={`image-item ${noMatte && "no-matte"}`} style={{backgroundImage: `url(${image})`}}/>
-        </Grid>
         { year && id && name && 
             <Grid item container className="image-caption" alignItems="flex-start">
                 <div className="caption-item">
@@ -16,6 +13,9 @@ const WorkImage = ({ image, year, id, name, noMatte }) => (
                 </div>
             </Grid>
         }
+        <Grid item container className="image-block" xs={12} alignItems="center" justify="center">
+            <div className={`image-item ${noMatte && "no-matte"}`} style={{backgroundImage: `url(${image})`}}/>
+        </Grid>
     </Grid>
 )
 

@@ -1,14 +1,4 @@
 @import "../../styles/styles.scss";
 
 .homepage-container {
-  .bio {
-    font-size: $fontSizeStatement;
-    line-height: $lineHeightStatement;
-    font-family: $primaryFontBold;
-    margin: $buffer*8 0;
-    @include breakpoint(xs) {
-      font-size: $fontSizeParagraph;
-      line-height: $lineHeightParagraph;
-    }
-  }
 }//homepage

@@ -1,0 +1,18 @@
+@import "../../styles/styles.scss";
+
+.footer-container {
+  .bio {
+    font-size: $fontSizeStatement;
+    line-height: $lineHeightStatement;
+    font-family: $primaryFontBold;
+    margin: $buffer*8 0;
+    @include breakpoint(xs) {
+      font-size: $fontSizeParagraph;
+      line-height: $lineHeightParagraph;
+    }
+  }
+  .copyright {
+    font-family: $primaryFontBold;
+    margin-top: $buffer*16;
+  }
+}
