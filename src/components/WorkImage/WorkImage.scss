@@ -34,7 +34,7 @@
     }//image-block
     .image-caption {
         position: absolute;
-        top: 0;
+        bottom: -$captionHeight;
         height: $lineHeight*2;
         font-family: $secondaryFont; 
         opacity: 1;
@@ -50,8 +50,8 @@
             } 
             .caption-text {
                 &.item-year {
-                    max-width: $buffer*6;
-                    margin-right: $buffer*4;
+                    max-width: $buffer*8;
+                    margin-right: $buffer*5;
                 }
                 &.item-id {
                     font-family: $secondaryFont;
