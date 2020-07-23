@@ -66,7 +66,7 @@
         }
     }//image-caption
 }
-// .LazyLoad {
-//     opacity: 0;
-//     @include animation(.5s, $easingRegular, 0s, fadeIn);
-// }
+.LazyLoad {
+    opacity: 0;
+    @include animation(.5s, $easingRegular, 0s, fadeIn);
+}
