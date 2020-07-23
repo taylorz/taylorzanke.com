@@ -1,11 +1,24 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import LazyLoad from 'react-lazy-load';
 import Grid from '@material-ui/core/Grid';
 import './WorkImage.scss';
 
-const WorkImage = ({ image, year, id, name, noMatte }) => (
-    // <LazyLoad height="100%" offset={0}>
-        <Grid container className="work-image">
+const useProgressiveImage = src => {  
+    const [sourceLoaded, setSourceLoaded] = useState(null)
+  
+    useEffect(() => {
+      const img = new Image()
+      img.src = src
+      img.onload = () => setSourceLoaded(src)
+    }, [src])
+  
+    return sourceLoaded 
+  }
+
+const WorkImage = ({ image, year, id, name, noMatte, source, placeholder }) => {
+    const loaded = useProgressiveImage(image)
+    return (
+    <Grid container className="work-image">
             { year && id && name && 
                 <Grid item container className="image-caption" alignItems="flex-start">
                     <div className="caption-item">
@@ -16,10 +29,12 @@ const WorkImage = ({ image, year, id, name, noMatte }) => (
                 </Grid>
             }
             <Grid item container className="image-block" xs={12} alignItems="center" justify="center">
-                <div className={`image-item ${noMatte && "no-matte"}`} style={{backgroundImage: `url(${image})`}}/>
+                {/* <LazyLoad height="100%" offset={0}> */}
+                    <div className={`image-item ${noMatte && "no-matte"}`} style={{backgroundImage: `url(${loaded || placeholder})`}}/>
+                {/* </LazyLoad> */}
             </Grid>
         </Grid>
-    // </LazyLoad>
-)
+    )
+}
 
 export default WorkImage
