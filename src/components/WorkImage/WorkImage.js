@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import LazyLoad from 'react-lazy-load';
 import Grid from '@material-ui/core/Grid';
 import './WorkImage.scss';
 
 const WorkImage = ({ image, year, id, name, noMatte }) => (
+    <LazyLoad height="100%" offset={1000}>
     <Grid container className="work-image">
         { year && id && name && 
             <Grid item container className="image-caption" alignItems="flex-start">
@@ -17,6 +19,7 @@ const WorkImage = ({ image, year, id, name, noMatte }) => (
             <div className={`image-item ${noMatte && "no-matte"}`} style={{backgroundImage: `url(${image})`}}/>
         </Grid>
     </Grid>
+    </LazyLoad>
 )
 
 export default WorkImage
