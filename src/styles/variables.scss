@@ -26,7 +26,7 @@ $lineHeightCaption:                  $lineHeight*.8;
 $captionHeight:                      $lineHeight*3;
 $captionBuffer:                      $captionHeight + $lineHeight;
 
-$timing:                             .25s;
+$timing:                             .5s;
 $easingCubic:                        cubic-bezier(0.77, 0, 0.175, 1);
 $easingRegular:                      ease-in-out;
 $transitionCubic:                    all $timing $easingCubic;

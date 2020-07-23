@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import {Link} from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import './Homepage.scss';
 import PageContainer from '../../components/PageContainer/PageContainer'
 import ImageWrapper from '../../components/ImageWrapper/ImageWrapper'
@@ -15,7 +15,7 @@ const Homepage = () => (
     <Grid container spacing={2} justify="center">
     {WORKS.sort(({ id: previousID }, { id: currentID }) => currentID - previousID).map((work) =>
       <ImageWrapper>
-        <Link to={work.route}>
+        <NavLink to={work.route}>
           <WorkImage
             noMatte={
               work.id === 1 || 
@@ -28,7 +28,7 @@ const Homepage = () => (
             name={work.name}
             year={work.year}
           />
-        </Link>
+        </NavLink>
         </ImageWrapper>
     )}
     </Grid>

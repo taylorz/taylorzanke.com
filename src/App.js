@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link, Switch} from "react-router-dom"
-import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import { CSSTransition, TransitionGroup, Transition } from 'react-transition-group'
 import './styles/styles.scss'
 import Homepage from './pages/Homepage/Homepage'
@@ -13,7 +12,6 @@ class App extends Component {
   render() {
     return (
       <Router>
-      <ScrollToTop/>
         <Route render={({location}) => {
           const { key } = location
           return (
@@ -32,7 +30,7 @@ class App extends Component {
                     </div>
                   </Route>
                   {WORKS.map(( work ) => (
-                    <Route key={work.route} exact path={work.route}>
+                    <Route key={work} exact path={work.route}>
                       {({ match }) => (
                           <div className="my-node">
                             <ProjectPage work={work}/>

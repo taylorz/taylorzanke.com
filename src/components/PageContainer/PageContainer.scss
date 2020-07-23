@@ -3,8 +3,14 @@
 .page-container {
   padding: $buffer*4;
   max-width: $md;
-  margin: 0 auto !important;
+  // margin: 0 auto !important;s
   overflow-x: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-y: scroll;
   .header {
     margin-bottom: $buffer*8;
   }
