@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import { Link, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import './WorkList.scss'
 import WorkInfo from '../WorkInfo/WorkInfo'
 
@@ -14,7 +14,7 @@ const WorkList = () => (
             <li>
               <Grid container className="persistent-work-info">
                 <Grid item xs={12} className="work-details">
-                  <NavLink to={work.route} className="nav-link" activeClassName="nav-link-active">
+                  <NavLink exact to={work.route} className="nav-link" activeClassName="nav-link-active">
                     <Grid container className="details-container">
                       <Grid item xs={2} className="work-detail-item work-year">{work.year}</Grid>
                       <Grid item  xs={2} className="work-detail-item work-id">{work.id}</Grid>

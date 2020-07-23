@@ -18,33 +18,31 @@ class App extends Component {
           const { key } = location
           return (
             <>
-            {/* <TransitionGroup component={null}>
+            <TransitionGroup component={null}>
               <CSSTransition
                 key={key}
                 appear={true}
                 classNames="my-node"
                 timeout={{enter: 1000, exit: 500}}
-              > */}
+              >
                 <Switch location={location}>
                   <Route key={"/"} exact path={"/"}>
                     <div className="my-node">
                       <Homepage/>
                     </div>
                   </Route>
-                  {WORKS.map(( work, index ) => (
-                    <Route key={index} exact path={work.route}>
+                  {WORKS.map(( work ) => (
+                    <Route key={work.route} exact path={work.route}>
                       {({ match }) => (
                           <div className="my-node">
-                            <ProjectPage 
-                              work={work}
-                            />
+                            <ProjectPage work={work}/>
                           </div>
                       )}
                     </Route>
                   ))}
                 </Switch>
-              {/* </CSSTransition>
-            </TransitionGroup> */}
+              </CSSTransition>
+            </TransitionGroup>
             </>
           )
         }}/>
