@@ -5,24 +5,24 @@ import { CSSTransition, TransitionGroup, Transition } from 'react-transition-gro
 import './WorkImage.scss';
 
 const WorkImage = ({ image, year, id, name, noMatte }) => (
-    <Grid container className="work-image">
-        { year && id && name && 
-            <Grid item container className="image-caption" alignItems="flex-start">
-                <div className="caption-item">
-                    <span className="caption-text item-year">{year}</span>
-                    <span className="caption-text item-id">{id}</span>
-                    <span className="caption-text item-name">{name}</span>
-                </div>
-            </Grid>
-        }
-        <LazyLoad throttle={1000} offset={800}>
-            <Grid item container className="image-block" xs={12} alignItems="center" justify="center">
-                <div className="image-block-wrapper">
-                    <img className={`image-item ${noMatte && "no-matte"}`} src={image}/>
-                </div>
-            </Grid>
-        </LazyLoad>
-    </Grid>
+    <LazyLoad throttle={490} offset={980}>
+        <Grid container className="work-image">
+            { year && id && name && 
+                <Grid item container className="image-caption" alignItems="flex-start">
+                    <div className="caption-item">
+                        <span className="caption-text item-year">{year}</span>
+                        <span className="caption-text item-id">{id}</span>
+                        <span className="caption-text item-name">{name}</span>
+                    </div>
+                </Grid>
+            }
+                <Grid item container className="image-block" xs={12} alignItems="center" justify="center">
+                    <div className="image-block-wrapper">
+                        <img className={`image-item ${noMatte && "no-matte"}`} src={image}/>
+                    </div>
+                </Grid>
+        </Grid>
+    </LazyLoad>
 )
 
 export default WorkImage
