@@ -1,6 +1,7 @@
 import React  from 'react';
 import LazyLoad from 'react-lazyload';
 import Grid from '@material-ui/core/Grid';
+import { CSSTransition, TransitionGroup, Transition } from 'react-transition-group'
 import './WorkImage.scss';
 
 const WorkImage = ({ image, year, id, name, noMatte }) => (
@@ -14,9 +15,11 @@ const WorkImage = ({ image, year, id, name, noMatte }) => (
                 </div>
             </Grid>
         }
-        <LazyLoad throttle={200} offset={800} height="100%">
+        <LazyLoad throttle={1000} offset={800}>
             <Grid item container className="image-block" xs={12} alignItems="center" justify="center">
-                <img className={`image-item ${noMatte && "no-matte"}`} src={image}/>
+                <div className="image-block-wrapper">
+                    <img className={`image-item ${noMatte && "no-matte"}`} src={image}/>
+                </div>
             </Grid>
         </LazyLoad>
     </Grid>
