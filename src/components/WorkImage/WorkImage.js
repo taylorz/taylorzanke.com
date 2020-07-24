@@ -17,7 +17,6 @@ const WorkImage = ({ image, year, id, name, noMatte }) => {
     const loaded = useProgressiveImage(image)
     const placeholder = "hi"
     return (
-    <LazyLoad height="100%" offset={0}>
     <Grid container className="work-image">
             { year && id && name && 
                 <Grid item container className="image-caption" alignItems="flex-start">
@@ -29,10 +28,12 @@ const WorkImage = ({ image, year, id, name, noMatte }) => {
                 </Grid>
             }
             <Grid item container className="image-block" xs={12} alignItems="center" justify="center">
-                    <div className={`image-item ${noMatte && "no-matte"}`} style={{backgroundImage: `url(${loaded || placeholder})`}}/>
+                    {/* <div className={`image-item ${noMatte && "no-matte"}`} style={{backgroundImage: `url(${loaded || placeholder})`}}/> */}
+                    <LazyLoad height="100%" width="100%" offset={0}>
+                    <img className={`image-item ${noMatte && "no-matte"}`} src={loaded || placeholder}/>
+                    </LazyLoad>
             </Grid>
         </Grid>
-    </LazyLoad>
     )
 }
 
