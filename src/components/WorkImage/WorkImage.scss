@@ -7,19 +7,19 @@
     &:hover {
         .image-caption { opacity: 1;}
     }
+    .lazyload-wrapper {
+        opacity: 0;
+        @include animation(.5s, $easingRegular, $delay2, fadeIn);
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .image-block {
         height: 100%;
         flex-direction: column;
         overflow: hidden;
-        .lazyload-wrapper {
-            opacity: 0;
-            @include animation(.5s, $easingRegular, $delay2, fadeIn);
-            height: 100%;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
         .image-item {
             max-width: 70%;
             max-height: 70%;

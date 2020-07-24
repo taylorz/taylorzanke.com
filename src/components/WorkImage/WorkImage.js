@@ -14,11 +14,11 @@ const WorkImage = ({ image, year, id, name, noMatte }) => (
                 </div>
             </Grid>
         }
+        <LazyLoad throttle={200} offset={800} height="100%">
             <Grid item container className="image-block" xs={12} alignItems="center" justify="center">
-                <LazyLoad throttle={200} offset={800} height="100%">
-                    <img className={`image-item ${noMatte && "no-matte"}`} src={image}/>
-                </LazyLoad>
+                <img className={`image-item ${noMatte && "no-matte"}`} src={image}/>
             </Grid>
+        </LazyLoad>
     </Grid>
 )
 
