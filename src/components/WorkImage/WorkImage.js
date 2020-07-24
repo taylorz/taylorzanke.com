@@ -30,7 +30,7 @@ const WorkImage = ({ image, year, id, name, noMatte }) => {
             <Grid item container className="image-block" xs={12} alignItems="center" justify="center">
                     {/* <div className={`image-item ${noMatte && "no-matte"}`} style={{backgroundImage: `url(${loaded || placeholder})`}}/> */}
                     <LazyLoad height="100%" width="100%" offset={0}>
-                    <img className={`image-item ${noMatte && "no-matte"}`} src={loaded || placeholder}/>
+                    <img className={`image-item ${noMatte && "no-matte"}`} src={image}/>
                     </LazyLoad>
             </Grid>
         </Grid>
