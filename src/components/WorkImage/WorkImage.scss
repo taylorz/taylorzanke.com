@@ -24,12 +24,9 @@
             max-width: 70%;
             max-height: 70%;
             &.no-matte {
-                text-align: center;
-                margin-left: -10%;
                 max-width: 120%;
                 max-height: 120%;
                 @include breakpoint(xs) {
-                    margin-left: -15%;
                     max-width: 130%;
                     max-height: 130%;
                 }
