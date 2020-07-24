@@ -49,13 +49,14 @@
         }
         .caption-item {
             width: 100%;
-            margin-left: calc(-8.333% - #{$buffer*4});
+            margin-left: calc(-8.333% - #{$buffer*5});
             @include breakpoint(sm) {
                 margin-left: auto;
             } 
             .caption-text {
+                display: inline-block;
                 &.item-year {
-                    max-width: $buffer*8;
+                    width: $buffer*8;
                     margin-right: $buffer*4;
                 }
                 &.item-id {
