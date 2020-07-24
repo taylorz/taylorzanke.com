@@ -17,7 +17,7 @@ const WorkImage = ({ image, year, id, name, noMatte }) => {
     // const loaded = useProgressiveImage(image)
     // const placeholder = "hi"
     return (
-    <LazyLoad height="100%" width="100%" offset={0}>
+    <LazyLoad height="100%" width="100%" offset={1000}>
         <Grid container className="work-image">
             { year && id && name && 
                 <Grid item container className="image-caption" alignItems="flex-start">
