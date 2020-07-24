@@ -15,7 +15,7 @@ const WorkImage = ({ image, year, id, name, noMatte }) => (
             </Grid>
         }
             <Grid item container className="image-block" xs={12} alignItems="center" justify="center">
-                <LazyLoad height="100%" width="100%" offset={1000}>
+                <LazyLoad throttle={200} height="100%">
                     <img className={`image-item ${noMatte && "no-matte"}`} src={image}/>
                 </LazyLoad>
             </Grid>
