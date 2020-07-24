@@ -11,12 +11,14 @@
         height: 100%;
         flex-direction: column;
         overflow: hidden;
-        .LazyLoad {
+        .lazyload-wrapper {
             opacity: 0;
             @include animation(.5s, $easingRegular, 0s, fadeIn);
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .image-item {
             max-width: 70%;

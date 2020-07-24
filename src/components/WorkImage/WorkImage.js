@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import LazyLoad from 'react-lazy-load';
+import LazyLoad from 'react-lazyload';
 import Grid from '@material-ui/core/Grid';
 import './WorkImage.scss';
 
@@ -17,7 +17,6 @@ const WorkImage = ({ image, year, id, name, noMatte }) => {
     // const loaded = useProgressiveImage(image)
     // const placeholder = "hi"
     return (
-    <LazyLoad height="100%" width="100%" offset={1000}>
         <Grid container className="work-image">
             { year && id && name && 
                 <Grid item container className="image-caption" alignItems="flex-start">
@@ -29,10 +28,11 @@ const WorkImage = ({ image, year, id, name, noMatte }) => {
                 </Grid>
             }
                 <Grid item container className="image-block" xs={12} alignItems="center" justify="center">
-                    <img className={`image-item ${noMatte && "no-matte"}`} src={image}/>
+                    <LazyLoad height="100%" width="100%" offset={1000}>
+                        <img className={`image-item ${noMatte && "no-matte"}`} src={image}/>
+                    </LazyLoad>
                 </Grid>
         </Grid>
-    </LazyLoad>
     )
 }
 
