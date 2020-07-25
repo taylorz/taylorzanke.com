@@ -18,7 +18,6 @@
     .image-block {
         height: 100%;
         overflow: hidden;
-        @include animation($timing, $easingRegular, 0s, fadeIn);
         .image-block-wrapper {
             width: 100%; height: 100%;
             display: flex;
