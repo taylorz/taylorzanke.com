@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import { NavLink } from "react-router-dom"
@@ -23,10 +22,8 @@ const Homepage = () => (
               work.id === 3 ||
               work.id === 5
             }
-            image={work.images[1]}
-            id={work.id}
-            name={work.name}
-            year={work.year}
+            work={work}
+            hasCaption={true}
           />
         </NavLink>
         </ImageWrapper>

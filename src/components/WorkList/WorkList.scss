@@ -7,7 +7,7 @@
     padding: 0;
     li {
       .persistent-work-info {
-        .work-details{
+        .work-list-item {
           .nav-link {
             &.nav-link-active {
               font-family: $primaryFontBold;
@@ -17,29 +17,11 @@
                 font-size: $fontSize;
               }
             }
-            .details-container {
-              .work-detail-item {
-                &.work-year {
-                  font-family: $secondaryFont;
-                  max-width: $buffer*6;
-                  margin-right: $buffer*4;
-                }
-                &.work-id {
-                  font-family: $secondaryFont;
-                  text-align: right;
-                  max-width: $buffer*4;
-                  margin-right: $buffer*4;
-                }
-                &.work-name {
-                }
-              }
-            }
           }
         }
       }
       .active-work-info {
         display: none;
-        padding: $lineHeight 0;
       }
     }
   }

@@ -1,15 +1,5 @@
 @import "../../styles/styles.scss";
 
 .image-wrapper {
-    height: 85vh;
-    max-height: 700px;
-    margin-bottom: $captionHeight !important;
-    @include breakpoint(sm) {
-      height: 60vh;
-      min-height: auto;
-    }
-    @include breakpoint(xs) {
-      height: 35vh;
-      min-height: auto;
-    }
+    margin-bottom: $lineHeight*2 !important;
 }
