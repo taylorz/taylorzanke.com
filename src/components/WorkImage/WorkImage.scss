@@ -13,6 +13,7 @@
         overflow: hidden;
         background: $bgColorLight;
         height: 80vh;
+        max-height: 650px;
         @include breakpoint(xs) {
             height: 50vh;
         }
