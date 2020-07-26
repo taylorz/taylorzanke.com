@@ -43,5 +43,9 @@
     .image-caption {
         font-family: $secondaryFont;
         margin-left: calc(-8.333% - #{$buffer*5});
+        @include breakpoint(xs) {
+            margin-left: inherit;
+            padding-right: $buffer*4;
+        }
     }//image-caption
 }

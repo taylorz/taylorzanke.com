@@ -22,8 +22,9 @@ const Homepage = () => (
               work.id === 3 ||
               work.id === 5
             }
+            image={work.images[1]}
             work={work}
-            hasCaption={true}
+            hasCaption={false}
           />
         </NavLink>
         </ImageWrapper>
