@@ -12,7 +12,10 @@
     .image-block {
         overflow: hidden;
         background: $bgColorLight;
-        height: 650px;
+        height: 80vh;
+        @include breakpoint(xs) {
+            height: 50vh;
+        }
         .image-block-wrapper {
             width: 100%; height: 100%;
             display: flex;
@@ -37,7 +40,6 @@
         }
     }//image-block
     .image-caption {
-        margin-top: $lineHeight;
         font-family: $secondaryFont;
         margin-left: calc(-8.333% - #{$buffer*5});
     }//image-caption
