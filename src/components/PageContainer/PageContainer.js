@@ -12,15 +12,16 @@ const PageContainer = ({ className, children, center }) => {
   }, [])
   return (
     <Grid container className={`page-container ${className}`} justify={`${center ? "center" : "flex-start"}`}>
-      <Grid item xs={12} className="header">
-        <div className="home"><NavLink exact to="/">Taylor Zanke</NavLink></div>
+      <Grid item xs={12} sm={4} className="header">
+        {/* <div className="home"><NavLink exact to="/">Taylor Zanke</NavLink></div> */}
+        Taylor Zanke is an artist and designer based in the Los Angeles area.
       </Grid>
-      <Grid item xs={12}>{children}</Grid>
-      <Grid item xs={12} className="list">
+      {/* <Grid item xs={12}>{children}</Grid> */}
+      {/* <Grid item xs={12} className="list">
         <div className="home"><NavLink exact to="/">Index</NavLink></div>
         <WorkList/>
       </Grid>
-      <Footer/>
+      <Footer/> */}
     </Grid>
   )
 }

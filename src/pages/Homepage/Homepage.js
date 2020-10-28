@@ -11,8 +11,8 @@ import WORKS from '../../constants/works/works'
 
 const Homepage = () => (
   <PageContainer className="homepage-container">
-    <Grid container spacing={2} justify="center">
-    {WORKS.sort(({ id: previousID }, { id: currentID }) => currentID - previousID).map((work) =>
+    <Grid container spacing={2}>
+    {/* {WORKS.sort(({ id: previousID }, { id: currentID }) => currentID - previousID).map((work) =>
       <ImageWrapper>
         <NavLink to={work.route}>
           <WorkImage
@@ -28,7 +28,7 @@ const Homepage = () => (
           />
         </NavLink>
         </ImageWrapper>
-    )}
+    )} */}
     </Grid>
   </PageContainer>
 )

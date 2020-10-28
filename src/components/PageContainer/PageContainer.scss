@@ -4,13 +4,16 @@
   padding: $buffer*4;
   max-width: $md;
   overflow-x: hidden;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  // position: absolute;
+  // left: 0;
+  // right: 0;
+  // margin-left: auto;
+  // margin-right: auto;
   .header {
     margin-bottom: $lineHeight;
+    font-family: $primaryFontBold;
+    font-size: $fontSizeStatement;
+    line-height: $lineHeightStatement;
   }
   .list {
     margin-top: $buffer*4;

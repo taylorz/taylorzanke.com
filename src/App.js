@@ -29,7 +29,7 @@ class App extends Component {
                       <Homepage/>
                     </div>
                   </Route>
-                  {WORKS.map(( work ) => (
+                  {/* {WORKS.map(( work ) => (
                     <Route key={work} exact path={work.route}>
                       {({ match }) => (
                           <div className="my-node">
@@ -37,7 +37,7 @@ class App extends Component {
                           </div>
                       )}
                     </Route>
-                  ))}
+                  ))} */}
                 </Switch>
               </CSSTransition>
             </TransitionGroup>
