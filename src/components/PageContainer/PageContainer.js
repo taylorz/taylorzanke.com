@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { NavLink } from "react-router-dom"
 import './PageContainer.scss';
-import WorkList from '../WorkList/WorkList'
 import Footer from '../Footer/Footer'
 
 

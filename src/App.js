@@ -5,8 +5,6 @@ import './styles/styles.scss'
 import Homepage from './pages/Homepage/Homepage'
 import './App.css'
 
-import WORKS from './constants/works/works'
-
 class App extends Component {
   render() {
     return (
