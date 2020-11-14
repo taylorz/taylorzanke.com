@@ -12,8 +12,8 @@
   .header {
     margin-bottom: $lineHeight;
     font-family: $primaryFontBold;
-    font-size: $fontSizeStatement;
-    line-height: $lineHeightStatement;
+    font-size: $fontSize;
+    line-height: $lineHeight;
   }
   .list {
     margin-top: $buffer*4;

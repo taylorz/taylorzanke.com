@@ -12,9 +12,9 @@ const PageContainer = ({ className, children, center }) => {
   }, [])
   return (
     <Grid container className={`page-container ${className}`} justify={`${center ? "center" : "flex-start"}`}>
-      <Grid item xs={12} sm={4} className="header">
+      <Grid item xs={12} sm={3} className="header">
         {/* <div className="home"><NavLink exact to="/">Taylor Zanke</NavLink></div> */}
-        Taylor Zanke is an artist and designer based in the Los Angeles area.
+        Hello, welcome to my website. I’m Taylor, a Canadian artist and designer based in Pasadena, California. The intent of this website is to provide an overview of who I am and what I am working on—for those interested. 
       </Grid>
       {/* <Grid item xs={12}>{children}</Grid> */}
       {/* <Grid item xs={12} className="list">
