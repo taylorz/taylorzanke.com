@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Link, Switch} from "react-router-dom"
-import { CSSTransition, TransitionGroup, Transition } from 'react-transition-group'
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom"
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import './styles/styles.scss'
 import Homepage from './pages/Homepage/Homepage'
-import ProjectPage from './components/ProjectPage/ProjectPage'
 import './App.css'
 
 import WORKS from './constants/works/works'
@@ -29,15 +28,6 @@ class App extends Component {
                       <Homepage/>
                     </div>
                   </Route>
-                  {/* {WORKS.map(( work ) => (
-                    <Route key={work} exact path={work.route}>
-                      {({ match }) => (
-                          <div className="my-node">
-                            <ProjectPage work={work}/>
-                          </div>
-                      )}
-                    </Route>
-                  ))} */}
                 </Switch>
               </CSSTransition>
             </TransitionGroup>
