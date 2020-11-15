@@ -10,10 +10,10 @@ const Homepage = () => (
   <PageContainer className="homepage-container">
     <Grid container className="header">
       <Grid item xs={0} sm={1}/>
-      <Grid item xs={6} sm={2}>
+      <Grid item xs={6} sm={2} className="animate-1">
         <NavLink exact to="/">TAYLOR ZANKE</NavLink>
       </Grid>
-      <Grid item xs={6} sm={2}>.COM</Grid>
+      <Grid item xs={6} sm={2} className="animate-2">.COM</Grid>
       {/* <Grid item xs={6} sm={2}><a href="https://www.littleuniverse.com/" target="_blank">LITTLE UNIVERSE</a></Grid>
       <Grid item xs={6} sm={2}><a href="https://www.taylorzankeoffice.com/" target="_blank">TAYLOR ZANKE, OFFICE</a></Grid> */}
     </Grid>
