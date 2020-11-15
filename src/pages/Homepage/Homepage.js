@@ -8,7 +8,7 @@ const year = new Date().getFullYear()
 
 const Homepage = () => (
   <PageContainer className="homepage-container">
-    <Grid container className="header">
+    <Grid container className="top-bar">
       <Grid item xs={0} sm={1}/>
       <Grid item xs={6} sm={2}>
         <NavLink exact to="/">TAYLOR ZANKE</NavLink>
