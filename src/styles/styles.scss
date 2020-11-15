@@ -37,9 +37,14 @@ body {
   a {
     color: inherit;
     text-decoration: none;
+    @include transitionCubic;
     &:link {}
     &:visited {}
-    &:hover { cursor: pointer; }
+    &:hover {
+      cursor: pointer;
+      color: goldenrod;
+      @include transitionCubic;
+    }
     &:active {}
   }
   .my-node-appear {
