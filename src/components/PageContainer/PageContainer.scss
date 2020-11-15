@@ -4,22 +4,4 @@
   padding: $buffer*4;
   max-width: $md;
   overflow-x: hidden;
-  // position: absolute;
-  // left: 0;
-  // right: 0;
-  // margin-left: auto;
-  // margin-right: auto;
-  .header {
-    margin-bottom: $lineHeight;
-    font-family: $primaryFont;
-    font-size: $fontSize;
-    line-height: $lineHeight;
-  }
-  .list {
-    margin-top: $buffer*4;
-    margin-right: $buffer*4; //also a fix for typography spacing and consistency across pages... should be fixed
-  }
-  .home {
-    font-family: $primaryFontBold;
-  }
 }

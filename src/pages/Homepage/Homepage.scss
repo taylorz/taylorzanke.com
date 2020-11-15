@@ -1,4 +1,50 @@
 @import "../../styles/styles.scss";
 
 .homepage-container {
+  .header {
+    @include breakpoint(xs) {
+      margin-bottom: $lineHeight;
+    }
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: $lineHeight;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &.header {
+      display: inline-block;
+      // border-bottom: 1px solid black;
+    }
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 $lineHeight 0;
+    @include breakpoint(xs) {
+      padding: 0;
+    }
+    li {
+      margin-bottom: $lineHeight;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      span {
+        font-style: italic;
+      }
+      &.no-spacing {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .page-section {
+    @include breakpoint(xs) {
+      margin-bottom: $lineHeight;
+    }
+    &.info {}
+    &.statement {}
+    &.education {}
+    &.contact {}
+  }
 }//homepage
+
