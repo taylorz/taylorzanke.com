@@ -3,29 +3,29 @@
 .homepage-container {
   .header {
     @include breakpoint(xs) {
-      margin-bottom: $lineHeight;
+      margin-bottom: $lineHeightParagraph;
     }
   }
   p {
     margin-top: 0;
-    margin-bottom: $lineHeight;
+    margin-bottom: $lineHeightParagraph;
     &:last-child {
       margin-bottom: 0;
     }
     &.header {
       display: inline-block;
-      // border-bottom: 1px solid black;
+      border-bottom: 1px solid $darkFontColor;
     }
   }
   ul {
     list-style-type: none;
     margin: 0;
-    padding: 0 0 $lineHeight 0;
+    padding: 0 0 $lineHeightParagraph 0;
     @include breakpoint(xs) {
       padding: 0;
     }
     li {
-      margin-bottom: $lineHeight;
+      margin-bottom: $lineHeightParagraph;
       &:last-child {
         margin-bottom: 0;
       }
@@ -39,7 +39,7 @@
   }
   .page-section {
     @include breakpoint(xs) {
-      margin-bottom: $lineHeight;
+      margin-bottom: $lineHeightParagraph;
     }
     &.info {}
     &.statement {}
