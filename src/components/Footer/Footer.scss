@@ -1,7 +1,7 @@
 @import "../../styles/styles.scss";
 
 .footer-container {
-  padding: $buffer*4;
+  padding: 0 $buffer*4 $buffer*4 $buffer*4;
   justify-content: flex-end;
   position: fixed;
   bottom: 0;
@@ -9,6 +9,6 @@
   @include breakpoint(xs) {
     justify-content: flex-start;
     position: relative;
-    margin-bottom: $lineHeightParagraph*2;
+    // margin-bottom: $lineHeightParagraph*2;
   }
 }
