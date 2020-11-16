@@ -8,15 +8,14 @@ const year = new Date().getFullYear()
 
 const Homepage = () => (
   <PageContainer className="homepage-container">
-    <Grid container className="header">
-      <Grid item xs={0} sm={1}/>
+    <Grid container className="top-bar">
       <Grid item xs={6} sm={2}>
         <NavLink exact to="/">TAYLOR ZANKE</NavLink>
       </Grid>
       {/* <Grid item xs={6} sm={2}><a href="https://www.littleuniverse.com/" target="_blank">LITTLE UNIVERSE</a></Grid>
       <Grid item xs={6} sm={2}><a href="https://www.taylorzankeoffice.com/" target="_blank">TAYLOR ZANKE, OFFICE</a></Grid> */}
     </Grid>
-    <Grid container spacing={2}>
+    <Grid container spacing={1}>
       <Grid item xs={12} sm={4} className="page-section statement">
         <p className="header">ABOUT</p>
         <p>Hello, I’m Taylor, a Canadian artist and designer based in Los Angeles, California. I help run design at Little Universe, a digital agency building products alongside clients of all sizes to help solve the climate crisis. I also maintain my own small, independent office, where I mostly focus on self directed projects with an evolving set of concerns and requirements relating to architecture and art.</p>
