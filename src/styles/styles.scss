@@ -30,10 +30,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
-  @include breakpoint(xs) {
-    font-size: $fontSizeParagraph;
-    line-height: $lineHeightParagraph;
-  }
   a {
     color: inherit;
     text-decoration: none;
@@ -42,7 +38,7 @@ body {
     &:visited {}
     &:hover {
       cursor: pointer;
-      color: goldenrod;
+      color: #ccc;
       @include transitionCubic;
     }
     &:active {}

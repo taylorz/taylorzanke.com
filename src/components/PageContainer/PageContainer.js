@@ -8,12 +8,9 @@ const PageContainer = ({ className, children }) => {
     setTimeout(() => window.scrollTo(0, 0), 500)
   }, [])
   return (
-    <>
-      <div className={`page-container ${className}`}>
-        {children}
-      </div>
-      <Footer/>
-    </>
+    <div className={`page-container ${className}`}>
+      {children}
+    </div>
   )
 }
 

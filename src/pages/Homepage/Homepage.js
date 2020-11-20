@@ -9,13 +9,13 @@ const year = new Date().getFullYear()
 const Homepage = () => (
   <PageContainer className="homepage-container">
     <Grid container className="top-bar">
-      <Grid item xs={6} sm={2}>
+      <Grid item xs={6} sm={2} >
         <NavLink exact to="/">TAYLOR ZANKE</NavLink>
       </Grid>
       {/* <Grid item xs={6} sm={2}><a href="https://www.littleuniverse.com/" target="_blank">LITTLE UNIVERSE</a></Grid>
       <Grid item xs={6} sm={2}><a href="https://www.taylorzankeoffice.com/" target="_blank">TAYLOR ZANKE, OFFICE</a></Grid> */}
     </Grid>
-    <Grid container spacing={1}>
+    <Grid container>
       <Grid item xs={12} sm={4} className="page-section statement">
         <p className="header">ABOUT</p>
         <p>Hello, I’m Taylor, a Canadian artist and designer based in Los Angeles, California. I help run design at Little Universe, a digital agency building products alongside clients of all sizes to help solve the climate crisis. I also maintain my own small, independent office, where I mostly focus on self directed projects with an evolving set of concerns and requirements relating to architecture and art.</p>
@@ -26,20 +26,16 @@ const Homepage = () => (
         <p>Taylor</p>
       </Grid>
       <Grid item xs={12} sm={2} className="page-section  education">
+        <p className="header">WEBSITES</p>
+        <ul>
+          <li className="no-spacing"><a href="https://www.littleuniverse.com/" target="_blank">Little Universe</a></li>
+          <li className="no-spacing"><a href="https://www.taylorzankeoffice.com/" target="_blank">Taylor Zanke, Office</a></li>
+        </ul>
         <p className="header">EDUCATION</p>
         <ul>
           <li><span>M.Arch, M.S.</span> Columbia University Graduate School of Architecture Planning and Preservation</li>
           <li><span>B.F.A.</span> Parsons The New School for Design</li>
         </ul>
-      </Grid>
-      <Grid item xs={12} sm={2} className="page-section  links">
-        <p className="header">SITES</p>
-        <ul>
-          <li className="no-spacing"><a href="https://www.littleuniverse.com/" target="_blank">Little Universe</a></li>
-          <li className="no-spacing"><a href="https://www.taylorzankeoffice.com/" target="_blank">Taylor Zanke, Office</a></li>
-        </ul>
-      </Grid>
-      <Grid item xs={12} sm={2} className="page-section  links">
         <p className="header">CONTACT</p>
         <ul>
           <li className="no-spacing">mail@taylorzanke.com</li>
