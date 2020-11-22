@@ -2,7 +2,7 @@
 
 .page-container {
   position: absolute;
-  padding: $buffer*4;
+  padding: $lineHeightParagraph;
   max-width: $md;
   overflow-x: hidden;
 }
