@@ -22,6 +22,7 @@
     padding: 0 0 $lineHeightParagraph 0;
     @include breakpoint(xs) {
       padding: 0;
+      margin-bottom: $lineHeightParagraph;
     }
     li {
       margin-bottom: $lineHeightParagraph;

@@ -1,6 +1,7 @@
 @import "../../styles/styles.scss";
 
 .page-container {
+  position: absolute;
   padding: $buffer*4;
   max-width: $md;
   overflow-x: hidden;
