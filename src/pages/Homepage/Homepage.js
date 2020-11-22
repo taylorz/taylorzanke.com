@@ -3,11 +3,15 @@ import Grid from '@material-ui/core/Grid';
 import { NavLink } from "react-router-dom"
 import './Homepage.scss';
 import PageContainer from '../../components/PageContainer/PageContainer'
-
-const year = new Date().getFullYear()
+import flowers from '../../assets/images/flowers.png'
 
 const Homepage = () => (
   <PageContainer className="homepage-container">
+    <Grid container>
+      <Grid item xs={12} sm={8} className="page-section image">
+        <img src={flowers}/>
+      </Grid>
+    </Grid>
     <Grid container className="top-bar">
       <Grid item xs={6} sm={2} >
         <NavLink exact to="/">TAYLOR ZANKE</NavLink>

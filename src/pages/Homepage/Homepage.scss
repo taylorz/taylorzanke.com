@@ -38,6 +38,12 @@
     }
   }
   .page-section {
+    &.image {
+      margin-bottom: $lineHeightParagraph;
+      img {
+        width: 100%;
+      }
+    }
     padding-right: $buffer*4;
     @include breakpoint(xs) {
       padding-right: 0;
