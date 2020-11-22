@@ -30,7 +30,7 @@ const Homepage = () => (
         <p>Taylor</p>
       </Grid>
       <Grid item xs={12} sm={2} className="page-section  education">
-        <p className="header">WEBSITES</p>
+        <p className="header">ELSEWHERE</p>
         <ul>
           <li className="no-spacing"><a href="https://www.littleuniverse.com/" target="_blank">Little Universe</a></li>
           <li className="no-spacing"><a href="https://www.taylorzankeoffice.com/" target="_blank">Taylor Zanke, Office</a></li>
