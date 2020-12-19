@@ -1,60 +1,6 @@
 @import "../../styles/styles.scss";
 
-.homepage-container {
-  .top-bar {
-    margin-bottom: $lineHeightParagraph;
-    // font-family: $primaryFontBold;
-  }
-  p {
-    margin-top: 0;
-    margin-bottom: $lineHeightParagraph;
-    &:last-child {
-      margin-bottom: 0;
-    }
-    &.header {
-      display: inline-block;
-      // font-family: $primaryFontBold;
-    }
-  }
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0 0 $lineHeightParagraph 0;
-    @include breakpoint(xs) {
-      padding: 0;
-      margin-bottom: $lineHeightParagraph;
-    }
-    li {
-      margin-bottom: $lineHeightParagraph;
-      &:last-child {
-        margin-bottom: 0;
-      }
-      &.no-spacing {
-        margin-bottom: 0;
-      }
-    }
-  }
-  .page-section {
-    &.image {
-      margin-bottom: $lineHeightParagraph;
-      img {
-        width: 100%;
-      }
-    }
-    padding-right: $buffer*4;
-    @include breakpoint(xs) {
-      padding-right: 0;
-      margin-bottom: $lineHeightParagraph;
-    }
-    &.MuiGrid-item {
-      padding-top: 0; 
-      padding-bottom: 0;
-    }
-    &.info {}
-    &.statement {}
-    &.education {}
-    &.contact {}
-  }
+.homepage-container { 
 }//homepage
 
 

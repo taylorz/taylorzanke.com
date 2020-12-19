@@ -11,12 +11,10 @@ $primaryFont:                        "Fann Grotesque", sans-serif;
 $primaryFontBold:                    "Fann Grotesque Semibold", sans-serif;
 
 $fontSize:                           14px;
-$fontSizeParagraph:                  $fontSize*1.15;
+$fontSizeLarge:                      $fontSize*2;
 
-$lineHeight:                         16px;
-$lineHeightParagraph:                $lineHeight*1.15;
-
-$captionHeight:                      $lineHeight*4;
+$lineHeight:                         14px;
+$lineHeightLarge:                    $lineHeight*2;
 
 $timing:                             .5s;
 $easingCubic:                        cubic-bezier(0.77, 0, 0.175, 1);

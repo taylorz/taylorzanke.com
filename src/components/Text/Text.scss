@@ -1,0 +1,15 @@
+@import "../../styles/styles.scss";
+
+.text {
+  font-family: $primaryFont;
+  &.large {
+    font-size: $fontSizeLarge;
+    line-height: $lineHeightLarge;
+  }
+  &.center {
+    text-align: center;
+  }
+  &.bold {
+    font-family: $primaryFontBold;
+  }
+}
