@@ -7,19 +7,22 @@ import flowers from '../../assets/images/flowers.png'
 
 const Homepage = () => (
   <PageContainer className="homepage-container">
-    <Grid container>
-      <Grid item xs={12} sm={8} className="page-section image">
-        <img src={flowers}/>
-      </Grid>
-    </Grid>
     <Grid container className="top-bar">
-      <Grid item xs={6} sm={2} >
-        <NavLink exact to="/">TAYLOR ZANKE</NavLink>
+      <Grid item xs={6} sm={3}>
+        Taylor Zanke
       </Grid>
-      {/* <Grid item xs={6} sm={2}><a href="https://www.littleuniverse.com/" target="_blank">LITTLE UNIVERSE</a></Grid>
-      <Grid item xs={6} sm={2}><a href="https://www.taylorzankeoffice.com/" target="_blank">TAYLOR ZANKE, OFFICE</a></Grid> */}
+      <Grid item xs={6} sm={3}>
+        Artist and Designer
+      </Grid>
+      <Grid item xs={6} sm={3}>
+        Los Angeles, CA
+      </Grid>
+      {/* <Grid item xs={6} sm={3}>
+        Little Universe, <br/>
+        Taylor Zanke Office
+      </Grid> */}
     </Grid>
-    <Grid container>
+    {/* <Grid container>
       <Grid item xs={12} sm={4} className="page-section statement">
         <p>Hello, I’m Taylor, a Canadian artist and designer based in Los Angeles, California. I help run design at Little Universe, a digital agency building products alongside clients of all sizes to help solve the climate crisis. I also maintain my own small, independent office, where I mostly focus on self directed projects with an evolving set of concerns and requirements relating to architecture and art.</p>
         <p>In my role at Little Universe I work closely with our clients to find opportunities for design to bring new forms of value to their digital platforms. Sometimes this means developing a product from scratch, in other cases it means identifying interventions which can be made in an existing context to address a specific need. Both of these conditions bring exciting opportunities to write code, develop and critique design, and operate as a member of our team. To me, the key design question of our practice at Little Universe, among many others, is whether the forms we choose are appropriate and relevant within the domain we have situated ourselves: addressing the existential threat of climate change. In the context of digital product design this means asking questions about what engineering decisions are made, what user experience patterns are used, and what interactions feel like. It also means forming opinions about our design ethic, and questioning ideas like engagement, efficiency, function, clarity, optimism, hope, and joy. Through Little Universe I try to do my part in fulfilling the climate mandate critical to our future as a species.</p>
@@ -46,7 +49,7 @@ const Homepage = () => (
           <li className="no-spacing"><a href="https://taylorzanke.bandcamp.com/" target="_blank">Bandcamp</a></li>
         </ul>
       </Grid>
-    </Grid>
+    </Grid> */}
   </PageContainer>
 )
 

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import './PageContainer.scss';
-import Footer from '../Footer/Footer'
 
 
 const PageContainer = ({ className, children }) => {

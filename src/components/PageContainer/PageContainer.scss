@@ -1,8 +1,8 @@
 @import "../../styles/styles.scss";
 
 .page-container {
-  position: absolute;
-  padding: $lineHeightParagraph;
+  // position: absolute;
+  padding: $lineHeight;
   max-width: $md;
   overflow-x: hidden;
 }
