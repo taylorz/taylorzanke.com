@@ -1,8 +1,42 @@
 @import "../../styles/styles.scss";
 
 .homepage-container {
-  .top-bar {
-    font-size: $fontSizeParagraph;
+  .section {
+    padding: $lineHeightParagraph*5 0;
+    border-bottom: $lineHeightParagraph*5 dotted $bgColorDark;
+    &.dashed {
+      border-bottom: $lineHeightParagraph*5 dashed $bgColorDark;
+    }
+    &.double {
+      border-bottom: $lineHeightParagraph*5 double $bgColorDark;
+    }
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: 0;
+    }
+    p {
+      margin-top: 0;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin-bottom: $lineHeightParagraph;
+        &.no-spacing {
+          margin-bottom: 0;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
 }//homepage
 

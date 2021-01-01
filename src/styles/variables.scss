@@ -2,7 +2,7 @@ $buffer:                             4px;
 
 $bgBody:                             #ffffff;
 $bgColorLight:                       #eaeaea;
-$bgColorDark:                        #33333a;
+$bgColorDark:                        #111111;
 
 $darkFontColor:                      $bgColorDark;
 $lightFontColor:                     #ffffff;
@@ -11,10 +11,10 @@ $primaryFont:                        "Fann Grotesque", sans-serif;
 $primaryFontBold:                    "Fann Grotesque Semibold", sans-serif;
 
 $fontSize:                           14px;
-$fontSizeParagraph:                  $fontSize*1.5;
+$fontSizeParagraph:                  $fontSize*2;
 
 $lineHeight:                         16px;
-$lineHeightParagraph:                $lineHeight*1.5;
+$lineHeightParagraph:                $lineHeight*1.8;
 
 $timing:                             .5s;
 $easingCubic:                        cubic-bezier(0.77, 0, 0.175, 1);
