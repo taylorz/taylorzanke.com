@@ -3,12 +3,22 @@
 .homepage-container {
   .section {
     padding: $lineHeightParagraph*5 0;
-    border-bottom: $lineHeightParagraph*5 dotted $bgColorDark;
+    // border-bottom: $lineHeightParagraph*5 dotted $bgColorDark;
+    border-bottom: calc(#{$sm}/6) dotted $bgColorDark;
+    @include breakpoint(xs) {
+      border-bottom: calc(#{$sm}/12) dotted $bgColorDark;
+    }
     &.dashed {
-      border-bottom: $lineHeightParagraph*5 dashed $bgColorDark;
+      border-bottom: calc(#{$sm}/7) dashed $bgColorDark;
+      @include breakpoint(xs) {
+        border-bottom: calc(#{$sm}/12) dashed $bgColorDark;
+      }
     }
     &.double {
-      border-bottom: $lineHeightParagraph*5 double $bgColorDark;
+      border-bottom: calc(#{$sm}/6) double $bgColorDark;
+      @include breakpoint(xs) {
+        border-bottom: calc(#{$sm}/12) double $bgColorDark;
+      }
     }
     &:first-child {
       padding-top: 0;

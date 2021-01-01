@@ -27,6 +27,10 @@ body {
   font-size: $fontSizeParagraph;
   line-height: $lineHeightParagraph;
   color: $darkFontColor;
+  @include breakpoint(xs) {
+    font-size: $fontSize*1.25;
+    line-height: $lineHeight*1.25;
+  }
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;

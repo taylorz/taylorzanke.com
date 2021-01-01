@@ -3,7 +3,7 @@
 .page-container {
   // position: absolute;
   margin: 0 auto;
-  padding: $lineHeightParagraph*5;
+  padding: $lineHeightParagraph*5 $lineHeight;
   max-width: $sm;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
