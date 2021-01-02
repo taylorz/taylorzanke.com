@@ -32,6 +32,12 @@
       &:last-child {
         margin-bottom: 0;
       }
+      &:only-child {
+        margin-bottom: $lineHeightParagraph;
+        @include breakpoint(xs) {
+          margin-bottom: $lineHeight;
+        }
+      }
     }
     ul {
       list-style-type: none;

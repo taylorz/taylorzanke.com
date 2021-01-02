@@ -5,5 +5,7 @@
   margin: 0 auto;
   padding: $lineHeightParagraph*5 $lineHeight;
   max-width: $sm;
-  // overflow-x: hidden;
+  @include breakpoint(xs) {
+    padding-top: $lineHeight;
+  }
 }
