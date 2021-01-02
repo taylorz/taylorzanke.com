@@ -2,7 +2,7 @@
 
 .homepage-container {
   .section {
-    padding: $lineHeightParagraph*5 0;
+    padding: $lineHeightParagraph*6 0;
     // border-bottom: $lineHeightParagraph*5 dotted $bgColorDark;
     border-bottom: calc(#{$sm}/6) dotted $bgColorDark;
     @include breakpoint(xs) {
