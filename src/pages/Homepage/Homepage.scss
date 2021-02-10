@@ -15,9 +15,9 @@
       }
     }
     &.double {
-      border-bottom: calc(#{$sm}/6) double $bgColorDark;
+      border-bottom: calc(#{$sm}/6) solid $bgColorDark;
       @include breakpoint(xs) {
-        border-bottom: calc(#{$sm}/12) double $bgColorDark;
+        border-bottom: calc(#{$sm}/12) solid $bgColorDark;
       }
     }
     &:first-child {
