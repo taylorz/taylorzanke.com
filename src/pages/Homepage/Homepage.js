@@ -50,7 +50,6 @@ const Homepage = () => (
           <li className="no-spacing"><a href="https://www.littleuniverse.com" target="_blank">Little Universe</a></li>
           <li className="no-spacing"><a href="https://www.figurepress.com" target="_blank">Figure Press</a></li>
           <li className="no-spacing"><a href="https://www.instagram.com/taylorzanke/" target="_blank">Instagram</a></li>
-          <li className="no-spacing"><a href="https://taylorzanke.bandcamp.com/" target="_blank">Bandcamp</a></li>
         </ul>
       </Grid>
     </Grid>
