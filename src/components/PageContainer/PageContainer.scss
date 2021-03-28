@@ -1,9 +1,8 @@
 @import "../../styles/styles.scss";
 
 .page-container {
-  // position: absolute;
-  margin: 0 auto;
-  padding: $lineHeightParagraph*5 $lineHeight;
+  // margin: 0 auto;
+  padding: $lineHeight;
   max-width: $sm;
   @include breakpoint(xs) {
     padding-top: $lineHeight;

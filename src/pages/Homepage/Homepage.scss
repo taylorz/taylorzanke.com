@@ -1,59 +1,7 @@
 @import "../../styles/styles.scss";
 
 .homepage-container {
-  .section {
-    padding: $lineHeightParagraph*6 0;
-    // border-bottom: $lineHeightParagraph*5 dotted $bgColorDark;
-    border-bottom: calc(#{$sm}/6) dotted $bgColorDark;
-    @include breakpoint(xs) {
-      border-bottom: calc(#{$sm}/12) dotted $bgColorDark;
-    }
-    &.dashed {
-      border-bottom: calc(#{$sm}/7) dashed $bgColorDark;
-      @include breakpoint(xs) {
-        border-bottom: calc(#{$sm}/12) dashed $bgColorDark;
-      }
-    }
-    &.double {
-      border-bottom: calc(#{$sm}/6) solid $bgColorDark;
-      @include breakpoint(xs) {
-        border-bottom: calc(#{$sm}/12) solid $bgColorDark;
-      }
-    }
-    &:first-child {
-      padding-top: 0;
-    }
-    &:last-child {
-      padding-bottom: 0;
-      border-bottom: 0;
-    }
-    p {
-      margin-top: 0;
-      &:last-child {
-        margin-bottom: 0;
-      }
-      &:only-child {
-        margin-bottom: $lineHeightParagraph;
-        @include breakpoint(xs) {
-          margin-bottom: $lineHeight;
-        }
-      }
-    }
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      li {
-        margin-bottom: $lineHeightParagraph;
-        &.no-spacing {
-          margin-bottom: 0;
-        }
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
+
 }//homepage
 
 
