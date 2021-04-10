@@ -1,14 +1,18 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import styled from 'styled-components'
 
-const PageContainer = ({ className, children }) => {
-  useEffect(() => {
-    setTimeout(() => window.scrollTo(0, 0), 500)
-  }, [])
+const StyledPageContainer = styled.div`
+  width: 100%;
+`;
+
+const PageContainer = ({ children, ...props }) => {
+
   return (
-    <div>
+    <StyledPageContainer>
       {children}
-    </div>
+    </StyledPageContainer>
   )
+
 }
 
 export default PageContainer

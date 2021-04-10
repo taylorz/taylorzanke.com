@@ -1,8 +1,29 @@
 import React from 'react';
+import styled from 'styled-components'
+
+const StyledText = styled.span`
+  font-family: ${(props) => props.bold ? props.theme.text.fontFamilySemibold
+    : props.theme.text.fontFamily
+  };
+  font-size: ${({ theme }) => theme.text.fontSize}px;
+  line-height: ${({ theme }) => theme.text.lineHeight}px;
+  color: ${(props) => props.lightened ? props.theme.color.gray
+    : props.theme.color.black
+  };
+  display: ${(props) => props.p ? "block" : "inline"};
+  margin-bottom: ${(props) => props.p ? props.theme.text.lineHeight
+    : props.line ? 0
+      : 0
+  }px;
+  &:hover {
+    color: ${(props) => props.hoverable && props.theme.color.gray};
+    cursor: ${(props) => props.hoverable && "pointer"}
+  }
+`;
 
 const Text = ({ children, ...props }) => {
   return (
-    <span {...props}>{children}</span>
+    <StyledText {...props}>{children}</StyledText>
   )
 }
 

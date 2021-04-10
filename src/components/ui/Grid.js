@@ -14,6 +14,10 @@ const GridContainer = styled.div`
     width: calc(100% + ${theme.util.buffer * props.spacing}px);
     margin: ${-theme.util.buffer * (props.spacing/2)}px;
   `}
+  ${props => (props.spacingX && !props.item) && `
+    width: calc(100% + ${theme.util.buffer * props.spacingX}px);
+    margin: 0 ${-theme.util.buffer * (props.spacingX/2)}px;
+  `}
   ${props => props.m && `margin: ${props.m * theme.util.buffer}px`};
   ${props => props.mt && `margin-top: ${props.mt * theme.util.buffer}px`};
   ${props => props.mb && `margin-bottom: ${props.mb * theme.util.buffer}px`};
@@ -57,6 +61,12 @@ const GridContainer = styled.div`
       padding: ${theme.util.buffer * (props.spacing/2)}px;
     }
   `}
+  ${props => props.spacingX && `
+    > .grid-child {
+      padding: 0 ${theme.util.buffer * (props.spacingX/2)}px;
+    }
+  `}
+
   ${props => props.full && `width: 100%;`}
   &.grid-child {
     ${props => props.flexDirection ? `flex-direction: ${props.flexDirection};` : `flex-direction: column;`}

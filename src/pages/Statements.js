@@ -6,16 +6,15 @@ import {
 } from '../components/ui'
 import PageContainer from '../components/PageContainer'
 
-const Homepage = () => (
+const Press = () => (
   <PageContainer>
     <Grid container>
       <Grid item xs={12} md={6}>
-        <Text>
-
-        </Text>
+        <Text p bold>Statements</Text>
+        <Text p></Text>
       </Grid>
     </Grid>
   </PageContainer>
 )
 
-export default Homepage
+export default Press
