@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
-import './styles/styles.scss'
-import Homepage from './pages/Homepage/Homepage'
+
 import './App.css'
 
 class App extends Component {
@@ -23,7 +22,7 @@ class App extends Component {
                 <Switch location={location}>
                   <Route key={"/"} exact path={"/"}>
                     <div className="my-node">
-                      <Homepage/>
+                      <Homepage />
                     </div>
                   </Route>
                 </Switch>

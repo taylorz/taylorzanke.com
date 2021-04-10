@@ -1,9 +1,10 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import './Homepage.scss';
 
-import PageContainer from '../../components/PageContainer/PageContainer'
-import Text from '../../components/ui/Text/Text'
+import {
+  Grid,
+  Text
+} from './ui'
+import PageContainer from '../../components/PageContainer'
 
 import image1 from '../../assets/work-images/01-5.jpg'
 import image2 from '../../assets/work-images/02-29.jpg'
