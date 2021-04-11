@@ -4,15 +4,15 @@ const images = importAll(require.context('../../../src/assets/work-images/009', 
 
 const BOOK_009 = {
   id: 9,
-  title: 'Untitled',
+  title: 'Untitled #1',
   year: '2021',
-  description: '',
-  dimensions: '',
-  pagesCount: null,
-  textStock: '',
-  coverStock: '',
-  productionInfo: '',
-  edition: '',
+  description: 'Found grocery store flyers are folded and assembled into this volume.',
+  dimensions: '6.5 x 8.75 inches',
+  pagesCount: 144,
+  textStock: 'Found newsprint flyers',
+  coverStock: 'Crest, 80lb, Solar White',
+  productionInfo: 'Inkjet and unprinted, Smythe sewn, PVA glued spine, french folded',
+  edition: '1',
   images: [ images ],
   route: '/009'
 }

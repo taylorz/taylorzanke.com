@@ -55,7 +55,7 @@ const BookPage = ({ ...props }) => {
             </Grid>
           }
 
-          <Grid container>
+          <Grid container mb={2}>
             <Grid item xs={12}>
               {props.book.edition && <Text>Edition of {props.book.edition}</Text>}
               {props.book.pagesCount && <Text p>{props.book.pagesCount} pages</Text>}

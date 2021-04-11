@@ -4,15 +4,15 @@ const images = importAll(require.context('../../../src/assets/work-images/010', 
 
 const BOOK_010 = {
   id: 10,
-  title: 'Untitled',
+  title: 'Untitled #2',
   year: '2021',
-  description: '',
-  dimensions: '',
-  pagesCount: null,
-  textStock: '',
-  coverStock: '',
-  productionInfo: '',
-  edition: '',
+  description: 'Drawn lines divide sheets of paper which become signatures in this book. A grid system dictates where single or repeated page numbers are printed throughout the book. A dialogue between two methods of division emerges, implying idiosyncratic structural systems.',
+  dimensions: '5.75 x 8.5 inches',
+  pagesCount: 184,
+  textStock: 'Pacon, Standard Weight, Drawing Paper',
+  coverStock: 'Crest, 80lb, Solar White. Newsprint dust jacket',
+  productionInfo: 'Inkjet printed, smythe sewn, PVA glued spine, with original graphite drawings throughout',
+  edition: '1',
   images: [ images ],
   route: '/010'
 }

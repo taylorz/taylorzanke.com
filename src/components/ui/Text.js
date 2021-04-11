@@ -12,8 +12,7 @@ const StyledText = styled.span`
   };
   display: ${(props) => props.p ? "block" : "inline"};
   margin-bottom: ${(props) => props.p ? props.theme.text.lineHeight
-    : props.line ? 0
-      : 0
+    : 0
   }px;
   &:hover {
     color: ${(props) => props.hoverable && props.theme.color.gray};

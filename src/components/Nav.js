@@ -46,7 +46,7 @@ const StyledNavList = styled.ul`
 const Nav = ({ ...props }) => {
   return (
     <StyledNav>
-      <Grid container spacing={2}>
+      <Grid container spacing={2} mb={2}>
 
         <Grid item xs={12}>
         <StyledNavList>
@@ -67,7 +67,7 @@ const Nav = ({ ...props }) => {
             <li><StyledNavLink to="/contact"><StyledNavText>Contact</StyledNavText></StyledNavLink></li>
             <li><StyledNavLink to="/profile"><StyledNavText>Profile</StyledNavText></StyledNavLink></li>
             <li><StyledNavLink to="/statements"><StyledNavText>Statements</StyledNavText></StyledNavLink></li>
-            <li><StyledLink href="http://instagram.com/taylorzanke/" target="_blank"><StyledNavText>Instagram</StyledNavText></StyledLink></li>
+            {/* <li><StyledLink href="http://instagram.com/taylorzanke/" target="_blank"><StyledNavText>Instagram</StyledNavText></StyledLink></li> */}
           </StyledNavList>
         </Grid>
 
