@@ -38,6 +38,12 @@ const Books = ({ ...props }) => {
   // console.log("BOOKS[0].images", BOOKS[0].images[0][0])
   // console.log({hoveredBookNumber})
 
+  function reverse(array){
+    return array.map((item,idx) => array[array.length-1-idx])
+  }
+
+  const BOOKS_REVERSED = reverse(BOOKS)
+
   return (
     <PageContainer>
 
@@ -46,7 +52,7 @@ const Books = ({ ...props }) => {
         <Grid item xs={12} md={5} style={{flex: '1'}}>
           <Text p bold>Books</Text>
           <StyledBookList>
-            {BOOKS.map((b, i) =>
+            {BOOKS_REVERSED.map((b, i) =>
               <li>
                 <StyledNavLink to={`/books${b.route}`}>
                   <BookItemContainer
