@@ -11,15 +11,6 @@ const activeClassName = 'active'
 
 const StyledNav = styled.div``;
 const StyledNavText = styled(Text)``;
-const StyledLink = styled.a`
-  text-decoration: none;
-  ${StyledNavText} {
-    &:hover {
-      cursor: pointer;
-      color: ${({ theme }) => theme.color.gray};
-    }
-  }
-`;
 const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
   text-decoration: none;
   &.${activeClassName} {
@@ -58,7 +49,6 @@ const Nav = ({ ...props }) => {
           <StyledNavList>
             <li><StyledNavLink exact to="/books"><StyledNavText>Books</StyledNavText></StyledNavLink></li>
             <li><StyledNavLink exact to="/recordings"><StyledNavText>Recordings</StyledNavText></StyledNavLink></li>
-            {/* <li><StyledNavLink to="/writing"><StyledNavText>Writing</StyledNavText></StyledNavLink></li> */}
           </StyledNavList>
         </Grid>
 
@@ -67,7 +57,6 @@ const Nav = ({ ...props }) => {
             <li><StyledNavLink to="/contact"><StyledNavText>Contact</StyledNavText></StyledNavLink></li>
             <li><StyledNavLink to="/profile"><StyledNavText>Profile</StyledNavText></StyledNavLink></li>
             <li><StyledNavLink to="/statements"><StyledNavText>Statements</StyledNavText></StyledNavLink></li>
-            {/* <li><StyledLink href="http://instagram.com/taylorzanke/" target="_blank"><StyledNavText>Instagram</StyledNavText></StyledLink></li> */}
           </StyledNavList>
         </Grid>
 

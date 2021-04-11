@@ -6,7 +6,6 @@ import {
   Text
 } from '../components/ui'
 import PageContainer from '../components/PageContainer'
-import BOOK_008 from '../constants/books/BOOK_008';
 
 const StyledBookImage = styled.img`
   width: 100%;

@@ -6,7 +6,7 @@ const BOOK_010 = {
   id: 10,
   title: 'Untitled #2',
   year: '2021',
-  description: 'Drawn lines divide sheets of paper which become signatures in this book. A grid system dictates where single or repeated page numbers are printed throughout the book. A dialogue between two methods of division emerges, implying idiosyncratic structural systems.',
+  description: 'Drawn lines or gestural marks divide sheets of paper which are folded into signatures in this book. A grid system dictates where single or repeated page numbers are printed throughout the book. A dialogue between two methods of division emerges, implying idiosyncratic structural systems.',
   dimensions: '5.75 x 8.5 inches',
   pagesCount: 184,
   textStock: 'Pacon, Standard Weight, Drawing Paper',
