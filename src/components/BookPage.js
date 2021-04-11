@@ -6,9 +6,34 @@ import {
   Text
 } from '../components/ui'
 import PageContainer from '../components/PageContainer'
+import { isExternalModuleNameRelative } from 'typescript';
 
 const StyledBookImage = styled.img`
   width: 100%;
+`;
+const StyledImageWrapper = styled.div`
+  width: 100%;
+  height: auto;
+  position: relative;
+`;
+const StyledPrev = styled.div`
+  position: absolute;
+  width: 50%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  /* background: red; */
+  &:hover {
+    cursor: w-resize;
+  }
+`;
+const StyledNext = styled.div`
+  position: absolute;
+  width: 50%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  /* background: blue; */
   &:hover {
     cursor: e-resize;
   }
@@ -73,7 +98,11 @@ const BookPage = ({ ...props }) => {
 
           <Grid container mb={2}>
             <Grid item>
-              <StyledBookImage src={props.book.images[0][currentBookImage]} onClick={onClickNext}/>
+              <StyledImageWrapper>
+                <StyledPrev onClick={onClickPrev} />
+                <StyledBookImage src={props.book.images[0][currentBookImage]} onClick={onClickNext} />
+                <StyledNext onClick={onClickNext} />
+              </StyledImageWrapper>
             </Grid>
           </Grid>
 
