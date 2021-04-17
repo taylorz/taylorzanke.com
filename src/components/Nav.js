@@ -54,9 +54,9 @@ const Nav = ({ ...props }) => {
 
         <Grid item xs={12}>
           <StyledNavList>
-            <li><StyledNavLink to="/contact"><StyledNavText>Contact</StyledNavText></StyledNavLink></li>
-            <li><StyledNavLink to="/profile"><StyledNavText>Profile</StyledNavText></StyledNavLink></li>
             <li><StyledNavLink to="/statements"><StyledNavText>Statements</StyledNavText></StyledNavLink></li>
+            <li><StyledNavLink to="/profile"><StyledNavText>Profile</StyledNavText></StyledNavLink></li>
+            <li><StyledNavLink to="/contact"><StyledNavText>Contact</StyledNavText></StyledNavLink></li>
           </StyledNavList>
         </Grid>
 

@@ -49,7 +49,7 @@ const Books = ({ ...props }) => {
 
       <Grid container spacingX={2}>
 
-        <Grid item xs={12} md={5} style={{flex: '1'}}>
+        <Grid item xs={12} md={5} style={{flex: '1'}} mb={2}>
           <Text p bold>Books</Text>
           <StyledBookList>
             {BOOKS_REVERSED.map((b, i) =>
