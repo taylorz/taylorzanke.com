@@ -43,8 +43,6 @@ const BookPage = ({ ...props }) => {
   const [ currentBookImage, setCurrentBookImage ] = useState(0)
   const numOfImages = props.book.images[0].length
 
-  console.log("numOfImages", numOfImages)
-
   const onClickNext = () => {
     if (currentBookImage + 1 === numOfImages) {
       setCurrentBookImage(0)
@@ -60,6 +58,9 @@ const BookPage = ({ ...props }) => {
       setCurrentBookImage(currentBookImage - 1)
     }
   }
+
+  // console.log("numOfImages", numOfImages)
+  // console.log("book", props.book.images[0][1].default)
 
   return (
     <PageContainer>
@@ -100,7 +101,7 @@ const BookPage = ({ ...props }) => {
             <Grid item>
               <StyledImageWrapper>
                 <StyledPrev onClick={onClickPrev} />
-                <StyledBookImage src={props.book.images[0][currentBookImage]} onClick={onClickNext} />
+                <StyledBookImage src={props.book.images[0][currentBookImage].default} onClick={onClickNext} />
                 <StyledNext onClick={onClickNext} />
               </StyledImageWrapper>
             </Grid>
