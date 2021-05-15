@@ -35,9 +35,6 @@ const StyledBookList = styled.ul`
 const Books = ({ ...props }) => {
   const [ hoveredBookNumber, setHoveredBookNumber ] = useState(null)
 
-  // console.log("BOOKS[0].images", BOOKS[0].images[0][0])
-  // console.log({hoveredBookNumber})
-
   function reverse(array){
     return array.map((item,idx) => array[array.length-1-idx])
   }
@@ -73,7 +70,7 @@ const Books = ({ ...props }) => {
 
         <Grid item xs={12} md={7}>
           {hoveredBookNumber &&
-            <StyledBookImagePreview src={BOOKS[hoveredBookNumber - 1].images[0][0]} />
+            <StyledBookImagePreview src={BOOKS[hoveredBookNumber - 1].images[0][0].default} />
           }
         </Grid>
 
