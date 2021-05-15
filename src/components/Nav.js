@@ -48,13 +48,13 @@ const Nav = ({ ...props }) => {
         <Grid item xs={12}>
           <StyledNavList>
             <li><StyledNavLink exact to="/books"><StyledNavText>Books</StyledNavText></StyledNavLink></li>
-            <li><StyledNavLink exact to="/recordings"><StyledNavText>Recordings</StyledNavText></StyledNavLink></li>
+            {/* <li><StyledNavLink exact to="/recordings"><StyledNavText>Recordings</StyledNavText></StyledNavLink></li> */}
           </StyledNavList>
         </Grid>
 
         <Grid item xs={12}>
           <StyledNavList>
-            <li><StyledNavLink to="/statements"><StyledNavText>Statements</StyledNavText></StyledNavLink></li>
+            {/* <li><StyledNavLink to="/statements"><StyledNavText>Statements</StyledNavText></StyledNavLink></li> */}
             <li><StyledNavLink to="/profile"><StyledNavText>Profile</StyledNavText></StyledNavLink></li>
             <li><StyledNavLink to="/contact"><StyledNavText>Contact</StyledNavText></StyledNavLink></li>
           </StyledNavList>
