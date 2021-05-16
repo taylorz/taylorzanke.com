@@ -31,7 +31,7 @@ export const theme = {
   text: {
     fontSize: 14,
     lineHeight: 16,
-    fontFamily: 'Fann Grotesque',
+    fontFamily: 'Fann Grotesque Regular',
     fontFamilySemibold: 'Fann Grotesque Semibold',
   }
 };
