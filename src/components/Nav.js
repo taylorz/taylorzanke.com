@@ -15,13 +15,13 @@ const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
   text-decoration: none;
   &.${activeClassName} {
     ${StyledNavText} {
-      color: ${(props) => props.isHome ? props.theme.color.black : props.theme.color.gray};
+      color: ${(props) => props.isHome ? props.theme.color.pink : props.theme.color.pink};
     }
   }
   ${StyledNavText} {
     &:hover {
       cursor: pointer;
-      color: ${({ theme }) => theme.color.gray};
+      color: ${({ theme }) => theme.color.red};
     }
   }
 `;

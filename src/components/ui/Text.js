@@ -7,15 +7,15 @@ const StyledText = styled.span`
   };
   font-size: ${({ theme }) => theme.text.fontSize}px;
   line-height: ${({ theme }) => theme.text.lineHeight}px;
-  color: ${(props) => props.lightened ? props.theme.color.gray
-    : props.theme.color.black
+  color: ${(props) => props.lightened ? props.theme.color.pink
+    : props.theme.color.pink
   };
   display: ${(props) => props.p ? "block" : "inline"};
   margin-bottom: ${(props) => props.p ? props.theme.text.lineHeight
     : 0
   }px;
   &:hover {
-    color: ${(props) => props.hoverable && props.theme.color.gray};
+    color: ${(props) => props.hoverable && props.theme.color.red};
     cursor: ${(props) => props.hoverable && "pointer"}
   }
 `;

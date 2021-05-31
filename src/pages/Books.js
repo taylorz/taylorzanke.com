@@ -18,7 +18,7 @@ const BookItemContainer = styled(Grid)`
   &:hover {
     cursor: pointer;
     ${StyledListText} {
-      color: ${({ theme }) => theme.color.gray};
+      color: ${({ theme }) => theme.color.red};
     }
   }
 `;

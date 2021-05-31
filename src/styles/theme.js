@@ -27,6 +27,8 @@ export const theme = {
     black: '#222222',
     white: '#FFFFFF',
     gray: '#CCCCCA',
+    pink: 'pink',
+    red: 'red'
   },
   text: {
     fontSize: 14,

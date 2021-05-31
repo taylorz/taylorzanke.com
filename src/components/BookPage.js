@@ -6,7 +6,6 @@ import {
   Text
 } from '../components/ui'
 import PageContainer from '../components/PageContainer'
-import { isExternalModuleNameRelative } from 'typescript';
 
 const StyledBookImage = styled.img`
   width: 100%;
