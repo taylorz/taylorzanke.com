@@ -4,7 +4,7 @@ const images = importAll(require.context('../../../src/assets/work-images/010', 
 
 const BOOK_010 = {
   id: 10,
-  title: 'Untitled #2',
+  title: 'Divisions 1',
   year: '2021',
   description: 'Drawn lines or gestural marks divide sheets of paper which are folded into signatures in this book. A grid system dictates where single or repeated page numbers are printed throughout the book. A dialogue between two methods of demarcation emerges, implying idiosyncratic structural systems.',
   dimensions: '5.75 x 8.5 inches',
