@@ -21,7 +21,7 @@ const StyledNavLink = styled(NavLink).attrs({ activeClassName })`
   ${StyledNavText} {
     &:hover {
       cursor: pointer;
-      color: ${({ theme }) => theme.color.red};
+      color: ${({ theme }) => theme.color.purple};
     }
   }
 `;

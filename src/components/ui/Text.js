@@ -15,7 +15,7 @@ const StyledText = styled.span`
     : 0
   }px;
   &:hover {
-    color: ${(props) => props.hoverable && props.theme.color.red};
+    color: ${(props) => props.hoverable && props.theme.color.purple};
     cursor: ${(props) => props.hoverable && "pointer"}
   }
 `;
