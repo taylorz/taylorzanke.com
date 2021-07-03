@@ -20,7 +20,6 @@ const Contact = () => (
         <Text>Taylor Zanke</Text>
         <Text p>Los Angeles, California</Text>
         <StyledLink href="mailto: mail@taylorzanke.com"><Text hoverable>mail@taylorzanke.com</Text></StyledLink>
-        <StyledLink href="http://instagram.com/taylorzanke/"><Text hoverable>Instagram</Text></StyledLink>
       </Grid>
     </Grid>
 

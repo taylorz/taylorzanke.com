@@ -67,10 +67,10 @@ const BookPage = ({ ...props }) => {
 
         <Grid item xs={12} md={5} style={{flex: '1'}}>
 
-          <Grid container spacingX={1} mb={2}>
-            <Grid item md={.75} lg={.5}><Text>{props.book.id}</Text></Grid>
-            <Grid item md={1} lg={1}><Text>{props.book.year}</Text></Grid>
-            <Grid item><Text bold>{props.book.title}</Text></Grid>
+          <Grid container mb={2}>
+            <Grid item xs={1.5}><Text>{props.book.year}</Text></Grid>
+            <Grid item xs={1}><Text>{props.book.id}</Text></Grid>
+            <Grid item xs={9.5}><Text bold>{props.book.title}</Text></Grid>
           </Grid>
 
           {props.book.description &&

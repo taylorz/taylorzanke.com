@@ -18,7 +18,7 @@ const BookItemContainer = styled(Grid)`
   &:hover {
     cursor: pointer;
     ${StyledListText} {
-      color: ${({ theme }) => theme.color.purple};
+      color: ${({ theme }) => theme.color.secondary};
     }
   }
 `;
@@ -50,17 +50,17 @@ const Books = ({ ...props }) => {
           <Text p bold>Books</Text>
           <StyledBookList>
             {BOOKS_REVERSED.map((b, i) =>
-              <li>
+              <li key={i}>
                 <StyledNavLink to={`/books${b.route}`}>
                   <BookItemContainer
                     container
-                    spacingX={1}
+                    // spacingX={1}
                     onMouseEnter={() => setHoveredBookNumber(b.id)}
                     onMouseLeave={() => setHoveredBookNumber(null)}
                   >
-                    <Grid item md={.75} lg={.5}><StyledListText>{b.id}</StyledListText></Grid>
-                    <Grid item md={1} lg={1}><StyledListText>{b.year}</StyledListText></Grid>
-                    <Grid item><StyledListText>{b.title}</StyledListText></Grid>
+                    <Grid item xs={1.5}><StyledListText>{b.year}</StyledListText></Grid>
+                    <Grid item xs={1}><StyledListText>{b.id}</StyledListText></Grid>
+                    <Grid item xs={9.5}><StyledListText>{b.title}</StyledListText></Grid>
                   </BookItemContainer>
                 </StyledNavLink>
               </li>

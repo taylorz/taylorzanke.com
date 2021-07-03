@@ -27,8 +27,8 @@ export const theme = {
     black: '#222222',
     white: '#FFFFFF',
     gray: '#CCCCCA',
-    pink: 'pink',
-    purple: 'purple'
+    primary: 'Peru',
+    secondary: 'SaddleBrown'
   },
   text: {
     fontSize: 14,

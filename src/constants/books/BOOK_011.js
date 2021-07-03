@@ -4,7 +4,7 @@ const images = importAll(require.context('../../../src/assets/work-images/011', 
 
 const BOOK_011 = {
   id: 11,
-  title: 'Untitled #3',
+  title: 'Grocery 2',
   year: '2021',
   description: 'Found grocery store flyers are folded and assembled into this volume. Two sets of printed forms outline a grid and trace the contours of the numbers 0 to 9.',
   dimensions: '6.25 x 9',
