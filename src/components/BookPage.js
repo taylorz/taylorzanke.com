@@ -85,10 +85,30 @@ const BookPage = ({ ...props }) => {
               {props.book.pagesCount && <Text p>{props.book.pagesCount} pages</Text>}
             </Grid>
             <Grid item xs={12}>
-              {props.book.dimensions && <Text>Dimensions: {props.book.dimensions}.</Text>}
-              {props.book.textStock && <Text>Text: {props.book.textStock}.</Text>}
-              {props.book.coverStock && <Text>Cover: {props.book.coverStock}.</Text>}
-              {props.book.productionInfo && <Text>Production: {props.book.productionInfo}.</Text>}
+              {props.book.dimensions ?
+                <Grid container>
+                  <Grid item xs={6} sm={2.5}><Text>Dimensions</Text></Grid>
+                  <Grid item xs={6} sm={9.5}><Text>{props.book.dimensions}</Text></Grid>
+                </Grid>
+              : null}
+              {props.book.textStock ?
+                <Grid container>
+                  <Grid item xs={6} sm={2.5}><Text>Text</Text></Grid>
+                  <Grid item xs={6} sm={9.5}><Text>{props.book.textStock}</Text></Grid>
+                </Grid>
+              : null}
+              {props.book.coverStock ?
+                <Grid container>
+                  <Grid item xs={6} sm={2.5}><Text>Cover</Text></Grid>
+                  <Grid item xs={6} sm={9.5}><Text>{props.book.coverStock}</Text></Grid>
+                </Grid>
+              : null}
+              {props.book.productionInfo ?
+                <Grid container>
+                  <Grid item xs={6} sm={2.5}><Text>Production</Text></Grid>
+                  <Grid item xs={6} sm={9.5}><Text>{props.book.productionInfo}</Text></Grid>
+                </Grid>
+              : null}
             </Grid>
           </Grid>
 
