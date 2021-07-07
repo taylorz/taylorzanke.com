@@ -68,9 +68,9 @@ const BookPage = ({ ...props }) => {
         <Grid item xs={12} md={5} style={{flex: '1'}}>
 
           <Grid container mb={2}>
-            <Grid item xs={1.5}><Text>{props.book.year}</Text></Grid>
-            <Grid item xs={1}><Text>{props.book.id}</Text></Grid>
-            <Grid item xs={9.5}><Text bold>{props.book.title}</Text></Grid>
+            <Grid item xs={2} sm={1.75} md={1.5}><Text>{props.book.year}</Text></Grid>
+            <Grid item xs={2} sm={1.25} md={1}><Text>{props.book.id}</Text></Grid>
+            <Grid item xs={8} sm={9} md={9.5}><Text bold>{props.book.title}</Text></Grid>
           </Grid>
 
           {props.book.description &&
@@ -87,26 +87,26 @@ const BookPage = ({ ...props }) => {
             <Grid item xs={12}>
               {props.book.dimensions ?
                 <Grid container>
-                  <Grid item xs={6} sm={2.5}><Text>Dimensions</Text></Grid>
-                  <Grid item xs={6} sm={9.5}><Text>{props.book.dimensions}</Text></Grid>
+                  <Grid item xs={4} sm={3} md={2.5}><Text>Dimensions</Text></Grid>
+                  <Grid item xs={8} sm={9} md={9.5}><Text>{props.book.dimensions}</Text></Grid>
                 </Grid>
               : null}
               {props.book.textStock ?
                 <Grid container>
-                  <Grid item xs={6} sm={2.5}><Text>Text</Text></Grid>
-                  <Grid item xs={6} sm={9.5}><Text>{props.book.textStock}</Text></Grid>
+                  <Grid item xs={4} sm={3} md={2.5}><Text>Text</Text></Grid>
+                  <Grid item xs={8} sm={9} md={9.5}><Text>{props.book.textStock}</Text></Grid>
                 </Grid>
               : null}
               {props.book.coverStock ?
                 <Grid container>
-                  <Grid item xs={6} sm={2.5}><Text>Cover</Text></Grid>
-                  <Grid item xs={6} sm={9.5}><Text>{props.book.coverStock}</Text></Grid>
+                  <Grid item xs={4} sm={3} md={2.5}><Text>Cover</Text></Grid>
+                  <Grid item xs={8} sm={9} md={9.5}><Text>{props.book.coverStock}</Text></Grid>
                 </Grid>
               : null}
               {props.book.productionInfo ?
                 <Grid container>
-                  <Grid item xs={6} sm={2.5}><Text>Production</Text></Grid>
-                  <Grid item xs={6} sm={9.5}><Text>{props.book.productionInfo}</Text></Grid>
+                  <Grid item xs={4} sm={3} md={2.5}><Text>Production</Text></Grid>
+                  <Grid item xs={8} sm={9} md={9.5}><Text>{props.book.productionInfo}</Text></Grid>
                 </Grid>
               : null}
             </Grid>

@@ -54,13 +54,12 @@ const Books = ({ ...props }) => {
                 <StyledNavLink to={`/books${b.route}`}>
                   <BookItemContainer
                     container
-                    // spacingX={1}
                     onMouseEnter={() => setHoveredBookNumber(b.id)}
                     onMouseLeave={() => setHoveredBookNumber(null)}
                   >
-                    <Grid item xs={1.5}><StyledListText>{b.year}</StyledListText></Grid>
-                    <Grid item xs={1}><StyledListText>{b.id}</StyledListText></Grid>
-                    <Grid item xs={9.5}><StyledListText>{b.title}</StyledListText></Grid>
+                    <Grid item xs={2} sm={1.75} md={1.5}><StyledListText>{b.year}</StyledListText></Grid>
+                    <Grid item xs={2} sm={1.25} md={1}><StyledListText>{b.id}</StyledListText></Grid>
+                    <Grid item xs={8} sm={9} md={9.5}><StyledListText>{b.title}</StyledListText></Grid>
                   </BookItemContainer>
                 </StyledNavLink>
               </li>
