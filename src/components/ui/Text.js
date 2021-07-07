@@ -14,6 +14,7 @@ const StyledText = styled.span`
   margin-bottom: ${(props) => props.p ? props.theme.text.lineHeight
     : 0
   }px;
+  text-align: ${props => props.center && "center"};
   &:hover {
     color: ${(props) => props.hoverable && props.theme.color.secondary};
     cursor: ${(props) => props.hoverable && "pointer"}
