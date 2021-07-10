@@ -138,12 +138,13 @@ const BookPage = ({ ...props }) => {
 
         <Grid item xs={12} md={7}>
 
+
           <Grid container mb={2} justifyContent="center">
             <Grid item>
               <StyledImageWrapper>
-                <StyledPrev onClick={onClickPrev} />
+                {numOfImages.length ? <StyledPrev onClick={onClickPrev} /> : null}
                 <StyledBookImage src={props.recording.images[0][currentRecordingImage].default} onClick={onClickNext} />
-                <StyledNext onClick={onClickNext} />
+                {numOfImages.length ? <StyledNext onClick={onClickNext} /> : null}
               </StyledImageWrapper>
             </Grid>
           </Grid>

@@ -1,4 +1,4 @@
-const images = importAll(require.context('../../../src/assets/work-images/006', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(require.context('../../../src/assets/work-images/books/006', false, /\.(png|jpe?g|svg)$/));
 function importAll(r) { return r.keys().map(r); }
 console.log("images", images)
 

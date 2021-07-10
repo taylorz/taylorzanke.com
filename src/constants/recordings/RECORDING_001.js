@@ -17,7 +17,7 @@ const RECORDING_001 = {
     }
   ],
   format: 'Digital Release',
-  production: 'Synthesizer, effects, recorded to cassette.',
+  production: 'Synthesizer, effects, recorded to cassette',
   listenUrl: 'https://taylorzanke.bandcamp.com/track/being-with',
   images: [ images ],
   route: '/001'

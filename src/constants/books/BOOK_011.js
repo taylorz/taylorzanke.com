@@ -1,5 +1,5 @@
 function importAll(r) { return r.keys().map(r); }
-const images = importAll(require.context('../../../src/assets/work-images/011', false, /\.(png|jpe?g|svg)$/));
+const images = importAll(require.context('../../../src/assets/work-images/books/011', false, /\.(png|jpe?g|svg)$/));
 // console.log("images", images)
 
 const BOOK_011 = {
