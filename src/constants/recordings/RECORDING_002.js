@@ -36,7 +36,7 @@ const RECORDING_002 = {
       duration: '01:48'
     },
   ],
-  format: 'Digital Recording',
+  format: 'Digital Release',
   production: 'Field recordings, synthesizer, digital tape delay',
   listenUrl: 'https://taylorzanke.bandcamp.com/album/interludes',
   images: [ images ],
