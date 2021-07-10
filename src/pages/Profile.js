@@ -12,7 +12,7 @@ const Profile = () => (
     <Grid container>
       <Grid item xs={12} md={5}>
         <Text p bold>Profile</Text>
-        <Text p>Taylor is a Canadian artist and designer based in Los Angeles, California.</Text>
+        <Text p>I am a Canadian artist and designer based in Los Angeles, California. This is a personal archive—a digital space where I organize and reflect on what I make.</Text>
       </Grid>
     </Grid>
 
