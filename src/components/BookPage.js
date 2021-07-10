@@ -6,6 +6,7 @@ import {
   Text
 } from '../components/ui'
 import PageContainer from '../components/PageContainer'
+import WorkTitleContainer from '../components/WorkTitleContainer'
 
 const StyledBookImage = styled.img`
   width: 100%;
@@ -67,11 +68,12 @@ const BookPage = ({ ...props }) => {
 
         <Grid item xs={12} md={5} style={{flex: '1'}}>
 
-          <Grid container mb={2}>
-            <Grid item xs={2} sm={1.75} md={1.5}><Text>{props.book.year}</Text></Grid>
-            <Grid item xs={2} sm={1.25} md={1}><Text>{props.book.id}</Text></Grid>
-            <Grid item xs={8} sm={9} md={9.5}><Text bold>{props.book.title}</Text></Grid>
-          </Grid>
+          <WorkTitleContainer
+            year={props.book.year}
+            id={props.book.id}
+            title={props.book.title}
+            isHeadline
+          />
 
           {props.book.description &&
             <Grid container mb={2}>
@@ -80,9 +82,9 @@ const BookPage = ({ ...props }) => {
           }
 
           <Grid container mb={2}>
-            <Grid item xs={12}>
+            <Grid item xs={12} mb={2}>
               {props.book.edition && <Text>Edition of {props.book.edition}</Text>}
-              {props.book.pagesCount && <Text p>{props.book.pagesCount} pages</Text>}
+              {props.book.pagesCount && <Text>{props.book.pagesCount} pages</Text>}
             </Grid>
             <Grid item xs={12}>
               {props.book.dimensions ?

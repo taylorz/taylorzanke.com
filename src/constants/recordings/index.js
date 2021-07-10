@@ -1,0 +1,9 @@
+import RECORDING_001 from './RECORDING_001'
+import RECORDING_002 from './RECORDING_002'
+
+const RECORDINGS = [
+  RECORDING_001,
+  RECORDING_002
+]
+
+export default RECORDINGS

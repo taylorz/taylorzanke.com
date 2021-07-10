@@ -11,7 +11,7 @@ const BOOK_008 = {
   pagesCount: 192,
   textStock: 'US Letter, 24lb, White',
   coverStock: 'Crest, 80lb, Solar White. Red River, 26lb, Colorjet dust jacket',
-  productionInfo: 'Laser and inkjet printed, smythe sewn, PVA glued spine, with original and printed graphite drawings',
+  productionInfo: 'Laser and inkjet printed, smythe sewn, PVA glued spine',
   edition: '1',
   images: [ images ],
   route: '/008'
