@@ -7,20 +7,12 @@ import {
   Text
 } from '../components/ui'
 import PageContainer from '../components/PageContainer'
+import WorkTitleContainer from '../components/WorkTitleContainer'
 
-import BOOKS from '../constants/books/index'
+import BOOKS from '../constants/books'
 
 const StyledBookImagePreview = styled.img`
   width: 100%;
-`;
-const StyledListText = styled(Text)``;
-const BookItemContainer = styled(Grid)`
-  &:hover {
-    cursor: pointer;
-    ${StyledListText} {
-      color: ${({ theme }) => theme.color.secondary};
-    }
-  }
 `;
 const StyledNavLink = styled(NavLink)`
   text-decoration: none;
@@ -32,14 +24,16 @@ const StyledBookList = styled.ul`
   width: 100%;
 `
 
-const Books = ({ ...props }) => {
-  const [ hoveredBookNumber, setHoveredBookNumber ] = useState(null)
+const Books = () => {
+  const [hoveredBookNumber, setHoveredBookNumber] = useState(null)
 
   function reverse(array){
-    return array.map((item,idx) => array[array.length-1-idx])
+    return array.map((item, idx) => array[array.length-1-idx])
   }
 
   const BOOKS_REVERSED = reverse(BOOKS)
+
+  console.log({BOOKS_REVERSED})
 
   return (
     <PageContainer>
@@ -52,15 +46,13 @@ const Books = ({ ...props }) => {
             {BOOKS_REVERSED.map((b, i) =>
               <li key={i}>
                 <StyledNavLink to={`/books${b.route}`}>
-                  <BookItemContainer
-                    container
+                  <WorkTitleContainer
                     onMouseEnter={() => setHoveredBookNumber(b.id)}
                     onMouseLeave={() => setHoveredBookNumber(null)}
-                  >
-                    <Grid item xs={2} sm={1.75} md={1.5}><StyledListText>{b.year}</StyledListText></Grid>
-                    <Grid item xs={2} sm={1.25} md={1}><StyledListText>{b.id}</StyledListText></Grid>
-                    <Grid item xs={8} sm={9} md={9.5}><StyledListText>{b.title}</StyledListText></Grid>
-                  </BookItemContainer>
+                    year={b.year}
+                    id={b.id}
+                    title={b.title}
+                  />
                 </StyledNavLink>
               </li>
             )}

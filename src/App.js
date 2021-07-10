@@ -18,8 +18,10 @@ import {
 import AppWrapper from './components/AppWrapper'
 import Nav from './components/Nav'
 import BookPage from './components/BookPage'
+import RecordingPage from './components/RecordingPage'
 
-import BOOKS from './constants/books/index'
+import BOOKS from './constants/books'
+import RECORDINGS from './constants/recordings'
 
 const routes = [
   { route: '/', name: 'Homepage', Component: Homepage },
@@ -67,6 +69,14 @@ const App = ({}) => {
                       <Route key={index} exact path={`/books${book.route}`}>
                         <BookPage
                           book={book}
+                        />
+                      </Route>
+                    ))}
+
+                    {RECORDINGS.map(( recording, index ) => (
+                      <Route key={index} exact path={`/recordings${recording.route}`}>
+                        <RecordingPage
+                          recording={recording}
                         />
                       </Route>
                     ))}

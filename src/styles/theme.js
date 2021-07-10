@@ -56,4 +56,7 @@ export const GlobalStyle = createGlobalStyle`
       url(${fannGrotesqueSemiboldWoff2}) format('woff2'),
       url(${fannGrotesqueSemiboldWoff}) format('woff');
   }
+  a {
+    text-decoration: none;
+  }
 `
