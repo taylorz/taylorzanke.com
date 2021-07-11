@@ -120,7 +120,7 @@ const BookPage = ({ ...props }) => {
               : null}
             </Grid>
 
-            <Grid item xs={12} mb={2}>
+            <Grid item xs={12}>
               {props.recording.listenUrl ?
                 <Grid container>
                   <Grid item xs={4} sm={3} md={2.5}>
