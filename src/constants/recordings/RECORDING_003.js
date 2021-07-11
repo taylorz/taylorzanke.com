@@ -21,7 +21,7 @@ const RECORDING_003 = {
     },
   ],
   format: 'Digital Release',
-  production: 'Synthesizer, effects',
+  production: 'Synthesizer, processed guitar, effects',
   listenUrl: 'https://taylorzanke.bandcamp.com/album/a-wave-im-passing-by',
   images: [ images ],
   route: '/003'
