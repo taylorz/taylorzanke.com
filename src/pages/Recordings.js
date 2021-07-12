@@ -60,7 +60,7 @@ const Recordings = () => {
           </StyledRecordingsList>
         </Grid>
 
-        <Grid item xs={12} md={7} alignItems="center">
+        <Grid item xs={12} md={7} alignItems="flex-end">
           {hoveredRecordingNumber &&
             <StyledRecordingImagePreview src={RECORDINGS[hoveredRecordingNumber - 1].images[0][0].default} />
           }

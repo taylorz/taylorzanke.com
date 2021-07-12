@@ -139,7 +139,7 @@ const BookPage = ({ ...props }) => {
         <Grid item xs={12} md={7}>
 
 
-          <Grid container mb={2} justifyContent="center">
+          <Grid container mb={2} justifyContent="flex-end">
             <Grid item>
               <StyledImageWrapper>
                 {numOfImages.length ? <StyledPrev onClick={onClickPrev} /> : null}
