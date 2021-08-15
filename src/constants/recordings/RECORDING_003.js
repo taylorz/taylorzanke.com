@@ -4,7 +4,7 @@ const images = importAll(require.context('../../../src/assets/work-images/record
 
 const RECORDING_003 = {
   id: 3,
-  title: "A Wave, I'm Passing By",
+  title: "Moving Past",
   dateRecorded: '2021',
   dateReleased: '2021',
   release: 'Self Released',
@@ -22,7 +22,7 @@ const RECORDING_003 = {
   ],
   format: 'Digital Release',
   production: 'Synthesizer, processed guitar, effects',
-  listenUrl: 'https://taylorzanke.bandcamp.com/album/a-wave-im-passing-by',
+  listenUrl: 'https://taylorzanke.bandcamp.com/album/moving-past',
   images: [ images ],
   route: '/003'
 }
