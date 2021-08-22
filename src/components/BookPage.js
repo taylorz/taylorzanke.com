@@ -81,6 +81,12 @@ const BookPage = ({ ...props }) => {
             </Grid>
           }
 
+          {props.book.sharedDescription &&
+            <Grid container mb={2}>
+              <Grid item><Text>{props.book.sharedDescription}</Text></Grid>
+            </Grid>
+          }
+
           <Grid container mb={2}>
             <Grid item xs={12} mb={2}>
               {props.book.edition && <Text>Edition of {props.book.edition}</Text>}
