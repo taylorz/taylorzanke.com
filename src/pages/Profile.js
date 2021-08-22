@@ -12,7 +12,7 @@ const Profile = () => (
     <Grid container>
       <Grid item xs={12} md={5}>
         <Text p bold>Profile</Text>
-        <Text p>I am a Canadian artist, designer, and musician based in Los Angeles, California. This is a personal archive—a digital space where I organize and reflect on what I make.</Text>
+        <Text p>I am a Canadian artist, designer, and musician based in Los Angeles, California. This is a personal archive&mdash;a digital space where I organize and reflect on my practice.</Text>
       </Grid>
     </Grid>
 
