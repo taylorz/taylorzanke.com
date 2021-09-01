@@ -1,6 +1,6 @@
 const images = importAll(require.context('../../../src/assets/work-images/books/006', false, /\.(png|jpe?g|svg)$/));
 function importAll(r) { return r.keys().map(r); }
-console.log("images", images)
+// console.log("images", images)
 
 const BOOK_006 = {
   id: 6,

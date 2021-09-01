@@ -33,7 +33,7 @@ const Books = () => {
 
   const BOOKS_REVERSED = reverse(BOOKS)
 
-  console.log({BOOKS_REVERSED})
+  // console.log({BOOKS_REVERSED})
 
   return (
     <PageContainer>

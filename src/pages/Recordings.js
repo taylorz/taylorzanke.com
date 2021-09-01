@@ -34,7 +34,7 @@ const Recordings = () => {
 
   const RECORDINGS_REVERSED = reverse(RECORDINGS)
 
-  console.log({RECORDINGS_REVERSED})
+  // console.log({RECORDINGS_REVERSED})
 
   return (
     <PageContainer>
