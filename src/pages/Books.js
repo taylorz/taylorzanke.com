@@ -38,7 +38,7 @@ const Books = () => {
   return (
     <PageContainer>
 
-      <Grid container spacingX={2}>
+      <Grid container spacingX={4}>
 
         <Grid item xs={12} md={5} style={{flex: '1'}} mb={2}>
           <Text p bold>Books</Text>
