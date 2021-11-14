@@ -25,7 +25,7 @@ const RECORDING_004 = {
     },
   ],
   format: 'Digital Release',
-  production: 'Pitch adjusted tape, synthesizer, processed guitar, effects',
+  production: 'Pitch adjusted tape, synthesizer, processed guitar, effects, recorded to cassette',
   listenUrl: 'https://taylorzanke.bandcamp.com/album/a-loose-yet-guided-structure',
   images: [ images ],
   route: '/004'

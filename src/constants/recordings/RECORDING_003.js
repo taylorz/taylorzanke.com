@@ -21,7 +21,7 @@ const RECORDING_003 = {
     },
   ],
   format: 'Digital Release',
-  production: 'Synthesizer, processed guitar, effects',
+  production: 'Synthesizer, processed guitar, effects, recorded to cassette',
   listenUrl: 'https://taylorzanke.bandcamp.com/album/moving-past',
   images: [ images ],
   route: '/003'
