@@ -10,7 +10,7 @@ import Books from './pages/Books'
 import Contact from './pages/Contact'
 import Profile from './pages/Profile'
 import Recordings from './pages/Recordings'
-import Statements from './pages/Statements'
+import Releases from './pages/Releases'
 
 import {
   Grid
@@ -29,7 +29,7 @@ const routes = [
   { route: '/contact', name: 'Contact', Component: Contact },
   { route: '/profile', name: 'Profile', Component: Profile },
   { route: '/recordings', name: 'Recordings', Component: Recordings },
-  { route: '/statements', name: 'Statements', Component: Statements },
+  { route: '/releases', name: 'Releases', Component: Releases },
 ]
 
 const history = createHistory()

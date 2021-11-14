@@ -52,9 +52,14 @@ const Nav = ({ ...props }) => {
           </StyledNavList>
         </Grid>
 
+        {/* <Grid item xs={12}>
+          <StyledNavList>
+            <li><StyledNavLink to="/releases"><StyledNavText>Releases</StyledNavText></StyledNavLink></li>
+          </StyledNavList>
+        </Grid> */}
+
         <Grid item xs={12}>
           <StyledNavList>
-            {/* <li><StyledNavLink to="/releases"><StyledNavText>Releases</StyledNavText></StyledNavLink></li> */}
             <li><StyledNavLink to="/profile"><StyledNavText>Profile</StyledNavText></StyledNavLink></li>
             <li><StyledNavLink to="/contact"><StyledNavText>Contact</StyledNavText></StyledNavLink></li>
           </StyledNavList>
