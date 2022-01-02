@@ -18,6 +18,10 @@ section {
 section:last-child {
   margin-bottom: 0;
 }
+section.space-between {
+  display: flex;
+  justify-content: space-between;
+}
 
 p {
   font-size: 20px;
@@ -46,6 +50,9 @@ span.small {
 }
 p.title {
   margin-bottom: 16px;
+}
+p.lightened {
+  color: lightgray;
 }
 
 ul {
