@@ -5,7 +5,7 @@ body {
 }
 section {
   max-width: 640px;
-  /* margin: 0 auto; */
+  margin: 0 auto;
   margin-bottom: 48px;
   animation: 1.5s ease-in-out fadeIn;
 }
