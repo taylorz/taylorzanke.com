@@ -78,9 +78,6 @@ a:active {
   body {
     padding: 24px;
   }
-  section {
-    margin-bottom: 24px;
-  }
 }
 
 @keyframes fadeIn {
