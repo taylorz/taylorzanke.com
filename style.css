@@ -3,12 +3,6 @@ body {
   padding: 48px;
   color: black;
 }
-@media only screen and (max-width: 600px) {
-  body {
-    padding: 24px;
-  }
-}
-
 section {
   max-width: 640px;
   margin: 0 auto;
@@ -22,7 +16,6 @@ section.space-between {
   display: flex;
   justify-content: space-between;
 }
-
 p {
   font-size: 20px;
   line-height: 24px;
@@ -30,7 +23,6 @@ p {
   margin-bottom: 24px;
   font-family: 'Times New Roman', serif;
 }
-
 p.small {
   font-size: 14px;
   line-height: 16px;
@@ -38,7 +30,6 @@ p.small {
   margin-bottom: 16px;
   font-family: 'Helvetica Neue', sans-serif;
 }
-
 p.no-margin {
   margin-bottom: 0;
 }
@@ -51,7 +42,7 @@ span.small {
 p.title {
   margin-bottom: 16px;
 }
-p.lightened {
+.lightened {
   color: lightgray;
 }
 
@@ -85,6 +76,15 @@ a:active {
   color: gray;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 24px;
+  }
+  section {
+    margin-bottom: 24px;
+  }
 }
 
 @keyframes fadeIn {
