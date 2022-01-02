@@ -13,10 +13,10 @@ section:last-child {
   margin-bottom: 0;
 }
 p {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 24px;
+  line-height: 32px;
   margin-top: 0;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
   font-family: 'Times New Roman', serif;
 }
 p.small {
@@ -48,8 +48,8 @@ ul {
 }
 li {
   list-style-type: none;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 24px;
+  line-height: 32px;
   font-family: 'Times New Roman', serif;
 }
 
