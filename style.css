@@ -1,13 +1,20 @@
 body {
   margin: 0;
-  padding: 48px;
+  padding: 32px;
   color: black;
 }
 section {
-  max-width: 640px;
+  max-width: 800px;
   margin: 0 auto;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   animation: 1.5s ease-in-out fadeIn;
+}
+section > img {
+  width: 100%;
+  margin-bottom: 32px;
+}
+section > img:last-child {
+  margin-bottom: 0;
 }
 section:last-child {
   margin-bottom: 0;
@@ -17,7 +24,7 @@ p {
   line-height: 24px;
   margin-top: 0;
   margin-bottom: 24px;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Helvetica Neue', serif;
 }
 p.small {
   font-size: 14px;
@@ -50,7 +57,7 @@ li {
   list-style-type: none;
   font-size: 20px;
   line-height: 24px;
-  font-family: 'Times New Roman', serif;
+  font-family: 'Helvetica Neue', serif;
 }
 
 a:link {
@@ -63,7 +70,7 @@ a:visited {
   text-decoration: none;
 }
 a:hover {
-  color: goldenrod;
+  color: gray;
   text-decoration: none;
   cursor: pointer;
   transition: .25s ease-in-out all;
