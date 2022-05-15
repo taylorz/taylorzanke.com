@@ -1,82 +1,48 @@
 body {
   margin: 0;
   padding: 32px;
-  color: black;
+  color: green;
 }
+
 section {
-  max-width: 800px;
-  margin: 0 auto;
+  width: 320px;
   margin-bottom: 32px;
   animation: 1.5s ease-in-out fadeIn;
 }
-section > img {
-  width: 100%;
-  margin-bottom: 32px;
-}
-section > img:last-child {
-  margin-bottom: 0;
-}
-section:last-child {
-  margin-bottom: 0;
-}
+
 p {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 22px;
+  line-height: 28px;
   margin-top: 0;
-  margin-bottom: 24px;
+  margin-bottom: 28px;
   font-family: 'Helvetica Neue', serif;
-}
-p.small {
-  font-size: 14px;
-  line-height: 16px;
-  margin-top: 0;
-  margin-bottom: 16px;
-  font-family: 'Helvetica Neue', sans-serif;
-}
-p.no-margin {
-  margin-bottom: 0;
-}
-span.small {
-  font-size: 14px;
-  line-height: 16px;
-  margin-top: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-}
-p.title {
-  margin-bottom: 16px;
-}
-.lightened {
-  color: lightgray;
+  font-weight: 500;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
-}
-li {
-  list-style-type: none;
-  font-size: 20px;
-  line-height: 24px;
-  font-family: 'Helvetica Neue', serif;
+p.small {
+  font-size: 14px;
+  line-height: 18px;
+  margin-top: 0;
+  margin-bottom: 18px;
 }
 
 a:link {
-  color: black;
+  color: green;
   text-decoration: none;
   transition: .25s ease-in-out all;
 }
 a:visited {
-  color: black;
+  color: green;
   text-decoration: none;
 }
 a:hover {
-  color: gray;
+  color: yellowgreen;
   text-decoration: none;
   cursor: pointer;
   transition: .25s ease-in-out all;
 }
 a:active {
-  color: gray;
+  color: teal;
   text-decoration: none;
   cursor: pointer;
 }
