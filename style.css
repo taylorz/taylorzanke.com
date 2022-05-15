@@ -1,21 +1,22 @@
 body {
   margin: 0;
   padding: 32px;
-  color: green;
+  color: black;
 }
 
 section {
   width: 320px;
-  margin-bottom: 32px;
+  margin: 0 auto;
+  margin-bottom: 28px;
   animation: 1.5s ease-in-out fadeIn;
 }
 
 p {
-  font-size: 22px;
-  line-height: 28px;
+  font-size: 16px;
+  line-height: 20px;
   margin-top: 0;
-  margin-bottom: 28px;
-  font-family: 'Helvetica Neue', serif;
+  margin-bottom: 20px;
+  font-family: 'Helvetica Neue', sans-serif;
   font-weight: 500;
 }
 
@@ -27,22 +28,22 @@ p.small {
 }
 
 a:link {
-  color: green;
+  color: black;
   text-decoration: none;
-  transition: .25s ease-in-out all;
+  transition: .15s ease-in-out all;
 }
 a:visited {
-  color: green;
+  color: black;
   text-decoration: none;
 }
 a:hover {
-  color: yellowgreen;
+  color: black;
   text-decoration: none;
   cursor: pointer;
-  transition: .25s ease-in-out all;
+  transition: .15s ease-in-out all;
 }
 a:active {
-  color: teal;
+  color: black;
   text-decoration: none;
   cursor: pointer;
 }
@@ -50,6 +51,9 @@ a:active {
 @media only screen and (max-width: 600px) {
   body {
     padding: 24px;
+  }
+  section {
+    width: 100%;
   }
 }
 
