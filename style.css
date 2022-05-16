@@ -6,7 +6,6 @@ body {
 
 section {
   width: 320px;
-  margin: 0 auto;
   margin-bottom: 28px;
   animation: 1.5s ease-in-out fadeIn;
 }
