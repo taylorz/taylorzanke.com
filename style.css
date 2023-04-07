@@ -17,7 +17,10 @@ div.container {
   gap: 18px;
 }
 div.container > div.column {
-  width: 340px;
+  width: 700px;
+}
+div.container > img {
+  width: 320px;
 }
 
 a:link {
@@ -40,6 +43,9 @@ a:active {
     flex-direction: column;
   }
   div.container > div.column {
+    width: 100%;
+  }
+  div.container > img {
     width: 100%;
   }
 
