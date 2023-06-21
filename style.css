@@ -1,52 +1,33 @@
 body {
   margin: 0;
-  padding: 18px;
-  color: #333333;
+  padding: 12px;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: sans-serif;
+  letter-spacing: .15rem;
+  color: green;
 }
 
 p {
-  font-size: 16px;
-  line-height: 18px;
   margin-top: 0;
-  margin-bottom: 18px;
-  font-family: serif;
-}
+  margin-bottom: 24px;
 
-div.container {
-  display: flex;
-  gap: 18px;
-}
-div.container > div.column {
-  width: 700px;
-}
-div.container > img {
-  width: 320px;
 }
 
 a:link {
-  color: #333333;
+  color: green;
+  text-decoration: underline;
 }
 a:visited {
-  color: #333333;
+  color: green;
 }
 a:hover {
-  color: #333333;
+  color: green;
   cursor: pointer;
 }
 a:active {
-  color: #333333;
+  color: green;
+
   cursor: pointer;
 }
 
-@media only screen and (max-width: 600px) {
-  div.container {
-    flex-direction: column;
-  }
-  div.container > div.column {
-    width: 100%;
-  }
-  div.container > img {
-    width: 100%;
-  }
-
-}
