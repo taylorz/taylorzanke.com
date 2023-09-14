@@ -15,8 +15,17 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+ol {
+list-style-position: outside;
+padding-inline-start: 40px;
+margin: 0;
+}
+
+
 .indent {
-  text-indent: 60px;
+
+  text-indent: 40px;
 }
 
 a:link {
