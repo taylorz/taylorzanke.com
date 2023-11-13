@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Information() {
   return (
     <main
-      className={`p-2 font-sans text-sm leading-6 sm:leading-8 w-screen overflow-hidden sm:text-base`}
+      className={`p-2 font-sans text-sm leading-7 sm:leading-8 w-screen overflow-hidden sm:text-base`}
     >
       <div className={`grid grid-cols-1 sm:grid-cols-2`}>
         <div>
