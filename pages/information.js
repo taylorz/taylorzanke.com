@@ -55,12 +55,12 @@ export default function Information() {
           </ol>
 
           {/* TODO: Build the newsletter signup form */}
-          <div className="ml-12 sm:ml-16">
+          {/* <div className="ml-12 sm:ml-16">
             <p className={`mt-7 sm:mt-8`}>Newsletter</p>
             <p>Full name</p>
             <p>Email</p>
             <p>Submit</p>
-          </div>
+          </div> */}
 
           <div className="ml-12 sm:ml-16">
             <p className={`mt-7 sm:mt-8`}>Contact</p>
