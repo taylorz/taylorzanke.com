@@ -14,9 +14,11 @@ export default function Information() {
         <div>
           <p>
             Taylor Zanke is an artist based in Los Angeles. He is the founder of{" "}
-            <Link href="">Allowing Many Forms.</Link>
+            <Link href="https://allowingmanyforms.org/">
+              Allowing Many Forms.
+            </Link>
           </p>
-          <p className={`indent-12 mt-6 sm:indent-16 sm:mt-8`}>Recent</p>
+          <p className={`indent-12 mt-7 sm:indent-16 sm:mt-8`}>Recent</p>
           <ol className={`list-decimal ml-12 sm:ml-16`}>
             <li>
               Participating in the group exhibition{" "}
@@ -40,23 +42,28 @@ export default function Information() {
             </li>
             <li>
               <p>
-                Preparing <Link href="">Red Rotkopf</Link>'s book{" "}
-                <span className={`italic`}>Wind in the Cage</span> for press
-                with <Link href="">Allowing Many Forms</Link>. Forthcoming 2024.
+                Preparing{" "}
+                <Link href="https://www.redrotkopf.com/">Red Rotkopf</Link>'s
+                book <span className={`italic`}>Wind in the Cage</span> for
+                press with{" "}
+                <Link href="https://allowingmanyforms.org/">
+                  Allowing Many Forms
+                </Link>
+                . Forthcoming 2024.
               </p>
             </li>
           </ol>
 
           {/* TODO: Build the newsletter signup form */}
-          {/* <div className="ml-8 sm:ml-16">
-            <p className={`mt-6 sm:mt-8`}>Newsletter</p>
+          <div className="ml-12 sm:ml-16">
+            <p className={`mt-7 sm:mt-8`}>Newsletter</p>
             <p>Full name</p>
             <p>Email</p>
             <p>Submit</p>
-          </div> */}
+          </div>
 
           <div className="ml-12 sm:ml-16">
-            <p className={`mt-6 sm:mt-8`}>Contact</p>
+            <p className={`mt-7 sm:mt-8`}>Contact</p>
             <p>
               <Link href="">taylor@allowingmanyforms.org</Link>
             </p>
