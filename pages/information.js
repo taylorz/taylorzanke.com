@@ -3,11 +3,11 @@ import Link from "next/link";
 export default function Information() {
   return (
     <main
-      className={`p-2 font-sans text-base leading-8 w-screen overflow-hidden `}
+      className={`p-2 font-sans text-sm leading-6 sm:leading-8 w-screen overflow-hidden sm:text-base`}
     >
       <div className={`grid grid-cols-1 sm:grid-cols-2`}>
         <div>
-          <p className={`indent-16`}>
+          <p className={`indent-8 sm:indent-16`}>
             <Link href="/">Taylor Zanke</Link>
           </p>
         </div>
@@ -16,8 +16,8 @@ export default function Information() {
             Taylor Zanke is an artist based in Los Angeles, California. He is
             the founder of <Link href="">Allowing Many Forms.</Link>
           </p>
-          <p className={`indent-16 mt-8`}>Recent</p>
-          <ol className={`list-decimal ml-16`}>
+          <p className={`indent-8 mt-6 sm:indent-16 sm:mt-8`}>Recent</p>
+          <ol className={`list-decimal ml-8 sm:ml-16`}>
             <li>
               Participating in the group exhibition{" "}
               <span className={`italic`}>LEAF THRU, POUR OVER</span> at{" "}
@@ -48,15 +48,15 @@ export default function Information() {
           </ol>
 
           {/* TODO: Build the newsletter signup form */}
-          {/* <div className="ml-16">
-            <p className={`mt-8`}>Newsletter</p>
+          {/* <div className="ml-8 sm:ml-16">
+            <p className={`mt-6 sm:mt-8`}>Newsletter</p>
             <p>Full name</p>
             <p>Email</p>
             <p>Submit</p>
           </div> */}
 
-          <div className="ml-16">
-            <p className={`mt-8`}>Contact</p>
+          <div className="ml-8 sm:ml-16">
+            <p className={`mt-6 sm:mt-8`}>Contact</p>
             <p>
               <Link href="">taylor@allowingmanyforms.org</Link>
             </p>

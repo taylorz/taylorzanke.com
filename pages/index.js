@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -19,12 +19,12 @@ export default function Home() {
 
   return (
     <main
-      className={`p-2 font-sans text-base leading-8 w-screen overflow-hidden `}
+      className={`p-2 font-sans text-sm leading-6 sm:leading-8 w-screen overflow-hidden sm:text-base`}
     >
       <div className={`flex flex-col gap-2`}>
         <div className={`flex grid grid-cols-1 sm:grid-cols-2`}>
           <div>
-            <p className={`indent-16`}>
+            <p className={`indent-8 sm:indent-16`}>
               <Link href="/information">Taylor Zanke</Link>
             </p>
           </div>

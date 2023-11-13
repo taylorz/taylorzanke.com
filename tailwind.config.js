@@ -11,6 +11,7 @@ module.exports = {
         sans: ["Arial"],
       },
       fontSize: {
+        sm: "1.5rem",
         base: "1.75rem",
       },
     },
