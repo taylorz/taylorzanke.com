@@ -79,6 +79,13 @@ export default function Home() {
 
 const slides = [
   {
+    url: "/taylor-12.jpg",
+    title: "Trending Toward The Unity Of Concerns",
+    view: "Installation view",
+    additional: "Ruth Gallery, LEAF THRU POUR OVER",
+    year: "2023",
+  },
+  {
     url: "/taylor-9.jpg",
     title: "I Know Some Things Form Without You",
     view: "Installation view",
