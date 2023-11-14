@@ -13,10 +13,17 @@ export default function Information() {
         </div>
         <div>
           <p>
-            Taylor Zanke is an artist based in Los Angeles. He is the founder of{" "}
+            Taylor Zanke is an artist who uses material sourced from everyday
+            life to explore space and presence.
+          </p>
+
+          <p className={`indent-12 sm:indent-16 `}>
+            He is the founder of art book publisher{" "}
             <Link href="https://allowingmanyforms.org/">
-              Allowing Many Forms.
+              Allowing Many Forms
             </Link>
+            . He earned a Master of Architecture from Columbia University and a
+            BFA from Parsons the New School For Design.
           </p>
           <p className={`indent-12 mt-7 sm:indent-16 sm:mt-8`}>Recent</p>
           <ol className={`list-decimal ml-12 sm:ml-16`}>
