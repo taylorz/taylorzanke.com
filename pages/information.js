@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Information() {
   return (
     <main
-      className={`p-2 font-sans text-sm leading-7 sm:leading-8 w-screen overflow-hidden sm:text-base`}
+      className={`p-2 font-sans text-xs w-screen overflow-hidden sm:text-base`}
     >
       <div className={`grid grid-cols-1 sm:grid-cols-2`}>
         <div>
@@ -13,17 +13,18 @@ export default function Information() {
         </div>
         <div>
           <p>
-            Taylor Zanke is an artist who uses material sourced from everyday
-            life to explore space and presence.
+            Taylor Zanke is an artist who uses material from everyday life to
+            explore space and presence.
           </p>
 
           <p className={`indent-12 sm:indent-16 `}>
-            He is the founder of art book publisher{" "}
+            He is the founder of{" "}
             <Link href="https://allowingmanyforms.org/">
               Allowing Many Forms
             </Link>
-            . He earned a Master of Architecture from Columbia University and a
-            BFA from Parsons the New School For Design.
+            , a publisher of artist's books. He earned a Master of Architecture
+            and MS from Columbia University and a BFA from Parsons the New
+            School For Design.
           </p>
           <p className={`indent-12 mt-7 sm:indent-16 sm:mt-8`}>Recent</p>
           <ol className={`list-decimal ml-12 sm:ml-16`}>
@@ -45,18 +46,6 @@ export default function Information() {
                   TRYST
                 </Link>{" "}
                 (Torrance Art Museum). October 27 - 29, 2023.
-              </p>
-            </li>
-            <li>
-              <p>
-                Preparing{" "}
-                <Link href="https://www.redrotkopf.com/">Red Rotkopf</Link>'s
-                book <span className={`italic`}>Wind in the Cage</span> for
-                press with{" "}
-                <Link href="https://allowingmanyforms.org/">
-                  Allowing Many Forms
-                </Link>
-                . Forthcoming 2024.
               </p>
             </li>
           </ol>

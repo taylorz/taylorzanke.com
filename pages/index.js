@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <main
-      className={`p-2 font-sans text-sm leading-7 sm:leading-8 w-screen overflow-hidden sm:text-base`}
+      className={`p-2 font-sans text-xs w-screen overflow-hidden sm:text-base`}
     >
       <div className={`flex flex-col gap-2`}>
         <div className={`flex grid grid-cols-1 sm:grid-cols-2`}>
@@ -65,7 +65,7 @@ export default function Home() {
             onLoad={() => setIsLoaded(true)}
           />
         </div>
-        <div className={`flex justify-center`}>
+        <div className={`flex justify-center text-xs`}>
           <p>
             <span className={`italic`}>{slides[currentIndex]?.title}</span>.{" "}
             {slides[currentIndex]?.view}. {slides[currentIndex]?.additional}.{" "}
