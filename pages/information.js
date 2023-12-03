@@ -48,8 +48,37 @@ export default function Information() {
                 (Torrance Art Museum). October 27 - 29, 2023.
               </p>
             </li>
+            <li>
+              <p>
+                Forthcoming collaborative artist's book with{" "}
+                <Link href="https://www.instagram.com/codykminer/?hl=en">
+                  Cody Miner
+                </Link>{" "}
+                titled <span className="italic">The Halves and Half Nots</span>{" "}
+                to be released with{" "}
+                <Link href="https://allowingmanyforms.org/">
+                  Allowing Many Forms
+                </Link>{" "}
+                in early 2024.
+              </p>
+            </li>
           </ol>
 
+          {/* <p className={`indent-12 mt-7 sm:indent-16 sm:mt-8`}>Publications</p>
+          <ol className={`list-none `}>
+            <li>
+              <span className="italic">The Halves and Half Nots</span>. With
+              Cody Miner. Allowing Many Forms. (Forthcoming).
+            </li>
+            <li>
+              <span className="italic">Two Visits</span>. Allowing Many Forms.
+              (2018).
+            </li>
+            <li>
+              <span className="italic">Honolulu, New York</span>. Allowing Many
+              Forms. (2013).
+            </li>
+          </ol> */}
           {/* TODO: Build the newsletter signup form */}
           {/* <div className="ml-12 sm:ml-16">
             <p className={`mt-7 sm:mt-8`}>Newsletter</p>
