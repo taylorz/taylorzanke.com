@@ -17,18 +17,16 @@ export default function Home() {
     }
   };
 
-  console.log({ currentIndex });
-
   return (
     <main className="font-serif text-sm">
       <PageSection
-        className="justify-between cursor-pointer"
+        className="justify-between cursor-pointer "
         onClick={handleIncrement}
       >
-        <div className="grid grid-cols-2 gap-2 max-h-[90dvh]">
+        <div className="grid grid-cols-2 gap-2">
           {slides2[currentIndex].images.map((s, i) => (
             <div
-              className={`aspect-square flex
+              className={`aspect-square flex max-h-[80vh]
               ${isLoaded ? "opacity-100" : "opacity-0"}
             ${
               s.position === "left"
@@ -87,7 +85,7 @@ export default function Home() {
 const PageSection = ({ children, className, onClick }) => {
   return (
     <div
-      className={`h-[calc(100dvh)] flex flex-col p-3 ${className}`}
+      className={`h-[50vh] md:h-[calc(100dvh)] flex flex-col p-3 ${className}`}
       onClick={onClick}
     >
       {children}
