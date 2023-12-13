@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -17,40 +18,66 @@ export default function Home() {
     }
   };
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        staggerChildren: 0.25,
+      },
+    },
+    exit: { opacity: 0 },
+  };
+
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+    exit: { opacity: 0 },
+  };
+
   return (
     <main className="font-serif text-sm">
       <PageSection
         className="justify-between cursor-pointer "
         onClick={handleIncrement}
       >
-        <div className="grid grid-cols-2 gap-2">
-          {slides2[currentIndex].images.map((s, i) => (
-            <div
-              className={`aspect-square flex max-h-[80vh]
-              ${isLoaded ? "opacity-100" : "opacity-0"}
-            ${
-              s.position === "left"
-                ? "justify-start"
-                : s.position === "center"
-                ? "justify-center"
-                : s.position === "right" && "justify-end"
-            }
-            `}
-              key={i}
-            >
-              <Image
-                className="h-full w-auto"
-                src={s.url}
-                alt={slides2[currentIndex].title}
-                width={1}
-                height={1}
-                sizes="100vw"
-                priority
-                onLoad={() => setIsLoaded(true)}
-              />
-            </div>
-          ))}
-        </div>
+        <AnimatePresence key={currentIndex} mode="wait">
+          <motion.div
+            className="grid grid-cols-2 gap-2"
+            variants={container}
+            initial="hidden"
+            animate="show"
+          >
+            {slides2[currentIndex].images.map((s, i) => (
+              <motion.div variants={item} key={i}>
+                <div
+                  className={`aspect-square flex max-h-[80vh]
+                  ${
+                    s.position === "left"
+                      ? "justify-start"
+                      : s.position === "center"
+                      ? "justify-center"
+                      : s.position === "right" && "justify-end"
+                  }
+                `}
+                >
+                  <Image
+                    className="h-full w-auto"
+                    src={s.url}
+                    alt={slides2[currentIndex].title}
+                    width={1}
+                    height={1}
+                    sizes="100vw"
+                    priority
+                    onLoad={() => setIsLoaded(true)}
+                  />
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
+
         <div>
           <p>
             Taylor Zanke. <em>{slides2[currentIndex].title}</em>.{" "}
