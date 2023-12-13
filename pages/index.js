@@ -47,7 +47,7 @@ export default function Home() {
             className="grid grid-cols-2 gap-2"
             variants={container}
             initial="hidden"
-            animate="show"
+            animate={isLoaded ? "show" : "hidden"}
           >
             {slides2[currentIndex].images.map((s, i) => (
               <motion.div variants={item} key={i}>
