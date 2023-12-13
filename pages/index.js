@@ -133,8 +133,8 @@ const slides2 = [
   },
   {
     images: [
-      { url: "/taylor-6.jpg", position: "right" },
-      { url: "/taylor-3.jpg", position: "right" },
+      { url: "/taylor-6.jpg", position: "center" },
+      { url: "/taylor-3.jpg", position: "center" },
     ],
     title: "(Left) The Poetic Narrative, (Right) The Suspending Effect",
     caption: "TRYST (Torrance Art Museum). 2023.",
@@ -142,7 +142,7 @@ const slides2 = [
   {
     images: [
       { url: "/taylor-10.jpg", position: "left" },
-      { url: "/taylor.jpg", position: "right" },
+      { url: "/taylor.jpg", position: "left" },
     ],
     title: "The Factual Reality Of The Structure",
     caption: "2023.",
