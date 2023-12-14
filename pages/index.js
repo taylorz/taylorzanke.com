@@ -39,7 +39,7 @@ export default function Home() {
   return (
     <main className="font-serif text-sm">
       <PageSection
-        className="justify-between cursor-pointer "
+        className="justify-start md:justify-between cursor-pointer "
         onClick={handleIncrement}
       >
         <AnimatePresence key={currentIndex} mode="wait">
@@ -78,14 +78,14 @@ export default function Home() {
           </motion.div>
         </AnimatePresence>
 
-        <div>
+        <div className="pt-3">
           <p>
             Taylor Zanke. <em>{slides2[currentIndex].title}</em>.{" "}
             {slides2[currentIndex].caption}
           </p>
         </div>
       </PageSection>
-      <PageSection className="justify-end">
+      <PageSection className="justify-start md:justify-end">
         <div>
           <div>
             <p>
@@ -112,7 +112,7 @@ export default function Home() {
 const PageSection = ({ children, className, onClick }) => {
   return (
     <div
-      className={`h-[50vh] md:h-[calc(100dvh)] flex flex-col p-3 ${className}`}
+      className={`h-screen flex flex-col p-3 ${className}`}
       onClick={onClick}
     >
       {children}
