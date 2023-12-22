@@ -23,8 +23,8 @@ export default function Home() {
     show: {
       opacity: 1,
       transition: {
-        duration: 0.5,
-        staggerChildren: 0.25,
+        duration: 1,
+        staggerChildren: 0.5,
       },
     },
     exit: { opacity: 0 },
@@ -36,15 +36,31 @@ export default function Home() {
     exit: { opacity: 0 },
   };
 
+  const handleImageLoad = (currentIndex, setIsLoaded) => {
+    setIsLoaded((prevState) => {
+      if (prevState) {
+        return prevState;
+      } else {
+        const nextIndex = currentIndex + 1;
+        if (nextIndex < slides2.length) {
+          setCurrentIndex(nextIndex);
+        } else {
+          setCurrentIndex(0);
+        }
+        return true;
+      }
+    });
+  };
+
   return (
     <main className="font-serif text-sm">
       <PageSection
-        className="justify-start md:justify-between cursor-pointer "
+        className="justify-start md:justify-between cursor-pointer"
         onClick={handleIncrement}
       >
         <AnimatePresence key={currentIndex} mode="wait">
           <motion.div
-            className="grid grid-cols-2 gap-2"
+            className="grid grid-cols-2 gap-2 "
             variants={container}
             initial="hidden"
             animate={isLoaded ? "show" : "hidden"}
@@ -52,7 +68,7 @@ export default function Home() {
             {slides2[currentIndex].images.map((s, i) => (
               <motion.div variants={item} key={i}>
                 <div
-                  className={`aspect-square flex max-h-[80vh]
+                  className={`aspect-square flex
                   ${
                     s.position === "left"
                       ? "justify-start"
@@ -70,14 +86,13 @@ export default function Home() {
                     height={1}
                     sizes="100vw"
                     priority
-                    onLoad={() => setIsLoaded(true)}
+                    onLoad={() => handleImageLoad(currentIndex, setIsLoaded)}
                   />
                 </div>
               </motion.div>
             ))}
           </motion.div>
         </AnimatePresence>
-
         <div className="pt-3">
           <p>
             Taylor Zanke. <em>{slides2[currentIndex].title}</em>.{" "}
@@ -85,7 +100,7 @@ export default function Home() {
           </p>
         </div>
       </PageSection>
-      <PageSection className="justify-start md:justify-end">
+      <PageSection className="justify-start md:justify-end h-screen">
         <div>
           <div>
             <p>
@@ -112,7 +127,7 @@ export default function Home() {
 const PageSection = ({ children, className, onClick }) => {
   return (
     <div
-      className={`h-screen flex flex-col p-3 ${className}`}
+      className={`min-h-screen flex flex-col p-4 ${className}`}
       onClick={onClick}
     >
       {children}
@@ -133,8 +148,8 @@ const slides2 = [
   },
   {
     images: [
-      { url: "/taylor-6.jpg", position: "center" },
-      { url: "/taylor-3.jpg", position: "center" },
+      { url: "/taylor-6.jpg", position: "right" },
+      { url: "/taylor-3.jpg", position: "right" },
     ],
     title: "(Left) The Poetic Narrative, (Right) The Suspending Effect",
     caption: "TRYST (Torrance Art Museum). 2023.",
@@ -142,7 +157,7 @@ const slides2 = [
   {
     images: [
       { url: "/taylor-10.jpg", position: "left" },
-      { url: "/taylor.jpg", position: "left" },
+      { url: "/taylor.jpg", position: "right" },
     ],
     title: "The Factual Reality Of The Structure",
     caption: "2023.",
