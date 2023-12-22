@@ -36,22 +36,6 @@ export default function Home() {
     exit: { opacity: 0 },
   };
 
-  const handleImageLoad = (currentIndex, setIsLoaded) => {
-    setIsLoaded((prevState) => {
-      if (prevState) {
-        return prevState;
-      } else {
-        const nextIndex = currentIndex + 1;
-        if (nextIndex < slides2.length) {
-          setCurrentIndex(nextIndex);
-        } else {
-          setCurrentIndex(0);
-        }
-        return true;
-      }
-    });
-  };
-
   return (
     <main className="font-serif text-sm">
       <PageSection
@@ -86,7 +70,7 @@ export default function Home() {
                     height={1}
                     sizes="100vw"
                     priority
-                    onLoad={() => handleImageLoad(currentIndex, setIsLoaded)}
+                    onLoad={() => setIsLoaded(true)}
                   />
                 </div>
               </motion.div>
