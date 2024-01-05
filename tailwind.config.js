@@ -13,6 +13,14 @@ module.exports = {
       fontSize: {
         sm: ["18px", "20px"],
       },
+      animation: {
+        blink: "blink 2s steps(5, start) infinite",
+      },
+      keyframes: {
+        blink: {
+          to: { visibility: "hidden" },
+        },
+      },
     },
   },
   plugins: [],
