@@ -8,13 +8,13 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ["Times"],
+        serif: ["Times", "serif"],
       },
       fontSize: {
         sm: ["18px", "20px"],
       },
       animation: {
-        blink: "blink 2s steps(5, start) infinite",
+        blink: "blink .15s steps(5, start) infinite",
       },
       keyframes: {
         blink: {
