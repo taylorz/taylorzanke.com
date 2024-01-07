@@ -54,8 +54,8 @@ const NewsletterSubscribe = () => {
             />
           </div>
 
-          <button className="p-0 flex w-fit hover:animate-blink" type="submit">
-            Subscribe
+          <button className="p-0 flex w-fit" type="submit">
+            <span className="hover:animate-blink">Subscribe</span>
           </button>
         </div>
         {errors.email || errors.fullName ? (

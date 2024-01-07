@@ -14,7 +14,7 @@ module.exports = {
         sm: ["18px", "20px"],
       },
       animation: {
-        blink: "blink .15s steps(5, start) infinite",
+        blink: "blink .25s steps(5, start) infinite",
       },
       keyframes: {
         blink: {

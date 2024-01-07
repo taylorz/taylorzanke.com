@@ -15,7 +15,7 @@ export default function Information() {
           <Link href="https://allowingmanyforms.org/" target="_blank">
             <span className="hover:animate-blink">Allowing Many Forms</span>
           </Link>
-          , a publisher of artist's books.
+          , a publisher of artist's books. Based in Los Angeles, California.
         </p>
         <div className="mb-5">
           <p>Education</p>
@@ -85,19 +85,7 @@ export default function Information() {
               </span>
             </li>
             <li className="flex gap-3">
-              <span>2021</span>
-              <span>
-                Taylor Zanke. <em>Title</em>, Self, Digital Release
-              </span>
-            </li>
-            <li className="flex gap-3">
-              <span>2021</span>
-              <span>
-                Taylor Zanke. <em>Title</em>, Self, Digital Release
-              </span>
-            </li>
-            <li className="flex gap-3">
-              <span>2021</span>
+              <span>2020</span>
               <span>
                 Taylor Zanke. <em>Title</em>, Self, Digital Release
               </span>
@@ -106,6 +94,23 @@ export default function Information() {
               <span>2019</span>
               <span>
                 Taylor Zanke. <em>Two Visits</em>, Allowing Many Forms
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span>2018</span>
+              <span>
+                Taylor Zanke. <em>Apartment on 3 Cassettes</em>, Self, Digital
+                Release
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <span>2016</span>
+              <span>
+                Taylor Zanke, Various Authors.{" "}
+                <em>
+                  Housing the Majority in Baishizhou Village, Shenzhen China
+                </em>{" "}
+                Studio-X Beijing, Columbia University
               </span>
             </li>
             <li className="flex gap-3">
@@ -129,15 +134,28 @@ export default function Information() {
             <li className="flex gap-3">
               <span>2023</span>
               <span>
-                <em>Allowing Many Forms Handmade Book Residency (Winter)</em>.
-                Led by Taylor Zanke, Los Angeles, California.
+                <em>Allowing Many Forms Handmade Book Residency (Winter)</em>. 4
+                Participants. Led by Taylor Zanke, Los Angeles, California.
               </span>
             </li>
             <li className="flex gap-3">
               <span>2022</span>
               <span>
-                <em>Allowing Many Forms Handmade Book Residency (Fall)</em>. Led
-                by Taylor Zanke, New York, New York.
+                <em>Allowing Many Forms Handmade Book Residency (Fall)</em>. 6
+                Participants. Led by Taylor Zanke, New York, New York.
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div className="mb-5">
+          <p>Awards</p>
+          <ul>
+            <li className="flex gap-3">
+              <span>2018</span>
+              <span>
+                <em>William Kinne Travelling Fellowship</em>. For "A Building
+                Depository: New Temporal Accumulation of Subject Matter,
+                Material, and Memory". Columbia University, New York, New York.
               </span>
             </li>
           </ul>
