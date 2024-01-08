@@ -87,7 +87,7 @@ export default function Information() {
             <li className="flex gap-3">
               <span>2020</span>
               <span>
-                Taylor Zanke. <em>Title</em>, Self, Digital Release
+                Taylor Zanke. <em>Title</em>, Self, Digital
               </span>
             </li>
             <li className="flex gap-3">
@@ -99,8 +99,9 @@ export default function Information() {
             <li className="flex gap-3">
               <span>2018</span>
               <span>
-                Taylor Zanke. <em>Apartment on 3 Cassettes</em>, Self, Digital
-                Release
+                Taylor Zanke.{" "}
+                <em>Resonance Studies with Tape Recorders (3/3)</em>, Self,
+                Digital
               </span>
             </li>
             <li className="flex gap-3">
