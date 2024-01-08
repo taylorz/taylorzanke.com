@@ -51,7 +51,7 @@ export default function Home() {
               <Image
                 onMouseEnter={() => setHoveringImage(true)}
                 onMouseLeave={() => setHoveringImage(false)}
-                className="h-auto w-auto max-w-full max-h-full cursor-pointer"
+                className="w-auto h-full cursor-pointer"
                 onClick={handleIncrement}
                 src={slides2[currentIndex].url}
                 alt={slides2[currentIndex].title}
