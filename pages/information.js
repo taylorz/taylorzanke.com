@@ -109,8 +109,8 @@ export default function Information() {
                 Taylor Zanke, Various Authors.{" "}
                 <em>
                   Housing the Majority in Baishizhou Village, Shenzhen China
-                </em>{" "}
-                Studio-X Beijing, Columbia University
+                </em>
+                , Studio-X Beijing, Columbia University
               </span>
             </li>
             <li className="flex gap-3">
@@ -153,9 +153,12 @@ export default function Information() {
             <li className="flex gap-3">
               <span>2018</span>
               <span>
-                <em>William Kinne Travelling Fellowship</em>. For "A Building
-                Depository: New Temporal Accumulation of Subject Matter,
-                Material, and Memory". Columbia University, New York, New York.
+                William Kinne Travelling Fellowship, for{" "}
+                <em>
+                  A Building Depository: New Temporal Accumulation of Subject
+                  Matter, Material, and Memory
+                </em>
+                . Columbia University, New York, New York.
               </span>
             </li>
           </ul>
