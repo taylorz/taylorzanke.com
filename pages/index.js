@@ -4,9 +4,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
+import PageSection from "../components/PageSection";
+
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [hoveringImage, setHoveringImage] = useState(false);
 
   const handleIncrement = () => {
     if (currentIndex === slides2.length - 1) {
@@ -19,136 +22,92 @@ export default function Home() {
   };
 
   const container = {
-    hidden: { opacity: 0 },
+    hidden: {
+      opacity: 0,
+    },
     show: {
       opacity: 1,
-      transition: {
-        duration: 1,
-        staggerChildren: 0.5,
-      },
     },
-    exit: { opacity: 0 },
-  };
-
-  const item = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1 },
-    exit: { opacity: 0 },
   };
 
   return (
-    <main className="font-serif text-sm">
-      <PageSection
-        className="justify-start md:justify-between cursor-pointer"
-        onClick={handleIncrement}
-      >
-        <AnimatePresence key={currentIndex} mode="wait">
-          <motion.div
-            className="grid grid-cols-2 gap-2 "
-            variants={container}
-            initial="hidden"
-            animate={isLoaded ? "show" : "hidden"}
-          >
-            {slides2[currentIndex].images.map((s, i) => (
-              <motion.div variants={item} key={i}>
-                <div
-                  className={`aspect-square flex
-                  ${
-                    s.position === "left"
-                      ? "justify-start"
-                      : s.position === "center"
-                      ? "justify-center"
-                      : s.position === "right" && "justify-end"
-                  }
-                `}
-                >
-                  <Image
-                    className="h-full w-auto"
-                    src={s.url}
-                    alt={slides2[currentIndex].title}
-                    width={1}
-                    height={1}
-                    sizes="100vw"
-                    priority
-                    onLoad={() => setIsLoaded(true)}
-                  />
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </AnimatePresence>
-        <div className="pt-3">
-          <p>
-            Taylor Zanke. <em>{slides2[currentIndex].title}</em>.{" "}
-            {slides2[currentIndex].caption}
-          </p>
-        </div>
-      </PageSection>
-      <PageSection className="justify-start md:justify-end h-screen">
-        <div>
-          <div>
-            <p>
-              Taylor Zanke is an artist who uses material from everyday life to
-              explore space and presence.
-            </p>
+    <PageSection className="h-screen">
+      <p className="z-10">
+        <Link href="/information">
+          <span className="md:hover:animate-blink">Taylor Zanke</span>
+        </Link>
+      </p>
 
-            <p className="indent-8">
-              He is the founder of{" "}
-              <Link href="https://allowingmanyforms.org/">
-                Allowing Many Forms
-              </Link>
-              , a publisher of artist's books. He earned a Master of
-              Architecture and MS from Columbia University and a BFA from
-              Parsons the New School For Design.
+      <div className="flex justify-center items-center absolute top-0 left-0 right-0 bottom-0">
+        <div className="max-w-screen-lg sm:w-screen md:w-1/2 flex justify-center">
+          <AnimatePresence key={currentIndex} mode="wait">
+            <motion.div
+              variants={container}
+              initial="hidden"
+              animate={isLoaded ? "show" : "hidden"}
+              className="w-full h-full max-h-[80vh] max-w-[90vw]"
+            >
+              <Image
+                onMouseEnter={() => setHoveringImage(true)}
+                onMouseLeave={() => setHoveringImage(false)}
+                // className="h-full w-full cursor-pointer"
+                className="w-full aspect-square object-contain cursor-pointer"
+                onClick={handleIncrement}
+                src={slides2[currentIndex].url}
+                alt={slides2[currentIndex].title}
+                width={1}
+                height={1}
+                sizes="100vw"
+                priority
+                onLoad={() => setIsLoaded(true)}
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+      {hoveringImage ? (
+        <div className="absolute left-0 top-8 md:top-3 right-0 px-3">
+          <div className="flex justify-center w-full text-center">
+            <p>
+              <em>{slides2[currentIndex].title}</em>,{" "}
+              {slides2[currentIndex].caption}
             </p>
           </div>
         </div>
-      </PageSection>
-    </main>
+      ) : null}
+    </PageSection>
   );
 }
 
-const PageSection = ({ children, className, onClick }) => {
-  return (
-    <div
-      className={`min-h-screen flex flex-col p-4 ${className}`}
-      onClick={onClick}
-    >
-      {children}
-    </div>
-  );
-};
-
 const slides2 = [
   {
-    images: [{ url: "/taylor-12.jpg", position: "left" }],
-    title: "Trending Toward the Unity of Concerns",
-    caption: "Ruth Gallery, LEAF THRU POUR OVER. 2023.",
-  },
-  {
-    images: [{ url: "/taylor-4.jpg", position: "left" }],
-    title: "The Third Sphere of Spontaneity",
-    caption: "TRYST (Torrance Art Museum). 2023.",
-  },
-  {
-    images: [
-      { url: "/taylor-6.jpg", position: "right" },
-      { url: "/taylor-3.jpg", position: "right" },
-    ],
-    title: "(Left) The Poetic Narrative, (Right) The Suspending Effect",
-    caption: "TRYST (Torrance Art Museum). 2023.",
-  },
-  {
-    images: [
-      { url: "/taylor-10.jpg", position: "left" },
-      { url: "/taylor.jpg", position: "right" },
-    ],
-    title: "The Factual Reality Of The Structure",
+    url: "/1.jpg",
+    title: "Untitled",
     caption: "2023.",
   },
   {
-    images: [{ url: "/taylor-2.jpg", position: "left" }],
+    url: "/taylor-12.jpg",
+    title: "Trending Toward the Unity of Concerns",
+    caption: "Ruth Gallery. Leaf Thru, Pore Over. 2023.",
+  },
+  {
+    url: "/2.jpg",
+    title: "Untitled",
+    caption: "2023.",
+  },
+  {
+    url: "/3.jpg",
+    title: "I Know Some Things Form Without You",
+    caption: "TRYST (Torrance Art Museum). 2023.",
+  },
+  {
+    url: "/4.jpg",
     title: "To Store Everything In Matter",
+    caption: "2023.",
+  },
+  {
+    url: "/taylor-10.jpg",
+    title: "The Factual Reality Of The Structure",
     caption: "2023.",
   },
 ];
