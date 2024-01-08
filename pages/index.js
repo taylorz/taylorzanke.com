@@ -46,12 +46,12 @@ export default function Home() {
               variants={container}
               initial="hidden"
               animate={isLoaded ? "show" : "hidden"}
-              className="aspect-square flex justify-center max-h-[80vh] max-w-[85vw]"
+              className="aspect-square flex justify-center max-h-[80vh] max-w-[90vw]"
             >
               <Image
                 onMouseEnter={() => setHoveringImage(true)}
                 onMouseLeave={() => setHoveringImage(false)}
-                className="h-auto w-auto cursor-pointer"
+                className="h-auto w-auto max-w-full max-h-full cursor-pointer"
                 onClick={handleIncrement}
                 src={slides2[currentIndex].url}
                 alt={slides2[currentIndex].title}
@@ -81,28 +81,33 @@ export default function Home() {
 
 const slides2 = [
   {
+    url: "/1.jpg",
+    title: "Untitled",
+    caption: "2023.",
+  },
+  {
     url: "/taylor-12.jpg",
     title: "Trending Toward the Unity of Concerns",
     caption: "Ruth Gallery. Leaf Thru, Pore Over. 2023.",
   },
   {
-    url: "/taylor-4.jpg",
-    title: "The Third Sphere of Spontaneity",
-    caption: "TRYST (Torrance Art Museum). 2023.",
-  },
-  {
-    url: "/taylor-6.jpg",
-    title: "The Poetic Narrative",
-    caption: "TRYST (Torrance Art Museum). 2023.",
-  },
-  {
-    url: "/taylor.jpg",
-    title: "The Factual Reality Of The Structure",
+    url: "/2.jpg",
+    title: "Untitled",
     caption: "2023.",
   },
   {
-    url: "/taylor-2.jpg",
+    url: "/3.jpg",
+    title: "I Know Some Things Form Without You",
+    caption: "TRYST (Torrance Art Museum). 2023.",
+  },
+  {
+    url: "/4.jpg",
     title: "To Store Everything In Matter",
+    caption: "2023.",
+  },
+  {
+    url: "/taylor-10.jpg",
+    title: "The Factual Reality Of The Structure",
     caption: "2023.",
   },
 ];

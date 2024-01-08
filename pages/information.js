@@ -130,7 +130,7 @@ export default function Information() {
           </ul>
         </div>
         <div className="mb-5">
-          <p>Special Collaborations</p>
+          <p>Special Projects</p>
           <ul>
             <li className="flex gap-3">
               <span>2023</span>
