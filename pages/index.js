@@ -22,12 +22,11 @@ export default function Home() {
   };
 
   const container = {
-    hidden: { opacity: 0 },
+    hidden: {
+      opacity: 0,
+    },
     show: {
       opacity: 1,
-      transition: {
-        duration: 0,
-      },
     },
   };
 
@@ -35,7 +34,7 @@ export default function Home() {
     <PageSection className="h-screen">
       <p className="z-10">
         <Link href="/information">
-          <span className="hover:animate-blink">Taylor Zanke</span>
+          <span className="md:hover:animate-blink">Taylor Zanke</span>
         </Link>
       </p>
 

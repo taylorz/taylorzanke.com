@@ -8,14 +8,14 @@ export default function Information() {
       <div>
         <p className="mb-5">
           <Link href="/">
-            <span className="hover:animate-blink">Taylor Zanke</span>
+            <span className="md:hover:animate-blink">Taylor Zanke</span>
           </Link>{" "}
           (1992, Canada) is an artist who uses material from everyday life to
           explore space and presence. He is the founder of{" "}
           <Link href="https://allowingmanyforms.org/" target="_blank">
-            <span className="hover:animate-blink">Allowing Many Forms</span>
+            <span className="md:hover:animate-blink">Allowing Many Forms</span>
           </Link>
-          , a publisher of artist's books. Based in Los Angeles, California.
+          , a publisher of artist's books.
         </p>
         <div className="mb-5">
           <p>Education</p>
@@ -84,12 +84,12 @@ export default function Information() {
                 Taylor Zanke, Matthew Ransom. <em>Figures</em>, Figure Press
               </span>
             </li>
-            <li className="flex gap-3">
+            {/* <li className="flex gap-3">
               <span>2020</span>
               <span>
                 Taylor Zanke. <em>Title</em>, Self, Digital
               </span>
-            </li>
+            </li> */}
             <li className="flex gap-3">
               <span>2019</span>
               <span>
@@ -169,12 +169,12 @@ export default function Information() {
         <div className="mb-5">
           <NewsletterSubscribe />
         </div>
-        <div className="mb-15">
+        <div className="pb-20">
           <p>Contact</p>
           <a>
             <p>taylor@allowingmanyforms.org</p>
           </a>
-          <p>Studio in Pasadena</p>
+          <p>Studio in Pasadena, California</p>
         </div>
       </div>
     </PageSection>
