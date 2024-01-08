@@ -39,19 +39,20 @@ export default function Home() {
         </Link>
       </p>
 
-      <div className="flex justify-center items-center h-full w-full absolute top-0 left-0 right-0 bottom-0">
+      <div className="flex justify-center items-center absolute top-0 left-0 right-0 bottom-0">
         <div className="max-w-screen-lg sm:w-screen md:w-1/2 flex justify-center">
           <AnimatePresence key={currentIndex} mode="wait">
             <motion.div
               variants={container}
               initial="hidden"
               animate={isLoaded ? "show" : "hidden"}
-              className="aspect-square flex justify-center max-h-[80vh] max-w-[90vw]"
+              className="w-full h-full max-h-[80vh] max-w-[90vw]"
             >
               <Image
                 onMouseEnter={() => setHoveringImage(true)}
                 onMouseLeave={() => setHoveringImage(false)}
-                className="w-auto h-full cursor-pointer"
+                // className="h-full w-full cursor-pointer"
+                className="w-full aspect-square object-contain cursor-pointer"
                 onClick={handleIncrement}
                 src={slides2[currentIndex].url}
                 alt={slides2[currentIndex].title}
