@@ -45,13 +45,12 @@ export default function Home() {
               variants={container}
               initial="hidden"
               animate={isLoaded ? "show" : "hidden"}
-              className="w-full h-full max-h-[80vh] max-w-[90vw]"
+              className="w-full h-full"
             >
               <Image
                 onMouseEnter={() => setHoveringImage(true)}
                 onMouseLeave={() => setHoveringImage(false)}
-                // className="h-full w-full cursor-pointer"
-                className="w-full aspect-square object-contain cursor-pointer"
+                className="w-full aspect-square max-w-[90vw] max-h-[85vh] object-contain cursor-pointer"
                 onClick={handleIncrement}
                 src={slides2[currentIndex].url}
                 alt={slides2[currentIndex].title}
