@@ -100,7 +100,7 @@ export default function Information() {
               <span>2018</span>
               <span>
                 Taylor Zanke.{" "}
-                <em>Resonance Studies with Tape Recorders (3/3)</em>, Self,
+                <em>Resonance Studies (Building Soundings 1, 2, 3)</em>, Self,
                 Digital
               </span>
             </li>
