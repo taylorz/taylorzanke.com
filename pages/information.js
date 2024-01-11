@@ -115,6 +115,13 @@ export default function Information() {
               </span>
             </li>
             <li className="flex gap-3">
+              <span>2014</span>
+              <span>
+                Taylor Zanke, Various Authors.{" "}
+                <em>From A-Z, BFA Thesis 2013-14</em>, Parsons / The New School
+              </span>
+            </li>
+            <li className="flex gap-3">
               <span>2013</span>
               <span>
                 Taylor Zanke. <em>Honolulu, New York</em>, Allowing Many Forms
