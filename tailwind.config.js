@@ -11,7 +11,7 @@ module.exports = {
         serif: ["Times", "serif"],
       },
       fontSize: {
-        sm: ["18px", "20px"],
+        sm: ["20px", "24px"],
       },
       animation: {
         blink: "blink .35s steps(5, start) infinite",

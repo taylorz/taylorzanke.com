@@ -1,7 +1,7 @@
 const PageSection = ({ children, className, onClick }) => {
   return (
     <div
-      className={`min-h-screen flex flex-col p-3 ${className}`}
+      className={`min-h-screen flex flex-col p-4 ${className}`}
       onClick={onClick}
     >
       {children}

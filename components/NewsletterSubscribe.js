@@ -29,7 +29,7 @@ const NewsletterSubscribe = () => {
   ) : (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="w-[320px]">
-        <p className="text-rose-500">Newsletter</p>
+        <p>Newsletter</p>
         <div className="flex flex-col">
           <div className="grid grid-cols-2">
             <p>Full Name</p>
