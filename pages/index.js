@@ -72,7 +72,7 @@ export default function Home() {
         ) : null} */}
       </PageSection>
 
-      <PageSection className="md:grid md:grid-cols-2 md:gap-6 max-w-screen-2xl h-screen m-0 m-auto">
+      <PageSection className="h-screen">
         <div>
           <div className="mb-6">
             <p>
