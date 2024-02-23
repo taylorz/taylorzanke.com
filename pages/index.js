@@ -41,6 +41,21 @@ export default function Home() {
     setViewingIndex(false);
   };
 
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const listItem = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+  };
+
   return (
     <div
       className={`flex flex-col ${
@@ -58,19 +73,29 @@ export default function Home() {
           <div>Information</div>
         </Link>
       </div>
-      <div
-        className={`grid ${viewingIndex ? "grid-cols-5" : "grid-cols-2"} gap-2`}
-        onClick={viewingIndex ? null : handleIncrement}
-      >
-        {slides2.slice(visibleSliceFrom, visibleSliceTo).map((s, i) => (
-          <div
-            key={i}
-            onClick={viewingIndex ? () => handleViewImagePair(s.id) : null}
-          >
-            <ImageBox src={s.url} imageNumber={s.id} />
-          </div>
-        ))}
-      </div>
+
+      {slides2 && (
+        <motion.div
+          key={visibleSliceFrom}
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className={`grid ${
+            viewingIndex ? "grid-cols-5" : "grid-cols-2 max-w-screen-2xl"
+          } gap-2 mx-auto`}
+          onClick={viewingIndex ? null : handleIncrement}
+        >
+          {slides2.slice(visibleSliceFrom, visibleSliceTo).map((s) => (
+            <motion.div key={s} variants={listItem}>
+              <div
+                onClick={viewingIndex ? () => handleViewImagePair(s.id) : null}
+              >
+                <ImageBox src={s.url} imageNumber={s.id} />
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      )}
     </div>
   );
 }
@@ -79,7 +104,13 @@ const ImageBox = ({ src, imageNumber }) => {
   return (
     <div>
       <div className="w-full h-full cursor-pointer">
-        <img src={src} className="aspect-square object-contain" />
+        <Image
+          src={src}
+          width={1}
+          height={1}
+          sizes="100vw"
+          className="object-contain aspect-square w-full h-full"
+        />
       </div>
       <div>{imageNumber}</div>
     </div>
