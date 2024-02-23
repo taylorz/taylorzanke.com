@@ -81,7 +81,7 @@ export default function Home() {
           initial="hidden"
           animate="show"
           className={`grid ${
-            viewingIndex ? "grid-cols-5" : "grid-cols-2 max-w-screen-2xl"
+            viewingIndex ? "grid-cols-5" : "grid-cols-2 max-w-[2000px]"
           } gap-2 mx-auto`}
           onClick={viewingIndex ? null : handleIncrement}
         >
