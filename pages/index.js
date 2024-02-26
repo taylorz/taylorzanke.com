@@ -46,7 +46,7 @@ export default function Home() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.5,
+        staggerChildren: 0.25,
       },
     },
   };
@@ -60,7 +60,7 @@ export default function Home() {
     <div
       className={`flex flex-col ${
         viewingIndex ? "justify-start" : "justify-between"
-      } h-screen p-2 gap-2`}
+      } p-2 gap-2 h-screen `}
     >
       <div className="flex flex-col">
         <Link href="/">
@@ -73,46 +73,65 @@ export default function Home() {
           <div>Information</div>
         </Link>
       </div>
+      <div className="flex-1 grid grid-cols-2 gap-2">
+        <div className="flex flex-col bg-[green]">
+          <div className="flex w-full h-full justify-center">
+            <div className="aspect-square bg-[red] relative ">
+              <Image src="/1.jpg" fill objectFit="contain" />
+            </div>
+          </div>
+          <div>1</div>
+        </div>
+        <div className="flex flex-1 flex-col bg-[orange]">
+          <div className="flex flex-1 justify-center">
+            <div className="aspect-square bg-[red] relative">
+              <Image src="/3.jpg" layout="fill" objectFit="contain" />
+            </div>
+          </div>
+          <div>1</div>
+        </div>
+      </div>
 
-      {slides2 && (
+      {/* {slides2 && (
         <motion.div
           key={visibleSliceFrom}
           variants={container}
           initial="hidden"
           animate="show"
           className={`grid ${
-            viewingIndex ? "grid-cols-5" : "grid-cols-2 max-w-[2000px]"
+            viewingIndex ? "grid-cols-5" : "grid-cols-2 "
           } gap-2 mx-auto`}
           onClick={viewingIndex ? null : handleIncrement}
         >
           {slides2.slice(visibleSliceFrom, visibleSliceTo).map((s) => (
-            <motion.div key={s} variants={listItem}>
-              <div
-                onClick={viewingIndex ? () => handleViewImagePair(s.id) : null}
-              >
-                <ImageBox src={s.url} imageNumber={s.id} />
-              </div>
+            <motion.div
+              key={s}
+              variants={listItem}
+              className="flex-1 bg-[red]"
+              onClick={viewingIndex ? () => handleViewImagePair(s.id) : null}
+            >
+              <ImageBox src={s.url} imageNumber={s.id} />
             </motion.div>
           ))}
         </motion.div>
-      )}
+      )} */}
     </div>
   );
 }
 
 const ImageBox = ({ src, imageNumber }) => {
   return (
-    <div>
-      <div className="w-full h-full cursor-pointer">
+    <div className="h-full">
+      <div className="max-h-full max-w-full aspect-square">
         <Image
           src={src}
           width={1}
           height={1}
           sizes="100vw"
-          className="object-contain aspect-square w-full h-full"
+          className="object-contain w-full h-full bg-[green]"
         />
+        <p>1</p>
       </div>
-      <div>{imageNumber}</div>
     </div>
   );
 };
@@ -234,6 +253,42 @@ const slides2 = [
   {
     id: 6,
     url: "/taylor-10.jpg",
+    title: "The Factual Reality Of The Structure",
+    caption: "2023.",
+  },
+  {
+    id: 7,
+    url: "/taylor-7.jpg",
+    title: "The Factual Reality Of The Structure",
+    caption: "2023.",
+  },
+  {
+    id: 8,
+    url: "/taylor-3.jpg",
+    title: "The Factual Reality Of The Structure",
+    caption: "2023.",
+  },
+  {
+    id: 9,
+    url: "/taylor-2.jpg",
+    title: "The Factual Reality Of The Structure",
+    caption: "2023.",
+  },
+  {
+    id: 10,
+    url: "/taylor-9.jpg",
+    title: "The Factual Reality Of The Structure",
+    caption: "2023.",
+  },
+  {
+    id: 11,
+    url: "/taylor-11.jpg",
+    title: "The Factual Reality Of The Structure",
+    caption: "2023.",
+  },
+  {
+    id: 12,
+    url: "/taylor-4.jpg",
     title: "The Factual Reality Of The Structure",
     caption: "2023.",
   },
