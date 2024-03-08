@@ -9,7 +9,7 @@ export default function Home() {
     <PageContainer>
       {/* Clicking "Taylor Zanke" refreshes with new images */}
       <motion.div
-        className="flex flex-1 grid grid-cols-1 md:grid-cols-2 gap-2"
+        className="flex flex-1 auto-rows-min md:auto-rows-auto grid grid-cols-1 md:grid-cols-2 gap-2"
         initial="hidden"
         animate="visible"
         variants={list}
