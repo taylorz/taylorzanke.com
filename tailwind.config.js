@@ -11,7 +11,7 @@ module.exports = {
         serif: ["sans-serif"],
       },
       fontSize: {
-        sm: ["16px", "20px"],
+        sm: ["17px", "20px"],
       },
     },
   },

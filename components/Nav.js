@@ -5,7 +5,7 @@ const Nav = () => {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-[104px]">
       <div className="sticky top-2 z-10">
         <Link href="/">
           <div>Taylor Zanke</div>
@@ -33,22 +33,21 @@ const Nav = () => {
         {router.pathname === "/images" ? (
           <div className="indent-3">
             <Link href="/images/2024">
-              <div>2024</div>
+              <div>Selected</div>
             </Link>
             <Link href="/images/2023">
-              <div>2023</div>
+              <div>Exhibitions</div>
             </Link>
             <Link href="/images/2022">
-              <div>2022</div>
-            </Link>
-            <Link href="/images/2021">
-              <div>2021</div>
-            </Link>
-            <Link href="/images/2020">
-              <div>2020</div>
+              <div>Books</div>
             </Link>
           </div>
         ) : null}
+        {/* <Link href="/texts">
+          <div className={router.pathname === "/texts" ? "underline" : null}>
+            Texts
+          </div>
+        </Link> */}
       </div>
     </div>
   );

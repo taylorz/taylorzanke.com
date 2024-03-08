@@ -1,28 +1,15 @@
 import { motion } from "framer-motion";
 
+import { list, item } from "../../utils/animationVariants";
+
 import PageContainer from "../../components/PageContainer";
 import ImageBox from "../../components/ImageBox";
 
 const ImagesIndex = () => {
-  const list = {
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.5,
-      },
-    },
-    hidden: { opacity: 0 },
-  };
-
-  const item = {
-    visible: { opacity: 1, transition: { duration: 2 } },
-    hidden: { opacity: 0 },
-  };
-
   return (
     <PageContainer>
       <motion.div
-        className="flex flex-1 grid grid-cols-2 md:grid-cols-6 gap-2"
+        className="flex flex-1 grid grid-cols-2 md:grid-cols-8 gap-2"
         initial="hidden"
         animate="visible"
         variants={list}

@@ -1,24 +1,11 @@
 import { motion } from "framer-motion";
 
+import { list, item } from "../../utils/animationVariants";
+
 import PageContainer from "../../components/PageContainer";
 import ImageBox from "../../components/ImageBox";
 
 const ImagePage = () => {
-  const list = {
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 1,
-        delayChildren: 0.5,
-      },
-    },
-    hidden: { opacity: 0 },
-  };
-
-  const item = {
-    visible: { opacity: 1, transition: { duration: 2 } },
-    hidden: { opacity: 0 },
-  };
   return (
     <PageContainer>
       <motion.div
@@ -27,15 +14,16 @@ const ImagePage = () => {
         animate="visible"
         variants={list}
       >
-        <motion.span variants={item} className="flex flex-col justify-end">
-          <ImageBox src="/08-23.png" caption="1" />
+        <motion.span
+          variants={item}
+          className="md:flex md:flex-col justify-end"
+        >
+          <ImageBox src="/taylor-4.jpg" caption="1" />
         </motion.span>
-        <motion.span variants={item} className="flex flex-col justify-end">
-          <ImageBox src="/08-22.png" caption="1" />
-        </motion.span>
-        {/* <motion.span variants={item} className="flex flex-col justify-end">
-          <ImageBox src="/taylor-6.jpg" caption="3" />
-        </motion.span> */}
+        <motion.div variants={item}>
+          Installation view. <em>I Know Some Things Form Without You</em>, TRYST
+          (Torrance Art Museum) with Ruth Gallery. Torrance, California. (2023)
+        </motion.div>
       </motion.div>
     </PageContainer>
   );
