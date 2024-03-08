@@ -30,15 +30,15 @@ const Nav = () => {
             Images
           </div>
         </Link>
-        {router.pathname === "/images" ? (
+        {router.pathname.includes("/images") ? (
           <div className="indent-3">
-            <Link href="/images/2024">
+            <Link href="/images/selected">
               <div>Selected</div>
             </Link>
-            <Link href="/images/2023">
+            <Link href="/images/exhibitions">
               <div>Exhibitions</div>
             </Link>
-            <Link href="/images/2022">
+            <Link href="/images/books">
               <div>Books</div>
             </Link>
           </div>

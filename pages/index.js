@@ -16,10 +16,10 @@ export default function Home() {
       >
         {/* These images are "random" from a hopper, showing the image id*/}
         <motion.span variants={item} className="flex flex-col justify-end">
-          <ImageBox src="/taylor-6.jpg" caption="1" />
+          <ImageBox src="/taylor-9.jpg" caption="1" />
         </motion.span>
         <motion.span variants={item} className="flex flex-col justify-end">
-          <ImageBox src="/1.jpg" caption="2" />
+          <ImageBox src="/2.jpg" caption="2" />
         </motion.span>
       </motion.div>
     </PageContainer>

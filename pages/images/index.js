@@ -9,7 +9,7 @@ const ImagesIndex = () => {
   return (
     <PageContainer>
       <motion.div
-        className="flex flex-1 grid grid-cols-2 md:grid-cols-8 gap-2"
+        className="flex flex-1 grid grid-cols-2 md:grid-cols-8 gap-1"
         initial="hidden"
         animate="visible"
         variants={list}

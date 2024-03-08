@@ -9,7 +9,7 @@ const ImagePage = () => {
   return (
     <PageContainer>
       <motion.div
-        className="flex flex-1 grid grid-cols-1 md:grid-cols-2 gap-2"
+        className="flex flex-1 grid grid-cols-1 md:grid-cols-2 gap-3"
         initial="hidden"
         animate="visible"
         variants={list}
@@ -18,7 +18,7 @@ const ImagePage = () => {
           variants={item}
           className="md:flex md:flex-col justify-end"
         >
-          <ImageBox src="/taylor-4.jpg" caption="1" />
+          <ImageBox src="/06-16.png" caption="1" />
         </motion.span>
         <motion.div variants={item}>
           Installation view. <em>I Know Some Things Form Without You</em>, TRYST
