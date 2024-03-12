@@ -8,10 +8,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ["Times", "serif"],
+        serif: ["sans-serif"],
       },
       fontSize: {
-        sm: ["20px", "24px"],
+        sm: ["17px", "20px"],
       },
       animation: {
         blink: "blink .35s steps(5, start) infinite",

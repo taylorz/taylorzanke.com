@@ -31,62 +31,29 @@ export default function Home() {
     },
   };
 
-  return (
-    <>
-      <PageSection>
-        <div className="flex justify-center items-center absolute top-0 left-0 right-0 bottom-0">
-          <div className="max-w-screen-lg sm:w-screen md:w-1/2 flex justify-center">
-            <AnimatePresence key={currentIndex} mode="wait">
-              <motion.div
-                variants={container}
-                initial="hidden"
-                animate={isLoaded ? "show" : "hidden"}
-                className="w-full h-full"
-              >
-                <Image
-                  onMouseEnter={() => setHoveringImage(true)}
-                  onMouseLeave={() => setHoveringImage(false)}
-                  className="w-full aspect-square max-w-[90vw] max-h-[100vh] object-contain cursor-pointer"
-                  onClick={handleIncrement}
-                  src={slides2[currentIndex].url}
-                  alt={slides2[currentIndex].title}
-                  width={1}
-                  height={1}
-                  sizes="100vw"
-                  priority
-                  onLoad={() => setIsLoaded(true)}
-                />
-              </motion.div>
-            </AnimatePresence>
-          </div>
-        </div>
-        {/* {hoveringImage ? (
-          <div className="absolute left-0 top-8 md:top-3 right-0 px-3">
-            <div className="flex justify-center w-full text-center">
-              <p>
-                <em>{slides2[currentIndex].title}</em>,{" "}
-                {slides2[currentIndex].caption}
-              </p>
-            </div>
-          </div>
-        ) : null} */}
-      </PageSection>
+  const image = "/asdf.JPG";
 
-      <PageSection className="h-screen">
-        <div>
-          <div className="mb-6">
-            <p>
-              Taylor Zanke is an artist who uses material from everyday life to
-              explore space and presence. He is the founder of Allowing Many
-              Forms, a publisher of artist's books. He earned both a Master of
-              Architecture and M.S. from Columbia University and a BFA from
-              Parsons The New School For Design.
-            </p>
-          </div>
+  return (
+    <div>
+      <div className="p-3 h-screen">
+        I am interested in the embodied intentions of the built environment and
+        architecture insofar as they are externalizations of immaterial yet
+        structured forces: modes of regularization which combine to form
+        hard-edges. My practice creates space between these modes and their
+        material forms without overt destruction and instead engages in their
+        gradual and slowing dissipation and recombination. My work emerges from
+        this condition and things happen obliquely: by observing, waiting, and
+        becoming aware. I want to convey a sense of diffuse suspension in my
+        works and installations which challenge the fixity of the spaces within
+        which they are composed. Beyond what exists in front of us there is a
+        realm of unknowable potential.
+      </div>
+      <div className="p-3 h-screen">
+        <div className="grid gap-3 md:grid-cols-3 w-screen">
+          <img src={image} className="w-full" />
         </div>
-        <NewsletterSubscribe />
-      </PageSection>
-    </>
+      </div>
+    </div>
   );
 }
 
