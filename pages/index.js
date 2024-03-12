@@ -35,19 +35,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="p-3 h-screen">
-        I am interested in the embodied intentions of the built environment and
-        architecture insofar as they are externalizations of immaterial yet
-        structured forces: modes of regularization which combine to form
-        hard-edges. My practice creates space between these modes and their
-        material forms without overt destruction and instead engages in their
-        gradual and slowing dissipation and recombination. My work emerges from
-        this condition and things happen obliquely: by observing, waiting, and
-        becoming aware. I want to convey a sense of diffuse suspension in my
-        works and installations which challenge the fixity of the spaces within
-        which they are composed. Beyond what exists in front of us there is a
-        realm of unknowable potential.
-      </div>
+      <div className="p-3 h-screen">Taylor Zanke</div>
       <div className="p-3 h-screen">
         <div className="grid gap-3 md:grid-cols-3 w-full">
           <img src={image} className="w-full" />
