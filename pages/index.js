@@ -49,7 +49,7 @@ export default function Home() {
         realm of unknowable potential.
       </div>
       <div className="p-3 h-screen">
-        <div className="grid gap-3 md:grid-cols-3 w-screen">
+        <div className="grid gap-3 md:grid-cols-3 w-full">
           <img src={image} className="w-full" />
         </div>
       </div>
