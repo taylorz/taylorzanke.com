@@ -103,6 +103,24 @@ export default function CV() {
                   </div>
                 </motion.li>
                 <motion.li variants={item} className="flex">
+                  <div className="min-w-[54px]">2022</div>
+                  <div>
+                    <em>Reformulations 2</em>, Allowing Many Forms.
+                  </div>
+                </motion.li>
+                <motion.li variants={item} className="flex">
+                  <div className="min-w-[54px]">2021</div>
+                  <div>
+                    <em>Two Visits</em>, Allowing Many Forms.
+                  </div>
+                </motion.li>
+                <motion.li variants={item} className="flex">
+                  <div className="min-w-[54px]">2021</div>
+                  <div>
+                    <em>Reformulations 1</em>, Allowing Many Forms.
+                  </div>
+                </motion.li>
+                <motion.li variants={item} className="flex">
                   <div className="min-w-[54px]">2021</div>
                   <div>
                     <em>Figures</em>, with Matthew Ransom, Figure Press.

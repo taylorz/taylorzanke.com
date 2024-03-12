@@ -18,7 +18,7 @@ const ImagePage = () => {
           variants={item}
           className="md:flex md:flex-col justify-end"
         >
-          <ImageBox src="/taylor-12.jpg" caption="1" />
+          <ImageBox src="/08-10.png" caption="1" />
         </motion.span>
         <motion.div variants={item}>
           Installation view. <em>I Know Some Things Form Without You</em>, TRYST
