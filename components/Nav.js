@@ -21,7 +21,7 @@ const Nav = () => {
           <div className="indent-3">
             <NavLink link="/information/biography" label="Biography" />
             <NavLink link="/information/statement" label="Statement" />
-            <NavLink link="/information/cv" label="CV" />
+            {/* <NavLink link="/information/cv" label="CV" /> */}
             <NavLink link="/information/contact" label="Contact" />
           </div>
         ) : null}

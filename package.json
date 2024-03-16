@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@sanity/image-url": "^1.0.2",
-    "@sanity/vision": "^3.30.1",
+    "@sanity/vision": "^3.34.0",
     "axios": "^1.6.4",
     "framer-motion": "^10.16.16",
     "next": "14.0.1",
@@ -18,7 +18,6 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.49.2",
-    "sanity": "^3.30.1",
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
