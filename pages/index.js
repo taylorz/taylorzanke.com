@@ -31,7 +31,7 @@ export default function Home() {
     randomImages = randomIndices.map((i) => data[i]);
   }
 
-  console.log({ randomImages });
+  // console.log({ randomImages });
 
   return (
     <PageContainer>
