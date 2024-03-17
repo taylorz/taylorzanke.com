@@ -25,10 +25,10 @@ const NewsletterSubscribe = () => {
     }
   };
   return isSubmitSuccessful ? (
-    <p>Subscribed!</p>
+    <p>Subscribed</p>
   ) : (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="w-[320px]">
+      <div className="w-[240px]">
         <p>Newsletter</p>
         <div className="flex flex-col">
           <div className="grid grid-cols-2">
@@ -38,12 +38,11 @@ const NewsletterSubscribe = () => {
                 required: "Please enter your full name",
               })}
               name="fullName"
-              className="border-b border-black focus:outline-none rounded-none"
+              className="border-b border-stone-200 focus:outline-none rounded-none bg-stone-950"
             />
           </div>
           <div className="grid grid-cols-2">
             <p>Email</p>
-
             <input
               {...register("email", {
                 required: "Please enter a valid email",
@@ -51,10 +50,9 @@ const NewsletterSubscribe = () => {
                   /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
               })}
               name="email"
-              className="border-b border-black focus:outline-none rounded-none"
+              className="border-b border-stone-200 focus:outline-none rounded-none bg-stone-950"
             />
           </div>
-
           <button className="p-0 flex w-fit" type="submit">
             <span className="hover:animate-blink">Subscribe</span>
           </button>

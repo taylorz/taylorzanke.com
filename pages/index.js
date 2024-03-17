@@ -1,79 +1,56 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+import useSWR from "swr";
 
-import Link from "next/link";
-import Image from "next/image";
+import { getSanityClient, getSanityImageUrl } from "../lib/sanity";
 
-import PageSection from "../components/PageSection";
-import NewsletterSubscribe from "../components/NewsletterSubscribe";
+import { list, item } from "../utils/animationVariants";
+import PageContainer from "../components/PageContainer";
+import ImageBox from "../components/ImageBox";
 
 export default function Home() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hoveringImage, setHoveringImage] = useState(false);
-
-  const handleIncrement = () => {
-    if (currentIndex === slides2.length - 1) {
-      setCurrentIndex(0);
-      setIsLoaded(false);
-    } else {
-      setCurrentIndex(currentIndex + 1);
-      setIsLoaded(false);
+  const fetcher = (query) => getSanityClient().fetch(query);
+  const { data, error, isValidating } = useSWR(
+    `
+    *[_type == "group"].images[]{
+      _key,
+      "url": image.asset->url,
+      slug
     }
-  };
+    `,
+    fetcher
+  );
 
-  const container = {
-    hidden: {
-      opacity: 0,
-    },
-    show: {
-      opacity: 1,
-    },
-  };
+  // Once data is loaded, randomly select two images
+  let randomImages;
+  if (data) {
+    const randomIndices = [];
+    while (randomIndices.length < 2) {
+      let r = Math.floor(Math.random() * data.length);
+      if (randomIndices.indexOf(r) === -1) randomIndices.push(r);
+    }
+    randomImages = randomIndices.map((i) => data[i]);
+  }
 
-  const image = "/asdf.JPG";
+  // console.log({ randomImages });
 
   return (
-    <div>
-      <div className="p-3 h-screen">Taylor Zanke</div>
-      <div className="p-3 h-screen">
-        <div className="grid gap-3 md:grid-cols-3 w-full">
-          <img src={image} className="w-full" />
-        </div>
-      </div>
-    </div>
+    <PageContainer>
+      <motion.div
+        className="flex flex-1 auto-rows-min md:auto-rows-auto grid grid-cols-1 md:grid-cols-2 gap-2"
+        initial="hidden"
+        animate={!isValidating ? "visible" : "hidden"}
+        variants={list}
+        key={randomImages?.map((image) => image._key).join(",")}
+      >
+        {randomImages?.map((image, i) => (
+          <motion.span variants={item} className="flex flex-col justify-end">
+            <ImageBox
+              src={image.url ? getSanityImageUrl(image.url, 1600) : ""}
+              key={i}
+            />
+          </motion.span>
+        ))}
+      </motion.div>
+    </PageContainer>
   );
 }
-
-const slides2 = [
-  {
-    url: "/1.jpg",
-    title: "Untitled",
-    caption: "2023.",
-  },
-  {
-    url: "/taylor-12.jpg",
-    title: "Trending Toward the Unity of Concerns",
-    caption: "Ruth Gallery. Leaf Thru, Pore Over. 2023.",
-  },
-  {
-    url: "/2.jpg",
-    title: "Untitled",
-    caption: "2023.",
-  },
-  {
-    url: "/3.jpg",
-    title: "I Know Some Things Form Without You",
-    caption: "TRYST (Torrance Art Museum). 2023.",
-  },
-  {
-    url: "/4.jpg",
-    title: "To Store Everything In Matter",
-    caption: "2023.",
-  },
-  {
-    url: "/taylor-10.jpg",
-    title: "The Factual Reality Of The Structure",
-    caption: "2023.",
-  },
-];
