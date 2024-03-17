@@ -21,8 +21,8 @@ export default function Information() {
             <motion.li variants={item} className="flex">
               Lives and works in Los Angeles
             </motion.li>
-            <motion.li variants={item} className="flex mt-5">
-              C.V. on request
+            <motion.li variants={item} className="flex text-stone-600">
+              c.v. on request
             </motion.li>
           </ul>
         </motion.div>

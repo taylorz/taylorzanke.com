@@ -31,15 +31,17 @@ export default function Biography() {
               Master of Architecture and M.S. from Columbia University, and a
               BFA from Parsons the New School for Design.
             </motion.p> */}
-          </motion.div>
-          {/* Recent presentations include two
-              person exhibition <em>A Matter Of Space</em> (Ruth Gallery, 2024)
-              and group exhibition <em>Leaf Thru, Pore Over</em> (Ruth Gallery,
-              2023) as well as art fair <em>TRYST</em> (Torrance Art Museum,
-              2023) where he debuted a collection of works together titled{" "}
+            <motion.p>
+              Recent presentations include two person exhibition{" "}
+              <em>A Matter Of Space</em> (Ruth Gallery, 2024) and group
+              exhibition <em>Leaf Thru, Pore Over</em> (Ruth Gallery, 2023) as
+              well as art fair <em>TRYST</em> (Torrance Art Museum, 2023) where
+              he debuted a collection of works together titled{" "}
               <em>I Know Some Things Form Without You</em>. He recently released
               publications <em>The Source Can Be Transformed</em> (AMF, 2024),
-              and <em>The Halves And Half Nots</em> (AMF, 2024). */}
+              and <em>The Halves And Half Nots</em> (AMF, 2024).
+            </motion.p>
+          </motion.div>
         </div>
       </div>
     </PageContainer>

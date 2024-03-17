@@ -26,23 +26,41 @@ const Nav = () => {
           </div>
         ) : null}
         <Link href="/images">
-          <div className={router.pathname === "/images" ? "underline" : null}>
+          <div className={router.asPath === "/images" ? "underline" : null}>
             Images
           </div>
         </Link>
-        {router.pathname.includes("/images") ? (
+        {/* {router.pathname.includes("/images") ? (
           <div className="indent-3">
-            <Link href="/images/selected">
-              <div>Selected</div>
-            </Link>
-            <Link href="/images/exhibitions">
-              <div>Exhibitions</div>
+            <Link href="/images/sculpture">
+              <div
+                className={
+                  router.asPath === "/images/sculpture" ? "underline" : null
+                }
+              >
+                Sculpture
+              </div>
             </Link>
             <Link href="/images/books">
-              <div>Books</div>
+              <div
+                className={
+                  router.asPath === "/images/books" ? "underline" : null
+                }
+              >
+                Books
+              </div>
+            </Link>
+            <Link href="/images/drawings">
+              <div
+                className={
+                  router.asPath === "/images/drawings" ? "underline" : null
+                }
+              >
+                Drawings
+              </div>
             </Link>
           </div>
-        ) : null}
+        ) : null} */}
         {/* <Link href="/texts">
           <div className={router.pathname === "/texts" ? "underline" : null}>
             Texts
