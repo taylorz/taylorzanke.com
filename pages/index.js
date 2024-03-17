@@ -9,7 +9,7 @@ import ImageBox from "../components/ImageBox";
 
 export default function Home() {
   const fetcher = (query) => getSanityClient().fetch(query);
-  const { data, error, isValidating } = useSWR(
+  const { data, error, isValidating, mutate } = useSWR(
     `
     *[_type == "group"].images[]{
       _key,
@@ -36,11 +36,12 @@ export default function Home() {
   return (
     <PageContainer>
       <motion.div
-        className="flex flex-1 auto-rows-min md:auto-rows-auto grid grid-cols-1 md:grid-cols-2 gap-2"
+        className="flex flex-1 auto-rows-min md:auto-rows-auto grid grid-cols-1 md:grid-cols-2 gap-2 cursor-pointer"
         initial="hidden"
         animate={!isValidating ? "visible" : "hidden"}
         variants={list}
         key={randomImages?.map((image) => image._key).join(",")}
+        onClick={() => mutate()}
       >
         {randomImages?.map((image, i) => (
           <motion.span variants={item} className="flex flex-col justify-end">
