@@ -21,7 +21,8 @@ const ImagesIndex = () => {
       }
     }
     `,
-    fetcher
+    fetcher,
+    { revalidateOnFocus: false }
   );
 
   // console.log({ data });

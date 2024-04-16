@@ -5,7 +5,7 @@ const Nav = () => {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col w-[104px]">
+    <div className="flex flex-col w-[200px]">
       <div className="sticky top-2 z-10">
         <Link href="/">
           <div>Taylor Zanke</div>
@@ -18,9 +18,9 @@ const Nav = () => {
           </div>
         </Link>
         {router.pathname.includes("/information") ? (
-          <div className="indent-3">
+          <div className="indent-6">
             <NavLink link="/information/biography" label="Biography" />
-            <NavLink link="/information/statement" label="Statement" />
+            {/* <NavLink link="/information/statement" label="Statement" /> */}
             {/* <NavLink link="/information/cv" label="CV" /> */}
             <NavLink link="/information/contact" label="Contact" />
           </div>

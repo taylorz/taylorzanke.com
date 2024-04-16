@@ -17,7 +17,8 @@ export default function Home() {
       slug
     }
     `,
-    fetcher
+    fetcher,
+    { revalidateOnFocus: false }
   );
 
   // Once data is loaded, randomly select two images
