@@ -8,10 +8,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ["sans-serif"],
+        serif: ["Helvetica Neue, sans-serif"],
       },
       fontSize: {
-        sm: ["17px", "20px"],
+        sm: ["20px", "24px"],
       },
     },
   },

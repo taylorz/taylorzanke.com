@@ -2,13 +2,13 @@ export const list = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      staggerChildren: 0,
     },
   },
   hidden: { opacity: 0 },
 };
 
 export const item = {
-  visible: { opacity: 1, transition: { duration: 0.2 } },
+  visible: { opacity: 1, transition: { duration: 0 } },
   hidden: { opacity: 0 },
 };

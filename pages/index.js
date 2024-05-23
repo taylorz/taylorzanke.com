@@ -24,7 +24,7 @@ export default function Home() {
   let randomImages;
   if (data) {
     const randomIndices = [];
-    while (randomIndices.length < 2) {
+    while (randomIndices.length < 1) {
       let r = Math.floor(Math.random() * data.length);
       if (randomIndices.indexOf(r) === -1) randomIndices.push(r);
     }
@@ -43,6 +43,10 @@ export default function Home() {
         key={randomImages?.map((image) => image._key).join(",")}
         onClick={() => mutate()}
       >
+        <div className="flex gap-6">
+          <p>Taylor Zanke</p>
+        </div>
+
         {randomImages?.map((image, i) => (
           <motion.span variants={item} className="flex flex-col justify-end">
             <ImageBox

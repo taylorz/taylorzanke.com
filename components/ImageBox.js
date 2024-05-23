@@ -4,7 +4,7 @@ const ImageBox = ({ src, caption, href }) => {
   return (
     <div>
       <ConditionalLink href={href}>
-        <div className="relative aspect-square ">
+        <div className="relative aspect-square">
           <Image src={src} fill objectFit="contain" objectPosition="bottom" />
         </div>
       </ConditionalLink>

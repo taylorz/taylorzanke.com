@@ -7,8 +7,8 @@ import PageContainer from "../../components/PageContainer";
 export default function Biography() {
   return (
     <PageContainer>
-      <div className="flex flex-1 grid grid-cols-1 md:grid-cols-2 gap-2">
-        <div className="flex flex-col col-span-1 gap-5">
+      <div className="flex flex-1 grid grid-cols-1 md:grid-cols-4 gap-2">
+        <div className="flex flex-col col-span-3 gap-5">
           <motion.div
             initial="hidden"
             animate="visible"
