@@ -25,14 +25,14 @@ export default function Home() {
     <PageContainer>
       <div className="flex flex-col gap-5 max-w-[480px]">
         <p>
-          Taylor Zanke is a Canadian artist and founder of publisher{" "}
+          Taylor Zanke is an artist and founder of publisher{" "}
           <a href="https://allowingmanyforms.org" className="cursor-pointer">
             Allowing Many Forms
           </a>
           . Based in Los Angeles USA.
         </p>
         <div>
-          <p>Contact</p>
+          <p className="indent-8 pb-5">Contact</p>
           <p>taylor@allowingmanyforms.org</p>
         </div>
       </div>
