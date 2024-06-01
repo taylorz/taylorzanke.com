@@ -29,7 +29,7 @@ const ImagesIndex = () => {
   return !data && !error ? null : (
     <PageContainer>
       <motion.div
-        className="flex flex-1 auto-rows-min grid grid-cols-2 md:grid-cols-8 gap-3"
+        className="flex flex-1 auto-rows-min grid grid-cols-2 md:grid-cols-6 gap-3"
         initial="hidden"
         animate={!isValidating ? "visible" : "hidden"}
         variants={list}
@@ -39,7 +39,7 @@ const ImagesIndex = () => {
             <motion.span variants={item}>
               <ImageBox
                 src={image.url ? getSanityImageUrl(image.url, 480) : ""}
-                // caption={i + 1}
+                caption={i + 1}
                 key={i}
                 href={`/images/${d.slug.current}/${image?._key}`}
               />

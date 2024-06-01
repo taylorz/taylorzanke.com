@@ -19,39 +19,23 @@ export default function Home() {
     `,
     fetcher
   );
-
-  // Once data is loaded, randomly select two images
-  let randomImages;
-  if (data) {
-    const randomIndices = [];
-    while (randomIndices.length < 2) {
-      let r = Math.floor(Math.random() * data.length);
-      if (randomIndices.indexOf(r) === -1) randomIndices.push(r);
-    }
-    randomImages = randomIndices.map((i) => data[i]);
-  }
-
-  // console.log({ randomImages });
+  // console.log({ data });
 
   return (
     <PageContainer>
-      <motion.div
-        className="flex flex-1 auto-rows-min md:auto-rows-auto grid grid-cols-1 md:grid-cols-2 gap-2 cursor-pointer"
-        initial="hidden"
-        animate={!isValidating ? "visible" : "hidden"}
-        variants={list}
-        key={randomImages?.map((image) => image._key).join(",")}
-        onClick={() => mutate()}
-      >
-        {randomImages?.map((image, i) => (
-          <motion.span variants={item} className="flex flex-col justify-end">
-            <ImageBox
-              src={image.url ? getSanityImageUrl(image.url, 1600) : ""}
-              key={i}
-            />
-          </motion.span>
-        ))}
-      </motion.div>
+      <div className="flex flex-col gap-5 max-w-[480px]">
+        <p>
+          Taylor Zanke is a Canadian artist and founder of publisher{" "}
+          <a href="https://allowingmanyforms.org" className="cursor-pointer">
+            Allowing Many Forms
+          </a>
+          . Based in Los Angeles USA.
+        </p>
+        <div>
+          <p>Contact</p>
+          <p>taylor@allowingmanyforms.org</p>
+        </div>
+      </div>
     </PageContainer>
   );
 }

@@ -42,12 +42,6 @@ const ImagePage = () => {
         animate={!isValidating ? "visible" : "hidden"}
         variants={list}
       >
-        <motion.span
-          variants={item}
-          className="md:flex md:flex-col justify-end"
-        >
-          <ImageBox src={getSanityImageUrl(image.url, 1600)} />
-        </motion.span>
         <motion.div variants={item}>
           {image.title && <em>{`${image.title}. `}</em>}
           {image.caption && `${image.caption}. `}
@@ -55,6 +49,12 @@ const ImagePage = () => {
           {group.caption && `${group.caption}, `}
           {group.year && `${group.year}.`}
         </motion.div>
+        <motion.span
+          variants={item}
+          className="md:flex md:flex-col justify-end"
+        >
+          <ImageBox src={getSanityImageUrl(image.url, 1600)} />
+        </motion.span>
       </motion.div>
     </PageContainer>
   );
