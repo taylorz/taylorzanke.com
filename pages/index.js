@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <PageContainer>
-      <div className="flex flex-col gap-5 max-w-[480px]">
+      <div className="flex flex-col gap-5 max-w-[420px]">
         <p>
           Taylor Zanke is an artist and founder of publisher{" "}
           <a href="https://allowingmanyforms.org" className="cursor-pointer">
@@ -31,10 +31,8 @@ export default function Home() {
           </a>
           . Based in Los Angeles USA.
         </p>
-        <div>
-          <p className="indent-8 pb-5">Contact</p>
-          <p>taylor@allowingmanyforms.org</p>
-        </div>
+        <p className="indent-9">Contact</p>
+        <p>taylor@allowingmanyforms.org</p>
       </div>
     </PageContainer>
   );
