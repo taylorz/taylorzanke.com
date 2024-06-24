@@ -15,14 +15,3 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-
-
-body {
-}
-
-a:link {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}

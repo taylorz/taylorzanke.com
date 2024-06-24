@@ -26,11 +26,20 @@ export default function Home() {
       <div className="flex flex-col gap-6 max-w-[520px]">
         <p>
           Taylor Zanke is an artist. He is the founder of{" "}
-          <a href="https://allowingmanyforms.org" className="cursor-pointer">
+          <a
+            href="https://allowingmanyforms.org"
+            className="cursor-pointer italic"
+          >
             allowing many forms
           </a>
           , a project for making art books. Contact him{" "}
-          <a href="mailto:taylor@allowingmanyforms.org">here</a>.
+          <a
+            href="mailto:taylor@allowingmanyforms.org"
+            className="cursor-pointer italic"
+          >
+            here
+          </a>
+          .
         </p>
       </div>
     </PageContainer>
