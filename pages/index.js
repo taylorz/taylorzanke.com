@@ -23,16 +23,15 @@ export default function Home() {
 
   return (
     <PageContainer>
-      <div className="flex flex-col gap-6 max-w-[420px]">
+      <div className="flex flex-col gap-6 max-w-[520px]">
         <p>
-          Taylor Zanke is an artist and founder of{" "}
+          Taylor Zanke is an artist. He is the founder of{" "}
           <a href="https://allowingmanyforms.org" className="cursor-pointer">
-            Allowing Many Forms
+            allowing many forms
           </a>
-          . Based in Los Angeles.
+          , a project for making art books. Contact him{" "}
+          <a href="mailto:taylor@allowingmanyforms.org">here</a>.
         </p>
-        <p className="indent-12">Contact</p>
-        <p>taylor@allowingmanyforms.org</p>
       </div>
     </PageContainer>
   );
