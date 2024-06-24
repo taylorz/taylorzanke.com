@@ -32,7 +32,7 @@ export default function Home() {
           >
             allowing many forms
           </a>
-          , a project for making art books. Contact him{" "}
+          , a publisher of art books. Contact him{" "}
           <a
             href="mailto:taylor@allowingmanyforms.org"
             className="cursor-pointer italic"
