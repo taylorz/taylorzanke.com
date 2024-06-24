@@ -19,19 +19,19 @@ export default function Home() {
     `,
     fetcher
   );
-  // console.log({ data });
+  console.log({ data });
 
   return (
     <PageContainer>
-      <div className="flex flex-col gap-5 max-w-[420px]">
+      <div className="flex flex-col gap-6 max-w-[420px]">
         <p>
-          Taylor Zanke is an artist and founder of publisher{" "}
+          Taylor Zanke is an artist and founder of{" "}
           <a href="https://allowingmanyforms.org" className="cursor-pointer">
             Allowing Many Forms
           </a>
-          . Based in Los Angeles USA.
+          . Based in Los Angeles.
         </p>
-        <p className="indent-9">Contact</p>
+        <p className="indent-12">Contact</p>
         <p>taylor@allowingmanyforms.org</p>
       </div>
     </PageContainer>
