@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <PageContainer>
-      <div className="flex flex-col gap-6 max-w-[520px]">
+      <div className="flex flex-col gap-6">
         <p>
           Taylor Zanke is an artist. He is the founder of{" "}
           <a
