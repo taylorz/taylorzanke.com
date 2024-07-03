@@ -25,13 +25,12 @@ export default function Home() {
     <PageContainer>
       <div className="flex flex-col gap-6">
         <p>
-          Taylor Zanke is an artist based in Los Angeles, California. He is the
-          founder of{" "}
+          Taylor Zanke is an artist based in Los Angeles. He is the founder of{" "}
           <a
             href="https://allowingmanyforms.org"
             className="cursor-pointer italic"
           >
-            amf
+            allowing many forms
           </a>
           , a publisher of art books. Contact him{" "}
           <a
