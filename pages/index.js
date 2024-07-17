@@ -41,6 +41,42 @@ export default function Home() {
           </a>
           .
         </p>
+
+        <div className="pl-8 sm:pl-16">
+          <p>Recent</p>
+          <ol className="list-decimal">
+            <li>
+              <a
+                href="https://allowingmanyforms.org/books/the-source-can-be-transformed"
+                className="cursor-pointer italic"
+              >
+                A 112 page publication
+              </a>{" "}
+              using found papers published at allowing many forms in a limited
+              edition.
+            </li>
+
+            <li>
+              <a
+                href="https://scotty-berlin.de/b-la-m/"
+                className="cursor-pointer italic"
+              >
+                A group exhibition
+              </a>{" "}
+              at Scotty in Berlin, as part of Monte Vista Projects, showing a
+              graphite drawing.
+            </li>
+            <li>
+              <a
+                href="https://www.ruthgallery.com/current"
+                className="cursor-pointer italic"
+              >
+                A two person exhibition
+              </a>{" "}
+              at Ruth Gallery in Los Angeles showing sculptures.
+            </li>
+          </ol>
+        </div>
       </div>
     </PageContainer>
   );
