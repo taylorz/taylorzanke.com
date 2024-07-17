@@ -19,25 +19,18 @@ export default function Home() {
     `,
     fetcher
   );
-  console.log({ data });
+  // console.log({ data });
 
   return (
     <PageContainer>
       <div className="flex flex-col gap-6">
         <p>
-          Taylor Zanke is an artist based in Los Angeles. He is the founder of{" "}
+          Taylor Zanke, artist and founder of artist book publisher{" "}
           <a
             href="https://allowingmanyforms.org"
             className="cursor-pointer italic"
           >
-            allowing many forms
-          </a>
-          , a publisher of art books. Contact him{" "}
-          <a
-            href="mailto:taylor@allowingmanyforms.org"
-            className="cursor-pointer italic"
-          >
-            here
+            amf
           </a>
           .
         </p>
@@ -76,6 +69,17 @@ export default function Home() {
               at Ruth Gallery in Los Angeles showing sculptures.
             </li>
           </ol>
+        </div>
+
+        <div className="pl-8 sm:pl-12">
+          <p>Contact</p>
+          <p>Studio in Los Angeles</p>
+          <a
+            href="mailto:taylor@allowingmanyforms.org"
+            className="cursor-pointer italic"
+          >
+            taylor@allowingmanyforms.org
+          </a>
         </div>
       </div>
     </PageContainer>
