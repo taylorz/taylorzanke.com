@@ -42,7 +42,7 @@ export default function Home() {
           .
         </p>
 
-        <div className="pl-8 sm:pl-16">
+        <div className="pl-8 sm:pl-12">
           <p>Recent</p>
           <ol className="list-decimal">
             <li>
