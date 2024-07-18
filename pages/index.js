@@ -23,17 +23,27 @@ export default function Home() {
 
   return (
     <PageContainer>
-      <div className="flex flex-col gap-6">
-        <p>
-          Taylor Zanke, artist and founder of artist book publisher{" "}
-          <a
-            href="https://allowingmanyforms.org"
-            className="cursor-pointer italic"
-          >
-            amf
-          </a>
-          .
-        </p>
+      <div className="flex flex-col gap-7">
+        <div>
+          <p>
+            Taylor Zanke is a Canadian artist based in Los Angeles. He is the
+            founder of publisher{" "}
+            <a
+              href="https://allowingmanyforms.org"
+              className="cursor-pointer italic"
+            >
+              allowing many forms
+            </a>
+            : an ongoing effort to cultivate a way of working that permits a
+            book to be formed on its own terms.
+          </p>
+          <p className="indent-8 sm:indent-12">
+            He maintains a studio practice working in sculpture, drawing,
+            printmaking, and photography. He holds degrees in architecture and
+            design from Columbia University and Parsons The New School For
+            Design.
+          </p>
+        </div>
 
         <div className="pl-8 sm:pl-12">
           <p>Recent</p>
@@ -66,7 +76,7 @@ export default function Home() {
               >
                 A two person exhibition
               </a>{" "}
-              at Ruth Gallery in Los Angeles showing sculptures.
+              at Ruth Gallery in Los Angeles showing recent sculpture.
             </li>
           </ol>
         </div>
@@ -74,12 +84,7 @@ export default function Home() {
         <div className="pl-8 sm:pl-12">
           <p>Contact</p>
           <p>Studio in Los Angeles</p>
-          <a
-            href="mailto:taylor@allowingmanyforms.org"
-            className="cursor-pointer italic"
-          >
-            taylor@allowingmanyforms.org
-          </a>
+          <p>taylor@allowingmanyforms.org</p>
         </div>
       </div>
     </PageContainer>
