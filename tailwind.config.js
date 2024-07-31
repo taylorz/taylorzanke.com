@@ -11,7 +11,7 @@ module.exports = {
         serif: ["Times New Roman", "serif"],
       },
       fontSize: {
-        sm: ["23px", "28px"],
+        md: ["22px", "28px"],
       },
     },
   },
