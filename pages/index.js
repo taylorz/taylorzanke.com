@@ -23,7 +23,7 @@ export default function Home() {
 
   return (
     <PageContainer>
-      <div className="flex flex-col gap-7">
+      <div className="flex flex-col gap-6">
         <div className="flex flex-col">
           <p>Taylor Zanke</p>
           <p>Los Angeles, California</p>
