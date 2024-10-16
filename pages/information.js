@@ -21,7 +21,7 @@ export default function Information() {
         </p>
         <p>
           Zanke founded and directs Allowing Many Forms, a publisher of artists
-          books, through which he has released books of his own work including{" "}
+          books, through which he releases books of his own work including{" "}
           <em>The Source Can Be Transformed</em> (2024), <em>Two Visits</em>{" "}
           (2019), and <em>Honolulu New York</em> (2013). He has presented these
           and other volumes at the San Francisco Art Book Fair and Acid-Free Los

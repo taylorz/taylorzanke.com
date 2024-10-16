@@ -42,7 +42,7 @@ export default function Home() {
         <a href="/information">Info</a>
       </div>
       <div
-        className="absolute top-0 right-0 bottom-0 left-0 -z-10 flex justify-center items-center p-8 sm:p-32 cursor-pointer"
+        className="absolute top-0 right-0 bottom-0 left-0 -z-10 flex justify-center items-center p-8 sm:p-24 cursor-pointer"
         onClick={handleIncrement}
       >
         <img
