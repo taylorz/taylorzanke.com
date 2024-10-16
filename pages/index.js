@@ -33,7 +33,9 @@ export default function Home() {
             onMouseEnter={() => setShowCaption(true)}
             onMouseLeave={() => setShowCaption(false)}
           >
-            ({currentIndex + 1}/{images.length})
+            <span className="pointer-events-none">
+              ({currentIndex + 1}/{images.length})
+            </span>
           </p>
           {showCaption ? <p>{images[currentIndex].caption}</p> : null}
         </div>
