@@ -32,7 +32,6 @@ export default function Home() {
             className="cursor-pointer"
             onMouseEnter={() => setShowCaption(true)}
             onMouseLeave={() => setShowCaption(false)}
-            onClick={() => setCurrentIndex(0)}
           >
             ({currentIndex + 1}/{images.length})
           </p>
