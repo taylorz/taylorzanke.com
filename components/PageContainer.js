@@ -1,6 +1,6 @@
 const PageContainer = ({ children }) => {
   return (
-    <div className="py-6 sm:py-12 px-6 sm:px-12 max-w-screen-sm">
+    <div className="px-6 py-6 sm:px-9 sm:py-9 max-w-screen-2xl m-auto">
       {children}
     </div>
   );

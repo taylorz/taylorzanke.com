@@ -8,11 +8,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        serif: ["Times New Roman", "serif"],
+        serif: ["Times", "serif"],
       },
       fontSize: {
-        sm: ["17px", "22px"],
-        md: ["19px", "24px"],
+        sm: ["24px", "28px"],
+        md: ["32px", "36px"],
       },
     },
   },
