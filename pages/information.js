@@ -11,13 +11,13 @@ export default function Information() {
       </div>
       <div className="flex flex-col gap-7 sm:gap-9">
         <p>
-          Taylor is a visual artist and publisher. His sculptural works are made
-          from found materials including furniture, paper, building debris,
-          plastic bags, and string. He challenges the expectation of where art
-          exists in the world and engages with objects and spaces as they become
-          what they are, where they happen to be. The work unfolds in a
-          reciprocal relationship with photography, drawing, and the making of
-          artists books, where images allow reinhabitation and reverberation.
+          Taylor is a visual artist. His sculptural works are made from found
+          materials including furniture, paper, building debris, plastic bags,
+          and string. He challenges the expectation of where art exists in the
+          world and engages with objects and spaces as they become what they
+          are, where they happen to be. The work unfolds in a reciprocal
+          relationship with photography, drawing, and the making of artists
+          books, where images allow reinhabitation and reverberation.
         </p>
         <p>
           Zanke founded and directs Allowing Many Forms, a publisher of artists
