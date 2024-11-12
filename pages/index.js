@@ -61,7 +61,7 @@ const images = [
   { img: "/1-zanke.jpg", caption: "Untitled, 2024" },
   // { img: "/3-zanke.jpg", caption: "Untitled, 2024" },
   { img: "/2-zanke.jpg", caption: "Untitled, 2024" },
-  // { img: "/4-zanke.jpg", caption: "Untitled, 2024" },
+  { img: "/4-zanke.jpg", caption: "Untitled, 2024" },
   // { img: "/3-2.jpg", caption: "Its Encumbered Impression, 2024" },
   // { img: "/9.jpg", caption: "Untitled, 2024" },
   // { img: "/5.jpg", caption: "Shimmed Receptacle, 2024" },
