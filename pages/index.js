@@ -39,7 +39,9 @@ export default function Home() {
           </p>
           {showCaption ? <p>{images[currentIndex].caption}</p> : null}
         </div>
-        <a href="/information">Info</a>
+        <a href="/information" className="hover:underline">
+          Taylor Zanke
+        </a>
       </div>
       <div
         className="absolute top-0 right-0 bottom-0 left-0 -z-10 flex justify-center items-center p-8 sm:p-24 cursor-pointer"
@@ -56,15 +58,19 @@ export default function Home() {
 }
 
 const images = [
-  { img: "/3-2.jpg", caption: "Its Encumbered Impression, 2024" },
-  { img: "/9.jpg", caption: "Untitled, 2024" },
-  { img: "/5.jpg", caption: "Shimmed Receptacle, 2024" },
-  { img: "/6.jpg", caption: "Shimmed Receptacle, 2024" },
-  { img: "/1.jpg", caption: "OO, 2024" },
-  { img: "/4-2.jpg", caption: "Untitled, 2024" },
-  { img: "/10.jpg", caption: "Untitled, 2023" },
-  { img: "/zanke-3-1.png", caption: "The Source Can Be Transformed, 2024" },
-  { img: "/zanke-6-1.png", caption: "The Source Can Be Transformed, 2024" },
-  { img: "/zanke-11.jpg", caption: "Untitled, 2024" },
-  { img: "/zanke-13.jpg", caption: "Untitled, 2024" },
+  { img: "/1-zanke.jpg", caption: "Untitled, 2024" },
+  // { img: "/3-zanke.jpg", caption: "Untitled, 2024" },
+  { img: "/2-zanke.jpg", caption: "Untitled, 2024" },
+  // { img: "/4-zanke.jpg", caption: "Untitled, 2024" },
+  // { img: "/3-2.jpg", caption: "Its Encumbered Impression, 2024" },
+  // { img: "/9.jpg", caption: "Untitled, 2024" },
+  // { img: "/5.jpg", caption: "Shimmed Receptacle, 2024" },
+  // { img: "/6.jpg", caption: "Shimmed Receptacle, 2024" },
+  // { img: "/1.jpg", caption: "OO, 2024" },
+  // { img: "/4-2.jpg", caption: "Untitled, 2024" },
+  // { img: "/10.jpg", caption: "Untitled, 2023" },
+  // { img: "/zanke-3-1.png", caption: "The Source Can Be Transformed, 2024" },
+  // { img: "/zanke-6-1.png", caption: "The Source Can Be Transformed, 2024" },
+  // { img: "/zanke-11.jpg", caption: "Untitled, 2024" },
+  // { img: "/zanke-13.jpg", caption: "Untitled, 2024" },
 ];
