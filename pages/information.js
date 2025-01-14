@@ -4,7 +4,7 @@ export default function Information() {
   return (
     <PageContainer>
       <div className="w-full flex justify-between">
-        <div className="flex flex-col gap-9">
+        <div className="flex flex-col gap-6 sm:gap-9">
           <ul>
             <li className="font-bold">Contact</li>
             <li>Studio in Los Angeles, CA</li>

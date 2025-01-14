@@ -19,7 +19,7 @@ export default function Home() {
 
   return (
     <PageContainer>
-      <div className="flex flex-col gap-9">
+      <div className="flex flex-col gap-6 sm:gap-9">
         <div>
           <a href="/information" className="hover:underline">
             Taylor Zanke
@@ -28,8 +28,11 @@ export default function Home() {
 
         {works.map((work, i) => {
           return (
-            <div className="flex flex-col gap-9 max-w-screen-lg" key={i}>
-              <div className="px-9 sm:px-20 flex flex-col gap-9">
+            <div
+              className="flex flex-col gap-6 sm:gap-9 max-w-screen-lg"
+              key={i}
+            >
+              <div className="px-9 sm:px-20 flex flex-col gap-6 sm:gap-9">
                 {work.images.map((img, i) => {
                   return (
                     <img
