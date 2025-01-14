@@ -71,7 +71,7 @@ const works = [
     dimensions: "35 x 8 x 8 inches",
   },
   {
-    title: "Some Form Without",
+    title: "Untitled",
     year: "2025",
     images: ["/taylor-1234.jpg"],
     materials: "Cardboard, particleboard, paper, plastic",
