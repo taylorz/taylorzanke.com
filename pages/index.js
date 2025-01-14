@@ -88,13 +88,6 @@ const works = [
     dimensions: "48 x 24 x 24 inches",
   },
   {
-    title: "Untitled",
-    year: "2024",
-    images: ["/taylor-12345.jpg"],
-    materials: "Paper in groups of four",
-    dimensions: "18 x 7.5 x 3 inches",
-  },
-  {
     title: "Indifferently Suspends A Third",
     year: "2024",
     images: ["/taylor-123456.jpg"],
@@ -112,6 +105,6 @@ const works = [
     title: "I Know Some Things Form Without You",
     year: "2023",
     images: ["/taylor-9.jpg"],
-    materials: "Installation view",
+    materials: "Installation view (TRYST, Torrence Art Museum)",
   },
 ];
