@@ -4,9 +4,12 @@ const Contact = () => {
   return (
     <PageContainer
       pageContext={
-        <div className="pt-8">
-          <div>Studio in Los Angeles CA</div>
-          <div>taylor.zanke@gmail.com</div>
+        <div className="flex flex-col gap-4">
+          <div>STUDIO</div>
+          <div>
+            <div>In downtown Los Angeles CA</div>
+            <div>taylor.zanke@gmail.com</div>
+          </div>
         </div>
       }
     ></PageContainer>

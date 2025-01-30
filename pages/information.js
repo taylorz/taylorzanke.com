@@ -3,7 +3,7 @@ import PageContainer from "../components/PageContainer";
 const ResumeItem = ({ year, caption, location, showYear }) => {
   return (
     <div className="flex flex-row">
-      <div className="w-[48px]">{showYear ? year : ""}</div>
+      <div className="w-[52px]">{showYear ? year : ""}</div>
       <div className="w-full">
         {caption}, {location}
       </div>
@@ -15,12 +15,33 @@ export default function Information() {
   return (
     <PageContainer
       pageContext={
-        <div className="flex flex-col gap-4 pt-8">
-          <div>Biography (PDF)</div>
+        <div className="flex flex-col gap-4">
+          <div>LATEST</div>
+          <div>
+            <div>Acid-Free, Los Angeles CA (2024)</div>
+            <div>SF Art Book Fair, San Francisco CA (2024)</div>
+            <div>Off-Register, Santa Barbara CA (2024)</div>
+            <div>Print Pomona Art Book Fair, Pomona CA (2024)</div>
+            <div>Ruth Gallery, Los Angeles CA (2024, 2023)</div>
+            <div>Torrance Art Museum / TRYST, Torrance CA (2023)</div>
+          </div>
+          <div>BOOKS</div>
+          <span>
+            <a
+              href="https://www.allowingmanyforms.org"
+              className="hover:underline"
+            >
+              Allowing Many Forms
+            </a>{" "}
+            is my practice for making books founded in 2022. The intention of
+            the practice is to put forward books which form slowly out of
+            delicately held feeling.
+          </span>
+          <div className="fixed bottom-8">Last updated January 27, 2025</div>
         </div>
       }
     >
-      <div className="flex flex-col gap-4">
+      {/* <div className="flex flex-col gap-4">
         <div>EDUCATION</div>
         <div className="flex flex-col">
           {EDUCATION.map((e, i) => (
@@ -81,7 +102,7 @@ export default function Information() {
             />
           ))}
         </div>
-      </div>
+      </div> */}
     </PageContainer>
   );
 }
@@ -89,12 +110,12 @@ export default function Information() {
 const EDUCATION = [
   {
     year: "2018",
-    caption: "MArch, MS, Columbia University",
+    caption: "M.Arch, M.S., Columbia University",
     location: "New York NY",
   },
   {
     year: "2014",
-    caption: "BFA, Parsons The New School for Design",
+    caption: "B.F.A., Parsons The New School for Design",
     location: "New York NY",
   },
 ];
@@ -171,7 +192,8 @@ const PRESENTATIONS = [
   },
   {
     year: "2023",
-    caption: "Torrance Art Museum (TRYST)",
+    caption:
+      "I Know Some Things Form Without You, Torrance Art Museum (TRYST, Ruth Gallery)",
     location: "Torrance CA",
   },
   {

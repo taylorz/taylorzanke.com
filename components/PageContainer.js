@@ -1,8 +1,8 @@
 const PageContainer = ({ children, pageContext }) => {
   return (
-    <div className="flex flex-row">
-      <div className="flex flex-col gap-4 w-[320px]">{pageContext}</div>
-      <div className="flex flex-col gap-4 w-[640px]">{children}</div>
+    <div className="flex flex-row gap-4">
+      <div className="flex flex-col gap-4 w-[360px]">{pageContext}</div>
+      <div className="flex flex-col gap-4 w-[720px]">{children}</div>
     </div>
   );
 };

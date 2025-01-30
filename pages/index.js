@@ -27,12 +27,23 @@ export default function Home() {
   };
 
   return (
-    <PageContainer pageContext={<div>UNDER CONSTRUCTION</div>}>
+    <PageContainer pageContext={<div></div>}>
       <img
+        src={works2[6].imageArray[1].img}
+        alt="Taylor Zanke"
+        className="max-w-full max-h-[720px] object-contain object-center w-full px-8"
+      />
+      <img
+        src={works2[6].imageArray[3].img}
+        alt="Taylor Zanke"
+        className="max-w-full max-h-[720px] object-contain object-center w-full px-8"
+      />
+
+      {/* <img
         src={works2[4].imageArray[1].img}
         alt="Taylor Zanke"
         className="w-[480px]"
-      />
+      /> */}
 
       {/* <div className="flex flex-col gap-6 sm:gap-9">
         <div className="z-10 fixed top-6 sm:top-9 left-6 sm:left-9 flex gap-6 sm:gap-9">

@@ -1,6 +1,6 @@
 import PageContainer from "@/components/PageContainer";
 
-const Archive = () => {
+const YearPage = () => {
   return (
     <PageContainer
       pageContext={
@@ -18,25 +18,23 @@ const Archive = () => {
         </div>
       }
     >
-      <div className="flex flex-col gap-4 sticky top-8">
+      <div>
         <img
-          src={works2[4].imageArray[1].img}
+          src={works2[5].imageArray[0].img}
           className="max-w-full max-h-[720px] object-contain object-center w-full"
         />
-        <div className="flex justify-between gap-4">
-          <div>
-            <div>{works2[5].title}</div>
-            <div>{works2[5].year}</div>
-            <div>{works2[5].materials}</div>
-            <div>{works2[5].dimensions}</div>
-          </div>
-        </div>
+      </div>
+      <div>
+        <div>{works2[5].title}</div>
+        <div>{works2[5].year}</div>
+        <div>{works2[5].materials}</div>
+        <div>{works2[5].dimensions}</div>
       </div>
     </PageContainer>
   );
 };
 
-export default Archive;
+export default YearPage;
 
 const works2 = [
   {
