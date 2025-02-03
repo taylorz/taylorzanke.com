@@ -1,8 +1,11 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useArchiveYears } from "@/lib/hooks";
 
 const Nav = () => {
   const router = useRouter();
+  const { years, isLoading } = useArchiveYears();
+
   return (
     <div>
       <div className="flex flex-col gap-4 w-[120px] sticky top-8">
@@ -22,42 +25,14 @@ const Nav = () => {
           />
           {router.pathname.includes("/archive") && (
             <div className="pl-2 flex flex-col">
-              <NavLink
-                label="2025"
-                link="/archive/2025"
-                active={router.asPath.includes("/archive/2025")}
-              />
-              <NavLink
-                label="2024"
-                link="/archive/2024"
-                active={router.asPath.includes("/archive/2024")}
-              />
-              <NavLink
-                label="2023"
-                link="/archive/2023"
-                active={router.asPath.includes("/archive/2023")}
-              />
-              <NavLink
-                label="2022"
-                link="/archive/2022"
-                active={router.asPath.includes("/archive/2022")}
-              />
-              <NavLink
-                label="2021"
-                link="/archive/2021"
-                active={router.asPath.includes("/archive/2021")}
-              />
-              <NavLink
-                label="2020"
-                link="/archive/2020"
-                active={router.asPath.includes("/archive/2020")}
-              />
-              <NavLink
-                label="2019"
-                link="/archive/2019"
-                active={router.asPath.includes("/archive/2019")}
-              />
-              {/* <NavLink label="..." link="/archive/..." /> */}
+              {years?.map((year) => (
+                <NavLink
+                  key={year}
+                  label={year}
+                  link={`/archive/${year}`}
+                  active={router.asPath.includes(`/archive/${year}`)}
+                />
+              ))}
             </div>
           )}
           {/* <NavLink label="Exhibitions" link="/exhibitions" /> */}
