@@ -7,13 +7,8 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["Arial", "sans"],
-        serif: ["Times", "serif"],
-      },
       fontSize: {
-        sm: ["20px", "24px"],
-        md: ["32px", "36px"],
+        sm: ["12px", "16px"],
       },
     },
   },

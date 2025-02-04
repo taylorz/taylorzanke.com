@@ -17,46 +17,212 @@ export default function Home() {
   //   fetcher
   // );
 
+  const [currentWorkIndex, setCurrentWorkIndex] = useState(0);
+  const [isViewing, setIsViewing] = useState(false);
+
+  const handleNextWork = () => {
+    setCurrentWorkIndex((prevIndex) =>
+      prevIndex === works2.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
-    <PageContainer>
-      <div className="flex flex-col gap-6 sm:gap-9">
-        <div>
-          <a href="/information" className="hover:underline">
-            Taylor Zanke
+    <PageContainer
+      pageContext={
+        <div className="flex flex-col">
+          <a
+            href="https://allowingmanyforms.org"
+            target="_blank"
+            className="hover:underline"
+          >
+            <div>The Source Can Be Transformed</div>
+            <div>Allowing Many Forms (2024)</div>
           </a>
         </div>
+      }
+    >
+      <img
+        src={works2[6].imageArray[1].img}
+        alt="Taylor Zanke"
+        className="max-w-full max-h-[720px] object-contain object-center w-full px-8"
+      />
+      <img
+        src={works2[6].imageArray[3].img}
+        alt="Taylor Zanke"
+        className="max-w-full max-h-[720px] object-contain object-center w-full px-8"
+      />
 
-        {works.map((work, i) => {
-          return (
-            <div
-              className="flex flex-col gap-6 sm:gap-9 max-w-screen-lg"
-              key={i}
-            >
-              <div className="px-9 sm:px-20 flex flex-col gap-6 sm:gap-9">
-                {work.images.map((img, i) => {
-                  return (
-                    <img
-                      src={img}
-                      key={i}
-                      className="w-full max-h-[860px] object-contain"
-                    />
-                  );
-                })}
-              </div>
-              <div>
-                <p>
-                  <span className="italic">{work.title}</span>, {work.year}
-                </p>
-                {work.materials && <p>{work.materials}</p>}
-                {work.dimensions && <p>{work.dimensions}</p>}
-              </div>
+      {/* <img
+        src={works2[4].imageArray[1].img}
+        alt="Taylor Zanke"
+        className="w-[480px]"
+      /> */}
+
+      {/* <div className="flex flex-col gap-6 sm:gap-9">
+        <div className="z-10 fixed top-6 sm:top-9 left-6 sm:left-9 flex gap-6 sm:gap-9">
+          <p
+            className="hover:underline hover:cursor-pointer"
+            onClick={() => setIsViewing(!isViewing)}
+          >
+            {isViewing ? (
+              <span>Back</span>
+            ) : (
+              <span>({works2[currentWorkIndex].imageArray.length})</span>
+            )}
+          </p>
+        </div>
+        <div className="z-10 fixed top-6 sm:top-9 right-6 sm:right-9">
+          <a href="/information" className="hover:underline">
+            Info
+          </a>
+        </div>
+        {isViewing ? (
+          <div className="flex flex-col justify-center gap-9">
+            <div className="flex flex-col gap-6 sm:gap-9 m-auto">
+              {works2[currentWorkIndex].imageArray.map((image, index) => (
+                <img
+                  src={image.img}
+                  alt="Taylor Zanke"
+                  key={index}
+                  className="max-h-[calc(100vh-72px)] max-w-screen-lg"
+                />
+              ))}
             </div>
-          );
-        })}
-      </div>
+            <div>
+              <p className="italic">{works2[currentWorkIndex].title}</p>
+              <p>{works2[currentWorkIndex].year}</p>
+              <p>{works2[currentWorkIndex].materials}</p>
+              <p>{works2[currentWorkIndex].dimensions}</p>
+            </div>
+          </div>
+        ) : (
+          <div
+            className="absolute top-0 left-0 w-full h-full cursor-pointer flex justify-center items-center"
+            onClick={handleNextWork}
+          >
+            <img
+              src={works2[currentWorkIndex].imageArray[0].img}
+              alt="Taylor Zanke"
+              className="w-full h-full object-cover object-center"
+            />
+          </div>
+        )}
+      </div> */}
     </PageContainer>
   );
 }
+
+const works2 = [
+  {
+    title: "Untitled",
+    year: "2024",
+    materials: "Mixed media",
+    dimensions: "Dimensions variable",
+    imageArray: [
+      { img: "work/01/01-1.jpg", caption: "" },
+      { img: "work/01/01-2.jpg", caption: "" },
+      { img: "work/01/01-3.jpg", caption: "" },
+    ],
+  },
+  {
+    title: "OO",
+    year: "2024",
+    materials: "Pipe, wire, string, hardware, plastic",
+    dimensions: "Dimensions variable",
+    imageArray: [{ img: "work/02/02-1.jpg", caption: "" }],
+  },
+  {
+    title: "Alcove",
+    year: "2024",
+    materials: "Mixed media",
+    dimensions: "Dimensions variable",
+    imageArray: [
+      { img: "work/03/03-1.jpg", caption: "" },
+      { img: "work/03/03-2.jpg", caption: "" },
+      { img: "work/03/03-3.jpg", caption: "" },
+    ],
+  },
+  {
+    title: "Mirror",
+    year: "2024",
+    materials: "Mixed media",
+    dimensions: "Dimensions variable",
+    imageArray: [
+      { img: "work/04/04-1.jpg", caption: "" },
+      { img: "work/04/04-2.jpg", caption: "" },
+    ],
+  },
+  {
+    title: "Untitled",
+    year: "2024",
+    materials: "Mixed media",
+    dimensions: "Dimensions variable",
+    imageArray: [
+      { img: "work/05/05-1.jpg", caption: "" },
+      { img: "work/05/05-2.jpg", caption: "" },
+    ],
+  },
+  {
+    title: "Untitled",
+    year: "2024",
+    materials: "Mixed media",
+    dimensions: "Dimensions variable",
+    imageArray: [
+      { img: "work/06/06-1.jpg", caption: "" },
+      { img: "work/06/06-2.jpg", caption: "" },
+      { img: "work/06/06-3.jpg", caption: "" },
+      { img: "work/06/06-4.jpg", caption: "" },
+    ],
+  },
+  {
+    title: "The Source Can Be Transformed",
+    year: "2024",
+    materials: "Mixed media",
+    dimensions: "Dimensions variable",
+    imageArray: [
+      { img: "work/07/07-1.jpg", caption: "" },
+      { img: "work/07/07-2.jpg", caption: "" },
+      { img: "work/07/07-3.jpg", caption: "" },
+      { img: "work/07/07-4.jpg", caption: "" },
+      { img: "work/07/07-5.jpg", caption: "" },
+      { img: "work/07/07-6.jpg", caption: "" },
+      { img: "work/07/07-7.jpg", caption: "" },
+      { img: "work/07/07-8.jpg", caption: "" },
+      { img: "work/07/07-9.jpg", caption: "" },
+      { img: "work/07/07-10.jpg", caption: "" },
+      { img: "work/07/07-11.jpg", caption: "" },
+      { img: "work/07/07-12.jpg", caption: "" },
+      { img: "work/07/07-13.jpg", caption: "" },
+    ],
+  },
+  {
+    title: "Untitled",
+    year: "2024",
+    materials: "Mixed media",
+    dimensions: "Dimensions variable",
+    imageArray: [
+      { img: "work/08/08-1.jpg", caption: "" },
+      { img: "work/08/08-2.jpg", caption: "" },
+    ],
+  },
+  {
+    title: "Indifferently Suspends A Third",
+    year: "2024",
+    materials: "Mixed media",
+    dimensions: "Dimensions variable",
+    imageArray: [{ img: "work/09/09-1.png", caption: "" }],
+  },
+  {
+    title: "Untitled",
+    year: "2024",
+    materials: "Mixed media",
+    dimensions: "Dimensions variable",
+    imageArray: [
+      { img: "work/10/10-1.jpg", caption: "" },
+      { img: "work/10/10-2.webp", caption: "" },
+    ],
+  },
+];
 
 const works = [
   {

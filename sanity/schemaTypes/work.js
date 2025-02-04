@@ -10,11 +10,19 @@ export default defineType({
       title: 'Title',
       type: 'string',
     }),
-
     defineField({
       name: 'year',
       title: 'Year',
       type: 'number',
+    }),
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: 'title',
+        maxLength: 96,
+      },
     }),
     {
       name: 'category',
@@ -25,14 +33,15 @@ export default defineType({
           {title: 'Sculpture', value: 'sculpture'},
           {title: 'Books', value: 'books'},
           {title: 'Drawings', value: 'drawings'},
+          {title: 'Publications', value: 'publications'},
         ],
       },
     },
+    defineField({
+      name: 'images',
+      title: 'Images',
+      type: 'array',
+      of: [{type: 'reference', to: {type: 'workImage'}}],
+    }),
   ],
-  preview: {
-    select: {
-      title: 'title',
-      media: 'image',
-    },
-  },
 })
