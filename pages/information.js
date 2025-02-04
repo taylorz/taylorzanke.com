@@ -18,12 +18,12 @@ export default function Information() {
         <div className="flex flex-col gap-4">
           <div>LATEST</div>
           <div>
-            <div>Acid-Free, Los Angeles CA (2024)</div>
-            <div>SF Art Book Fair, San Francisco CA (2024)</div>
-            <div>Off-Register, Santa Barbara CA (2024)</div>
-            <div>Print Pomona Art Book Fair, Pomona CA (2024)</div>
-            <div>Ruth Gallery, Los Angeles CA (2024, 2023)</div>
-            <div>Torrance Art Museum / TRYST, Torrance CA (2023)</div>
+            <div>
+              Acid-Free, Los Angeles CA (2024), SF Art Book Fair, San Francisco
+              CA (2024), Off-Register, Santa Barbara CA (2024), Print Pomona Art
+              Book Fair, Pomona CA (2024), Ruth Gallery, Los Angeles CA (2024,
+              2023), Torrance Art Museum / TRYST, Torrance CA (2023)
+            </div>
           </div>
           <div>BOOKS</div>
           <span>

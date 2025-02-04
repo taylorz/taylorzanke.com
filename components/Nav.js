@@ -35,12 +35,12 @@ const Nav = () => {
               ))}
             </div>
           )}
-          {/* <NavLink label="Exhibitions" link="/exhibitions" /> */}
           <NavLink
             label="Publications"
             link="/publications"
             active={router.pathname === "/publications"}
           />
+          {/* <NavLink label="Exhibitions" link="/exhibitions" /> */}
         </div>
         <div className="flex flex-col">
           <NavLink label="Contact" link="/contact" />

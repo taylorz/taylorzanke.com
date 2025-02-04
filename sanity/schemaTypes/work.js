@@ -33,6 +33,7 @@ export default defineType({
           {title: 'Sculpture', value: 'sculpture'},
           {title: 'Books', value: 'books'},
           {title: 'Drawings', value: 'drawings'},
+          {title: 'Publications', value: 'publications'},
         ],
       },
     },

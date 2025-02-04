@@ -27,7 +27,20 @@ export default function Home() {
   };
 
   return (
-    <PageContainer pageContext={<div></div>}>
+    <PageContainer
+      pageContext={
+        <div className="flex flex-col">
+          <a
+            href="https://allowingmanyforms.org"
+            target="_blank"
+            className="hover:underline"
+          >
+            <div>The Source Can Be Transformed</div>
+            <div>Allowing Many Forms (2024)</div>
+          </a>
+        </div>
+      }
+    >
       <img
         src={works2[6].imageArray[1].img}
         alt="Taylor Zanke"
