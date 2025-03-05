@@ -12,7 +12,7 @@ export default function Portfolio() {
 
   return (
     <PageContainer>
-      <div className="grid grid-cols-7 gap-4 max-w-screen-xl">
+      <div className="grid grid-cols-2 sm:grid-cols-7 gap-4 max-w-screen-xl">
         {images?.map((image) => (
           <Link key={image._id} href={`/portfolio/${image.slug}`}>
             <div className="cursor-pointer">
