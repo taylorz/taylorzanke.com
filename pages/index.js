@@ -30,8 +30,7 @@ export default function Home() {
   return (
     <PageContainer>
       <div className="mix-blend-difference text-white w-fit">
-        Taylor Zanke is a visual artist based in Los Angeles. He is the founder
-        of{" "}
+        Taylor Zanke is an artist based in Los Angeles. He is the founder of{" "}
         <a
           href="https://allowingmanyforms.org"
           target="_blank"
