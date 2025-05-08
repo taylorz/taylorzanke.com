@@ -1,77 +1,53 @@
 import Link from "next/link";
-
 import PageContainer from "@/components/PageContainer";
 import MaxWidth from "@/components/MaxWidth";
-const Work = () => {
+import { getWorks } from "@/lib/sanity";
+
+const Work = ({ works }) => {
+  console.log("Works:", works);
+
+  // Group works by category
+  const worksByCategory = works?.reduce((acc, work) => {
+    const category = work.category || "Uncategorized";
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(work);
+    return acc;
+  }, {});
+
+  // Get selected works
+  const selectedWorks = works?.filter((work) => work.selected) || [];
+
   return (
     <PageContainer>
       <div className="pt-10 pl-[224px]">
         <MaxWidth>
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-5">
-              <div>
-                <h1 className="italic">Selected</h1>
-                <p>
-                  <Link href="/work/1">Untitled (Ongoing)</Link>
-                </p>
-                <p>
-                  <Link href="/work/1">The Source Can Be Transformed</Link>
-                </p>
-                <p>
-                  <Link href="/work/1">
-                    I Know Some Things Form Without You
-                  </Link>
-                </p>
-              </div>
-              <div>
-                <h1 className="italic">Sculpture & Drawings</h1>
-                <p>
-                  <Link href="/work/1">...</Link>
-                </p>
-                <p>
-                  <Link href="/work/1">OO</Link>
-                </p>
-                <p>
-                  <Link href="/work/1">
-                    The Factual Reality Of The Structure
-                  </Link>
-                </p>
-              </div>
-              <div>
-                <h1 className="italic">Artist's Books</h1>
-                <p>
-                  <Link href="/work/1">Reformulations 1</Link>
-                </p>
-                <p>
-                  <Link href="/work/1">Reformulations 2</Link>
-                </p>
-                <p>
-                  <Link href="/work/1">Two Visits</Link>
-                </p>
-                <p>
-                  <Link href="/work/1">
-                    Several Speculative Improvements To My Family Home
-                  </Link>
-                </p>
-                <p>
-                  <Link href="/work/1">Honolulu New York</Link>
-                </p>
-              </div>
-              <div>
-                <h1 className="italic">Exhibitions & Presentations</h1>
-                <p>
-                  <Link href="/work/1">Reformulations 1</Link>
-                </p>
-                <p>
-                  <Link href="/work/1">Reformulations 2</Link>
-                </p>
-                <p>
-                  <Link href="/work/1">Two Visits</Link>
-                </p>
-                <p>
-                  <Link href="/work/1">Honolulu New York</Link>
-                </p>
-              </div>
+              {selectedWorks.length > 0 ? (
+                <div>
+                  <h1 className="italic">Selected</h1>
+                  {selectedWorks.map((work) => (
+                    <p key={work._id}>
+                      <Link href={`/work/${work.slug}`}>{work.title}</Link>
+                    </p>
+                  ))}
+                </div>
+              ) : null}
+              {worksByCategory &&
+                Object.entries(worksByCategory).map(
+                  ([category, categoryWorks]) => (
+                    <div key={category}>
+                      <h1 className="italic">{category}</h1>
+                      {categoryWorks.map((work) => (
+                        <p key={work._id}>
+                          <Link href={`/work/${work.slug}`}>{work.title}</Link>
+                        </p>
+                      ))}
+                    </div>
+                  )
+                )}
             </div>
           </div>
         </MaxWidth>
@@ -79,5 +55,17 @@ const Work = () => {
     </PageContainer>
   );
 };
+
+export async function getStaticProps() {
+  const works = await getWorks();
+
+  return {
+    props: {
+      works,
+    },
+    // Revalidate every minute
+    revalidate: 60,
+  };
+}
 
 export default Work;
