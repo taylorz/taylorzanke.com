@@ -11,11 +11,11 @@ export default function Home({ workImages }) {
 
   return (
     <PageContainer>
-      <div className="flex flex-wrap gap-20 pt-10 justify-between">
+      <div className="flex flex-wrap gap-20 pt-20 justify-between">
         {randomizedImages.map((image, index) => (
           <motion.div
             key={image.slug}
-            className={Math.random() < 0.5 ? "w-1/12" : "w-1/6"}
+            className={Math.random() < 0.5 ? "w-[8%]" : "w-[12%]"}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: index * 0.015 }}
