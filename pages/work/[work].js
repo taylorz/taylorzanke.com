@@ -1,16 +1,11 @@
-import { useRouter } from "next/router";
-import Link from "next/link";
 import PageContainer from "@/components/PageContainer";
 import MaxWidth from "@/components/MaxWidth";
-import { getWork } from "@/lib/sanity";
+import { getWork, urlFor } from "@/lib/sanity";
 import { PortableText } from "@portabletext/react";
 import { portableTextComponents } from "@/components/PortableTextComponents";
+import LoadingImage from "@/components/LoadingImage";
 
 const WorkPage = ({ work }) => {
-  const router = useRouter();
-
-  console.log("Work:", work);
-
   return (
     <PageContainer>
       <div className="pt-10 pl-[224px]">
@@ -41,13 +36,15 @@ const WorkPage = ({ work }) => {
             <div className="flex flex-col gap-3 px-5">
               {/* Images */}
               {work.images?.map((image, index) => {
-                if (!image?.url) return null;
+                if (!image?.image) return null;
                 return (
-                  <img
+                  <LoadingImage
                     key={index}
-                    src={image.url}
+                    src={urlFor(image.image).width(1200).quality(80).url()}
                     alt={image.caption || ""}
-                    className="max-h-[560px] object-contain object-center"
+                    className="max-h-[560px]"
+                    priority={index === 0}
+                    objectPosition="center"
                   />
                 );
               })}
