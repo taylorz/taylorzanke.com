@@ -23,6 +23,7 @@ const WorkPage = ({ work }) => {
                 {work.year && <p>{work.year}</p>}
               </div>
               {work.details && <p>{work.details}</p>}
+              {work.externalLink && <p>{work.externalLink}</p>}
               {/* description */}
               {work.description && (
                 <div className="prose">
