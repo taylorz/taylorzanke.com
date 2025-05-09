@@ -21,7 +21,7 @@ const WorkPage = ({ work }) => {
                 {/* title */}
                 {work.title && <h1 className="italic">{work.title}</h1>}
                 {/* dimensions */}
-                {work.dimensions && <p>{work.dimensions} inches</p>}
+                {work.dimensions && <p>{work.dimensions}</p>}
                 {/* materials */}
                 {work.materials && <p>{work.materials}</p>}
                 {/* year */}
