@@ -21,7 +21,7 @@ const Work = ({ works }) => {
 
   return (
     <PageContainer>
-      <div className="pt-10 pl-[224px]">
+      <div className="pt-10 pl-0 sm:pl-[224px]">
         <MaxWidth>
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-5">

@@ -18,14 +18,17 @@ export default function Home({ workImages }) {
 
   return (
     <PageContainer>
-      <div className="flex flex-wrap gap-12 pt-20 justify-center">
+      <div className="flex flex-wrap gap-6 sm:gap-12 pt-20 justify-center">
         {randomizedImages.map((image, index) => (
           <div
             key={image.slug}
             className={
-              ["w-[12%]", "w-[20%]", "w-[28%]", "w-[36%]"][
-                Math.floor(Math.random() * 4)
-              ]
+              [
+                "w-[28%] sm:w-[12%]",
+                "w-[20%]",
+                "w-[48%] sm:w-[28%]",
+                "w-[36%]",
+              ][Math.floor(Math.random() * 4)]
             }
           >
             <Link href={`/work/${image.slug}`} scroll={false}>
@@ -35,7 +38,7 @@ export default function Home({ workImages }) {
                   .quality(80)
                   .url()}
                 alt={image.randomImage.caption}
-                className="aspect-square"
+                className="aspect-square object-top"
                 objectPosition="top"
                 delay={index * 0.015}
               />

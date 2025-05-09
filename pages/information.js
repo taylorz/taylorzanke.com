@@ -5,7 +5,7 @@ import MaxWidth from "@/components/MaxWidth";
 const Information = () => {
   return (
     <PageContainer>
-      <div className="pt-10 pl-[116px]">
+      <div className="pt-10 pl-0 sm:pl-[116px]">
         <MaxWidth>
           <div className="flex flex-col gap-10">
             {/* Info */}
