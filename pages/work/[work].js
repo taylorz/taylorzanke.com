@@ -15,10 +15,10 @@ const WorkPage = ({ work }) => {
               <div>
                 {/* title */}
                 {work.title && (
-                  <span className="flex">
-                    <h1 className="italic">{work.title}</h1>
-                    {work.year && <p>, {work.year}</p>}
-                  </span>
+                  <p>
+                    <span className="italic">{work.title}</span>
+                    {work.year && <span>, {work.year}</span>}
+                  </p>
                 )}
                 {/* materials */}
                 {work.materials && <p>{work.materials}</p>}
