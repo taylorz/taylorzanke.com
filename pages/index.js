@@ -1,58 +1,60 @@
 import { useState, useEffect } from "react";
-import { useWorkImages } from "@/lib/hooks";
+import Link from "next/link";
+
 import PageContainer from "@/components/PageContainer";
-import { urlFor } from "@/lib/sanity";
+import { getWorkImages, urlFor } from "@/lib/sanity";
+import LoadingImage from "@/components/LoadingImage";
 
-export default function Home() {
-  const { images, isLoading } = useWorkImages();
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  // Function to get a random image, excluding the current one
-  const getRandomImage = () => {
-    if (!images || images.length === 0) return null;
-    if (images.length === 1) return images[0];
-
-    // Filter out the current image
-    const availableImages = images.filter(
-      (img) => img._id !== selectedImage?._id
-    );
-    const randomIndex = Math.floor(Math.random() * availableImages.length);
-    return availableImages[randomIndex];
-  };
-
-  // Set initial random image on load
-  useEffect(() => {
-    if (images) {
-      setSelectedImage(getRandomImage());
+export default function Home({ workImages }) {
+  // Randomize the order of work images, prioritizing selected works
+  const randomizedImages = [...workImages].sort((a, b) => {
+    // If one is selected and the other isn't, selected comes first
+    if (a.selected !== b.selected) {
+      return a.selected ? -1 : 1;
     }
-  }, [images]);
+    // If both are selected or both are not selected, randomize
+    return Math.random() - 0.5;
+  });
 
   return (
     <PageContainer>
-      <div className="mix-blend-difference text-white w-fit">
-        Taylor Zanke is an artist based in Los Angeles. He is the founder of{" "}
-        <a
-          href="https://allowingmanyforms.org"
-          target="_blank"
-          className="underline"
-        >
-          Allowing Many Forms
-        </a>
-        . Contact him{" "}
-        <a href="mailto:taylorzanke@gmail.com" className="underline">
-          here
-        </a>
-        .
-      </div>
-      <div className="absolute top-0 right-0 bottom-0 left-0 overflow-hidden -z-10">
-        {selectedImage && (
-          <img
-            src={urlFor(selectedImage.image).width(2600).url()}
-            alt={selectedImage.title || "Taylor Zanke"}
-            className="w-full h-full object-cover object-center"
-          />
-        )}
+      <div className="flex flex-wrap gap-6 sm:gap-12 pt-20 justify-center">
+        {randomizedImages.map((image, index) => (
+          <div
+            key={image.slug}
+            className={
+              ["w-[20%]", "w-[48%] sm:w-[28%]", "w-[36%]"][
+                Math.floor(Math.random() * 3)
+              ]
+            }
+          >
+            <Link href={`/work/${image.slug}`} scroll={false}>
+              <LoadingImage
+                src={urlFor(image.randomImage.image)
+                  .width(1200)
+                  .quality(80)
+                  .url()}
+                alt={image.randomImage.caption}
+                className="aspect-square object-top"
+                objectPosition="top"
+                delay={index * 0.015}
+              />
+            </Link>
+          </div>
+        ))}
       </div>
     </PageContainer>
   );
+}
+
+export async function getStaticProps() {
+  const workImages = await getWorkImages();
+
+  return {
+    props: {
+      workImages,
+    },
+    // Revalidate every minute
+    revalidate: 60,
+  };
 }

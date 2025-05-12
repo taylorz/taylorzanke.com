@@ -1,11 +1,18 @@
+import { useState } from "react";
 import Link from "next/link";
 
 const Nav = () => {
   return (
-    <div>
-      <div className="flex flex-col gap-4 w-[120px] sticky top-8">
+    <div className="absolute top-0 left-0 w-full z-30">
+      <div className="flex gap-6 pl-5 pt-5">
         <Link href="/">
-          <div className="hover:cursor-pointer">TAYLOR ZANKE</div>
+          <p className="font-bold hover:cursor-pointer">Taylor Zanke</p>
+        </Link>
+        <Link href="/information">
+          <p className="font-bold hover:cursor-pointer">Information</p>
+        </Link>
+        <Link href="/work">
+          <p className="font-bold hover:cursor-pointer">Work</p>
         </Link>
       </div>
     </div>
@@ -13,11 +20,3 @@ const Nav = () => {
 };
 
 export default Nav;
-
-const NavLink = ({ link, label, active }) => {
-  return (
-    <Link href={link}>
-      <div className={active ? "underline" : "hover:underline"}>{label}</div>
-    </Link>
-  );
-};

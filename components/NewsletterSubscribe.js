@@ -25,40 +25,37 @@ const NewsletterSubscribe = () => {
     }
   };
   return isSubmitSuccessful ? (
-    <p>Subscribed</p>
+    <p>Subscribed — Thank you!</p>
   ) : (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="w-full">
-        <p className="font-bold">Newsletter</p>
         <div className="flex flex-col">
-          <div className="grid grid-cols-2">
-            <p>Full Name</p>
-            <input
-              {...register("fullName", {
-                required: "Please enter your full name",
-              })}
-              name="fullName"
-              className="border border-stone-950 focus:outline-none rounded-none"
-            />
-          </div>
-          <div className="grid grid-cols-2">
-            <p>Email</p>
-            <input
-              {...register("email", {
-                required: "Please enter a valid email",
-                pattern:
-                  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-              })}
-              name="email"
-              className="border border-stone-950 focus:outline-none rounded-none"
-            />
-          </div>
-          <button className="p-0 flex w-fit" type="submit">
-            <span className="hover:animate-blink">Subscribe</span>
+          <input
+            {...register("fullName", {
+              required: "Please enter your name",
+            })}
+            className="focus:outline-none placeholder:text-neutral-400"
+            placeholder="Full Name"
+            name="fullName"
+          />
+
+          <input
+            {...register("email", {
+              required: "Please enter a valid email",
+              pattern:
+                /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+            })}
+            className="focus:outline-none placeholder:text-neutral-400"
+            placeholder="Email"
+            name="email"
+          />
+
+          <button className="p-0 flex w-fit hover:text-[pink]" type="submit">
+            Subscribe
           </button>
         </div>
         {errors.email || errors.fullName ? (
-          <div className="mt-5">
+          <div className="mt-5 italic">
             {errors.fullName && <p>{errors.fullName.message}</p>}
             {errors.email && <p>{errors.email.message}</p>}
           </div>
