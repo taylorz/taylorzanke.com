@@ -1,11 +1,10 @@
+import { useState } from "react";
 import Link from "next/link";
+
 import PageContainer from "@/components/PageContainer";
 import MaxWidth from "@/components/MaxWidth";
 import { getWorks } from "@/lib/sanity";
-
 const Work = ({ works }) => {
-  console.log("Works:", works);
-
   // Group works by category
   const worksByCategory = works?.reduce((acc, work) => {
     const category = work.category || "Uncategorized";
@@ -25,25 +24,30 @@ const Work = ({ works }) => {
         <MaxWidth>
           <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-5">
-              {selectedWorks.length > 0 ? (
+              {selectedWorks.length > 0 && (
                 <div>
                   <h1 className="italic">Selected</h1>
                   {selectedWorks.map((work) => (
-                    <p key={work._id}>
-                      <Link href={`/work/${work.slug}`}>{work.title}</Link>
-                    </p>
+                    <WorkItem
+                      title={work.title}
+                      year={work.year}
+                      slug={work.slug}
+                    />
                   ))}
                 </div>
-              ) : null}
+              )}
               {worksByCategory &&
                 Object.entries(worksByCategory).map(
                   ([category, categoryWorks]) => (
                     <div key={category}>
                       <h1 className="italic">{category}</h1>
                       {categoryWorks.map((work) => (
-                        <p key={work._id}>
-                          <Link href={`/work/${work.slug}`}>{work.title}</Link>
-                        </p>
+                        <WorkItem
+                          key={work._id}
+                          title={work.title}
+                          year={work.year}
+                          slug={work.slug}
+                        />
                       ))}
                     </div>
                   )
@@ -69,3 +73,27 @@ export async function getStaticProps() {
 }
 
 export default Work;
+
+const WorkItem = ({ title, year, slug }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <div className="relative">
+      {isHovered && (
+        <span className="absolute -left-12 text-[pink]">
+          {year?.toString().slice(0, 4)}
+        </span>
+      )}
+
+      <p>
+        <Link
+          href={`/work/${slug}`}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {" "}
+          {title}
+        </Link>
+      </p>
+    </div>
+  );
+};

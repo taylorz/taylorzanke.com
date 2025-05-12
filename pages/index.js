@@ -23,18 +23,15 @@ export default function Home({ workImages }) {
           <div
             key={image.slug}
             className={
-              [
-                "w-[28%] sm:w-[12%]",
-                "w-[20%]",
-                "w-[48%] sm:w-[28%]",
-                "w-[36%]",
-              ][Math.floor(Math.random() * 4)]
+              ["w-[20%]", "w-[48%] sm:w-[28%]", "w-[36%]"][
+                Math.floor(Math.random() * 3)
+              ]
             }
           >
             <Link href={`/work/${image.slug}`} scroll={false}>
               <LoadingImage
                 src={urlFor(image.randomImage.image)
-                  .width(860)
+                  .width(1200)
                   .quality(80)
                   .url()}
                 alt={image.randomImage.caption}

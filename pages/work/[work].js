@@ -14,16 +14,40 @@ const WorkPage = ({ work }) => {
             <div className="flex flex-col gap-5">
               <div>
                 {/* title */}
-                {work.title && <h1 className="italic">{work.title}</h1>}
-                {/* dimensions */}
-                {work.dimensions && <p>{work.dimensions}</p>}
+                {work.title && (
+                  <span className="flex">
+                    <h1 className="italic">{work.title}</h1>
+                    {work.year && <p>, {work.year}</p>}
+                  </span>
+                )}
                 {/* materials */}
                 {work.materials && <p>{work.materials}</p>}
-                {/* year */}
-                {work.year && <p>{work.year}</p>}
+                {/* dimensions */}
+                {work.customDimensions ? (
+                  <p>{work.customDimensions}</p>
+                ) : work.height && work.width ? (
+                  <p>
+                    {`${work.height} x ${work.width} ${
+                      work.depth ? `x ${work.depth}` : ""
+                    } inches`}
+                  </p>
+                ) : null}
               </div>
-              {work.details && <p>{work.details}</p>}
-              {work.externalLink && <p>{work.externalLink}</p>}
+
+              {(work.details ||
+                (work.externalLinkUrl && work.externalLinkLabel)) && (
+                <div>
+                  {work.details && <p>{work.details}</p>}
+                  {work.externalLinkUrl && work.externalLinkLabel && (
+                    <p>
+                      <a href={work.externalLinkUrl}>
+                        {work.externalLinkLabel}
+                      </a>
+                    </p>
+                  )}
+                </div>
+              )}
+
               {/* description */}
               {work.description && (
                 <div className="prose">
@@ -43,7 +67,7 @@ const WorkPage = ({ work }) => {
                     key={index}
                     src={urlFor(image.image).width(1200).quality(80).url()}
                     alt={image.caption || ""}
-                    className="max-h-[560px]"
+                    className="max-h-[520px]"
                     priority={index === 0}
                     objectPosition="center"
                   />

@@ -16,15 +16,39 @@ export default defineType({
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: (doc) => {
+          const title = doc.title || ''
+          const materials = doc.materials || ''
+          return `${title} ${materials}`.trim()
+        },
         maxLength: 96,
       },
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'dimensions',
-      title: 'Dimensions',
+      name: 'height',
+      title: 'Height',
       type: 'string',
+      description: 'Height of the artwork',
+    }),
+    defineField({
+      name: 'width',
+      title: 'Width',
+      type: 'string',
+      description: 'Width of the artwork',
+    }),
+    defineField({
+      name: 'depth',
+      title: 'Depth',
+      type: 'string',
+      description: 'Depth of the artwork (optional)',
+    }),
+    defineField({
+      name: 'customDimensions',
+      title: 'Custom Dimensions',
+      type: 'string',
+      description:
+        'Use this field for non-standard dimension descriptions (e.g., "Variable dimensions", "Site-specific installation")',
     }),
     defineField({
       name: 'materials',
@@ -37,9 +61,15 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'externalLink',
-      title: 'External Link',
+      name: 'externalLinkUrl',
+      title: 'External Link URL',
       type: 'url',
+    }),
+    defineField({
+      name: 'externalLinkLabel',
+      title: 'External Link Label',
+      type: 'string',
+      description: 'The text to display for the external link',
     }),
     defineField({
       name: 'details',
