@@ -148,7 +148,7 @@ const Information = () => {
             </div>
             {/* Last Updated */}
             <div className="flex flex-col gap-5">
-              <p>Last updated May 7, 2025</p>
+              <p>Last updated May 12, 2025</p>
             </div>
           </div>
         </MaxWidth>
