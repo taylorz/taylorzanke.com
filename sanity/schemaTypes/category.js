@@ -21,5 +21,12 @@ export default defineType({
       },
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: 'order',
+      title: 'Display Order',
+      type: 'number',
+      description: 'Lower numbers will appear first in the list',
+      initialValue: 0,
+    }),
   ],
 })
