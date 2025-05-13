@@ -9,14 +9,24 @@ const Work = ({ works }) => {
   const worksByCategory = works?.reduce((acc, work) => {
     const category = work.category || "Uncategorized";
     if (!acc[category]) {
-      acc[category] = [];
+      acc[category] = {
+        works: [],
+        order: work.categoryOrder || 999, // Default high number for uncategorized
+      };
     }
-    acc[category].push(work);
+    acc[category].works.push(work);
     return acc;
   }, {});
 
   // Get selected works
   const selectedWorks = works?.filter((work) => work.selected) || [];
+
+  // Sort categories by order
+  const sortedCategories = worksByCategory
+    ? Object.entries(worksByCategory)
+        .sort(([, a], [, b]) => a.order - b.order)
+        .map(([category, data]) => [category, data.works])
+    : [];
 
   return (
     <PageContainer>
@@ -29,6 +39,7 @@ const Work = ({ works }) => {
                   <h1 className="italic">Selected</h1>
                   {selectedWorks.map((work) => (
                     <WorkItem
+                      key={work._id}
                       title={work.title}
                       year={work.year}
                       slug={work.slug}
@@ -36,22 +47,19 @@ const Work = ({ works }) => {
                   ))}
                 </div>
               )}
-              {worksByCategory &&
-                Object.entries(worksByCategory).map(
-                  ([category, categoryWorks]) => (
-                    <div key={category}>
-                      <h1 className="italic">{category}</h1>
-                      {categoryWorks.map((work) => (
-                        <WorkItem
-                          key={work._id}
-                          title={work.title}
-                          year={work.year}
-                          slug={work.slug}
-                        />
-                      ))}
-                    </div>
-                  )
-                )}
+              {sortedCategories.map(([category, categoryWorks]) => (
+                <div key={category}>
+                  <h1 className="italic">{category}</h1>
+                  {categoryWorks.map((work) => (
+                    <WorkItem
+                      key={work._id}
+                      title={work.title}
+                      year={work.year}
+                      slug={work.slug}
+                    />
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
         </MaxWidth>
