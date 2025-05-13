@@ -74,20 +74,20 @@ const Information = () => {
               <h1 className="font-bold">Practice</h1>
               <p>
                 As I work today, I have noticed the edges of work and raw
-                material to be increasingly ambiguous as I continue to engage
-                with what is present. The seeking edge of my practice feels most
-                tangible in the arising conditions between untethered substance
-                and tenuously attached material. I sense a kind of oscillation
-                there which pulls one toward the other. The visibly incidental
-                stirs a question about that which seems determined - and the
-                inverse seems true to me too. I can observe new artists books
-                and sculptures appearing out of these conditions. I can imagine
-                an installation of these materials which I would continue to
-                work on throughout the duration of its being shown.
+                material to be increasingly ambiguous in what is present. The
+                seeking edge of my practice feels most tangible in the arising
+                conditions between untethered substance and tenuously attached
+                material. I sense a kind of oscillation there which pulls one
+                toward the other. The visibly incidental stirs a question about
+                that which seems determined - and the inverse seems true to me
+                too. I can observe new artists books and sculptures appearing
+                out of these conditions. I can imagine an installation of these
+                materials which I would continue to work on throughout the
+                duration of its being shown.
               </p>
               <p>
                 I think often about an unrealized work which is sited in an old,
-                abandoned, house, somewhere in the countryside. The house would
+                abandoned house, somewhere in the countryside. The house would
                 be both the material used to make sculptures and the location in
                 which they are made. The sculptures would engage the
                 architecture of the house, and bring that architecture to
@@ -128,12 +128,11 @@ const Information = () => {
                 that were made in very close dialog with the ongoing questions
                 and practice of each individual I collaborated with. Lately,
                 I've ventured into the world of commercial printing to realize a
-                number of books showing specific bodies of work — participating
-                in art book fairs like the San Francisco Art Book Fair and
-                Acid-Free LA in 2024. The project has become a venue for me to
-                collaborate with other artists or organizations and see how the
-                ways of working I am developing in my art making might engage
-                with other structures and modes. (
+                number of books showing specific bodies of work produced
+                together with artists, or from their practices. The project has
+                become a venue for me to collaborate with other artists or
+                organizations and see how the ways of working I am developing in
+                my art making might engage with other structures and modes. (
                 <a href="https://allowingmanyforms.org" target="_blank">
                   allowingmanyforms.org
                 </a>
@@ -148,7 +147,7 @@ const Information = () => {
             </div>
             {/* Last Updated */}
             <div className="flex flex-col gap-5">
-              <p>Last updated May 12, 2025</p>
+              <p>Last updated May 13, 2025</p>
             </div>
           </div>
         </MaxWidth>
