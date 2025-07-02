@@ -11,13 +11,6 @@ const Information = () => {
             {/* Info */}
             <div className="flex flex-col gap-5">
               <div>
-                <p className="italic">Studio</p>
-                <p>Studio 5, Third Floor</p>
-                <p>1500 S Los Angeles Street</p>
-                <p>Los Angeles, California 90015</p>
-                <p>United States</p>
-              </div>
-              <div>
                 <p className="italic">Contact</p>
                 <p>
                   <a href="mailto:taylor@allowingmanyforms.org">
@@ -70,7 +63,7 @@ const Information = () => {
               </p>
             </div>
             {/* Practice */}
-            <div className="flex flex-col gap-5">
+            {/* <div className="flex flex-col gap-5">
               <h1 className="font-bold">Practice</h1>
               <p>
                 As I work today, I have noticed the edges of work and raw
@@ -95,7 +88,7 @@ const Information = () => {
                 house would become smaller and smaller, until a final
                 site-specific work would reveal itself from the remains.
               </p>
-            </div>
+            </div> */}
             {/* Kinne */}
             <div className="flex flex-col gap-5">
               <h1 className="font-bold">William Kinne Prize</h1>
