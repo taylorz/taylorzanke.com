@@ -72,6 +72,26 @@ export default defineType({
       description: 'The text to display for the external link',
     }),
     defineField({
+      name: 'file',
+      title: 'File',
+      type: 'object',
+      fields: [
+        {
+          name: 'file',
+          title: 'File',
+          type: 'file',
+          description: 'Upload a PDF or other file',
+        },
+        {
+          name: 'label',
+          title: 'Label',
+          type: 'string',
+          description:
+            'The text to display for the file link (e.g., "Download PDF", "View Documentation")',
+        },
+      ],
+    }),
+    defineField({
       name: 'details',
       title: 'Details',
       type: 'string',

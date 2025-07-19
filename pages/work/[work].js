@@ -1,6 +1,6 @@
 import PageContainer from "@/components/PageContainer";
 import MaxWidth from "@/components/MaxWidth";
-import { getWork, urlFor } from "@/lib/sanity";
+import { getWork, urlFor, sanityClient } from "@/lib/sanity";
 import { PortableText } from "@portabletext/react";
 import { portableTextComponents } from "@/components/PortableTextComponents";
 import LoadingImage from "@/components/LoadingImage";
@@ -33,6 +33,21 @@ const WorkPage = ({ work }) => {
                   </p>
                 ) : null}
               </div>
+
+              {work.file && work.file.file && (
+                <a
+                  href={`https://cdn.sanity.io/files/${
+                    process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
+                  }/production/${work.file.file.asset._ref
+                    .replace("file-", "")
+                    .replace("-pdf", ".pdf")}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="cursor-pointer"
+                >
+                  {work.file.label}
+                </a>
+              )}
 
               {(work.details ||
                 (work.externalLinkUrl && work.externalLinkLabel)) && (
