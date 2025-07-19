@@ -58,7 +58,7 @@ const WorkPage = ({ work }) => {
                 </div>
               )}
             </div>
-            <div className="flex flex-col gap-3 px-5">
+            <div className="flex flex-col gap-3 px-5 items-start justify-start">
               {/* Images */}
               {work.images?.map((image, index) => {
                 if (!image?.image) return null;
@@ -69,7 +69,6 @@ const WorkPage = ({ work }) => {
                     alt={image.caption || ""}
                     className="max-h-[520px]"
                     priority={index === 0}
-                    objectPosition="center"
                   />
                 );
               })}
