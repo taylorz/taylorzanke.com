@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import PageContainer from "@/components/PageContainer";
 import MaxWidth from "@/components/MaxWidth";
 import { getWork, urlFor, sanityClient } from "@/lib/sanity";
@@ -78,13 +80,7 @@ const WorkPage = ({ work }) => {
               {work.images?.map((image, index) => {
                 if (!image?.image) return null;
                 return (
-                  <LoadingImage
-                    key={index}
-                    src={urlFor(image.image).width(1200).quality(80).url()}
-                    alt={image.caption || ""}
-                    className="max-h-[520px]"
-                    priority={index === 0}
-                  />
+                  <WorkImage key={index} image={image} priority={index === 0} />
                 );
               })}
             </div>
@@ -115,3 +111,40 @@ export async function getStaticPaths() {
 }
 
 export default WorkPage;
+
+const WorkImage = ({ image, priority }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  // lock scrolling when isOpen is true
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpen]);
+  return (
+    <div>
+      {isOpen ? (
+        <div
+          onClick={() => setIsOpen(false)}
+          className="cursor-pointer fixed inset-1 z-50 overflow-y-scroll"
+        >
+          <LoadingImage
+            src={urlFor(image.image).width(3200).quality(80).url()}
+            alt={image.caption || ""}
+            className="w-full object-contain"
+            priority={true}
+          />
+        </div>
+      ) : null}
+      <div onClick={() => setIsOpen(true)} className="cursor-pointer">
+        <LoadingImage
+          src={urlFor(image.image).width(1200).quality(80).url()}
+          alt={image.caption || ""}
+          className="max-h-[520px]"
+          priority={priority}
+        />
+      </div>
+    </div>
+  );
+};
