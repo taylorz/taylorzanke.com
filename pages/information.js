@@ -7,29 +7,46 @@ const Information = () => {
     <PageContainer>
       <div className="pt-10 pl-0 sm:pl-[116px]">
         <MaxWidth>
-          <div className="flex flex-col gap-10">
+          <div className="flex flex-col gap-5">
             {/* Info */}
             <div className="flex flex-col gap-5">
-              <div>
-                <p className="italic">Contact</p>
-                <p>
+              <ul>
+                <li className="italic">Contact</li>
+                <li>Los Angeles, California</li>
+                <li>
                   <a href="mailto:taylor@allowingmanyforms.org">
                     taylor@allowingmanyforms.org
                   </a>
-                </p>
-                <p>+1 917 826 7277</p>
-              </div>
-              <div>
-                <p className="italic">Download</p>
-                <p>
-                  <a href="/downloads/taylor-zanke-cv-2025.pdf" target="_blank">
-                    Curriculum Vitae
+                </li>
+              </ul>
+              <ul>
+                <li className="italic">Publishing</li>
+                <li>
+                  <a href="https://allowingmanyforms.org" target="_blank">
+                    allowingmanyforms.org
                   </a>
-                </p>
-              </div>
+                </li>
+              </ul>
+
+              <ul>
+                <li className="italic">Download</li>
+                <li>
+                  <a href="/downloads/taylor-zanke-cv-2025.pdf" target="_blank">
+                    Resume
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/downloads/taylor-zanke-statement-2025.pdf"
+                    target="_blank"
+                  >
+                    Statement
+                  </a>
+                </li>
+              </ul>
             </div>
             {/* Statement */}
-            <div className="flex flex-col gap-5">
+            {/* <div className="flex flex-col gap-5">
               <h1 className="font-bold">Artist Statement, 2024 — Present</h1>
 
               <p>
@@ -61,7 +78,7 @@ const Information = () => {
                 solidity of both art and non art objects to entertain the
                 possibility of transformation and awakening.
               </p>
-            </div>
+            </div> */}
             {/* Practice */}
             {/* <div className="flex flex-col gap-5">
               <h1 className="font-bold">Practice</h1>
@@ -90,7 +107,7 @@ const Information = () => {
               </p>
             </div> */}
             {/* Kinne */}
-            <div className="flex flex-col gap-5">
+            {/* <div className="flex flex-col gap-5">
               <h1 className="font-bold">William Kinne Prize</h1>
               <p>
                 I wrote a winning proposal for a form of unconventional
@@ -110,9 +127,9 @@ const Information = () => {
                 </a>
                 ).
               </p>
-            </div>
+            </div> */}
             {/* Allowing Many Forms */}
-            <div className="flex flex-col gap-5">
+            {/* <div className="flex flex-col gap-5">
               <h1 className="font-bold">Allowing Many Forms</h1>
               <p>
                 In 2022 I began working with other artists to create unique
@@ -131,13 +148,13 @@ const Information = () => {
                 </a>
                 ).
               </p>
-            </div>
-            {/* Last Updated */}
-            <div className="flex flex-col gap-5">
-              <h1 className="font-bold">Newsletter</h1>
+            </div> */}
 
+            <div className="flex flex-col">
+              <h1 className="italic">Newsletter</h1>
               <NewsletterSubscribe />
             </div>
+
             {/* Last Updated */}
             <div className="flex flex-col gap-5">
               <p>Last updated July 18, 2025</p>

@@ -50,7 +50,7 @@ const NewsletterSubscribe = () => {
             name="email"
           />
 
-          <button className="p-0 flex w-fit hover:text-[pink]" type="submit">
+          <button className="p-0 flex w-fit hover:text-[gray]" type="submit">
             Subscribe
           </button>
         </div>

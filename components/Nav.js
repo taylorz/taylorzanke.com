@@ -12,7 +12,7 @@ const Nav = () => {
           <p className="font-bold hover:cursor-pointer">Information</p>
         </Link>
         <Link href="/work">
-          <p className="font-bold hover:cursor-pointer">Work</p>
+          <p className="font-bold hover:cursor-pointer">Works</p>
         </Link>
       </div>
     </div>
