@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 import PageContainer from "@/components/PageContainer";
-import MaxWidth from "@/components/MaxWidth";
 import { getWorkImages, urlFor } from "@/lib/sanity";
 import LoadingImage from "@/components/LoadingImage";
 
@@ -12,7 +11,8 @@ export default function Home({ workImages }) {
 
   return (
     <PageContainer>
-      <div className="flex flex-col gap-2 pt-10 items-start justify-start max-w-screen-md">
+      {/* <div className="flex flex-col gap-2 pt-10 items-start justify-start max-w-screen-md"> */}
+      <div className="fixed inset-1 overflow-y-scroll flex flex-col gap-1">
         {randomizedImages.map((image, index) => (
           <div key={image.slug}>
             <Link href={`/work/${image.slug}`} scroll={false}>
@@ -22,13 +22,14 @@ export default function Home({ workImages }) {
                   .quality(80)
                   .url()}
                 alt={image.firstImage.caption}
-                className="max-h-[768px]" // max height of 768px: AKA w-screen-md
+                // className="max-h-[768px]" // max height of 768px: AKA w-screen-md
                 delay={index * 0.015}
               />
             </Link>
           </div>
         ))}
       </div>
+      {/* </div> */}
     </PageContainer>
   );
 }

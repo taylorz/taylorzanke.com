@@ -87,7 +87,7 @@ const WorkItem = ({ title, year, slug }) => {
   return (
     <div className="relative">
       {isHovered && (
-        <span className="absolute -left-12 text-[pink]">
+        <span className="absolute -left-12 text-[gray]">
           {year?.toString().slice(0, 4)}
         </span>
       )}
