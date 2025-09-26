@@ -11,13 +11,11 @@ const Information = () => {
             {/* Info */}
             <div className="flex flex-col gap-5">
               <ul>
-                <li className="italic">Contact</li>
-                <li>Los Angeles, California</li>
-                <li>
-                  <a href="mailto:taylor@allowingmanyforms.org">
-                    taylor@allowingmanyforms.org
-                  </a>
-                </li>
+                <li className="italic">Studio</li>
+                <li>Third Floor, Studio 5</li>
+                <li>1500 S Los Angeles Street</li>
+                <li>Los Angeles, California 90015</li>
+                <li>United States</li>
               </ul>
               <ul>
                 <li className="italic">Publishing</li>
@@ -28,6 +26,14 @@ const Information = () => {
                 </li>
               </ul>
 
+              <ul>
+                <li className="italic">Contact</li>
+                <li>
+                  <a href="mailto:taylor@allowingmanyforms.org">
+                    taylor@allowingmanyforms.org
+                  </a>
+                </li>
+              </ul>
               <ul>
                 <li className="italic">Download</li>
                 <li>
