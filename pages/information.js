@@ -7,9 +7,9 @@ const Information = () => {
     <PageContainer>
       <div className="pt-10 pl-0 sm:pl-[116px]">
         <MaxWidth>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-2">
             {/* Info */}
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-2">
               <ul>
                 <li className="italic">Studio</li>
                 <li>Third Floor, Studio 5</li>
@@ -21,19 +21,11 @@ const Information = () => {
                 <li className="italic">Publishing</li>
                 <li>
                   <a href="https://allowingmanyforms.org" target="_blank">
-                    allowingmanyforms.org
+                    Allowing Many Forms
                   </a>
                 </li>
               </ul>
 
-              <ul>
-                <li className="italic">Contact</li>
-                <li>
-                  <a href="mailto:taylor@allowingmanyforms.org">
-                    taylor@allowingmanyforms.org
-                  </a>
-                </li>
-              </ul>
               <ul>
                 <li className="italic">Download</li>
                 <li>
@@ -160,6 +152,14 @@ const Information = () => {
               <h1 className="italic">Newsletter</h1>
               <NewsletterSubscribe />
             </div>
+            <ul>
+              <li className="italic">Contact</li>
+              <li>
+                <a href="mailto:taylor@allowingmanyforms.org">
+                  taylor@allowingmanyforms.org
+                </a>
+              </li>
+            </ul>
 
             {/* Last Updated */}
             <div className="flex flex-col gap-5">

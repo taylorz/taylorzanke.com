@@ -33,7 +33,7 @@ const Work = ({ works }) => {
       <div className="pt-10 pl-0 sm:pl-[224px]">
         <MaxWidth>
           <div className="flex flex-col gap-10">
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-2">
               {selectedWorks.length > 0 && (
                 <div>
                   <h1 className="italic">Selected</h1>
