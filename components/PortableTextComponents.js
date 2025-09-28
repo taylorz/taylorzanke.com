@@ -1,8 +1,8 @@
 export const portableTextComponents = {
   block: {
-    normal: ({ children }) => <p className="mb-4 last:mb-0">{children}</p>,
+    normal: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
     h1: ({ children }) => (
-      <h1 className="text-2xl font-bold mb-4 last:mb-0">{children}</h1>
+      <h1 className="text-2xl font-bold mb-2 last:mb-0">{children}</h1>
     ),
     h2: ({ children }) => (
       <h2 className="text-xl font-bold mb-3 last:mb-0">{children}</h2>
@@ -14,7 +14,7 @@ export const portableTextComponents = {
       <h4 className="text-base font-bold mb-2 last:mb-0">{children}</h4>
     ),
     blockquote: ({ children }) => (
-      <blockquote className="border-l-4 border-gray-300 pl-4 italic mb-4 last:mb-0">
+      <blockquote className="border-l-4 border-gray-300 pl-4 italic mb-2 last:mb-0">
         {children}
       </blockquote>
     ),
@@ -40,7 +40,7 @@ export const portableTextComponents = {
   },
   list: {
     bullet: ({ children }) => (
-      <ul className="list-disc list-inside mb-4 last:mb-0">{children}</ul>
+      <ul className="list-disc list-inside mb-2 last:mb-0">{children}</ul>
     ),
   },
 };
