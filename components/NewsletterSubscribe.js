@@ -50,12 +50,12 @@ const NewsletterSubscribe = () => {
             name="email"
           />
 
-          <button className="p-0 flex w-fit hover:text-[gray]" type="submit">
+          <button className="p-0 flex w-fit" type="submit">
             Subscribe
           </button>
         </div>
         {errors.email || errors.fullName ? (
-          <div className="mt-5 italic">
+          <div className="mt-2">
             {errors.fullName && <p>{errors.fullName.message}</p>}
             {errors.email && <p>{errors.email.message}</p>}
           </div>

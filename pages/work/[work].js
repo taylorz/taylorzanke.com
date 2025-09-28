@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import PageContainer from "@/components/PageContainer";
 import MaxWidth from "@/components/MaxWidth";
-import { getWork, urlFor, sanityClient } from "@/lib/sanity";
+import { getWork, urlFor } from "@/lib/sanity";
 import { PortableText } from "@portabletext/react";
 import { portableTextComponents } from "@/components/PortableTextComponents";
 import LoadingImage from "@/components/LoadingImage";
@@ -12,8 +12,8 @@ const WorkPage = ({ work }) => {
     <PageContainer>
       <div className="pt-10 pl-0 sm:pl-[224px]">
         <MaxWidth>
-          <div className="flex flex-col gap-10">
-            <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-20">
+            <div className="flex flex-col gap-2">
               <div>
                 {/* title */}
                 {work.title && (
@@ -75,7 +75,7 @@ const WorkPage = ({ work }) => {
                 </div>
               )}
             </div>
-            <div className="flex flex-col gap-3 px-5 items-start justify-start">
+            <div className="flex flex-col gap-20 items-start justify-start">
               {/* Images */}
               {work.images?.map((image, index) => {
                 if (!image?.image) return null;

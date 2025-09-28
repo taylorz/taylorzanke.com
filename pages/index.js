@@ -22,7 +22,6 @@ export default function Home({ workImages }) {
                   .quality(80)
                   .url()}
                 alt={image.firstImage.caption}
-                // className="max-h-[768px]" // max height of 768px: AKA w-screen-md
                 delay={index * 0.015}
               />
             </Link>
