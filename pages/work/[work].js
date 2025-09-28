@@ -12,7 +12,7 @@ const WorkPage = ({ work }) => {
     <PageContainer>
       <div className="pt-10 pl-0 sm:pl-[224px]">
         <MaxWidth>
-          <div className="flex flex-col gap-20">
+          <div className="flex flex-col gap-10">
             <div className="flex flex-col gap-2">
               <div>
                 {/* title */}
@@ -75,7 +75,7 @@ const WorkPage = ({ work }) => {
                 </div>
               )}
             </div>
-            <div className="flex flex-col gap-20 items-start justify-start">
+            <div className="flex flex-col gap-2 px-2 items-start justify-start">
               {/* Images */}
               {work.images?.map((image, index) => {
                 if (!image?.image) return null;
