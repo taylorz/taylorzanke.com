@@ -25,10 +25,21 @@ const Information = () => {
               </li>
             </ul>
             <ul>
-              <li className="italic">Publishing</li>
+              <li className="italic">Projects</li>
               <li>
                 <a href="https://allowingmanyforms.org" target="_blank">
                   Allowing Many Forms
+                </a>
+              </li>
+            </ul>
+            <ul>
+              <li className="italic">Publications</li>
+              <li>
+                <a
+                  href="https://www.allowingmanyforms.org/books/the-source-can-be-transformed"
+                  target="_blank"
+                >
+                  The Source Can Be Transformed, 2025
                 </a>
               </li>
             </ul>
