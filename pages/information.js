@@ -25,14 +25,6 @@ const Information = () => {
               </li>
             </ul>
             <ul>
-              <li className="italic">Projects</li>
-              <li>
-                <a href="https://allowingmanyforms.org" target="_blank">
-                  Allowing Many Forms
-                </a>
-              </li>
-            </ul>
-            <ul>
               <li className="italic">Publications</li>
               <li>
                 <a
@@ -40,6 +32,14 @@ const Information = () => {
                   target="_blank"
                 >
                   The Source Can Be Transformed, 2025
+                </a>
+              </li>
+            </ul>
+            <ul>
+              <li className="italic">Projects</li>
+              <li>
+                <a href="https://allowingmanyforms.org" target="_blank">
+                  Allowing Many Forms
                 </a>
               </li>
             </ul>

@@ -34,7 +34,7 @@ const NewsletterSubscribe = () => {
             {...register("fullName", {
               required: "Please enter your name",
             })}
-            className="focus:outline-none placeholder:text-neutral-400"
+            className="focus:outline-none placeholder:text-zinc-400"
             placeholder="Full Name"
             name="fullName"
           />
@@ -45,7 +45,7 @@ const NewsletterSubscribe = () => {
               pattern:
                 /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
             })}
-            className="focus:outline-none placeholder:text-neutral-400"
+            className="focus:outline-none placeholder:text-zinc-400"
             placeholder="Email"
             name="email"
           />

@@ -10,72 +10,33 @@ import LoadingImage from "@/components/LoadingImage";
 const WorkPage = ({ work }) => {
   return (
     <PageContainer>
-      <div className="pt-10 pl-0 sm:pl-[224px]">
+      <div className="pt-10 pl-0 sm:pl-[220px]">
         <MaxWidth>
-          <div className="flex flex-col gap-10">
-            <div className="flex flex-col gap-2">
-              <div>
-                {/* title */}
-                {work.title && (
-                  <p>
-                    <span className="italic">{work.title}</span>
-                    {work.year && <span>, {work.year}</span>}
-                  </p>
-                )}
-                {/* materials */}
-                {work.materials && <p>{work.materials}</p>}
-                {/* dimensions */}
-                {work.customDimensions ? (
-                  <p>{work.customDimensions}</p>
-                ) : work.height && work.width ? (
-                  <p>
-                    {`${work.height} x ${work.width} ${
-                      work.depth ? `x ${work.depth}` : ""
-                    } inches`}
-                  </p>
-                ) : null}
-              </div>
-
-              {work.file && work.file.file && (
-                <a
-                  href={`https://cdn.sanity.io/files/${
-                    process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
-                  }/production/${work.file.file.asset._ref
-                    .replace("file-", "")
-                    .replace("-pdf", ".pdf")}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="cursor-pointer"
-                >
-                  {work.file.label}
-                </a>
-              )}
-
-              {(work.details ||
-                (work.externalLinkUrl && work.externalLinkLabel)) && (
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2 items-start justify-start pb-12">
+              <div className="flex flex-col gap-2 pb-12">
                 <div>
-                  {work.details && <p>{work.details}</p>}
-                  {work.externalLinkUrl && work.externalLinkLabel && (
+                  {/* title */}
+                  {work.title && (
                     <p>
-                      <a href={work.externalLinkUrl}>
-                        {work.externalLinkLabel}
-                      </a>
+                      <span className="italic">{work.title}</span>
+                      {work.year && <span>, {work.year}</span>}
                     </p>
                   )}
+                  {/* materials */}
+                  {work.materials && <p>{work.materials}</p>}
+                  {/* dimensions */}
+                  {work.customDimensions ? (
+                    <p>{work.customDimensions}</p>
+                  ) : work.height && work.width ? (
+                    <p>
+                      {`${work.height} x ${work.width} ${
+                        work.depth ? `x ${work.depth}` : ""
+                      } inches`}
+                    </p>
+                  ) : null}
                 </div>
-              )}
-
-              {/* description */}
-              {work.description && (
-                <div className="prose">
-                  <PortableText
-                    value={work.description}
-                    components={portableTextComponents}
-                  />
-                </div>
-              )}
-            </div>
-            <div className="flex flex-col gap-2 px-2 items-start justify-start">
+              </div>
               {/* Images */}
               {work.images?.map((image, index) => {
                 if (!image?.image) return null;
@@ -84,6 +45,53 @@ const WorkPage = ({ work }) => {
                 );
               })}
             </div>
+            {work.file ||
+            work.details ||
+            (work.externLinkUrl && work.externalLinkLabel) ||
+            work.description ? (
+              <>
+                <div className="flex flex-col gap-2 pb-12">
+                  {work.file && work.file.file && (
+                    <a
+                      href={`https://cdn.sanity.io/files/${
+                        process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
+                      }/production/${work.file.file.asset._ref
+                        .replace("file-", "")
+                        .replace("-pdf", ".pdf")}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="cursor-pointer"
+                    >
+                      {work.file.label}
+                    </a>
+                  )}
+
+                  {(work.details ||
+                    (work.externalLinkUrl && work.externalLinkLabel)) && (
+                    <div>
+                      {work.details && <p>{work.details}</p>}
+                      {work.externalLinkUrl && work.externalLinkLabel && (
+                        <p>
+                          <a href={work.externalLinkUrl}>
+                            {work.externalLinkLabel}
+                          </a>
+                        </p>
+                      )}
+                    </div>
+                  )}
+
+                  {/* description */}
+                  {work.description && (
+                    <div className="prose">
+                      <PortableText
+                        value={work.description}
+                        components={portableTextComponents}
+                      />
+                    </div>
+                  )}
+                </div>
+              </>
+            ) : null}
           </div>
         </MaxWidth>
       </div>

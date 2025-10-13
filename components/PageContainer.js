@@ -1,5 +1,5 @@
 const PageContainer = ({ children }) => {
-  return <div className="w-full px-5 py-2">{children}</div>;
+  return <div className="w-full px-5 py-1">{children}</div>;
 };
 
 export default PageContainer;
