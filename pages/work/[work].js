@@ -10,11 +10,11 @@ import LoadingImage from "@/components/LoadingImage";
 const WorkPage = ({ work }) => {
   return (
     <PageContainer>
-      <div className="pt-10 pl-0 sm:pl-[220px]">
+      <div className="pt-10 pl-0 sm:pl-[195px]">
         <MaxWidth>
           <div className="flex flex-col gap-4">
-            <div className="flex flex-col gap-2 items-start justify-start pb-12">
-              <div className="flex flex-col gap-2 pb-12">
+            <div className="flex flex-col gap-2 items-start justify-start">
+              <div className="flex flex-col gap-2">
                 <div>
                   {/* title */}
                   {work.title && (
@@ -37,13 +37,19 @@ const WorkPage = ({ work }) => {
                   ) : null}
                 </div>
               </div>
-              {/* Images */}
-              {work.images?.map((image, index) => {
-                if (!image?.image) return null;
-                return (
-                  <WorkImage key={index} image={image} priority={index === 0} />
-                );
-              })}
+              <div className="flex flex-col gap-1 items-start justify-start">
+                {/* Images */}
+                {work.images?.map((image, index) => {
+                  if (!image?.image) return null;
+                  return (
+                    <WorkImage
+                      key={index}
+                      image={image}
+                      priority={index === 0}
+                    />
+                  );
+                })}
+              </div>
             </div>
             {work.file ||
             work.details ||

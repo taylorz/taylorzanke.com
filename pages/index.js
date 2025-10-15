@@ -13,7 +13,7 @@ export default function Home({ workImages }) {
     <PageContainer>
       {/* <div className="flex flex-col gap-2 pt-10 items-start justify-start max-w-screen-md"> */}
       <div className="fixed inset-1 overflow-y-scroll flex flex-col gap-1">
-        {randomizedImages.map((image, index) => (
+        {/* {randomizedImages.map((image, index) => (
           <div key={image.slug}>
             <Link href={`/work/${image.slug}`} scroll={false}>
               <LoadingImage
@@ -26,7 +26,7 @@ export default function Home({ workImages }) {
               />
             </Link>
           </div>
-        ))}
+        ))} */}
       </div>
       {/* </div> */}
     </PageContainer>

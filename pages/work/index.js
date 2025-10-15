@@ -5,7 +5,7 @@ import { getSelectedWorks } from "@/lib/sanity";
 const Work = ({ works }) => {
   return (
     <PageContainer>
-      <div className="pt-10 pl-0 sm:pl-[220px]">
+      <div className="pt-10 pl-0 sm:pl-[195px]">
         <div className="flex flex-col gap-10">
           <div className="flex flex-col gap-2">
             {works.map((work, i) => (

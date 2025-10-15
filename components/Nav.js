@@ -3,7 +3,7 @@ import Link from "next/link";
 const Nav = () => {
   return (
     <div className="absolute top-0 left-0 w-full z-30">
-      <div className="flex gap-6 pl-5 pt-5">
+      <div className="flex gap-3 pl-5 pt-5">
         <Link href="/">
           <p className="hover:cursor-pointer">Taylor Zanke</p>
         </Link>
