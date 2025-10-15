@@ -15,7 +15,7 @@ const Information = () => {
                   href="https://www.allowingmanyforms.org/books/the-source-can-be-transformed"
                   target="_blank"
                 >
-                  The Source Can Be Transformed, 2025
+                  The Source Can Be Transformed, 2024
                 </a>
               </li>
             </ul>
