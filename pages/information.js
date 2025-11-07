@@ -7,17 +7,6 @@ import NewsletterSubscribe from "@/components/NewsletterSubscribe";
 import MaxWidth from "@/components/MaxWidth";
 import { getResume } from "@/lib/sanity";
 
-export async function getStaticProps() {
-  const resume = await getResume();
-  return {
-    props: {
-      resume,
-    },
-    // Revalidate every minute
-    revalidate: 60,
-  };
-}
-
 const Information = ({ resume }) => {
   const [subPage, setSubPage] = useState("contact");
 
@@ -149,6 +138,17 @@ const Information = ({ resume }) => {
 };
 
 export default Information;
+
+export async function getStaticProps() {
+  const resume = await getResume();
+  return {
+    props: {
+      resume,
+    },
+    // Revalidate every minute
+    revalidate: 60,
+  };
+}
 
 const Resume = ({ resume }) => {
   return (
