@@ -9,9 +9,10 @@ module.exports = {
     extend: {
       fontFamily: {
         serif: ["Times New Roman", "Times", "serif"],
+        sans: ["Arial"],
       },
       fontSize: {
-        sm: ["16px", "20px"],
+        sm: ["15px", "19px"],
       },
     },
   },

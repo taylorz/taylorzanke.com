@@ -10,33 +10,32 @@ import LoadingImage from "@/components/LoadingImage";
 const WorkPage = ({ work }) => {
   return (
     <PageContainer>
-      <div className="pt-10 pl-0 sm:pl-[195px]">
+      <div className="pl-0 sm:pl-[201px]">
         <MaxWidth>
-          <div className="flex flex-col gap-4">
-            <div className="flex flex-col gap-2 items-start justify-start">
-              <div className="flex flex-col gap-2">
-                <div>
-                  {/* title */}
-                  {work.title && (
-                    <p>
-                      <span className="italic">{work.title}</span>
-                      {work.year && <span>, {work.year}</span>}
-                    </p>
-                  )}
-                  {/* materials */}
-                  {work.materials && <p>{work.materials}</p>}
-                  {/* dimensions */}
-                  {work.customDimensions ? (
-                    <p>{work.customDimensions}</p>
-                  ) : work.height && work.width ? (
-                    <p>
-                      {`${work.height} x ${work.width} ${
-                        work.depth ? `x ${work.depth}` : ""
-                      } inches`}
-                    </p>
-                  ) : null}
-                </div>
+          <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-5 items-start justify-start">
+              <div>
+                {/* title */}
+                {work.title && (
+                  <p>
+                    <span className="italic">{work.title}</span>
+                    {work.year && <span>, {work.year}</span>}
+                  </p>
+                )}
+                {/* materials */}
+                {work.materials && <p>{work.materials}</p>}
+                {/* dimensions */}
+                {work.customDimensions ? (
+                  <p>{work.customDimensions}</p>
+                ) : work.height && work.width ? (
+                  <p>
+                    {`${work.height} x ${work.width} ${
+                      work.depth ? `x ${work.depth}` : ""
+                    } inches`}
+                  </p>
+                ) : null}
               </div>
+
               <div className="flex flex-col gap-1 items-start justify-start">
                 {/* Images */}
                 {work.images?.map((image, index) => {
@@ -51,12 +50,13 @@ const WorkPage = ({ work }) => {
                 })}
               </div>
             </div>
+
             {work.file ||
             work.details ||
             (work.externLinkUrl && work.externalLinkLabel) ||
             work.description ? (
               <>
-                <div className="flex flex-col gap-2 pb-12">
+                <div className="flex flex-col gap-5 pb-5">
                   {work.file && work.file.file && (
                     <a
                       href={`https://cdn.sanity.io/files/${
@@ -141,7 +141,7 @@ const WorkImage = ({ image, priority }) => {
       {isOpen ? (
         <div
           onClick={() => setIsOpen(false)}
-          className="cursor-pointer fixed inset-1 z-50 overflow-y-scroll"
+          className="cursor-pointer fixed inset-0 z-50 overflow-y-scroll"
         >
           <LoadingImage
             src={urlFor(image.image).width(3200).quality(80).url()}
@@ -155,7 +155,7 @@ const WorkImage = ({ image, priority }) => {
         <LoadingImage
           src={urlFor(image.image).width(1200).quality(80).url()}
           alt={image.caption || ""}
-          className="max-h-[520px]"
+          className="max-h-[640px]"
           priority={priority}
         />
       </div>
