@@ -13,6 +13,8 @@ export async function getStaticProps() {
     props: {
       resume,
     },
+    // Revalidate every minute
+    revalidate: 60,
   };
 }
 
