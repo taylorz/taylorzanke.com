@@ -12,19 +12,21 @@ export default function Home({ workImages }) {
 
   return (
     <PageContainer>
-      <MaxWidth>
-        <Link href={`/work/${randomImage.slug}`} scroll={false}>
-          <LoadingImage
-            src={urlFor(randomImage.firstImage.image)
-              .width(2400)
-              .quality(80)
-              .url()}
-            alt={randomImage.firstImage.caption}
-            className="max-h-[640px]"
-            objectPosition="bottom"
-          />
-        </Link>
-      </MaxWidth>
+      <div className="fixed bottom-0 right-0 p-1">
+        <MaxWidth>
+          <Link href={`/work/${randomImage.slug}`} scroll={false}>
+            <LoadingImage
+              src={urlFor(randomImage.firstImage.image)
+                .width(2400)
+                .quality(80)
+                .url()}
+              alt={randomImage.firstImage.caption}
+              className="max-h-[640px]"
+              objectPosition="bottom"
+            />
+          </Link>
+        </MaxWidth>
+      </div>
     </PageContainer>
   );
 }
