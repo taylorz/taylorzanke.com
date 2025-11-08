@@ -64,12 +64,12 @@ const Information = ({ resume }) => {
                       studio visit or to discuss a collaboration. Warmly,
                       Taylor.
                     </p>
-                    <p>
+                    {/* <p>
                       Third Floor, Studio 5 <br />
                       1500 S Los Angeles Street <br />
                       Los Angeles, California 90015 <br />
                       United States
-                    </p>
+                    </p> */}
                     <ul>
                       <li>
                         <a href="mailto:taylor@allowingmanyforms.org">
