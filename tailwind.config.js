@@ -12,7 +12,7 @@ module.exports = {
         sans: ["Arial"],
       },
       fontSize: {
-        sm: ["15px", "19px"],
+        sm: ["14px", "16px"],
       },
     },
   },

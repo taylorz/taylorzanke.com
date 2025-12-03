@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const Nav = () => {
   return (
-    <div className="w-full">
-      <div className="flex gap-5 pl-5 pt-5">
+    <div className="w-full px-4 pt-4">
+      <div className="flex gap-4">
         <Link href="/">
           <p className="hover:cursor-pointer">Taylor Zanke</p>
         </Link>
@@ -13,6 +13,9 @@ const Nav = () => {
         <Link href="/work">
           <p className="hover:cursor-pointer">Work</p>
         </Link>
+        {/* <Link href="/books">
+          <p className="hover:cursor-pointer">Books</p>
+        </Link> */}
       </div>
     </div>
   );

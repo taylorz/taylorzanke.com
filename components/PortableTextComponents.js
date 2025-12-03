@@ -1,6 +1,6 @@
 export const portableTextComponents = {
   block: {
-    normal: ({ children }) => <p className="mb-5 last:mb-0">{children}</p>,
+    normal: ({ children }) => <p className="mb-4 last:mb-0">{children}</p>,
     h1: ({ children }) => (
       <h1 className="text-2xl font-bold mb-2 last:mb-0">{children}</h1>
     ),

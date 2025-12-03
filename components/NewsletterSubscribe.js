@@ -31,10 +31,8 @@ const NewsletterSubscribe = () => {
       <div className="w-full">
         <div className="flex flex-col">
           <input
-            {...register("fullName", {
-              required: "Please enter your name",
-            })}
-            className="focus:outline-none placeholder:text-zinc-900 bg-transparent"
+            {...register("fullName", { required: false })}
+            className="focus:outline-none placeholder:text-zinc-500 bg-transparent"
             placeholder="Full Name"
             name="fullName"
           />
@@ -45,7 +43,7 @@ const NewsletterSubscribe = () => {
               pattern:
                 /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
             })}
-            className="focus:outline-none placeholder:text-zinc-900 bg-transparent"
+            className="focus:outline-none placeholder:text-zinc-500 bg-transparent"
             placeholder="Email"
             name="email"
           />
@@ -55,8 +53,7 @@ const NewsletterSubscribe = () => {
           </button>
         </div>
         {errors.email || errors.fullName ? (
-          <div className="mt-2">
-            {errors.fullName && <p>{errors.fullName.message}</p>}
+          <div className="mt-4 text-red-500">
             {errors.email && <p>{errors.email.message}</p>}
           </div>
         ) : null}

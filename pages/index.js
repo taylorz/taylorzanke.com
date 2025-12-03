@@ -7,24 +7,22 @@ import { getWorkImages, urlFor } from "@/lib/sanity";
 import LoadingImage from "@/components/LoadingImage";
 
 export default function Home({ workImages }) {
-  // Select one random image from work images
-  const randomImage = workImages[Math.floor(Math.random() * workImages.length)];
+  // Select the first image from the first work
+  const randomImage = workImages[0];
 
   return (
     <PageContainer>
-      <div className="fixed bottom-0 right-0 p-1">
+      <div className="fixed inset-0 flex items-center justify-center pointer-events-none">
         <MaxWidth>
-          <Link href={`/work/${randomImage.slug}`} scroll={false}>
-            <LoadingImage
-              src={urlFor(randomImage.firstImage.image)
-                .width(2400)
-                .quality(80)
-                .url()}
-              alt={randomImage.firstImage.caption}
-              className="max-h-[640px]"
-              objectPosition="bottom"
-            />
-          </Link>
+          <LoadingImage
+            src={urlFor(randomImage.firstImage.image)
+              .width(2400)
+              .quality(80)
+              .url()}
+            alt={randomImage.firstImage.caption}
+            className="max-h-[640px]"
+            objectPosition="bottom"
+          />
         </MaxWidth>
       </div>
     </PageContainer>

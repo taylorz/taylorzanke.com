@@ -10,10 +10,10 @@ import LoadingImage from "@/components/LoadingImage";
 const WorkPage = ({ work }) => {
   return (
     <PageContainer>
-      <div className="pl-0 sm:pl-[201px]">
+      <div className="pl-0 sm:pl-[182px]">
         <MaxWidth>
-          <div className="flex flex-col gap-5">
-            <div className="flex flex-col gap-5 items-start justify-start">
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 items-start justify-start">
               <div>
                 {/* title */}
                 {work.title && (
@@ -56,7 +56,7 @@ const WorkPage = ({ work }) => {
             (work.externLinkUrl && work.externalLinkLabel) ||
             work.description ? (
               <>
-                <div className="flex flex-col gap-5 pb-5">
+                <div className="flex flex-col gap-4 pb-4">
                   {work.file && work.file.file && (
                     <a
                       href={`https://cdn.sanity.io/files/${
