@@ -1,5 +1,5 @@
 // External
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { PortableText } from "@portabletext/react";
 // Internal
@@ -7,14 +7,10 @@ import PageContainer from "@/components/PageContainer";
 import NewsletterSubscribe from "@/components/NewsletterSubscribe";
 import MaxWidth from "@/components/MaxWidth";
 import { portableTextComponents } from "@/components/PortableTextComponents";
-import { getResume, getStatement } from "@/lib/sanity";
+import { getResume, getStatement, getBiography } from "@/lib/sanity";
 
-const Information = ({ resume, statement }) => {
+const Information = ({ resume, statement, biography }) => {
   const [subPage, setSubPage] = useState("biography");
-
-  useEffect(() => {
-    console.log(resume);
-  }, [resume]);
   return (
     <PageContainer>
       <div className="pl-0 sm:pl-[97px]">
@@ -76,13 +72,12 @@ const Information = ({ resume, statement }) => {
                 )}
                 {subPage === "biography" && (
                   <div>
-                    <p>
-                      Taylor Zanke (b. 1992, Toronto) is a Canadian artist
-                      working with sculpture and installation. He maintains a
-                      production and publishing project embedded within his
-                      artistic praxis, titled Allowing Many Forms, founded in
-                      2022.
-                    </p>
+                    {biography?.content && (
+                      <PortableText
+                        value={biography.content}
+                        components={portableTextComponents}
+                      />
+                    )}
                   </div>
                 )}
                 {subPage === "contact" && (
@@ -120,10 +115,12 @@ export default Information;
 export async function getStaticProps() {
   const resume = await getResume();
   const statement = await getStatement();
+  const biography = await getBiography();
   return {
     props: {
       resume,
       statement,
+      biography,
     },
     // Revalidate every minute
     revalidate: 60,
