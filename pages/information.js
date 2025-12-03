@@ -78,15 +78,10 @@ const Information = ({ resume, statement }) => {
                   <div>
                     <p>
                       Taylor Zanke (b. 1992, Toronto) is a Canadian artist
-                      working with sculpture and installation. His practice
-                      engages with a shifting collection of ephemeral material,
-                      including paper and building debris, to explore notions of
-                      transformation and the ways in which conventional notions
-                      of function, value, or origin can be set and unset. He
-                      brings these materials and questions into contact with
-                      existing systems and structures through a flexible project
-                      titled Allowing Many Forms that publishes, produces,
-                      coordinates, and collaborates.
+                      working with sculpture and installation. He maintains a
+                      production and publishing project embedded within his
+                      artistic praxis, titled Allowing Many Forms, founded in
+                      2022.
                     </p>
                   </div>
                 )}
@@ -141,7 +136,7 @@ const Resume = ({ resume }) => {
       {resume.groups.map((group, index) => {
         const seenYears = new Set();
         return (
-          <div key={index} className="flex flex-col gap-1">
+          <div key={index} className="flex flex-col gap-4">
             <p>{group.groupTitle}</p>
             <div>
               {group.items.map((item, itemIndex) => {
