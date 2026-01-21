@@ -82,10 +82,6 @@ const Information = ({ resume, statement, biography }) => {
                 )}
                 {subPage === "contact" && (
                   <div className="flex flex-col gap-4">
-                    <div>
-                      Studio in downtown Los Angeles in the Fashion District
-                      near the Bendix Building.
-                    </div>
                     <div className="flex flex-col">
                       <a href="mailto:taylor@allowingmanyforms.org">
                         taylor@allowingmanyforms.org
