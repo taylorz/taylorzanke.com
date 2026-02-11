@@ -12,7 +12,7 @@ export default function InformationOverlay({ biography, resume, onClose }) {
       onClick={onClose}
     >
       <div
-        className="grid grid-cols-1 sm:grid-cols-3 w-full px-3 sm:px-32 gap-32 py-48 sm:py-8 min-h-full"
+        className="grid grid-cols-1 sm:grid-cols-3 w-full px-3 sm:px-32 gap-6 sm:gap-32 py-20 sm:py-8 min-h-full"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex flex-col gap-3 col-span-1 order-2 sm:order-1">
