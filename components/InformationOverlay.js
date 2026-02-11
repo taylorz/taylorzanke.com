@@ -17,21 +17,14 @@ export default function InformationOverlay({ biography, resume, onClose }) {
       >
         <div className="flex flex-col gap-3 col-span-1 order-2 sm:order-1">
           <div>
+            <Text>Taylor Zanke</Text>
+          </div>
+          <div>
             <Text>Contact</Text>
             <Text className="indent-2">Los Angeles, CA</Text>
             <a href="mailto:taylor.zanke@gmail.com" className="indent-2">
               <Text link>taylor.zanke@gmail.com</Text>
             </a>
-          </div>
-          <div>
-            <Text>Links</Text>
-            <Link
-              href="https://allowingmanyforms.org"
-              target="_blank"
-              className="indent-2"
-            >
-              <Text link>Allowing Many Forms</Text>
-            </Link>
           </div>
 
           <div>
@@ -39,6 +32,11 @@ export default function InformationOverlay({ biography, resume, onClose }) {
             <div className="pl-2">
               <NewsletterSubscribe />
             </div>
+          </div>
+          <div>
+            <Link href="https://allowingmanyforms.org" target="_blank">
+              <Text link>Allowing Many Forms</Text>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col col-span-2 order-1 sm:order-2">

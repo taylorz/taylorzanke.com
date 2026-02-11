@@ -53,9 +53,7 @@ const NewsletterSubscribe = () => {
           </button>
         </div>
         {errors.email || errors.fullName ? (
-          <div className="mt-4 text-red-500">
-            {errors.email && <p>{errors.email.message}</p>}
-          </div>
+          <div>{errors.email && <Text>{errors.email.message}</Text>}</div>
         ) : null}
       </div>
     </form>
