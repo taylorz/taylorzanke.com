@@ -51,7 +51,7 @@ export default function Home({ workImages, resume, biography }) {
                     <img
                       src={urlFor(image.image).width(3200).quality(80).url()}
                       alt="Taylor Zanke"
-                      className="sm:max-w-[60vw] sm:max-h-[60vw] max-w-[90vw] max-h-[90vw] w-auto h-auto self-start"
+                      className="sm:max-w-[70vw] sm:max-h-[70vw] max-w-[95vw] max-h-[95vw] w-auto h-auto self-start"
                     />
                     {image.caption && (
                       <div className="text-xs leading-[1] p-2">
