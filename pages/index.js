@@ -1,29 +1,32 @@
-import { useState, useEffect } from "react";
-import Link from "next/link";
-
 import PageContainer from "@/components/PageContainer";
-import MaxWidth from "@/components/MaxWidth";
+import Text from "@/components/Text";
 import { getWorkImages, urlFor } from "@/lib/sanity";
-import LoadingImage from "@/components/LoadingImage";
 
 export default function Home({ workImages }) {
-  // Select the first image from the first work
-  const randomImage = workImages[0];
-
+  console.log(workImages);
   return (
     <PageContainer>
-      <div className="fixed inset-0 flex items-center justify-center pointer-events-none">
-        <MaxWidth>
-          <LoadingImage
-            src={urlFor(randomImage.firstImage.image)
-              .width(2400)
-              .quality(80)
-              .url()}
-            alt={randomImage.firstImage.caption}
-            className="max-h-[640px]"
-            objectPosition="bottom"
-          />
-        </MaxWidth>
+      <div className="flex flex-col gap-32">
+        {workImages.flatMap(
+          (work) =>
+            work.images?.map((image, index) => {
+              if (!image?.image) return null;
+              return (
+                <div key={`${work.slug}-${index}`} className="flex flex-col">
+                  <img
+                    src={urlFor(image.image).width(3200).quality(80).url()}
+                    alt="Taylor Zanke"
+                    className="sm:max-w-[60vw] sm:max-h-[60vw] max-w-[90vw] max-h-[90vw] w-auto h-auto self-start"
+                  />
+                  {image.caption && (
+                    <div className="text-xs leading-[1] p-2">
+                      {image.caption}
+                    </div>
+                  )}
+                </div>
+              );
+            }) ?? []
+        )}
       </div>
     </PageContainer>
   );

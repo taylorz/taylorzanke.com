@@ -19,5 +19,39 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: Helvetica, sans-serif;
+  font-size: 22px;
+  line-height: 1.2;
 }
+
+/* Link-style Text: when inside hovered/focused anchor, or when containing hovered anchor */
+a:hover .text-link-style,
+a:focus .text-link-style,
+.text-link-style:has(a:hover),
+.text-link-style:has(a:focus) {
+  filter: none;
+  color: rgb(0 0 0);
+}
+
+/* Button hover: same as link */
+button:hover .text-link-style,
+button:focus .text-link-style {
+  filter: none;
+  color: rgb(0 0 0);
+}
+
+/* Newsletter inputs: outlined when empty, black when filled */
+.newsletter-input {
+  filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 1));
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 1);
+  color: white;
+}
+.newsletter-input::placeholder {
+  color: white;
+}
+.newsletter-input:not(:placeholder-shown) {
+  filter: none;
+  color: rgb(0 0 0);
+}
+
 

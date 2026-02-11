@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         serif: ["Times New Roman", "Times", "serif"],
-        sans: ["Arial"],
+        sans: ["Helvetica"],
       },
       fontSize: {
         sm: ["14px", "16px"],

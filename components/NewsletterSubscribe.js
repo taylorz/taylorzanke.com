@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-
+import Text from "@/components/Text";
 const NewsletterSubscribe = () => {
   const {
     register,
@@ -25,14 +25,14 @@ const NewsletterSubscribe = () => {
     }
   };
   return isSubmitSuccessful ? (
-    <p>Subscribed — Thank you!</p>
+    <Text>Subscribed!</Text>
   ) : (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="w-full">
         <div className="flex flex-col">
           <input
             {...register("fullName", { required: false })}
-            className="focus:outline-none placeholder:text-zinc-500 bg-transparent"
+            className="newsletter-input focus:outline-none bg-transparent w-full"
             placeholder="Full Name"
             name="fullName"
           />
@@ -43,13 +43,13 @@ const NewsletterSubscribe = () => {
               pattern:
                 /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
             })}
-            className="focus:outline-none placeholder:text-zinc-500 bg-transparent"
+            className="newsletter-input focus:outline-none bg-transparent w-full"
             placeholder="Email"
             name="email"
           />
 
-          <button className="p-0 flex w-fit" type="submit">
-            Subscribe
+          <button className="p-0 flex w-fit focus:outline-none" type="submit">
+            <Text link>Subscribe</Text>
           </button>
         </div>
         {errors.email || errors.fullName ? (
