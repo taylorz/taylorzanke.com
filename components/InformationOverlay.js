@@ -19,8 +19,8 @@ export default function InformationOverlay({ biography, resume, onClose }) {
           <div>
             <Text>Contact</Text>
             <Text className="indent-2">Los Angeles, CA</Text>
-            <a href="mailto:studio@taylorzanke.com" className="indent-2">
-              <Text link>studio@taylorzanke.com</Text>
+            <a href="mailto:taylor.zanke@gmail.com" className="indent-2">
+              <Text link>taylor.zanke@gmail.com</Text>
             </a>
           </div>
           <div>

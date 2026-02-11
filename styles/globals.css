@@ -21,8 +21,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: Helvetica, sans-serif;
   font-size: 24px;
-  line-height: 1.1;
-  font-weight: bold;
+  line-height: 1.2;
+
 }
 
 /* Link-style Text: when inside hovered/focused anchor, or when containing hovered anchor */
