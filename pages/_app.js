@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <main>
-      <div className="fixed inset-0 px-3 sm:px-16 pt-8 sm:pb-6 flex flex-col sm:justify-end pointer-events-none">
+      <div className="fixed inset-0 px-3 sm:px-16 pt-8 sm:pb-6 flex flex-col sm:justify-end pointer-events-none z-10">
         <Link
           href={router.asPath === "/" ? "/information" : "/"}
           className="pointer-events-auto w-fit"
