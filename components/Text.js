@@ -9,14 +9,14 @@ export default function Text({
   className = "",
   link = false,
 }) {
-  const shadowClasses = noShadow ? "text-outline" : DROP_SHADOW_CLASSES;
+  const shadowClasses = noShadow ? "" : DROP_SHADOW_CLASSES;
   const shadowStyle = DROP_SHADOW_STYLE;
-  const colorClass = color === "black" ? "text-black" : "text-white";
+  const colorClass = color === "black" ? "text-black" : "text-black";
   const linkClasses = link ? "text-link-style" : "";
   const baseClasses = "font-sans leading-[1.2] text-[21px] font-bold";
   const combinedClassName = [
     baseClasses,
-    shadowClasses,
+    // shadowClasses,
     colorClass,
     linkClasses,
     className,
@@ -24,9 +24,5 @@ export default function Text({
     .filter(Boolean)
     .join(" ");
 
-  return (
-    <p className={combinedClassName} style={shadowStyle}>
-      {children}
-    </p>
-  );
+  return <p className={combinedClassName}>{children}</p>;
 }
