@@ -25,14 +25,17 @@ const NewsletterSubscribe = () => {
     }
   };
   return isSubmitSuccessful ? (
-    <Text>Subscribed!</Text>
+    <div>
+      <Text className="opacity-50">Email</Text>
+      <Text>Subscribed</Text>
+    </div>
   ) : (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="w-full">
         <div className="flex flex-col">
           <input
             {...register("email", {
-              required: "Please enter a valid email",
+              required: "Email required",
               pattern:
                 /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
             })}

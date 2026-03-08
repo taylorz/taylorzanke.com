@@ -8,7 +8,7 @@ import { portableTextComponents } from "@/components/PortableTextComponents";
 export default function InformationOverlay({ biography, resume, onClose }) {
   return (
     <div
-      className="fixed inset-0 z-20 overflow-y-auto pointer-events-auto"
+      className="fixed inset-0 z-20 overflow-y-auto pointer-events-auto bg-white"
       onClick={onClose}
     >
       <div
