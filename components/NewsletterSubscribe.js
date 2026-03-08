@@ -31,13 +31,6 @@ const NewsletterSubscribe = () => {
       <div className="w-full">
         <div className="flex flex-col">
           <input
-            {...register("fullName", { required: false })}
-            className="newsletter-input focus:outline-none bg-transparent w-full"
-            placeholder="Full Name"
-            name="fullName"
-          />
-
-          <input
             {...register("email", {
               required: "Please enter a valid email",
               pattern:
@@ -52,8 +45,8 @@ const NewsletterSubscribe = () => {
             <Text link>Subscribe</Text>
           </button>
         </div>
-        {errors.email || errors.fullName ? (
-          <div>{errors.email && <Text>{errors.email.message}</Text>}</div>
+        {errors.email ? (
+          <div><Text>{errors.email.message}</Text></div>
         ) : null}
       </div>
     </form>
