@@ -37,7 +37,7 @@ export default function Home({ workImages, resume, biography }) {
           onClick={() => setIsOverlayOpen((prev) => !prev)}
           className="pointer-events-auto w-fit bg-transparent border-none p-0 cursor-pointer"
         >
-          <Text link>{isOverlayOpen ? "Close" : "Taylor Zanke"}</Text>
+          <Text link>Taylor Zanke</Text>
         </button>
       </div>
       <PageContainer>

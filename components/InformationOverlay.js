@@ -16,9 +16,6 @@ export default function InformationOverlay({ biography, resume, onClose }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex flex-col gap-5 col-span-1 order-2 md:order-1">
-          <div className="hidden md:block">
-            <Text>Taylor Zanke</Text>
-          </div>
           <div>
             <Text>Contact</Text>
             <Text className="indent-2">Los Angeles, CA</Text>
