@@ -44,7 +44,7 @@ button:focus .text-link-style {
   color: black;
   font-family: Helvetica, sans-serif;
   font-size: 18px;
-  line-height: 1.1;
+  line-height: 20px;
   font-weight: bold;
 }
 .newsletter-input:not(:placeholder-shown) {
