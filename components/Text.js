@@ -13,7 +13,7 @@ export default function Text({
   const shadowStyle = DROP_SHADOW_STYLE;
   const colorClass = color === "black" ? "text-black" : "text-black";
   const linkClasses = link ? "text-link-style" : "";
-  const baseClasses = "font-sans leading-[1.2] text-[21px] font-bold";
+  const baseClasses = "font-sans leading-[1.1] text-[18px] font-bold";
   const combinedClassName = [
     baseClasses,
     // shadowClasses,

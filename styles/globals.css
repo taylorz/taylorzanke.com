@@ -39,20 +39,12 @@ button:focus .text-link-style {
 }
 
 /* Newsletter inputs: outlined when empty, black when filled */
-.newsletter-input {
-  /* filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 1));
-  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 1); */
-  /* color: white; */
-  color: black;
-  font-size: 21px;
-  line-height: 1.2;
-  font-weight: bold;
-}
+.newsletter-input,
 .newsletter-input::placeholder {
-  /* color: white; */
   color: black;
-  font-size: 21px;
-  line-height: 1.2;
+  font-family: Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.1;
   font-weight: bold;
 }
 .newsletter-input:not(:placeholder-shown) {

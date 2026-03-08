@@ -46,7 +46,9 @@ const NewsletterSubscribe = () => {
           </button>
         </div>
         {errors.email ? (
-          <div><Text>{errors.email.message}</Text></div>
+          <div>
+            <Text>{errors.email.message}</Text>
+          </div>
         ) : null}
       </div>
     </form>
