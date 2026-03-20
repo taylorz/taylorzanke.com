@@ -44,7 +44,10 @@ const NewsletterSubscribe = () => {
             name="email"
           />
 
-          <button className="p-0 flex w-fit focus:outline-none" type="submit">
+          <button
+            className="p-0 flex w-fit focus:outline-none hover:underline"
+            type="submit"
+          >
             <Text link>Subscribe</Text>
           </button>
         </div>
