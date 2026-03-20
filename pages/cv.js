@@ -6,7 +6,7 @@ import { getResume, getBiography } from "@/lib/sanity";
 const CVPage = ({ resume, biography }) => {
   return (
     <PageContainer>
-      <div className="px-8 grid grid-cols-5 gap-8">
+      <div className="px-8 grid grid-cols-5 gap-8 pb-32">
         <div className="col-start-1 col-span-5 flex flex-col gap-4">
           <Resume resume={resume} />
         </div>

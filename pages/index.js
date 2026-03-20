@@ -2,8 +2,12 @@ import PageContainer from "@/components/PageContainer";
 import { getExhibitions, urlFor } from "@/lib/sanity";
 
 export default function Home({ exhibitions }) {
+  const ogImage = exhibitions[0]?.firstImage
+    ? urlFor(exhibitions[0].firstImage).width(1200).quality(80).url()
+    : null;
+
   return (
-    <PageContainer>
+    <PageContainer ogImage={ogImage}>
       <div className="flex flex-col gap-32 py-32">
         {exhibitions[0]?.firstImage && (
           <div className="flex flex-col gap-1">
