@@ -19,8 +19,14 @@ export default (S) =>
         .child(S.document().schemaType('resume').documentId('resume')),
       // Add a divider for other document types
       S.divider(),
+      // Exhibitions and Individuals before Work
+      S.documentTypeListItem('exhibition').title('Exhibitions'),
+      S.listItem()
+        .title('Individuals')
+        .id('individuals')
+        .child(S.document().schemaType('individuals').documentId('individuals')),
       // Include other document types
       ...S.documentTypeListItems().filter(
-        (listItem) => !['biography', 'statement', 'resume'].includes(listItem.getId()),
+        (listItem) => !['biography', 'statement', 'resume', 'exhibition', 'individuals'].includes(listItem.getId()),
       ),
     ])

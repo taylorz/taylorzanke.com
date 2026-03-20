@@ -22,30 +22,13 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
-/* Link-style Text: when inside hovered/focused anchor, or when containing hovered anchor */
-a:hover .text-link-style,
-a:focus .text-link-style,
-.text-link-style:has(a:hover),
-.text-link-style:has(a:focus) {
-  filter: none;
-  color: rgb(0 0 0);
-}
-
-/* Button hover: same as link */
-button:hover .text-link-style,
-button:focus .text-link-style {
-  filter: none;
-  color: rgb(0 0 0);
-}
-
 /* Newsletter inputs: outlined when empty, black when filled */
 .newsletter-input,
 .newsletter-input::placeholder {
-  color: black;
+  color: gray;
   font-family: Helvetica, sans-serif;
-  font-size: 18px;
-  line-height: 20px;
-  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
 }
 .newsletter-input:not(:placeholder-shown) {
   filter: none;

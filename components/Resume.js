@@ -4,12 +4,12 @@ const Resume = ({ resume }) => {
   if (!resume?.groups) return null;
 
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-4">
       {resume.groups.map((group, index) => {
         return (
-          <div key={index}>
-            <Text>{group.groupTitle}</Text>
-            <div className="pl-2">
+          <div key={index} className="flex flex-col gap-4">
+            <Text className="uppercase">{group.groupTitle}</Text>
+            <div>
               {group.items.map((item, itemIndex) => {
                 return (
                   <ResumeItem
@@ -30,9 +30,10 @@ const Resume = ({ resume }) => {
 
 const ResumeItem = ({ year, title, label }) => {
   return (
-    <div>
+    <div className="flex gap-4">
+      <Text>{year}</Text>
       <Text>
-        {year} {title ? `${title}, ` : null}
+        {title ? `${title}, ` : null}
         {label ? `${label}` : null}
       </Text>
     </div>
