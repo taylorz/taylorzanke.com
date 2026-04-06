@@ -62,19 +62,24 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'file',
-      title: 'File',
-      type: 'object',
-      fields: [
+      name: 'files',
+      title: 'Files',
+      type: 'array',
+      of: [
         {
-          name: 'label',
-          title: 'Label',
-          type: 'string',
-        },
-        {
-          name: 'file',
-          title: 'File',
-          type: 'file',
+          type: 'object',
+          fields: [
+            {
+              name: 'label',
+              title: 'Label',
+              type: 'string',
+            },
+            {
+              name: 'file',
+              title: 'File',
+              type: 'file',
+            },
+          ],
         },
       ],
     }),

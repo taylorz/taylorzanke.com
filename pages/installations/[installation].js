@@ -44,8 +44,26 @@ const InstallationPage = ({ exhibition }) => {
               />
             </div>
           )}
-          {(exhibition.file?.file || exhibition.link?.url) && (
+          {(exhibition.files?.length > 0 || exhibition.file?.file || exhibition.link?.url) && (
             <div>
+              {exhibition.files?.map((f, i) => (
+                f.file?.asset && (
+                  <Text key={i}>
+                    <a
+                      href={`https://cdn.sanity.io/files/${
+                        process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
+                      }/production/${f.file.asset._ref
+                        .replace("file-", "")
+                        .replace(/-(\w+)$/, ".$1")}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {f.label}
+                    </a>
+                  </Text>
+                )
+              ))}
               {exhibition.file?.file && (
                 <Text>
                   <a
