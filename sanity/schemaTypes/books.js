@@ -99,10 +99,30 @@ export default defineType({
       ],
     }),
   ],
+  orderings: [
+    {
+      title: 'Year, New',
+      name: 'yearDesc',
+      by: [{field: 'year', direction: 'desc'}],
+    },
+    {
+      title: 'Year, Old',
+      name: 'yearAsc',
+      by: [{field: 'year', direction: 'asc'}],
+    },
+  ],
   preview: {
     select: {
       title: 'title',
-      subtitle: 'year',
+      year: 'year',
+      images: 'images',
+    },
+    prepare({title, year, images}) {
+      const hasImages = Array.isArray(images) && images.length > 0
+      return {
+        title,
+        subtitle: `${year || ''}${hasImages ? '' : ' (no images)'}`.trim(),
+      }
     },
   },
 })
