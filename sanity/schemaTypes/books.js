@@ -1,0 +1,108 @@
+import {defineField, defineType} from 'sanity'
+
+export default defineType({
+  name: 'book',
+  title: 'Books',
+  type: 'document',
+  fields: [
+    defineField({
+      name: 'year',
+      title: 'Year',
+      type: 'string',
+    }),
+    defineField({
+      name: 'title',
+      title: 'Title',
+      type: 'string',
+    }),
+    defineField({
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      options: {
+        source: (doc) => `${doc.title || ''} ${doc.year || ''}`.trim(),
+        maxLength: 96,
+      },
+    }),
+    defineField({
+      name: 'note',
+      title: 'Note',
+      type: 'blockContent',
+    }),
+    defineField({
+      name: 'link',
+      title: 'Link',
+      type: 'object',
+      fields: [
+        {
+          name: 'label',
+          title: 'Label',
+          type: 'string',
+        },
+        {
+          name: 'url',
+          title: 'URL',
+          type: 'url',
+        },
+      ],
+    }),
+    defineField({
+      name: 'files',
+      title: 'Files',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'label',
+              title: 'Label',
+              type: 'string',
+            },
+            {
+              name: 'file',
+              title: 'File',
+              type: 'file',
+            },
+          ],
+        },
+      ],
+    }),
+    defineField({
+      name: 'images',
+      title: 'Images',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'image',
+              title: 'Image',
+              type: 'image',
+              options: {
+                hotspot: true,
+              },
+            },
+            {
+              name: 'captionTitle',
+              title: 'Caption Title',
+              type: 'string',
+            },
+            {
+              name: 'captionLabel',
+              title: 'Caption Label',
+              type: 'string',
+            },
+          ],
+        },
+      ],
+    }),
+  ],
+  preview: {
+    select: {
+      title: 'title',
+      subtitle: 'year',
+    },
+  },
+})

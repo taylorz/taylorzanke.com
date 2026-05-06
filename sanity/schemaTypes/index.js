@@ -6,5 +6,6 @@ import statement from './statement'
 import biography from './biography'
 import exhibition from './exhibitions'
 import individual from './individuals'
+import book from './books'
 
-export const schemaTypes = [blockContent, work, category, resume, statement, biography, exhibition, individual]
+export const schemaTypes = [blockContent, work, category, resume, statement, biography, exhibition, individual, book]

@@ -25,8 +25,9 @@ export default (S) =>
         .title('Individuals')
         .id('individuals')
         .child(S.document().schemaType('individuals').documentId('individuals')),
+      S.documentTypeListItem('book').title('Books'),
       // Include other document types
       ...S.documentTypeListItems().filter(
-        (listItem) => !['biography', 'statement', 'resume', 'exhibition', 'individuals'].includes(listItem.getId()),
+        (listItem) => !['biography', 'statement', 'resume', 'exhibition', 'individuals', 'book'].includes(listItem.getId()),
       ),
     ])

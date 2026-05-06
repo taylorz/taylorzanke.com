@@ -1,21 +1,31 @@
 import Link from "next/link";
+import Text from "@/components/Text";
 
 const Nav = () => {
   return (
-    <div className="w-full px-4 pt-4">
-      <div className="flex gap-4">
-        <Link href="/">
-          <p className="hover:cursor-pointer">Taylor Zanke</p>
+    <div className="flex flex-col gap-4">
+      <Link href="/" className="hover:underline">
+        <Text>TAYLOR ZANKE</Text>
+      </Link>
+      <div>
+        <Link href="/cv" className="hover:underline">
+          <Text>cv</Text>
         </Link>
-        <Link href="/information">
-          <p className="hover:cursor-pointer">Information</p>
+        <Link href="/amf" className="hover:underline">
+          <Text>amf</Text>
         </Link>
-        <Link href="/work">
-          <p className="hover:cursor-pointer">Work</p>
+        <Link href="/books" className="hover:underline">
+          <Text>books</Text>
         </Link>
-        {/* <Link href="/books">
-          <p className="hover:cursor-pointer">Books</p>
-        </Link> */}
+        <Link href="/contact" className="hover:underline">
+          <Text>contact</Text>
+        </Link>
+        <Link href="/individuals" className="hover:underline">
+          <Text>individual</Text>
+        </Link>
+        <Link href="/installations" className="hover:underline">
+          <Text>installations</Text>
+        </Link>
       </div>
     </div>
   );
