@@ -8,7 +8,7 @@ const Resume = ({ resume }) => {
       {resume.groups.map((group, index) => {
         return (
           <div key={index} className="flex flex-col gap-4">
-            <Text className="uppercase">{group.groupTitle}</Text>
+            <Text>{group.groupTitle}</Text>
             <div>
               {group.items.map((item, itemIndex) => {
                 return (

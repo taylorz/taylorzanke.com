@@ -16,12 +16,14 @@ const WorkPage = ({ work }) => {
               className="sm:max-w-[70vw] sm:max-h-[70vw] max-w-[95vw] max-h-[95vw] w-auto h-auto self-start"
             />
             {(image.captionTitle || image.captionLabel) && (
-              <div className="px-8 text-[10px] leading-[12px]">
-                {image.captionTitle && (
-                  <span className="italic">{image.captionTitle}</span>
-                )}
-                {image.captionTitle && image.captionLabel && ", "}
-                {image.captionLabel && <span>{image.captionLabel}</span>}
+              <div className="px-8">
+                <Text>
+                  {image.captionTitle && (
+                    <span className="italic">{image.captionTitle}</span>
+                  )}
+                  {image.captionTitle && image.captionLabel && ", "}
+                  {image.captionLabel && <span>{image.captionLabel}</span>}
+                </Text>
               </div>
             )}
           </div>

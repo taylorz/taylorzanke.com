@@ -28,7 +28,7 @@ body {
   color: gray;
   font-family: Helvetica, sans-serif;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 15px;
 }
 .newsletter-input:not(:placeholder-shown) {
   filter: none;
