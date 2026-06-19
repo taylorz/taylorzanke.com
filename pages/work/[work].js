@@ -1,15 +1,15 @@
 import Link from "next/link";
 import PageContainer from "@/components/PageContainer";
-import { getBook, getBooks, urlFor } from "@/lib/sanity";
+import { getWorkItem, getBooks, getExhibitions, urlFor } from "@/lib/sanity";
 import { PortableText } from "@portabletext/react";
 import { portableTextComponents } from "@/components/PortableTextComponents";
 import Text from "@/components/Text";
 
-const BookPage = ({ book }) => {
+const WorkPage = ({ work }) => {
   return (
     <PageContainer>
       <div className="flex flex-col gap-32 py-32">
-        {book.images?.map((image, i) => (
+        {work.images?.map((image, i) => (
           <div key={i} className="flex flex-col gap-1">
             <img
               src={urlFor(image.image).width(3200).quality(80).url()}
@@ -28,21 +28,25 @@ const BookPage = ({ book }) => {
         ))}
         <div className="p-8 flex flex-col gap-4">
           <div>
-            <Text className="italic">{book.title}</Text>
-            {book.year && <Text>{book.year}</Text>}
+            <Text className="italic">{work.title}</Text>
+            {work.datesOpen ? (
+              <Text>{work.datesOpen}</Text>
+            ) : (
+              work.year && <Text>{work.year}</Text>
+            )}
           </div>
 
-          {book.note && (
+          {work.note && (
             <div>
               <PortableText
-                value={book.note}
+                value={work.note}
                 components={portableTextComponents}
               />
             </div>
           )}
-          {(book.files?.length > 0 || book.link?.url) && (
+          {(work.files?.length > 0 || work.file?.file || work.link?.url) && (
             <div>
-              {book.files?.map(
+              {work.files?.map(
                 (f, i) =>
                   f.file?.asset && (
                     <Text key={i}>
@@ -59,16 +63,32 @@ const BookPage = ({ book }) => {
                         {f.label}
                       </a>
                     </Text>
-                  ),
+                  )
               )}
-              {book.link?.url && (
+              {work.file?.file && (
+                <Text>
+                  <a
+                    href={`https://cdn.sanity.io/files/${
+                      process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
+                    }/production/${work.file.file.asset._ref
+                      .replace("file-", "")
+                      .replace(/-(\w+)$/, ".$1")}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {work.file.label}
+                  </a>
+                </Text>
+              )}
+              {work.link?.url && (
                 <Text>
                   <Link
-                    href={book.link.url}
+                    href={work.link.url}
                     target="_blank"
                     className="hover:underline"
                   >
-                    {book.link.label}
+                    {work.link.label}
                   </Link>
                 </Text>
               )}
@@ -81,21 +101,25 @@ const BookPage = ({ book }) => {
 };
 
 export async function getStaticProps({ params }) {
-  const book = await getBook(params.book);
+  const work = await getWorkItem(params.work);
 
   return {
     props: {
-      book,
+      work,
     },
     revalidate: 60,
   };
 }
 
 export async function getStaticPaths() {
-  const books = await getBooks();
-  const paths = books
-    .filter((b) => b.slug)
-    .map((b) => ({ params: { book: b.slug } }));
+  const [books, exhibitions] = await Promise.all([
+    getBooks(),
+    getExhibitions(),
+  ]);
+
+  const paths = [...books, ...exhibitions]
+    .filter((w) => w.slug)
+    .map((w) => ({ params: { work: w.slug } }));
 
   return {
     paths,
@@ -103,4 +127,4 @@ export async function getStaticPaths() {
   };
 }
 
-export default BookPage;
+export default WorkPage;

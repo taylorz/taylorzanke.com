@@ -1,49 +1,72 @@
+import { useState } from "react";
+import Link from "next/link";
 import PageContainer from "@/components/PageContainer";
-import { getExhibitions, urlFor } from "@/lib/sanity";
+import Text from "@/components/Text";
+import { getBooks, getExhibitions } from "@/lib/sanity";
 
-export default function Home({ exhibitions }) {
+export default function Home({ works }) {
   return (
     <PageContainer>
-      <div className="flex flex-col gap-32 py-32">
-        {exhibitions[0]?.firstImage && (
-          <div className="flex flex-col gap-1">
-            <img
-              src={urlFor(exhibitions[0].firstImage)
-                .width(3200)
-                .quality(80)
-                .url()}
-              alt="Taylor Zanke"
-              className="sm:max-w-[70vw] sm:max-h-[70vw] max-w-[95vw] max-h-[95vw] w-auto h-auto self-start"
-            />
-            {(exhibitions[0].firstImageCaptionTitle ||
-              exhibitions[0].firstImageCaptionLabel) && (
-              <div className="px-8 text-[10px] leading-[12px]">
-                {exhibitions[0].firstImageCaptionTitle && (
-                  <span className="italic">
-                    {exhibitions[0].firstImageCaptionTitle}
-                  </span>
-                )}
-                {exhibitions[0].firstImageCaptionTitle &&
-                  exhibitions[0].firstImageCaptionLabel &&
-                  ", "}
-                {exhibitions[0].firstImageCaptionLabel && (
-                  <span>{exhibitions[0].firstImageCaptionLabel}</span>
-                )}
-              </div>
-            )}
-          </div>
-        )}
+      <div className="px-8 grid grid-cols-5 gap-8 pt-32">
+        <div className="col-start-1 col-span-5">
+          {works.map((work, i) => (
+            <WorkItem key={i} work={work} />
+          ))}
+        </div>
       </div>
     </PageContainer>
   );
 }
 
+const WorkItem = ({ work }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const label = (
+    <>
+      <span className="italic">{work.title}</span>
+      {work.venue && `, ${work.venue}`}
+      {work.location && `, ${work.location}`}
+    </>
+  );
+
+  if (!work.firstImage) {
+    return (
+      <div className="w-fit text-neutral-500">
+        <div className="flex gap-4">
+          <Text>{label}</Text>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className="w-fit"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <Link href={`/work/${work.slug}`}>
+        <div className="flex gap-4">
+          <Text className={isHovered && "underline"}>{label}</Text>
+        </div>
+      </Link>
+    </div>
+  );
+};
+
 export async function getStaticProps() {
-  const exhibitions = await getExhibitions();
+  const [books, exhibitions] = await Promise.all([
+    getBooks(),
+    getExhibitions(),
+  ]);
+
+  const works = [...books, ...exhibitions].sort(
+    (a, b) => (b.year || 0) - (a.year || 0)
+  );
 
   return {
     props: {
-      exhibitions,
+      works,
     },
     revalidate: 60,
   };
