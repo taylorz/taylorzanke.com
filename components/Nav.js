@@ -14,17 +14,8 @@ const Nav = () => {
         <Link href="/amf" className="hover:underline">
           <Text>amf</Text>
         </Link>
-        <Link href="/books" className="hover:underline">
-          <Text>books</Text>
-        </Link>
         <Link href="/contact" className="hover:underline">
           <Text>contact</Text>
-        </Link>
-        <Link href="/individuals" className="hover:underline">
-          <Text>individual</Text>
-        </Link>
-        <Link href="/installations" className="hover:underline">
-          <Text>installations</Text>
         </Link>
       </div>
     </div>

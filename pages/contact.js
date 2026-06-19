@@ -9,7 +9,7 @@ const Information = () => {
       <div className="px-8 grid grid-cols-5 gap-8">
         <div className="col-start-1 col-span-5 flex flex-col gap-4">
           <div>
-            <Text>Los Angeles, California, United States</Text>
+            <Text>Based in Los Angeles, California</Text>
           </div>
           <div>
             <a href="mailto:taylor.zanke@gmail.com" className="hover:underline">
