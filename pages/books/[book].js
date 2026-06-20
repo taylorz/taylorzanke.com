@@ -1,32 +1,32 @@
 import PageContainer from "@/components/PageContainer";
 import WorkDetail from "@/components/WorkDetail";
-import { getWorkItem, getExhibitions } from "@/lib/sanity";
+import { getBook, getBooks } from "@/lib/sanity";
 
-const WorkPage = ({ work }) => {
+const BookPage = ({ book }) => {
   return (
     <PageContainer>
-      <WorkDetail work={work} />
+      <WorkDetail work={book} />
     </PageContainer>
   );
 };
 
 export async function getStaticProps({ params }) {
-  const work = await getWorkItem(params.work);
+  const book = await getBook(params.book);
 
   return {
     props: {
-      work,
+      book,
     },
     revalidate: 60,
   };
 }
 
 export async function getStaticPaths() {
-  const exhibitions = await getExhibitions();
+  const books = await getBooks();
 
-  const paths = exhibitions
-    .filter((w) => w.slug)
-    .map((w) => ({ params: { work: w.slug } }));
+  const paths = books
+    .filter((b) => b.slug)
+    .map((b) => ({ params: { book: b.slug } }));
 
   return {
     paths,
@@ -34,4 +34,4 @@ export async function getStaticPaths() {
   };
 }
 
-export default WorkPage;
+export default BookPage;

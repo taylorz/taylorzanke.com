@@ -1,14 +1,14 @@
 import PageContainer from "@/components/PageContainer";
 import WorkItem from "@/components/WorkItem";
-import { getExhibitions } from "@/lib/sanity";
+import { getBooks } from "@/lib/sanity";
 
-export default function Home({ works }) {
+export default function Books({ books }) {
   return (
     <PageContainer>
       <div className="px-8 grid grid-cols-5 gap-8">
         <div className="col-start-1 col-span-5">
-          {works.map((work, i) => (
-            <WorkItem key={i} work={work} basePath="/work" />
+          {books.map((book, i) => (
+            <WorkItem key={i} work={book} basePath="/books" />
           ))}
         </div>
       </div>
@@ -17,13 +17,11 @@ export default function Home({ works }) {
 }
 
 export async function getStaticProps() {
-  const exhibitions = await getExhibitions();
-
-  const works = exhibitions.sort((a, b) => (b.year || 0) - (a.year || 0));
+  const books = (await getBooks()).sort((a, b) => (b.year || 0) - (a.year || 0));
 
   return {
     props: {
-      works,
+      books,
     },
     revalidate: 60,
   };

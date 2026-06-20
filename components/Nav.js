@@ -16,6 +16,15 @@ const Nav = () => {
         </Link>
         ,{" "}
         <Link
+          href="/books"
+          className={`hover:underline ${
+            pathname === "/books" ? "underline" : ""
+          }`}
+        >
+          Books
+        </Link>
+        ,{" "}
+        <Link
           href="/contact"
           className={`hover:underline ${
             pathname === "/contact" ? "underline" : ""
