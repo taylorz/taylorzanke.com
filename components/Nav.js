@@ -6,7 +6,7 @@ const Nav = () => {
   const router = useRouter();
   const pathname = router.pathname;
   return (
-    <div className="pb-32">
+    <div>
       {/* <Link href="/cv" className="hover:underline ">
           <Text>C.V.</Text>
           </Link> */}
