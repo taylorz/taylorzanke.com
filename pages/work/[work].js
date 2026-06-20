@@ -8,7 +8,7 @@ import Text from "@/components/Text";
 const WorkPage = ({ work }) => {
   return (
     <PageContainer>
-      <div className="flex flex-col gap-32 py-32">
+      <div className="flex flex-col gap-32 pb-32">
         {work.images?.map((image, i) => (
           <div key={i} className="flex flex-col gap-1">
             <img

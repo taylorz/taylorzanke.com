@@ -30,33 +30,31 @@ const NewsletterSubscribe = () => {
       <Text>Subscribed</Text>
     </div>
   ) : (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="w-full">
-        <div className="flex flex-col">
-          <input
-            {...register("email", {
-              required: "Email required",
-              pattern:
-                /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-            })}
-            className="newsletter-input focus:outline-none bg-transparent w-full"
-            placeholder="Email"
-            name="email"
-          />
-
-          <button
-            className="p-0 flex w-fit focus:outline-none hover:underline"
-            type="submit"
-          >
-            <Text link>Subscribe</Text>
-          </button>
-        </div>
-        {errors.email ? (
-          <div>
-            <Text>{errors.email.message}</Text>
-          </div>
-        ) : null}
-      </div>
+    <form onSubmit={handleSubmit(onSubmit)} className="flex items-baseline">
+      <Text>&nbsp;</Text>
+      <input
+        {...register("email", {
+          required: "Email required",
+          pattern: {
+            value:
+              /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+            message: "Invalid email",
+          },
+        })}
+        className="newsletter-input p-0 m-0 focus:outline-none bg-transparent"
+        placeholder="email"
+        name="email"
+      />
+      <Text>,&nbsp;</Text>
+      <button
+        className="p-0 flex w-fit focus:outline-none hover:underline"
+        type="submit"
+      >
+        <Text link>subscribe</Text>
+      </button>
+      {errors.email ? (
+        <Text className="lowercase">&nbsp;({errors.email.message})</Text>
+      ) : null}
     </form>
   );
 };
