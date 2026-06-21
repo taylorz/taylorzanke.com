@@ -32,7 +32,7 @@ const NewsletterSubscribe = () => {
   ) : (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="inline-flex flex-wrap items-baseline max-w-full align-baseline"
+      className="flex flex-wrap items-baseline min-w-0"
     >
       <Text>&nbsp;</Text>
       <input

@@ -67,8 +67,8 @@ const Information = ({ contact }) => {
               </Text>
             )}
 
-            <div className="pl-4 [text-indent:-16px]">
-              <Text className="inline">Newsletter:&nbsp;</Text>
+            <div className="flex">
+              <Text className="shrink-0">Newsletter:</Text>
               <NewsletterSubscribe />
             </div>
           </div>
