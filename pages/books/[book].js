@@ -1,6 +1,6 @@
 import PageContainer from "@/components/PageContainer";
 import WorkDetail from "@/components/WorkDetail";
-import { getBook, getBooks } from "@/lib/sanity";
+import { getWorkItem, getBooks } from "@/lib/sanity";
 
 const BookPage = ({ book }) => {
   return (
@@ -11,7 +11,7 @@ const BookPage = ({ book }) => {
 };
 
 export async function getStaticProps({ params }) {
-  const book = await getBook(params.book);
+  const book = await getWorkItem(params.book);
 
   return {
     props: {

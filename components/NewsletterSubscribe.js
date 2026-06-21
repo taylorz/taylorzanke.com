@@ -30,7 +30,10 @@ const NewsletterSubscribe = () => {
       <Text>Subscribed</Text>
     </div>
   ) : (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex items-baseline">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="inline-flex flex-wrap items-baseline max-w-full align-baseline"
+    >
       <Text>&nbsp;</Text>
       <input
         {...register("email", {

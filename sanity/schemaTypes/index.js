@@ -4,8 +4,8 @@ import category from './category'
 import resume from './resume'
 import statement from './statement'
 import biography from './biography'
-import exhibition from './exhibitions'
 import individual from './individuals'
-import book from './books'
+import works from './works'
+import contact from './contact'
 
-export const schemaTypes = [blockContent, work, category, resume, statement, biography, exhibition, individual, book]
+export const schemaTypes = [blockContent, work, category, resume, statement, biography, individual, works, contact]

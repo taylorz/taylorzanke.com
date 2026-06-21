@@ -15,5 +15,20 @@ export default defineConfig({
 
   schema: {
     types: schemaTypes,
+    templates: (prev) => [
+      ...prev,
+      {
+        id: 'works-exhibition',
+        title: 'Work — Exhibition',
+        schemaType: 'works',
+        value: {tags: ['exhibitions']},
+      },
+      {
+        id: 'works-book',
+        title: 'Work — Book',
+        schemaType: 'works',
+        value: {tags: ['books']},
+      },
+    ],
   },
 })

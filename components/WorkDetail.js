@@ -1,8 +1,20 @@
-import Link from "next/link";
 import { urlFor } from "@/lib/sanity";
 import { PortableText } from "@portabletext/react";
 import { portableTextComponents } from "@/components/PortableTextComponents";
 import Text from "@/components/Text";
+
+const withScheme = (url) =>
+  /^https?:\/\//i.test(url) ? url : `https://${url}`;
+
+// Render note blocks inline so "Note:" + the text flow as a single
+// hanging-indent line, matching the other fields.
+const inlineNoteComponents = {
+  ...portableTextComponents,
+  block: {
+    ...portableTextComponents.block,
+    normal: ({ children }) => <>{children}</>,
+  },
+};
 
 const WorkDetail = ({ work }) => {
   return (
@@ -17,70 +29,70 @@ const WorkDetail = ({ work }) => {
           )}
         </div>
 
-        {work.note && (
-          <div>
-            <PortableText
-              value={work.note}
-              components={portableTextComponents}
-            />
-          </div>
-        )}
-        {(work.files?.length > 0 || work.file?.file || work.link?.url) && (
-          <div>
-            {work.files?.map(
-              (f, i) =>
-                f.file?.asset && (
-                  <Text key={i}>
-                    <a
-                      href={`https://cdn.sanity.io/files/${
-                        process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
-                      }/production/${f.file.asset._ref
-                        .replace("file-", "")
-                        .replace(/-(\w+)$/, ".$1")}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:underline"
-                    >
-                      {f.label}
-                    </a>
-                  </Text>
-                )
-            )}
-            {work.file?.file && (
-              <Text>
-                <a
-                  href={`https://cdn.sanity.io/files/${
-                    process.env.NEXT_PUBLIC_SANITY_PROJECT_ID
-                  }/production/${work.file.file.asset._ref
-                    .replace("file-", "")
-                    .replace(/-(\w+)$/, ".$1")}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  {work.file.label}
-                </a>
-              </Text>
-            )}
-            {work.link?.url && (
-              <Text>
-                <Link
-                  href={work.link.url}
-                  target="_blank"
-                  className="hover:underline"
-                >
-                  {work.link.label}
-                </Link>
-              </Text>
-            )}
-          </div>
-        )}
+        <div>
+          {work.attributes?.map((attr, i) => (
+            <Text key={i} className="pl-4 [text-indent:-16px]">
+              {attr.label}: {attr.value}
+            </Text>
+          ))}
+
+          {work.location && (
+            <Text className="pl-4 [text-indent:-16px]">
+              Location: {work.location}
+            </Text>
+          )}
+
+          {work.documents?.length > 0 && (
+            <Text className="pl-4 [text-indent:-16px] break-words">
+              Documents:{" "}
+              {work.documents.map((doc, i) => (
+                <span key={i}>
+                  {i > 0 && ", "}
+                  <a
+                    href={doc.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {doc.name}
+                  </a>
+                </span>
+              ))}
+            </Text>
+          )}
+
+          {work.online?.length > 0 && (
+            <Text className="pl-4 [text-indent:-16px] break-words">
+              Online:{" "}
+              {work.online.map((url, i) => (
+                <span key={i}>
+                  {i > 0 && ", "}
+                  <a
+                    href={withScheme(url)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {url}
+                  </a>
+                </span>
+              ))}
+            </Text>
+          )}
+
+          {work.note && (
+            <Text className="pl-4 [text-indent:-16px]">
+              Note:{" "}
+              <PortableText value={work.note} components={inlineNoteComponents} />
+            </Text>
+          )}
+        </div>
       </div>
       {work.images?.map((image, i) => (
         <div key={i} className="flex flex-col gap-1">
           <img
             src={urlFor(image.image).width(3200).quality(80).url()}
-            className="sm:max-w-[70vw] sm:max-h-[70vw] max-w-[95vw] max-h-[95vw] w-auto h-auto self-start"
+            className="sm:max-w-[70vw] sm:max-h-[70vw] max-w-[calc(100vw-24px)] max-h-[calc(100vw-24px)] w-auto h-auto self-start"
           />
           {(image.captionTitle || image.captionLabel) && (
             <div className="px-6 sm:px-8">

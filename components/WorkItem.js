@@ -8,7 +8,6 @@ const WorkItem = ({ work, basePath = "/work" }) => {
   const label = (
     <>
       <span className="italic">{work.title}</span>
-      {work.venue && `, ${work.venue}`}
       {work.location && `, ${work.location}`}
     </>
   );
