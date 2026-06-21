@@ -7,7 +7,7 @@ import Text from "@/components/Text";
 const WorkDetail = ({ work }) => {
   return (
     <div className="flex flex-col gap-32 pb-32">
-      <div className="px-8 flex flex-col gap-4">
+      <div className="px-6 sm:px-8 flex flex-col gap-4">
         <div>
           <Text className="italic">{work.title}</Text>
           {work.datesOpen ? (
@@ -83,7 +83,7 @@ const WorkDetail = ({ work }) => {
             className="sm:max-w-[70vw] sm:max-h-[70vw] max-w-[95vw] max-h-[95vw] w-auto h-auto self-start"
           />
           {(image.captionTitle || image.captionLabel) && (
-            <div className="px-8">
+            <div className="px-6 sm:px-8">
               <Text>
                 {image.captionTitle && (
                   <span className="italic">{image.captionTitle}</span>

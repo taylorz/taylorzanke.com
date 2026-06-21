@@ -1,19 +1,8 @@
-import PageContainer from "@/components/PageContainer";
-import WorkItem from "@/components/WorkItem";
+import WorkList from "@/components/WorkList";
 import { getExhibitions } from "@/lib/sanity";
 
 export default function Home({ works }) {
-  return (
-    <PageContainer>
-      <div className="px-8 grid grid-cols-5 gap-8">
-        <div className="col-start-1 col-span-5">
-          {works.map((work, i) => (
-            <WorkItem key={i} work={work} basePath="/work" />
-          ))}
-        </div>
-      </div>
-    </PageContainer>
-  );
+  return <WorkList items={works} basePath="/work" />;
 }
 
 export async function getStaticProps() {

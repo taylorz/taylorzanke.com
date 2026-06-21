@@ -6,7 +6,7 @@ import NewsletterSubscribe from "@/components/NewsletterSubscribe";
 const Information = () => {
   return (
     <PageContainer>
-      <div className="px-8 grid grid-cols-5 gap-8">
+      <div className="px-6 sm:px-8 grid grid-cols-5 gap-8">
         <div className="col-start-1 col-span-5 flex flex-col gap-4">
           <div>
             <Text>Location: Los Angeles, California</Text>

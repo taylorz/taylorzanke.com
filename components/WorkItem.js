@@ -17,7 +17,7 @@ const WorkItem = ({ work, basePath = "/work" }) => {
     return (
       <div className="w-fit text-neutral-500">
         <div className="flex gap-4">
-          <Text>{label}</Text>
+          <Text className="pl-4 [text-indent:-16px]">{label}</Text>
         </div>
       </div>
     );
@@ -31,7 +31,9 @@ const WorkItem = ({ work, basePath = "/work" }) => {
     >
       <Link href={`${basePath}/${work.slug}`}>
         <div className="flex gap-4">
-          <Text className={isHovered && "underline"}>{label}</Text>
+          <Text className={`pl-4 [text-indent:-16px] ${isHovered ? "underline" : ""}`}>
+            {label}
+          </Text>
         </div>
       </Link>
     </div>
