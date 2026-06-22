@@ -5,6 +5,8 @@ import Text from "@/components/Text";
 
 const withScheme = (url) =>
   /^https?:\/\//i.test(url) ? url : `https://${url}`;
+const stripScheme = (url) =>
+  url.replace(/^https?:\/\//i, "").replace(/\/$/, "");
 
 // Render note blocks inline so "Note:" + the text flow as a single
 // hanging-indent line, matching the other fields.
@@ -73,7 +75,7 @@ const WorkDetail = ({ work }) => {
                     rel="noopener noreferrer"
                     className="hover:underline"
                   >
-                    {url}
+                    {stripScheme(url)}
                   </a>
                 </span>
               ))}
