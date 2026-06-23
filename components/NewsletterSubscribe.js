@@ -45,7 +45,7 @@ const NewsletterSubscribe = () => {
           },
         })}
         className="newsletter-input p-0 m-0 focus:outline-none bg-transparent"
-        placeholder="email"
+        placeholder="Email"
         name="email"
       />
       <Text>,&nbsp;</Text>
@@ -53,11 +53,9 @@ const NewsletterSubscribe = () => {
         className="p-0 flex w-fit focus:outline-none hover:underline"
         type="submit"
       >
-        <Text link>subscribe</Text>
+        <Text link>Subscribe</Text>
       </button>
-      {errors.email ? (
-        <Text className="lowercase">&nbsp;({errors.email.message})</Text>
-      ) : null}
+      {errors.email ? <Text>&nbsp;({errors.email.message})</Text> : null}
     </form>
   );
 };
