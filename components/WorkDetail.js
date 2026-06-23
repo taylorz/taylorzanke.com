@@ -85,7 +85,10 @@ const WorkDetail = ({ work }) => {
           {work.note && (
             <Text className="pl-4 [text-indent:-16px]">
               Note:{" "}
-              <PortableText value={work.note} components={inlineNoteComponents} />
+              <PortableText
+                value={work.note}
+                components={inlineNoteComponents}
+              />
             </Text>
           )}
         </div>
@@ -94,7 +97,7 @@ const WorkDetail = ({ work }) => {
         <div key={i} className="flex flex-col gap-1">
           <img
             src={urlFor(image.image).width(3200).quality(80).url()}
-            className="sm:max-w-[70vw] sm:max-h-[70vw] max-w-[calc(100vw-24px)] max-h-[calc(100vw-24px)] w-auto h-auto self-start"
+            className="sm:max-w-[75vw] sm:max-h-[75vw] max-w-[calc(100vw-24px)] max-h-[calc(100vw-24px)] w-auto h-auto self-start"
           />
           {(image.captionTitle || image.captionLabel) && (
             <div className="px-6 sm:px-8">

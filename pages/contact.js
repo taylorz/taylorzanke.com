@@ -1,7 +1,9 @@
 import Link from "next/link";
+import { PortableText } from "@portabletext/react";
 import PageContainer from "@/components/PageContainer";
 import Text from "@/components/Text";
 import NewsletterSubscribe from "@/components/NewsletterSubscribe";
+import { portableTextComponents } from "@/components/PortableTextComponents";
 import { getContact } from "@/lib/sanity";
 
 const withScheme = (url) =>
@@ -9,11 +11,40 @@ const withScheme = (url) =>
 const stripScheme = (url) =>
   url.replace(/^https?:\/\//i, "").replace(/\/$/, "");
 
+// Biography links use the site's plain underline style (not the default blue).
+const bioComponents = {
+  ...portableTextComponents,
+  marks: {
+    ...portableTextComponents.marks,
+    link: ({ value, children }) => {
+      const href = value?.href || "";
+      const target = href.startsWith("http") ? "_blank" : undefined;
+      return (
+        <a
+          href={href}
+          target={target}
+          rel={target === "_blank" ? "noopener noreferrer" : undefined}
+          className="hover:underline"
+        >
+          {children}
+        </a>
+      );
+    },
+  },
+};
+
 const Information = ({ contact }) => {
   return (
     <PageContainer>
       <div className="px-6 sm:px-8 grid grid-cols-5 gap-8">
         <div className="col-start-1 col-span-5 flex flex-col gap-4">
+          {contact?.biography && (
+            <PortableText
+              value={contact.biography}
+              components={bioComponents}
+            />
+          )}
+
           <div>
             {contact?.location && (
               <Text className="pl-4 [text-indent:-16px]">

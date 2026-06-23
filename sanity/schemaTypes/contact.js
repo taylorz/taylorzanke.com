@@ -11,6 +11,11 @@ export default defineType({
   ],
   fields: [
     defineField({
+      name: 'biography',
+      title: 'Biography',
+      type: 'blockContent',
+    }),
+    defineField({
       name: 'location',
       title: 'Location',
       type: 'string',

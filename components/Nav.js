@@ -7,9 +7,6 @@ const Nav = () => {
   const pathname = router.pathname;
   return (
     <div>
-      {/* <Link href="/cv" className="hover:underline ">
-          <Text>C.V.</Text>
-          </Link> */}
       <Text>
         <Link href="/" className="hover:underline">
           Taylor Zanke
@@ -33,9 +30,6 @@ const Nav = () => {
           Contact
         </Link>
       </Text>
-      {/* <Link href="/amf" className="hover:underline ">
-          <Text>Allowing Many Forms</Text>
-        </Link> */}
     </div>
   );
 };

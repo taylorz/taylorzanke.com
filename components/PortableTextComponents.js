@@ -5,9 +5,7 @@ import Text, {
 
 export const portableTextComponents = {
   block: {
-    normal: ({ children }) => (
-      <Text className="mb-6 last:mb-0">{children}</Text>
-    ),
+    normal: ({ children }) => <Text className="mb-0">{children}</Text>,
     h1: ({ children }) => (
       <h1
         className={`${DROP_SHADOW_CLASSES} text-2xl font-bold mb-2 last:mb-0 text-white`}
