@@ -9,7 +9,7 @@ const Nav = () => {
     <div>
       <Text>
         <Link href="/" className="hover:underline">
-          Taylor Zanke
+          Taylor Louie Zanke
         </Link>
         ,{" "}
         <Link
