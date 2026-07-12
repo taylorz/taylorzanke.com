@@ -7,12 +7,12 @@ export default function MyApp({ Component, pageProps, ogImage }) {
   return (
     <>
       <Head>
-        <title>Taylor Zanke</title>
-        <meta name="description" content="Taylor Zanke" />
-        <meta property="og:title" content="Taylor Zanke" />
-        <meta property="og:description" content="Taylor Zanke" />
-        <meta name="twitter:title" content="Taylor Zanke" />
-        <meta name="twitter:description" content="Taylor Zanke" />
+        <title>Taylor Louie Zanke</title>
+        <meta name="description" content="Taylor Louie Zanke" />
+        <meta property="og:title" content="Taylor Louie Zanke" />
+        <meta property="og:description" content="Taylor Louie Zanke" />
+        <meta name="twitter:title" content="Taylor Louie Zanke" />
+        <meta name="twitter:description" content="Taylor Louie Zanke" />
         {ogImage && <meta property="og:image" content={ogImage} />}
         {ogImage && <meta name="twitter:image" content={ogImage} />}
         {ogImage && <meta name="twitter:card" content="summary_large_image" />}
