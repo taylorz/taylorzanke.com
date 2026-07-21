@@ -1,10 +1,22 @@
+import Head from "next/head";
 import PageContainer from "@/components/PageContainer";
 import WorkDetail from "@/components/WorkDetail";
-import { getWorkItem, getBooks } from "@/lib/sanity";
+import { getWorkItem, getBooks, urlFor } from "@/lib/sanity";
 
-const BookPage = ({ book }) => {
+const BookPage = ({ book, ogImage }) => {
   return (
     <PageContainer>
+      {ogImage && (
+        <Head>
+          <meta key="og:image" property="og:image" content={ogImage} />
+          <meta key="twitter:image" name="twitter:image" content={ogImage} />
+          <meta
+            key="twitter:card"
+            name="twitter:card"
+            content="summary_large_image"
+          />
+        </Head>
+      )}
       <WorkDetail work={book} />
     </PageContainer>
   );
@@ -13,9 +25,15 @@ const BookPage = ({ book }) => {
 export async function getStaticProps({ params }) {
   const book = await getWorkItem(params.book);
 
+  const firstImage = book?.images?.[0]?.image;
+  const ogImage = firstImage
+    ? urlFor(firstImage).width(1200).quality(80).url()
+    : null;
+
   return {
     props: {
       book,
+      ogImage,
     },
     revalidate: 60,
   };
