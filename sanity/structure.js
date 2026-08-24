@@ -2,6 +2,11 @@ export default (S) =>
   S.list()
     .title('Content')
     .items([
+      // Home singleton - homepage slideshow
+      S.listItem()
+        .title('Home')
+        .id('home')
+        .child(S.document().schemaType('home').documentId('home')),
       // Biography singleton - only one document can exist
       S.listItem()
         .title('Biography')
@@ -60,6 +65,8 @@ export default (S) =>
         .child(S.document().schemaType('individuals').documentId('individuals')),
       // Include other document types
       ...S.documentTypeListItems().filter(
-        (listItem) => !['biography', 'statement', 'resume', 'works', 'individuals', 'contact'].includes(listItem.getId()),
+        (listItem) => !['home', 'biography', 'statement', 'resume', 'works', 'individuals', 'contact'].includes(
+          listItem.getId(),
+        ),
       ),
     ])

@@ -1,4 +1,5 @@
 import {defineField, defineType} from 'sanity'
+import {workSubtitle} from '../lib/workLabels'
 
 export default defineType({
   name: 'works',
@@ -131,10 +132,9 @@ export default defineType({
       tags: 'tags',
     },
     prepare({title, year, tags}) {
-      const tagList = Array.isArray(tags) && tags.length ? ` — ${tags.join(', ')}` : ''
       return {
         title,
-        subtitle: `${year || ''}${tagList}`.trim(),
+        subtitle: workSubtitle(tags, year),
       }
     },
   },

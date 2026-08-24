@@ -7,5 +7,6 @@ import biography from './biography'
 import individual from './individuals'
 import works from './works'
 import contact from './contact'
+import home from './home'
 
-export const schemaTypes = [blockContent, work, category, resume, statement, biography, individual, works, contact]
+export const schemaTypes = [blockContent, work, category, resume, statement, biography, individual, works, contact, home]
