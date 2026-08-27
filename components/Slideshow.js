@@ -4,8 +4,8 @@ import Text from "@/components/Text";
 
 const SECONDS_PER_SLIDE = 2;
 
-// Full-screen slideshow that covers the page until the visitor clicks or hits
-// a key. Advances on a timer with no transition — each slide simply replaces
+// Full-screen slideshow that covers the page until the visitor clicks.
+// Advances on a timer with no transition — each slide simply replaces
 // the last. Every image is rendered up front (hidden with visibility, not
 // display) so the browser has them decoded before their turn.
 const Slideshow = ({ slides, onClose }) => {
@@ -21,12 +21,6 @@ const Slideshow = ({ slides, onClose }) => {
 
     return () => clearInterval(interval);
   }, [slides.length]);
-
-  useEffect(() => {
-    const handleKeyDown = () => onClose();
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [onClose]);
 
   // Hold the page still underneath while the slideshow is covering it.
   useEffect(() => {
