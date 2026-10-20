@@ -8,7 +8,6 @@ import Text from "@/components/Text";
 // images.
 export default function Home({ slides }) {
   const [slide, setSlide] = useState(null);
-  const [showContact, setShowContact] = useState(false);
 
   useEffect(() => {
     if (slides.length === 0) return;
@@ -17,10 +16,7 @@ export default function Home({ slides }) {
 
   return (
     <div className="overflow-x-hidden">
-      <div
-        onClick={() => setShowContact(true)}
-        className="p-2 w-[100vw] h-[100vh] flex items-center justify-center [container-type:size] cursor-pointer"
-      >
+      <div className="p-2 w-[100vw] h-[100vh] flex items-center justify-center [container-type:size]">
         <div className="aspect-square w-[min(100cqw,100cqh)] select-none">
           {slide && (
             <img
@@ -32,41 +28,32 @@ export default function Home({ slides }) {
         </div>
       </div>
 
-      {showContact && (
-        <div
-          onClick={() => setShowContact(false)}
-          className="fixed inset-0 bg-[white] z-20"
-        >
-          <div className="h-[100svh] flex items-center justify-center px-8 py-8">
-            <div className="flex flex-col text-center gap-4">
-              <Text>Taylor Louie Zanke</Text>
+      <div className="h-[100vh] flex items-center justify-center px-8 py-8">
+        <div className="flex flex-col text-center gap-4">
+          <Text>Taylor Louie Zanke</Text>
 
-              <div>
-                <Text>
-                  <a
-                    href="https://www.instagram.com/taylorlouiezanke/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="hover:underline"
-                  >
-                    @taylorlouiezanke
-                  </a>
-                </Text>
-                <Text>
-                  <a
-                    href="mailto:info@taylorlouiezanke.com"
-                    onClick={(e) => e.stopPropagation()}
-                    className="hover:underline"
-                  >
-                    taylor@taylorlouiezanke.com
-                  </a>
-                </Text>
-              </div>
-            </div>
+          <div>
+            <Text>
+              <a
+                href="https://www.instagram.com/taylorlouiezanke/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                @taylorlouiezanke
+              </a>
+            </Text>
+            <Text>
+              <a
+                href="mailto:taylor@taylorlouiezanke.com"
+                className="hover:underline"
+              >
+                taylor@taylorlouiezanke.com
+              </a>
+            </Text>
           </div>
         </div>
-      )}
+      </div>
     </div>
   );
 }
