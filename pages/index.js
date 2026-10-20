@@ -42,7 +42,7 @@ export default function Home({ slides }) {
               <Text>Taylor Louie Zanke</Text>
 
               <div>
-                <Text>
+                {/* <Text>
                   <a
                     href="https://www.instagram.com/taylorlouiezanke/"
                     target="_blank"
@@ -52,7 +52,7 @@ export default function Home({ slides }) {
                   >
                     @taylorlouiezanke
                   </a>
-                </Text>
+                </Text> */}
                 <Text>
                   <a
                     href="mailto:info@taylorlouiezanke.com"
