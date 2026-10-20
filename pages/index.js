@@ -16,7 +16,7 @@ export default function Home({ slides }) {
 
   return (
     <div className="overflow-x-hidden">
-      <div className="p-2 w-[100vw] h-[100vh] flex items-center justify-center [container-type:size]">
+      <div className="p-2 w-[100vw] h-[100dvh] flex items-center justify-center [container-type:size]">
         <div className="aspect-square w-[min(100cqw,100cqh)] select-none">
           {slide && (
             <img
@@ -28,7 +28,7 @@ export default function Home({ slides }) {
         </div>
       </div>
 
-      <div className="h-[100vh] flex items-center justify-center px-8 py-8">
+      <div className="h-[100dvh] flex items-center justify-center px-8 py-8">
         <div className="flex flex-col text-center gap-4">
           <Text>Taylor Louie Zanke</Text>
 
