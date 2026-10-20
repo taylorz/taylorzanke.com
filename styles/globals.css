@@ -19,14 +19,14 @@
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 /* Newsletter inputs: outlined when empty, black when filled */
 .newsletter-input,
 .newsletter-input::placeholder {
   color: gray;
-  font-family: Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 14px;
   line-height: 16px;
 }
