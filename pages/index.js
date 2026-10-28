@@ -39,33 +39,6 @@ export default function Home({ slides, ogImage }) {
           )}
         </div>
       </div>
-
-      <div className="h-[100dvh] flex items-center justify-center px-8 py-8">
-        <div className="flex flex-col text-center gap-4">
-          <Text>Taylor Louie Zanke</Text>
-
-          <div>
-            <Text>
-              <a
-                href="https://www.instagram.com/taylorlouiezanke/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                @taylorlouiezanke
-              </a>
-            </Text>
-            <Text>
-              <a
-                href="mailto:taylor@taylorlouiezanke.com"
-                className="hover:underline"
-              >
-                taylor@taylorlouiezanke.com
-              </a>
-            </Text>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
