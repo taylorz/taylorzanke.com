@@ -2,11 +2,6 @@ export default (S) =>
   S.list()
     .title('Content')
     .items([
-      // Home singleton - homepage slideshow
-      S.listItem()
-        .title('Home')
-        .id('home')
-        .child(S.document().schemaType('home').documentId('home')),
       // Biography singleton - only one document can exist
       S.listItem()
         .title('Biography')
@@ -29,44 +24,69 @@ export default (S) =>
         .child(S.document().schemaType('contact').documentId('contact')),
       // Add a divider for other document types
       S.divider(),
-      // Works grouped by tag, before Work
+      // Work: everything, then one list per tag doc
       S.listItem()
-        .title('Works')
+        .title('Work')
         .child(
           S.list()
-            .title('Works')
+            .title('Work')
             .items([
               S.listItem()
-                .title('Exhibitions')
+                .title('All')
                 .child(
-                  S.documentList()
-                    .title('Exhibitions')
-                    .schemaType('works')
-                    .filter('_type == "works" && "exhibitions" in tags')
-                    .defaultOrdering([{field: 'year', direction: 'desc'}])
-                    .initialValueTemplates([S.initialValueTemplateItem('works-exhibition')]),
+                  S.documentTypeList('works')
+                    .title('All work')
+                    .defaultOrdering([{field: 'year', direction: 'desc'}]),
                 ),
               S.divider(),
               S.listItem()
-                .title('Books')
+                .title('By tag')
                 .child(
-                  S.documentList()
-                    .title('Books')
-                    .schemaType('works')
-                    .filter('_type == "works" && "books" in tags')
-                    .defaultOrdering([{field: 'year', direction: 'desc'}])
-                    .initialValueTemplates([S.initialValueTemplateItem('works-book')]),
+                  S.documentTypeList('tag')
+                    .title('By tag')
+                    .defaultOrdering([{field: 'order', direction: 'asc'}])
+                    .child((tagId) =>
+                      S.documentList()
+                        .title('Work')
+                        .schemaType('works')
+                        .filter('_type == "works" && references($tagId)')
+                        .params({tagId})
+                        .defaultOrdering([{field: 'year', direction: 'desc'}])
+                        .initialValueTemplates([
+                          S.initialValueTemplateItem('works-by-tag', {tagId}),
+                        ]),
+                    ),
                 ),
             ]),
+        ),
+      S.listItem()
+        .title('Tags')
+        .child(
+          S.documentTypeList('tag')
+            .title('Tags')
+            .defaultOrdering([{field: 'order', direction: 'asc'}]),
         ),
       S.listItem()
         .title('Individuals')
         .id('individuals')
         .child(S.document().schemaType('individuals').documentId('individuals')),
-      // Include other document types
+      // Home singleton - homepage carousel (1–5 slides)
+      S.listItem()
+        .title('Home')
+        .id('home')
+        .child(S.document().schemaType('home').documentId('home')),
+      // Include any other document types
       ...S.documentTypeListItems().filter(
-        (listItem) => !['home', 'biography', 'statement', 'resume', 'works', 'individuals', 'contact'].includes(
-          listItem.getId(),
-        ),
+        (listItem) =>
+          ![
+            'home',
+            'biography',
+            'statement',
+            'resume',
+            'works',
+            'individuals',
+            'contact',
+            'tag',
+          ].includes(listItem.getId()),
       ),
     ])

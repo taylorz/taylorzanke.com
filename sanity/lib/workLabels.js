@@ -1,15 +1,11 @@
-const TAG_LABELS = {
-  exhibitions: 'Exhibition',
-  books: 'Book',
+// Tag titles (already dereferenced) joined, e.g. "Installation, Publication".
+export function tagLabel(tagTitles) {
+  if (!Array.isArray(tagTitles)) return ''
+  return tagTitles.filter(Boolean).join(', ')
 }
 
-export function tagLabel(tags) {
-  if (!Array.isArray(tags)) return ''
-  return tags.map((tag) => TAG_LABELS[tag] || tag).join(', ')
-}
-
-// "Exhibition · 2026" — leads with the type so it reads at a glance in
+// "Installation · 2026" — leads with the tags so it reads at a glance in
 // document lists and in the reference dropdown on Home.
-export function workSubtitle(tags, year) {
-  return [tagLabel(tags), year].filter(Boolean).join(' · ')
+export function workSubtitle(tagTitles, year) {
+  return [tagLabel(tagTitles), year].filter(Boolean).join(' · ')
 }
