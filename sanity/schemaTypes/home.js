@@ -1,27 +1,8 @@
 import {defineArrayMember, defineField, defineType} from 'sanity'
-import SlideImagePicker from '../components/SlideImagePicker'
-import {workSubtitle} from '../lib/workLabels'
+import SlidePicker from '../components/SlidePicker'
 
-// The reference search runs under the Studio's drafts perspective, which
-// rewrites `_id` to the published id and moves the real one to `_originalId`.
-// That makes `!(_id in path("drafts.**"))` a no-op inside the search filter,
-// and filtering on `_originalId` would also hide published works that simply
-// have unpublished edits. So resolve the eligible published ids up front and
-// match against those instead.
-const PUBLISHED_WORK_IDS = `*[
-  _type == "works" &&
-  ("exhibitions" in tags || "books" in tags) &&
-  count(images) > 0 &&
-  !(_id in path("drafts.**"))
-]._id`
-
-const publishedWorksFilter = async ({getClient}) => {
-  const client = getClient({apiVersion: '2024-04-07'}).withConfig({perspective: 'raw'})
-  const publishedWorkIds = await client.fetch(PUBLISHED_WORK_IDS)
-
-  return {filter: '_id in $publishedWorkIds', params: {publishedWorkIds}}
-}
-
+// Homepage carousel: 1–5 slides, each one specific image picked from a work
+// or an individuals group. The site numbers them 1–5 in this order.
 export default defineType({
   name: 'home',
   title: 'Home',
@@ -29,51 +10,53 @@ export default defineType({
   fields: [
     defineField({
       name: 'slides',
-      title: 'Slideshow',
+      title: 'Slides',
       description:
-        'Full-screen slideshow shown on the first visit to the homepage. Pick a work, then pick one of its images. Drag to reorder.',
+        'Full-screen images on the homepage, numbered 1–5 in this order. Pick a work or an individual, then one of its images. Drag to reorder.',
       type: 'array',
+      validation: (Rule) => Rule.required().min(1).max(5),
       of: [
         defineArrayMember({
           type: 'object',
           name: 'slide',
+          // One picker for the whole slide: it sets the source (work or
+          // individuals group), the image key, and a copy of the image.
+          components: {input: SlidePicker},
           fields: [
+            // Source: exactly one of these two.
             defineField({
               name: 'work',
               title: 'Work',
               type: 'reference',
               to: [{type: 'works'}],
-              options: {filter: publishedWorksFilter},
-              validation: (Rule) => Rule.required(),
             }),
             defineField({
-              name: 'imageKey',
-              title: 'Image',
+              name: 'groupKey',
+              title: 'Individuals group',
               type: 'string',
-              components: {input: SlideImagePicker},
-              validation: (Rule) => Rule.required().error('Pick an image for this slide.'),
+              description: '_key of a group in the Individuals document.',
             }),
+            // `_key` of the chosen image within the source's images.
+            defineField({name: 'imageKey', title: 'Image', type: 'string'}),
+            // Copy of the chosen image, for the Studio list preview (an
+            // individuals group can't be referenced, so a preview can't
+            // look it up). The site resolves the live image from the source
+            // and only falls back to this copy.
+            defineField({name: 'image', title: 'Image copy', type: 'image', readOnly: true}),
           ],
+          validation: (Rule) =>
+            Rule.custom((slide) =>
+              slide?.imageKey && (slide.work?._ref || slide.groupKey)
+                ? true
+                : 'Pick an image for this slide.',
+            ),
           preview: {
-            // Preview paths follow the reference, so `work.images` resolves to
-            // the referenced document's array — the selected image is picked
-            // out of it below.
-            select: {
-              title: 'work.title',
-              year: 'work.year',
-              tags: 'work.tags',
-              images: 'work.images',
-              imageKey: 'imageKey',
-            },
-            prepare({title, year, tags, images, imageKey}) {
-              const selected = Array.isArray(images)
-                ? images.find((image) => image._key === imageKey)
-                : undefined
-
+            select: {title: 'work.title', year: 'work.year', groupKey: 'groupKey', media: 'image'},
+            prepare({title, year, groupKey, media}) {
               return {
-                title: title || 'Untitled',
-                subtitle: workSubtitle(tags, year),
-                media: selected?.image,
+                title: title || (groupKey ? 'Individual' : 'No image picked'),
+                subtitle: title ? year : undefined,
+                media,
               }
             },
           },
@@ -85,10 +68,7 @@ export default defineType({
     select: {slides: 'slides'},
     prepare({slides}) {
       const count = Array.isArray(slides) ? slides.length : 0
-      return {
-        title: 'Home',
-        subtitle: `${count} slide${count === 1 ? '' : 's'}`,
-      }
+      return {title: 'Home', subtitle: `${count} slide${count === 1 ? '' : 's'}`}
     },
   },
 })

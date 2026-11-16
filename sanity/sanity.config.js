@@ -17,17 +17,15 @@ export default defineConfig({
     types: schemaTypes,
     templates: (prev) => [
       ...prev,
+      // New work pre-tagged with the tag whose list it was created from.
       {
-        id: 'works-exhibition',
-        title: 'Work — Exhibition',
+        id: 'works-by-tag',
+        title: 'Work with tag',
         schemaType: 'works',
-        value: {tags: ['exhibitions']},
-      },
-      {
-        id: 'works-book',
-        title: 'Work — Book',
-        schemaType: 'works',
-        value: {tags: ['books']},
+        parameters: [{name: 'tagId', type: 'string'}],
+        value: ({tagId}) => ({
+          tags: [{_type: 'reference', _ref: tagId, _key: tagId}],
+        }),
       },
     ],
   },

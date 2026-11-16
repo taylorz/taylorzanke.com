@@ -3,7 +3,7 @@ import {workSubtitle} from '../lib/workLabels'
 
 export default defineType({
   name: 'works',
-  title: 'Works',
+  title: 'Work',
   type: 'document',
   fields: [
     defineField({
@@ -29,14 +29,7 @@ export default defineType({
       name: 'tags',
       title: 'Tags',
       type: 'array',
-      of: [{type: 'string'}],
-      options: {
-        list: [
-          {title: 'Exhibitions', value: 'exhibitions'},
-          {title: 'Books', value: 'books'},
-        ],
-        layout: 'grid',
-      },
+      of: [{type: 'reference', to: [{type: 'tag'}]}],
     }),
     defineField({
       name: 'location',
@@ -129,12 +122,16 @@ export default defineType({
     select: {
       title: 'title',
       year: 'year',
-      tags: 'tags',
+      tag0: 'tags.0.title',
+      tag1: 'tags.1.title',
+      tag2: 'tags.2.title',
+      media: 'images.0.image',
     },
-    prepare({title, year, tags}) {
+    prepare({title, year, tag0, tag1, tag2, media}) {
       return {
         title,
-        subtitle: workSubtitle(tags, year),
+        subtitle: workSubtitle([tag0, tag1, tag2], year),
+        media,
       }
     },
   },

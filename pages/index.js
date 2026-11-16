@@ -1,60 +1,134 @@
-import { useEffect, useState } from "react";
-import Head from "next/head";
-import { getHome, urlFor } from "@/lib/sanity";
-import Text from "@/components/Text";
+import { useState } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import Layout from "@/components/Layout";
+import {
+  getHomeSlides,
+  getIndividualGroups,
+  responsiveImage,
+  imageDimensions,
+} from "@/lib/sanity";
+import { resolveSlides } from "@/lib/slides";
 
-// One slide, picked at random on each page load, centered in a square. The
-// page is statically generated, so the pick happens in the browser after
-// mount; picking during render would give the server and client different
-// images.
-export default function Home({ slides, ogImage }) {
-  const [slide, setSlide] = useState(null);
+// Full-screen with object-cover, the image renders at whichever is larger:
+// the viewport width, or the viewport height × the image's aspect ratio
+// (a landscape image on a portrait screen is cropped from something much
+// wider than 100vw). Telling the browser that keeps it crisp either way.
+const sizesFor = (image) => {
+  const dims = imageDimensions(image);
+  if (!dims) return "100vw";
+  const ratio = (dims.width / dims.height) * 100;
+  return `max(100vw, ${ratio.toFixed(1)}vh)`;
+};
 
-  useEffect(() => {
-    if (slides.length === 0) return;
-    setSlide(slides[Math.floor(Math.random() * slides.length)]);
-  }, [slides]);
+// Center the cover crop on the image's hotspot when one is set in the Studio.
+const objectPosition = (image) =>
+  image.hotspot
+    ? `${image.hotspot.x * 100}% ${image.hotspot.y * 100}%`
+    : "center";
+
+// Line height (leading-[20px]) shared by the nav and the title.
+const LINE = 20;
+// Page padding (p-6) around the Layout.
+const PAD = 24;
+
+export default function Home({ slides }) {
+  // Clicking a number on another page lands here with ?slide=n.
+  const { query } = useRouter();
+  const requested = Number(query.slide) || 1;
+  const [slide, setSlide] = useState(
+    requested >= 1 && requested <= slides.length ? requested : 1,
+  );
+
+  // Nav number under the pointer, if any. The active slide's title always
+  // shows; a hovered non-active number shows its title too, on its line.
+  const [hoveredSlide, setHoveredSlide] = useState(null);
+  const advance = () => setSlide((n) => (n % slides.length) + 1);
+  const activeHref = slides[slide - 1]?.href;
+  const shownSlides = [
+    slide,
+    ...(hoveredSlide && hoveredSlide !== slide ? [hoveredSlide] : []),
+  ];
 
   return (
-    <div className="overflow-x-hidden">
-      {ogImage && (
-        <Head>
-          <meta key="og:image" property="og:image" content={ogImage} />
-          <meta key="twitter:image" name="twitter:image" content={ogImage} />
-          <meta
-            key="twitter:card"
-            name="twitter:card"
-            content="summary_large_image"
+    // Click anywhere outside the nav and links to go to the next slide
+    // (wrapping).
+    <div
+      className="min-h-dvh cursor-pointer"
+      onClick={(e) => !e.target.closest("nav, a") && advance()}
+    >
+      {/* Every slide is rendered so switching is instant; only the active
+          one is visible. The active one loads first at high priority, the
+          rest right after at low priority. */}
+      {slides.map(({ image }, i) => {
+        const active = i + 1 === slide;
+        return (
+          <img
+            key={i}
+            {...responsiveImage(image, 1280)}
+            sizes={sizesFor(image)}
+            alt=""
+            loading="eager"
+            fetchpriority={active ? "high" : "low"}
+            style={{ objectPosition: objectPosition(image) }}
+            className={`fixed inset-0 -z-10 w-full h-full object-cover ${
+              active ? "" : "invisible"
+            }`}
           />
-        </Head>
-      )}
-      <div className="p-2 w-[100vw] h-[100dvh] flex items-center justify-center [container-type:size]">
-        <div className="aspect-square w-[min(100cqw,100cqh)] select-none">
-          {slide && (
-            <img
-              src={urlFor(slide.image).width(2400).quality(80).url()}
-              alt=""
-              className="w-full h-full object-contain"
-            />
-          )}
-        </div>
-      </div>
+        );
+      })}
+      <Layout
+        slide={slide}
+        setSlide={setSlide}
+        setHoveredSlide={setHoveredSlide}
+      >
+        {/* From md up, each title sits left-aligned in the first half of the
+            same 6-column grid as About/Contact, on the same line as its
+            number in the nav: the nav's name line + gap-5 put number 1 two
+            20px lines down from the top, then one line per number. The
+            active slide also gets a "View" link at the grid's far right. */}
+        {shownSlides.map((n) => {
+          const { title, href } = slides[n - 1] ?? {};
+          if (!title) return null;
+          return (
+            <div
+              key={n}
+              className="hidden md:grid absolute inset-x-0 grid-cols-6 gap-x-6"
+              style={{ top: `${(n + 1) * LINE}px` }}
+            >
+              <p className="col-span-3">{title}</p>
+              {n === slide && href && (
+                <Link href={href} className="col-start-6 justify-self-end">
+                  View
+                </Link>
+              )}
+            </div>
+          );
+        })}
+        {/* Below md the content stacks under the nav, so "View" is pinned to
+            the viewport instead: on the active number's line (p-6 + two
+            lines + one per number), at the right page margin. No title. */}
+        {activeHref && (
+          <Link
+            href={activeHref}
+            className="md:hidden fixed right-6"
+            style={{ top: `${PAD + (slide + 1) * LINE}px` }}
+          >
+            View
+          </Link>
+        )}
+      </Layout>
     </div>
   );
 }
 
 export async function getStaticProps() {
-  const home = await getHome();
-  // Drop slides whose image has since been removed from the work.
-  const slides = (home?.slides || []).filter((slide) => slide.image);
-
+  const [slides, groups] = await Promise.all([
+    getHomeSlides(),
+    getIndividualGroups(),
+  ]);
   return {
-    props: {
-      slides,
-      ogImage: slides[0]
-        ? urlFor(slides[0].image).width(1200).quality(80).url()
-        : null,
-    },
+    props: { slides: resolveSlides(slides, groups) },
     revalidate: 60,
   };
 }

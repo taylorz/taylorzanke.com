@@ -1,8 +1,10 @@
 import {defineField, defineType} from 'sanity'
 
+// Categories a work can be filed under (e.g. Installation, Publication).
+// Works reference these via their multi-select `tags` field.
 export default defineType({
-  name: 'category',
-  title: 'Category',
+  name: 'tag',
+  title: 'Tag',
   type: 'document',
   fields: [
     defineField({
@@ -15,18 +17,16 @@ export default defineType({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
+      options: {source: 'title', maxLength: 96},
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'order',
       title: 'Display Order',
       type: 'number',
-      description: 'Lower numbers will appear first in the list',
+      description: 'Lower numbers appear first (e.g. in the /work filter).',
       initialValue: 0,
     }),
   ],
+  orderings: [{title: 'Display Order', name: 'orderAsc', by: [{field: 'order', direction: 'asc'}]}],
 })
