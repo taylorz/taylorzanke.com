@@ -15,7 +15,7 @@ export default function About() {
             given situation, working then and there. Solo presentations of his
             work have appeared at PRP, Dallas (2026), and TRYST, Torrance Art
             Museum (2023, 2025). Publications include a self-published, limited
-            edition, book printed on found and saved paper titled The Source Can
+            edition book printed on found and saved paper titled The Source Can
             be Transformed (2024). He holds a B.F.A. from Parsons School of
             Design and earned an M.Arch and M.S. from Columbia University.
           </p>
