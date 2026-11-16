@@ -5,7 +5,7 @@ import { SITE, pageTitle } from "@/lib/site";
 // it again to override. Tags are keyed, so next/head keeps only the page's
 // version of each. Omitted props fall back to the defaults from _app.
 //
-// - title: page title, e.g. "Work" -> "Work — Taylor Louie Zanke"
+// - title: page title, e.g. "Work" -> "Work - Taylor Louie Zanke"
 // - description: plain text, ideally under ~155 characters
 // - image: absolute URL for the link unfurl (1200×630 reads best)
 export default function Seo({ title, description, image }) {
