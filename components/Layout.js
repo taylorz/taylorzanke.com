@@ -2,8 +2,8 @@ import SiteNav from "@/components/SiteNav";
 
 // Base type and spacing for the new design. _app.js already renders <main>,
 // so this is a div. Below md the content stacks one line (gap-5) under the
-// nav at full width; from md up it sits beside the nav, centered at
-// max-w-screen-lg.
+// nav at full width; from md up it sits beside the nav, left-aligned at
+// max-w-screen-xl.
 export default function Layout({ children, slide, setSlide, setHoveredSlide }) {
   return (
     <div className="font-[Arial] text-[15px] leading-[20px] text-[green] p-6 flex flex-col gap-5 md:flex-row md:gap-6">
@@ -12,7 +12,7 @@ export default function Layout({ children, slide, setSlide, setHoveredSlide }) {
         setSlide={setSlide}
         setHoveredSlide={setHoveredSlide}
       />
-      <div className="relative w-full md:flex-1 md:pt-40 md:max-w-screen-lg md:mx-auto">
+      <div className="relative w-full md:flex-1 md:pt-40 md:max-w-screen-xl">
         {children}
       </div>
     </div>

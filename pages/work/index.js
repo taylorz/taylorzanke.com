@@ -15,16 +15,16 @@ import { numberIndividuals } from "@/lib/individuals";
 const VIEWS = ["Images", "List"];
 
 // Largest CSS widths images render at, with the content column at its
-// max-w-screen-lg (1024px): 2 work cards across gap-x-6 (1 below md), and
+// max-w-screen-xl (1280px): 2 work cards across gap-x-6 (1 below md), and
 // INDIVIDUAL_COLUMNS individuals cells across gap-x-1 (4px). Below that the
 // `sizes` vw fallbacks take over (they overestimate, since the nav also
 // takes width, which errs on the crisp side).
-const WORK_CARD_WIDTH = 500;
+const WORK_CARD_WIDTH = 630;
 // Keep in sync with the individuals grid's md:grid-cols-* class below
 // (below md it's 2 columns, sized as 50vw).
 const INDIVIDUAL_COLUMNS = 6;
 const INDIVIDUAL_CELL_WIDTH = Math.ceil(
-  (1024 - (INDIVIDUAL_COLUMNS - 1) * 4) / INDIVIDUAL_COLUMNS,
+  (1280 - (INDIVIDUAL_COLUMNS - 1) * 4) / INDIVIDUAL_COLUMNS,
 );
 
 // A comma-separated inline list; the active item gets px-6.
@@ -67,7 +67,7 @@ export default function Work({ works: allWorks, tags, individuals }) {
 
   // First image of each project, in the same order as `works` (null for a
   // project with no images). Cropped to the 7:5 frame (hotspot-aware) and
-  // sized for a card: half of the 1024px content column, ~500px.
+  // sized for a card: half of the 1280px content column, ~630px.
   const firstImages = works.map((work) =>
     work.images?.[0]
       ? responsiveImage(work.images[0].image, WORK_CARD_WIDTH, (b, w) =>
@@ -85,7 +85,9 @@ export default function Work({ works: allWorks, tags, individuals }) {
       <div className="pb-10">
         <div className="hidden md:grid grid-cols-3">
           <Picker items={VIEWS} active={view} onChange={setView} />
-          <Picker items={filters} active={filter} onChange={setFilter} />
+          <div className="col-span-2">
+            <Picker items={filters} active={filter} onChange={setFilter} />
+          </div>
         </div>
         {/* Below md: no filtering (always "All"), just the view picker. */}
         <div className="md:hidden">
@@ -100,13 +102,13 @@ export default function Work({ works: allWorks, tags, individuals }) {
                 <Link
                   key={work.slug}
                   href={`/work/${work.slug}`}
-                  className="flex flex-col gap-5 justify-end"
+                  className="flex flex-col gap-5"
                 >
                   {firstImages[i] && (
                     <img
                       className="object-cover aspect-[7/5]"
                       {...firstImages[i]}
-                      sizes={`(min-width: 1200px) ${WORK_CARD_WIDTH}px, (min-width: 768px) 50vw, 100vw`}
+                      sizes={`(min-width: 1500px) ${WORK_CARD_WIDTH}px, (min-width: 768px) 50vw, 100vw`}
                       alt=""
                     />
                   )}
@@ -138,7 +140,7 @@ export default function Work({ works: allWorks, tags, individuals }) {
                         INDIVIDUAL_CELL_WIDTH,
                         fitLongSide(image),
                       )}
-                      sizes={`(min-width: 1200px) ${INDIVIDUAL_CELL_WIDTH}px, (min-width: 768px) ${Math.ceil(100 / INDIVIDUAL_COLUMNS)}vw, 50vw`}
+                      sizes={`(min-width: 1500px) ${INDIVIDUAL_CELL_WIDTH}px, (min-width: 768px) ${Math.ceil(100 / INDIVIDUAL_COLUMNS)}vw, 50vw`}
                       alt=""
                       className="w-full h-full object-contain object-left-bottom"
                     />
