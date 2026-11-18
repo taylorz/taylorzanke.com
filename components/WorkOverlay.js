@@ -3,11 +3,12 @@ import SiteNav from "@/components/SiteNav";
 import { responsiveImage, fitLongSide, imageDimensions } from "@/lib/sanity";
 
 // Longest side, in CSS px, an image can render at: the middle 4 of 6 columns
-// of the 1280px content column (gap-6), i.e. 4 × 193.33 + 3 × 24.
-const STACK_BOX = 846;
-// From ~1500px (1280px content + the nav's space + p-6 sides) the box is
-// STACK_BOX; from md it's 4 of 6 columns (~66vw, an overestimate since the
-// nav's space also takes width); below md the stack is full width.
+// of the overlay at its widest, the full site width (nav ~154px + gap-6 +
+// 1280px content ≈ 1458px), i.e. 4 × 223 + 3 × 24. Approximate, since the
+// nav's width comes from its text.
+const STACK_BOX = 964;
+// From ~1500px (the site width + p-6 sides) the box is STACK_BOX; from md
+// it's 4 of 6 columns (~66vw); below md the stack is full width.
 const SIZES = `(min-width: 1500px) ${STACK_BOX}px, (min-width: 768px) 66vw, 100vw`;
 
 // Images fit a square box the width of the middle 4 of 6 columns (the full
@@ -52,17 +53,22 @@ function ImageStack({ images }) {
 }
 
 // Reads as a full-screen modal over /work: no nav, same type and padding as
-// Layout. From md up an invisible copy of the nav holds its space, so the
-// content lands exactly where Layout's content column is (left-aligned,
-// max-w-screen-xl). `images` are Sanity image objects; `children` (e.g.
-// notes, details) go below the images.
+// Layout. From md up the content spans the whole site width (nav + gap-6 +
+// max-w-screen-xl content) and is centered in the viewport. The grid's first
+// column sizes to an invisible, zero-height copy of the nav, so its width
+// stays exact; the second holds up to 1280px; the content spans both.
+// `images` are Sanity image objects; `children` (e.g. notes, details) go
+// below the images.
 export default function WorkOverlay({ title, images, children }) {
   return (
-    <div className="font-[Arial] text-[15px] leading-[20px] text-[green] p-6 min-h-dvh md:flex md:gap-6">
-      <div className="hidden md:block invisible">
+    <div className="font-[Arial] text-[15px] leading-[20px] text-[green] p-6 min-h-dvh md:grid md:grid-cols-[auto_minmax(0,theme(screens.xl))] md:gap-x-6 md:justify-center">
+      <div
+        aria-hidden
+        className="hidden md:block invisible h-0 overflow-hidden"
+      >
         <SiteNav />
       </div>
-      <div className="w-full md:flex-1 md:max-w-screen-xl flex flex-col gap-10 pb-5">
+      <div className="w-full md:col-span-2 flex flex-col gap-10 pb-5">
         <div className="sticky top-6 flex justify-between gap-6">
           <h1>{title}</h1>
           <Link href="/work" className="shrink-0">

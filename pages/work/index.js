@@ -54,7 +54,9 @@ export default function Work({ works: allWorks, tags, individuals }) {
   const [view, setView] = useState("Images");
   // Picker labels are tag titles; "All" shows every work plus individuals,
   // a tag shows only its works, "Individuals" shows only individuals.
-  const filters = [ALL, ...tags.map((tag) => tag.title), INDIVIDUALS];
+  // Individuals hidden for now; restore INDIVIDUALS here and the two
+  // commented-out individuals blocks below to bring them back.
+  const filters = [ALL, ...tags.map((tag) => tag.title) /*, INDIVIDUALS */];
   const [filter, setFilter] = useState(ALL);
   const works =
     filter === ALL
@@ -83,16 +85,20 @@ export default function Work({ works: allWorks, tags, individuals }) {
     <Layout>
       <Seo {...PAGES.work} />
       <div className="pb-10">
+        {/* Filtering hidden for now (filter stays "All"), so just the view
+            picker at every size. To bring filters back, swap this Picker for
+            the commented-out block below.
         <div className="hidden md:grid grid-cols-3">
           <Picker items={VIEWS} active={view} onChange={setView} />
           <div className="col-span-2">
             <Picker items={filters} active={filter} onChange={setFilter} />
           </div>
         </div>
-        {/* Below md: no filtering (always "All"), just the view picker. */}
         <div className="md:hidden">
           <Picker items={VIEWS} active={view} onChange={setView} />
         </div>
+        */}
+        <Picker items={VIEWS} active={view} onChange={setView} />
       </div>
       {view === "Images" ? (
         <div className="flex flex-col gap-20">
@@ -121,8 +127,8 @@ export default function Work({ works: allWorks, tags, individuals }) {
               ))}
             </div>
           )}
-          {/* individuals: every image of each legacy doc, unrolled, with an
-              empty cell between docs. */}
+          {/* Individuals (hidden): every image of each legacy doc, unrolled,
+              with an empty cell between docs.
           {showIndividuals && (
             <div className="grid grid-cols-2 md:grid-cols-6 gap-x-1 gap-y-5">
               {individuals.flatMap((group, g) => [
@@ -149,6 +155,7 @@ export default function Work({ works: allWorks, tags, individuals }) {
               ])}
             </div>
           )}
+          */}
         </div>
       ) : (
         // `works` comes from Sanity sorted newest year first.
@@ -168,8 +175,8 @@ export default function Work({ works: allWorks, tags, individuals }) {
               ))}
             </ul>
           )}
-          {/* One line per individuals doc, its images numbered in parens,
-              counting on across docs: (1, 2, 3), (4, 5), … */}
+          {/* Individuals (hidden): one line per individuals doc, its images
+              numbered in parens, counting on across docs: (1, 2, 3), (4, 5), …
           {showIndividuals && (
             <ul>
               {individuals.map((group) => (
@@ -184,6 +191,7 @@ export default function Work({ works: allWorks, tags, individuals }) {
               ))}
             </ul>
           )}
+          */}
         </div>
       )}
     </Layout>
