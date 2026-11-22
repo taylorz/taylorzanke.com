@@ -76,8 +76,9 @@ function ContentColumn({ className = "", style, navItem, children }) {
 
 // Reads as a full-screen modal over /work: no nav, same type and padding as
 // Layout. From md up the content spans the whole site width (nav + gap-6 +
-// max-w-screen-xl content) and is left-aligned, like Layout (justify-start,
-// so the auto nav column doesn't stretch into the spare width). The grid's first
+// max-w-screen-xl content) and is centered in the viewport, like Layout
+// (justify-center also keeps the auto nav column from stretching into the
+// spare width). The grid's first
 // column sizes to an invisible, zero-height copy of the nav, so its width
 // stays exact; the second holds up to 1280px. The image stack spans both
 // columns (centered); the title row and text sit in the content column, as
@@ -106,7 +107,7 @@ export default function WorkOverlay({ title, images, slide, children }) {
     return () => observer.disconnect();
   }, []);
   return (
-    <div className="font-[Arial] text-[15px] leading-[20px] text-[green] p-6 min-h-dvh md:grid md:grid-cols-[auto_minmax(0,theme(screens.xl))] md:gap-x-6 md:justify-start">
+    <div className="font-[Arial] text-[15px] leading-[20px] text-[green] p-6 min-h-dvh md:grid md:grid-cols-[auto_minmax(0,theme(screens.xl))] md:gap-x-6 md:justify-center">
       <div
         aria-hidden
         className="hidden md:block invisible h-0 overflow-hidden"

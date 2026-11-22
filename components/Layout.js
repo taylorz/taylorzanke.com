@@ -2,13 +2,14 @@ import SiteNav, { useActivePageLineOffset } from "@/components/SiteNav";
 
 // Base type and spacing for the new design. _app.js already renders <main>,
 // so this is a div. Below md the content stacks two lines (gap-10) under the
-// nav at full width; from md up it sits beside the nav, left-aligned at
-// max-w-screen-xl, its first line on the line of the active nav item
-// (Work, About or Contact).
+// nav at full width; from md up it sits beside the nav, at most
+// max-w-screen-xl, with its first line on the line of the active nav item
+// (Work, About or Contact), and the nav + content block is centered in the
+// viewport (matching WorkOverlay).
 export default function Layout({ children, slide, setSlide, setHoveredSlide }) {
   const pageLine = useActivePageLineOffset();
   return (
-    <div className="font-[Arial] text-[15px] leading-[20px] text-[green] p-6 flex flex-col gap-10 md:flex-row md:gap-6">
+    <div className="font-[Arial] text-[15px] leading-[20px] text-[green] p-6 flex flex-col gap-10 md:flex-row md:gap-6 md:justify-center">
       <SiteNav
         slide={slide}
         setSlide={setSlide}
