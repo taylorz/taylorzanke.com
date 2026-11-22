@@ -2,12 +2,16 @@ import { PortableText, toPlainText } from "@portabletext/react";
 import WorkOverlay from "@/components/WorkOverlay";
 import Seo from "@/components/Seo";
 import { truncateDescription } from "@/lib/seoText";
-import { getWorkItem, getWorkSlugs, ogImageUrl } from "@/lib/sanity";
+import {
+  getHomeSlides,
+  getWorkItem,
+  getWorkSlugs,
+  ogImageUrl,
+} from "@/lib/sanity";
 
-const WorkPage = ({ work }) => {
+const WorkPage = ({ work, slide }) => {
   // Rows with no value in Sanity are left out.
   const details = [
-    { label: "Year", value: work.year },
     { label: "Location", value: work.location },
     { label: "Dates", value: work.datesOpen },
     ...(work.attributes ?? []),
@@ -31,8 +35,9 @@ const WorkPage = ({ work }) => {
 
   return (
     <WorkOverlay
-      title={work.title}
+      title={seoTitle}
       images={work.images?.map(({ image }) => image)}
+      slide={slide}
     >
       <Seo
         title={seoTitle}
@@ -43,16 +48,18 @@ const WorkPage = ({ work }) => {
           group two lines from the images. */}
       <div className="flex flex-col gap-5">
         {work.note && (
-          // Full width; paragraphs one line apart.
-          <div className="flex flex-col gap-5">
-            <PortableText value={work.note} />
+          // Half the content column (3 of 6 columns) from md, full width
+          // below; paragraphs one line apart.
+          <div className="grid grid-cols-6 gap-x-6">
+            <div className="col-span-6 md:col-span-3 flex flex-col gap-5">
+              <PortableText value={work.note} />
+            </div>
           </div>
         )}
         <ul>
           {details.map(({ label, value }) => (
-            <li key={label} className="flex gap-6">
-              <p>{label}</p>
-              <p>{value}</p>
+            <li key={label}>
+              {label}: {value}
             </li>
           ))}
         </ul>
@@ -62,11 +69,18 @@ const WorkPage = ({ work }) => {
 };
 
 export async function getStaticProps({ params }) {
-  const work = await getWorkItem(params.work);
+  const [work, slides] = await Promise.all([
+    getWorkItem(params.work),
+    getHomeSlides(),
+  ]);
 
   if (!work) return { notFound: true, revalidate: 60 };
 
-  return { props: { work }, revalidate: 60 };
+  // The homepage slide number (1-based) featuring this work, if any; the
+  // title row lines up with that number in the nav.
+  const slide = slides.findIndex((s) => s.workSlug === params.work) + 1 || null;
+
+  return { props: { work, slide }, revalidate: 60 };
 }
 
 export async function getStaticPaths() {

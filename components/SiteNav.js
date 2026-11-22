@@ -8,6 +8,17 @@ const HOME = "/";
 // number per slide on every page.
 export const SlideCountContext = createContext(5);
 
+// Distances in px from the nav's top to its lines, for pages that align
+// content to them. Keep in sync with the markup below: the name line, gap-5,
+// one line per slide number, gap-5, then Work / About / Contact.
+const LINE = 20; // leading-[20px]
+const GAP = 20; // gap-5
+// Slide number n's line (1-based).
+export const slideLineOffset = (n) => LINE + GAP + LINE * (n - 1);
+// The "Work" line.
+export const useWorkLineOffset = () =>
+  slideLineOffset(useContext(SlideCountContext) + 1) + GAP;
+
 // Hover indent shared with other lists (e.g. the /work list view).
 export const itemClass = "hover:indent-6 w-fit cursor-pointer";
 

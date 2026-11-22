@@ -35,7 +35,7 @@ function Picker({ items, active, onChange }) {
         <li key={item} className="inline">
           <button
             onClick={() => onChange(item)}
-            className={item === active ? "px-6" : ""}
+            className={item === active ? "pl-6" : "hover:pl-6"}
           >
             {item}
           </button>
@@ -108,7 +108,7 @@ export default function Work({ works: allWorks, tags, individuals }) {
                 <Link
                   key={work.slug}
                   href={`/work/${work.slug}`}
-                  className="flex flex-col gap-5"
+                  className="group flex flex-col gap-5"
                 >
                   {firstImages[i] && (
                     <img
@@ -118,11 +118,10 @@ export default function Work({ works: allWorks, tags, individuals }) {
                       alt=""
                     />
                   )}
-                  <div className="px-6">
-                    <p>
-                      {work.title}, {work.year}
-                    </p>
-                  </div>
+                  {/* Indents on hover, like the nav. */}
+                  <p className="group-hover:indent-6">
+                    {work.title}, {work.year}
+                  </p>
                 </Link>
               ))}
             </div>
@@ -159,7 +158,8 @@ export default function Work({ works: allWorks, tags, individuals }) {
         </div>
       ) : (
         // `works` comes from Sanity sorted newest year first.
-        // Below md, wrapped lines get a 12px hanging indent (pl-3 -indent-3).
+        // Wrapped lines get a hanging indent matching the nav's (pl-6 -indent-6).
+        // On hover the first line indents too (indent-0), like the nav.
         <div>
           {showWorks && (
             <ul className="pb-10">
@@ -167,7 +167,7 @@ export default function Work({ works: allWorks, tags, individuals }) {
                 <li key={work.slug} className="w-fit">
                   <Link
                     href={`/work/${work.slug}`}
-                    className="block max-md:pl-3 max-md:-indent-3"
+                    className="block pl-6 -indent-6 hover:indent-0"
                   >
                     {work.title}, {work.year}
                   </Link>
@@ -183,7 +183,7 @@ export default function Work({ works: allWorks, tags, individuals }) {
                 <li key={group.id} className="w-fit">
                   <Link
                     href={`/work/individuals/${group.id}`}
-                    className="block max-md:pl-3 max-md:-indent-3"
+                    className="block pl-6 -indent-6"
                   >
                     ({group.numbers.join(", ")})
                   </Link>
