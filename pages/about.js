@@ -46,12 +46,19 @@ export default function About({ sections }) {
             Taylor Louie Zanke is a Canadian artist based in Los Angeles,
             California. Through a process of improvisation involving material,
             space, and form he attends to the charged possibilities present in a
-            given situation, working with the then and there to explore
-            structures and narratives. Solo presentations of his work have
-            appeared at PRP, Dallas (2026), and TRYST, Torrance Art Museum
-            (2023, 2025). He holds a B.F.A. from Parsons School of Design and
-            earned an M.Arch and M.S. from Columbia University.
+            situation: working with the then and there to explore structures and
+            narratives. Solo presentations of his work have appeared at PRP,
+            Dallas (2026), and TRYST, Torrance Art Museum (2023, 2025).
           </p>
+          <p>
+            He publishes books made in collaboration with artists as{" "}
+            <em>Allowing Many Forms</em>, and has exhibited at Printed Matter's
+            Los Angeles Art Book Fair (2026), the San Francisco Art Book Fair
+            (2024, 2026), and Acid-Free (2024), among others. He holds a B.F.A.
+            from Parsons School of Design and earned an M.Arch and M.S. from
+            Columbia University.
+          </p>
+
           {/* <p className="mt-5">Artist Statement</p>
           <p>...</p> */}
         </div>
