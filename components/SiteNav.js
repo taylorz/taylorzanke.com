@@ -28,14 +28,25 @@ const pages = [
   { href: "/contact", label: "Contact" },
 ];
 
+// A section stays active on its own page and any page under it
+// (e.g. Work on /work/[work]).
+const isActivePage = (pathname, href) =>
+  pathname === href || pathname.startsWith(`${href}/`);
+
+// The line of the active page's nav item (Work / About / Contact), falling
+// back to the Work line on other pages (e.g. the homepage).
+export const useActivePageLineOffset = () => {
+  const { pathname } = useRouter();
+  const workLine = useWorkLineOffset();
+  const i = pages.findIndex(({ href }) => isActivePage(pathname, href));
+  return workLine + LINE * Math.max(i, 0);
+};
+
 // slide / setSlide / setHoveredSlide are only passed on the homepage.
 export default function SiteNav({ slide, setSlide, setHoveredSlide }) {
   const { pathname } = useRouter();
   const slideCount = useContext(SlideCountContext);
-  // A section stays indented on its own page and any page under it
-  // (e.g. Work on /work/[work]).
-  const isActive = (href) =>
-    pathname === href || pathname.startsWith(`${href}/`);
+  const isActive = (href) => isActivePage(pathname, href);
 
   return (
     <nav className="flex flex-col gap-5 w-fit shrink-0 pr-6">
