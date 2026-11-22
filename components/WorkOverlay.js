@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import SiteNav, {
   slideLineOffset,
@@ -90,6 +91,19 @@ function ContentColumn({ className = "", style, navItem, children }) {
 export default function WorkOverlay({ title, images, slide, children }) {
   const workLine = useWorkLineOffset();
   const titleLine = slide ? slideLineOffset(slide) : workLine;
+  // Height of the title text (20px per line), measured so the details'
+  // scroll stop accounts for a title that wraps (e.g. on mobile).
+  const titleRef = useRef(null);
+  const [titleHeight, setTitleHeight] = useState(20);
+  useEffect(() => {
+    const el = titleRef.current;
+    if (!el) return;
+    const observer = new ResizeObserver(() =>
+      setTitleHeight(el.offsetHeight),
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
   return (
     <div className="font-[Arial] text-[15px] leading-[20px] text-[green] p-6 min-h-dvh md:grid md:grid-cols-[auto_minmax(0,theme(screens.xl))] md:gap-x-6 md:justify-center">
       <div
@@ -98,7 +112,13 @@ export default function WorkOverlay({ title, images, slide, children }) {
       >
         <SiteNav />
       </div>
-      <div className="w-full md:col-span-2 flex flex-col gap-10 pb-5">
+      <div
+        className="w-full md:col-span-2 flex flex-col gap-10 pb-5"
+        style={{
+          "--title-line": `${titleLine}px`,
+          "--title-height": `${titleHeight}px`,
+        }}
+      >
         {/* Sticky needs this full-height parent, so the row offsets itself
             with ContentColumn rather than sitting in the grid's column. */}
         <ContentColumn
@@ -120,9 +140,8 @@ export default function WorkOverlay({ title, images, slide, children }) {
             )
           }
           className="sticky z-10 top-6 md:top-[calc(24px+var(--title-line))] md:h-0 md:-mb-5 md:items-start"
-          style={{ "--title-line": `${titleLine}px` }}
         >
-          <div className="flex justify-between gap-6">
+          <div ref={titleRef} className="flex justify-between gap-6">
             <h1>{title}</h1>
             <Link href="/work" className="shrink-0">
               Close
@@ -130,7 +149,15 @@ export default function WorkOverlay({ title, images, slide, children }) {
           </div>
         </ContentColumn>
         <ImageStack images={images} />
-        <ContentColumn>{children}</ContentColumn>
+        {/* Four lines below the last image (gap-10 + mt-10). Tall enough
+            that the page scrolls until the details' first line sits one
+            blank line under the stuck title: the viewport minus that line's
+            top (p-6 + title line + the title's height + one blank line) and
+            the space below (pb-5 + p-6). Below md the title sticks at the
+            top (line 0). */}
+        <ContentColumn className="mt-10 min-h-[calc(100dvh-88px-var(--title-height))] md:min-h-[calc(100dvh-88px-var(--title-line)-var(--title-height))]">
+          {children}
+        </ContentColumn>
       </div>
     </div>
   );
