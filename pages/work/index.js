@@ -164,12 +164,18 @@ export default function Work({ works: allWorks, tags, individuals }) {
           {showWorks && (
             <ul className="pb-10">
               {works.map((work) => (
-                <li key={work.slug} className="w-fit">
+                <li key={work.slug} className="w-fit max-w-full">
+                  {/* Below md each entry stays on one line: a long title
+                      truncates with an ellipsis and the year stays at the
+                      end. From md up it wraps with the hanging indent. */}
                   <Link
                     href={`/work/${work.slug}`}
-                    className="block pl-6 -indent-6 hover:indent-0"
+                    className="flex md:block md:pl-6 md:-indent-6 md:hover:indent-0"
                   >
-                    {work.title}, {work.year}
+                    <span className="truncate md:whitespace-normal">
+                      {work.title}
+                    </span>
+                    <span className="shrink-0">, {work.year}</span>
                   </Link>
                 </li>
               ))}
