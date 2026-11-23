@@ -82,23 +82,25 @@ export default function Home({ slides }) {
         setSlide={setSlide}
         setHoveredSlide={setHoveredSlide}
       >
-        {/* From md up, each title sits left-aligned in the first half of the
-            same 6-column grid as About/Contact, on the same line as its
-            number in the nav: the nav's name line + gap-5 put number 1 two
-            20px lines down from the top, then one line per number. The
-            active slide also gets a "View" link at the grid's far right. */}
+        {/* From md up, each title sits left-aligned across the
+            content column, on the same line as its number in the nav: the
+            nav's name line + gap-5 put number 1 two 20px lines down from the
+            top, then one line per number. One line, never wrapping: the
+            title ("Title, 2025") on the left and, for the active slide, a
+            "View" link at the far right (truncating the title if they'd
+            meet). */}
         {shownSlides.map((n) => {
           const { title, href } = slides[n - 1] ?? {};
           if (!title) return null;
           return (
             <div
               key={n}
-              className="hidden md:grid absolute inset-x-0 grid-cols-6 gap-x-6"
+              className="hidden md:flex absolute inset-x-0 justify-between gap-6"
               style={{ top: `${(n + 1) * LINE}px` }}
             >
-              <p className="col-span-3">{title}</p>
+              <p className="truncate">{title}</p>
               {n === slide && href && (
-                <Link href={href} className="col-start-6 justify-self-end">
+                <Link href={href} className="shrink-0">
                   View
                 </Link>
               )}
