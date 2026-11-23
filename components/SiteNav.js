@@ -33,15 +33,6 @@ const pages = [
 const isActivePage = (pathname, href) =>
   pathname === href || pathname.startsWith(`${href}/`);
 
-// The line of the active page's nav item (Work / About / Contact), falling
-// back to the Work line on other pages (e.g. the homepage).
-export const useActivePageLineOffset = () => {
-  const { pathname } = useRouter();
-  const workLine = useWorkLineOffset();
-  const i = pages.findIndex(({ href }) => isActivePage(pathname, href));
-  return workLine + LINE * Math.max(i, 0);
-};
-
 // slide / setSlide / setHoveredSlide are only passed on the homepage.
 export default function SiteNav({ slide, setSlide, setHoveredSlide }) {
   const { pathname } = useRouter();

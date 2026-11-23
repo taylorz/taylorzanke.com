@@ -27,8 +27,11 @@ const SIZES = `(min-width: 1500px) ${STACK_BOX}px, (min-width: 768px) 66vw, 100v
 function ImageStack({ images }) {
   if (!images?.length) return null;
   return (
-    <div className="grid grid-cols-6 gap-6">
-      <div className="col-span-6 md:col-start-2 md:col-span-4 flex flex-col gap-y-10 [container-type:inline-size]">
+    // Four lines above the first image (from the title row; from md, which
+    // takes no space, from the top line: -mb-5 leaves one, pt-[60px] adds
+    // three) and between images; the details below add their own four.
+    <div className="grid grid-cols-6 gap-6 pt-10 md:pt-[60px]">
+      <div className="col-span-6 md:col-start-2 md:col-span-4 flex flex-col gap-y-20 [container-type:inline-size]">
         {images.map((image, i) => {
           const dims = imageDimensions(image);
           const portrait = dims && dims.height > dims.width;
