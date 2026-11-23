@@ -5,20 +5,44 @@ import SiteNav, {
 } from "@/components/SiteNav";
 import { responsiveImage, fitLongSide, imageDimensions } from "@/lib/sanity";
 
-// Longest side, in CSS px, an image can render at: the middle 4 of 6 columns
-// of the overlay at its widest, the full site width (nav ~154px + gap-6 +
-// 1280px content ≈ 1458px), i.e. 4 × 223 + 3 × 24. Approximate, since the
-// nav's width comes from its text.
-const STACK_BOX = 964;
-// From ~1500px (the site width + p-6 sides) the box is STACK_BOX; from md
-// it's 4 of 6 columns (~66vw); below md the stack is full width.
-const SIZES = `(min-width: 1500px) ${STACK_BOX}px, (min-width: 768px) 66vw, 100vw`;
-
-// Images fit a square box the width of the middle 4 of 6 columns (the full
-// width below md):
-// landscape fills the width, portrait fills the same height. The column is a
-// size container so the image can use its width (cqw) as its height.
+// The stack's box: from md up it starts on the title's left edge (the
+// content column, after the nav + gap-6) and is inset by the same amount on
+// the right, so it stays centered in the site block. Images fit a square of
+// that width: landscape fills the width, portrait fills the same height, so
+// either way the long edge is the box width. Below md there's no nav, so
+// the box is the full width (the title starts at the left edge too).
 //
+// Longest side, in CSS px, an image can render at: the site block at its
+// widest (nav ~154px + gap-6 + 1280px content ≈ 1458px) minus the nav +
+// gap-6 on both sides. Approximate, since the nav's width comes from its
+// text.
+const NAV_INSET = 178; // nav (~154px, incl. its pr-6) + gap-6
+const STACK_BOX = 1280 - NAV_INSET;
+// From ~1506px (the site block + p-6 sides) the box is STACK_BOX; from md
+// it's the viewport minus p-6 and the inset on both sides; below md the
+// stack is full width.
+const SIZES = `(min-width: 1506px) ${STACK_BOX}px, (min-width: 768px) calc(100vw - ${
+  48 + 2 * NAV_INSET
+}px), 100vw`;
+
+// An invisible, zero-height copy of the nav, so a sibling can be offset by
+// exactly the nav's real width (plus gap-6, as margin on `side`). From md
+// only.
+function NavSpacer({ side = "right", children }) {
+  return (
+    <div
+      className={`hidden md:block relative shrink-0 ${
+        side === "right" ? "mr-6" : "ml-6"
+      }`}
+    >
+      <div aria-hidden className="invisible h-0 overflow-hidden">
+        <SiteNav />
+      </div>
+      {children}
+    </div>
+  );
+}
+
 // Loading: the first image is fetched eagerly at high priority; the rest
 // load lazily as they near the viewport. Each image's box is sized from its
 // dimensions before it loads, so nothing jumps and lazy images below the
@@ -26,12 +50,14 @@ const SIZES = `(min-width: 1500px) ${STACK_BOX}px, (min-width: 768px) 66vw, 100v
 function ImageStack({ images }) {
   if (!images?.length) return null;
   return (
-    // Four lines above the first image (from the title row; from md, which
-    // takes no space, from the top line: -mb-5 leaves one, pt-[60px] adds
-    // three); five lines between images, and between the last image and
-    // the details below.
-    <div className="grid grid-cols-6 gap-6 pt-10 md:pt-[60px]">
-      <div className="col-span-6 md:col-start-2 md:col-span-4 flex flex-col gap-y-[100px] [container-type:inline-size]">
+    // Five lines above the first image (from the title row; from md, which
+    // takes no space, from the top line: -mb-5 leaves one, pt-20 adds
+    // four), between images, and between the last image and the details
+    // below. The column is a size container so portrait images
+    // can use its width (cqw) as their height.
+    <div className="flex pt-[60px] md:pt-20">
+      <NavSpacer side="right" />
+      <div className="flex-1 min-w-0 flex flex-col gap-y-[100px] [container-type:inline-size]">
         {images.map((image, i) => {
           const dims = imageDimensions(image);
           const portrait = dims && dims.height > dims.width;
@@ -55,6 +81,7 @@ function ImageStack({ images }) {
           );
         })}
       </div>
+      <NavSpacer side="left" />
     </div>
   );
 }
@@ -66,12 +93,9 @@ function ImageStack({ images }) {
 function ContentColumn({ className = "", style, navItem, children }) {
   return (
     <div className={`flex ${className}`} style={style}>
-      <div className="hidden md:block relative shrink-0 mr-6">
-        <div aria-hidden className="invisible h-0 overflow-hidden">
-          <SiteNav />
-        </div>
+      <NavSpacer>
         {navItem && <div className="absolute top-0 left-0">{navItem}</div>}
-      </div>
+      </NavSpacer>
       <div className="flex-1 min-w-0">{children}</div>
     </div>
   );
@@ -83,8 +107,9 @@ function ContentColumn({ className = "", style, navItem, children }) {
 // (justify-center also keeps the auto nav column from stretching into the
 // spare width). The grid's first
 // column sizes to an invisible, zero-height copy of the nav, so its width
-// stays exact; the second holds up to 1280px. The image stack spans both
-// columns (centered); the title row and text sit in the content column, as
+// stays exact; the second holds up to 1280px. The image stack starts on the
+// content column's left edge and is inset the same on the right, so it
+// stays centered; the title row and text sit in the content column, as
 // on Layout pages. From md up the title row floats over the images, stuck on the "Work" line of the (hidden) nav (Layout's
 // work-line offset + p-6), or, for a work featured on the homepage, on the
 // line of its slide number (`slide`, 1-based); it takes no space (h-0, and
