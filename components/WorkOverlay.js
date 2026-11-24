@@ -12,16 +12,15 @@ import { responsiveImage, fitLongSide, imageDimensions } from "@/lib/sanity";
 // either way the long edge is the box width. Below md there's no nav, so
 // the box is the full width (the title starts at the left edge too).
 //
-// Longest side, in CSS px, an image can render at: the site block at its
-// widest (nav ~154px + gap-6 + 1280px content ≈ 1458px) minus the nav +
-// gap-6 on both sides. Approximate, since the nav's width comes from its
-// text.
+// Longest side, in CSS px, an image can render at: the site at its widest
+// (max-w-screen-xl, 1280px) minus p-6 sides, minus the nav + gap-6 on both
+// sides. Approximate, since the nav's width comes from its text.
 const NAV_INSET = 178; // nav (~154px, incl. its pr-6) + gap-6
-const STACK_BOX = 1280 - NAV_INSET;
-// From ~1506px (the site block + p-6 sides) the box is STACK_BOX; from md
+const STACK_BOX = 1280 - 48 - 2 * NAV_INSET;
+// From 1280px the box is STACK_BOX; from md
 // it's the viewport minus p-6 and the inset on both sides; below md the
 // stack is full width.
-const SIZES = `(min-width: 1506px) ${STACK_BOX}px, (min-width: 768px) calc(100vw - ${
+const SIZES = `(min-width: 1280px) ${STACK_BOX}px, (min-width: 768px) calc(100vw - ${
   48 + 2 * NAV_INSET
 }px), 100vw`;
 
@@ -103,11 +102,10 @@ function ContentColumn({ className = "", style, navItem, children }) {
 
 // Reads as a full-screen modal over /work: no nav, same type and padding as
 // Layout. From md up the content spans the whole site width (nav + gap-6 +
-// max-w-screen-xl content) and is centered in the viewport, like Layout
-// (justify-center also keeps the auto nav column from stretching into the
-// spare width). The grid's first
+// content), capped at max-w-screen-xl and centered in the viewport, like
+// Layout. The grid's first
 // column sizes to an invisible, zero-height copy of the nav, so its width
-// stays exact; the second holds up to 1280px. The image stack starts on the
+// stays exact; the second takes the rest. The image stack starts on the
 // content column's left edge and is inset the same on the right, so it
 // stays centered; the title row and text sit in the content column, as
 // on Layout pages. From md up the title row floats over the images, stuck on the "Work" line of the (hidden) nav (Layout's
@@ -122,7 +120,7 @@ export default function WorkOverlay({ title, images, slide, children }) {
   const workLine = useWorkLineOffset();
   const titleLine = slide ? slideLineOffset(slide) : workLine;
   return (
-    <div className="font-[Arial] text-[15px] leading-[20px] text-[green] p-6 min-h-dvh md:grid md:grid-cols-[auto_minmax(0,theme(screens.xl))] md:gap-x-6 md:justify-center">
+    <div className="font-[Arial] text-[15px] leading-[20px] text-[green] p-6 min-h-dvh md:grid md:grid-cols-[auto_minmax(0,1fr)] md:gap-x-6 md:max-w-screen-xl md:mx-auto">
       <div
         aria-hidden
         className="hidden md:block invisible h-0 overflow-hidden"

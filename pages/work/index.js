@@ -12,19 +12,23 @@ import {
 } from "@/lib/sanity";
 import { numberIndividuals } from "@/lib/individuals";
 
+const UNDER_CONSTRUCTION = true;
+
 const VIEWS = ["Images", "List"];
 
 // Largest CSS widths images render at, with the content column at its
-// max-w-screen-xl (1280px): 2 work cards across gap-x-6 (1 below md), and
+// widest: the site's max-w-screen-xl (1280px) minus p-6 sides and the nav +
+// gap-6 (~178px, see WorkOverlay). 2 work cards across gap-x-6 (1 below md), and
 // INDIVIDUAL_COLUMNS individuals cells across gap-x-1 (4px). Below that the
 // `sizes` vw fallbacks take over (they overestimate, since the nav also
 // takes width, which errs on the crisp side).
-const WORK_CARD_WIDTH = 630;
+const CONTENT_MAX = 1280 - 48 - 178;
+const WORK_CARD_WIDTH = Math.ceil((CONTENT_MAX - 24) / 2);
 // Keep in sync with the individuals grid's md:grid-cols-* class below
 // (below md it's 2 columns, sized as 50vw).
 const INDIVIDUAL_COLUMNS = 6;
 const INDIVIDUAL_CELL_WIDTH = Math.ceil(
-  (1280 - (INDIVIDUAL_COLUMNS - 1) * 4) / INDIVIDUAL_COLUMNS,
+  (CONTENT_MAX - (INDIVIDUAL_COLUMNS - 1) * 4) / INDIVIDUAL_COLUMNS,
 );
 
 // A comma-separated inline list; the active item gets px-6.
@@ -81,14 +85,25 @@ export default function Work({ works: allWorks, tags, individuals }) {
       : null,
   );
 
+  // Archive is being reworked: show a placeholder instead of the page below.
+  // Set UNDER_CONSTRUCTION to false to bring the page back.
+  if (UNDER_CONSTRUCTION) {
+    return (
+      <Layout>
+        <Seo {...PAGES.work} />
+        <p>Under construction...</p>
+      </Layout>
+    );
+  }
+
   return (
     <Layout>
       <Seo {...PAGES.work} />
       <div className="pb-10">
-        {/* Filtering hidden for now (filter stays "All"), so just the view
-            picker at every size. To bring filters back, swap this Picker for
-            the commented-out block below.
-        <div className="hidden md:grid grid-cols-3">
+        {/* Filtering hidden for now (filter stays "All"), so just the view picker
+        at every size. To bring filters back, swap this Picker for the
+        commented-out block below. */}
+        <div className="hidden md:grid grid-cols-6">
           <Picker items={VIEWS} active={view} onChange={setView} />
           <div className="col-span-2">
             <Picker items={filters} active={filter} onChange={setFilter} />
@@ -97,8 +112,6 @@ export default function Work({ works: allWorks, tags, individuals }) {
         <div className="md:hidden">
           <Picker items={VIEWS} active={view} onChange={setView} />
         </div>
-        */}
-        <Picker items={VIEWS} active={view} onChange={setView} />
       </div>
       {view === "Images" ? (
         <div className="flex flex-col gap-20">
@@ -114,7 +127,7 @@ export default function Work({ works: allWorks, tags, individuals }) {
                     <img
                       className="object-cover aspect-[7/5]"
                       {...firstImages[i]}
-                      sizes={`(min-width: 1500px) ${WORK_CARD_WIDTH}px, (min-width: 768px) 50vw, 100vw`}
+                      sizes={`(min-width: 1280px) ${WORK_CARD_WIDTH}px, (min-width: 768px) 50vw, 100vw`}
                       alt=""
                     />
                   )}
@@ -145,7 +158,7 @@ export default function Work({ works: allWorks, tags, individuals }) {
                         INDIVIDUAL_CELL_WIDTH,
                         fitLongSide(image),
                       )}
-                      sizes={`(min-width: 1500px) ${INDIVIDUAL_CELL_WIDTH}px, (min-width: 768px) ${Math.ceil(100 / INDIVIDUAL_COLUMNS)}vw, 50vw`}
+                      sizes={`(min-width: 1280px) ${INDIVIDUAL_CELL_WIDTH}px, (min-width: 768px) ${Math.ceil(100 / INDIVIDUAL_COLUMNS)}vw, 50vw`}
                       alt=""
                       className="w-full h-full object-contain object-left-bottom"
                     />
@@ -158,24 +171,38 @@ export default function Work({ works: allWorks, tags, individuals }) {
         </div>
       ) : (
         // `works` comes from Sanity sorted newest year first.
-        // Wrapped lines get a hanging indent matching the nav's (pl-6 -indent-6).
-        // On hover the first line indents too (indent-0), like the nav.
         <div>
           {showWorks && (
             <ul className="pb-10">
               {works.map((work) => (
-                <li key={work.slug} className="w-fit max-w-full">
-                  {/* Below md each entry stays on one line: a long title
-                      truncates with an ellipsis and the year stays at the
-                      end. From md up it wraps with the hanging indent. */}
-                  <Link
-                    href={`/work/${work.slug}`}
-                    className="flex md:block md:pl-6 md:-indent-6 md:hover:indent-0"
-                  >
-                    <span className="truncate md:whitespace-normal">
-                      {work.title}
+                <li key={work.slug}>
+                  <Link href={`/work/${work.slug}`} className="group block">
+                    {/* Below md each entry stays on one line: a long title
+                        truncates with an ellipsis and the year stays at the
+                        end. */}
+                    <span className="flex md:hidden">
+                      <span className="truncate">{work.title}</span>
+                      <span className="shrink-0">, {work.year}</span>
                     </span>
-                    <span className="shrink-0">, {work.year}</span>
+                    {/* From md up, one row on the 6-column grid (lined up
+                        with the pickers above): year + title (sharing 3
+                        columns, gap-6 apart), type, client/collaborator,
+                        note. Every cell stays on one line and truncates;
+                        missing data leaves it blank. On hover the year
+                        indents, like the nav. */}
+                    <span className="hidden md:grid grid-cols-6">
+                      <span className="col-span-3 flex gap-6 pr-6">
+                        <span className="shrink-0 group-hover:pl-6">
+                          {work.year}
+                        </span>
+                        <span className="truncate">{work.title}</span>
+                      </span>
+                      <span className="truncate pr-6">
+                        {work.tags?.map((t) => t.title).join(", ")}
+                      </span>
+                      <span className="truncate pr-6">{work.collaborator}</span>
+                      <span className="truncate">{work.note}</span>
+                    </span>
                   </Link>
                 </li>
               ))}
