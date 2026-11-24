@@ -1,8 +1,8 @@
 import {defineField, defineType} from 'sanity'
 
 export default defineType({
-  name: 'biography',
-  title: 'Biography',
+  name: 'about',
+  title: 'About',
   type: 'document',
   __experimental_actions: [
     // Only allow update and publish - disable create and delete to make it a singleton
@@ -11,17 +11,16 @@ export default defineType({
   ],
   fields: [
     defineField({
-      name: 'content',
-      title: 'Content',
+      name: 'biography',
+      title: 'Biography',
       type: 'blockContent',
     }),
   ],
   preview: {
     prepare() {
       return {
-        title: 'Biography',
+        title: 'About',
       }
     },
   },
 })
-
