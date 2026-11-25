@@ -20,13 +20,5 @@ export default defineType({
       options: {source: 'title', maxLength: 96},
       validation: (Rule) => Rule.required(),
     }),
-    defineField({
-      name: 'order',
-      title: 'Display Order',
-      type: 'number',
-      description: 'Lower numbers appear first (e.g. in the /work filter).',
-      initialValue: 0,
-    }),
   ],
-  orderings: [{title: 'Display Order', name: 'orderAsc', by: [{field: 'order', direction: 'asc'}]}],
 })

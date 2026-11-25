@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import Link from "next/link";
 import SiteNav, {
+  SlideCountContext,
   slideLineOffset,
   useWorkLineOffset,
 } from "@/components/SiteNav";
@@ -12,15 +14,15 @@ import { responsiveImage, fitLongSide, imageDimensions } from "@/lib/sanity";
 // either way the long edge is the box width. Below md there's no nav, so
 // the box is the full width (the title starts at the left edge too).
 //
-// Longest side, in CSS px, an image can render at: the site at its widest
-// (max-w-screen-xl, 1280px) minus p-6 sides, minus the nav + gap-6 on both
-// sides. Approximate, since the nav's width comes from its text.
+// The site has no max width, so `sizes` is all viewport-based. STACK_BOX is
+// the box at a reference 1512px viewport, the base for the srcset (which
+// goes up to 3x it, enough for very wide screens). Approximate, since the
+// nav's width comes from its text.
 const NAV_INSET = 178; // nav (~154px, incl. its pr-6) + gap-6
-const STACK_BOX = 1280 - 48 - 2 * NAV_INSET;
-// From 1280px the box is STACK_BOX; from md
-// it's the viewport minus p-6 and the inset on both sides; below md the
-// stack is full width.
-const SIZES = `(min-width: 1280px) ${STACK_BOX}px, (min-width: 768px) calc(100vw - ${
+const STACK_BOX = 1512 - 48 - 2 * NAV_INSET;
+// From md the box is the viewport minus p-6 and the inset on both sides;
+// below md the stack is full width.
+const SIZES = `(min-width: 768px) calc(100vw - ${
   48 + 2 * NAV_INSET
 }px), 100vw`;
 
@@ -49,12 +51,13 @@ function NavSpacer({ side = "right", children }) {
 function ImageStack({ images }) {
   if (!images?.length) return null;
   return (
-    // Five lines above the first image (from the title row; from md, which
-    // takes no space, from the top line: -mb-5 leaves one, pt-20 adds
-    // four), between images, and between the last image and the details
-    // below. The column is a size container so portrait images
+    // 100px everywhere: above the first image (below md, from the title
+    // row; from md, where the title row takes no space, from the window's
+    // top edge: p-6 + the -mb-5/gap-10 line + pt-14), between images,
+    // between the last image and the details below, and below those to the
+    // window's bottom edge. The column is a size container so portrait images
     // can use its width (cqw) as their height.
-    <div className="flex pt-[60px] md:pt-20">
+    <div className="flex pt-[60px] md:pt-14">
       <NavSpacer side="right" />
       <div className="flex-1 min-w-0 flex flex-col gap-y-[100px] [container-type:inline-size]">
         {images.map((image, i) => {
@@ -102,8 +105,7 @@ function ContentColumn({ className = "", style, navItem, children }) {
 
 // Reads as a full-screen modal over /work: no nav, same type and padding as
 // Layout. From md up the content spans the whole site width (nav + gap-6 +
-// content), capped at max-w-screen-xl and centered in the viewport, like
-// Layout. The grid's first
+// content), with no max width, like Layout. The grid's first
 // column sizes to an invisible, zero-height copy of the nav, so its width
 // stays exact; the second takes the rest. The image stack starts on the
 // content column's left edge and is inset the same on the right, so it
@@ -118,9 +120,10 @@ function ContentColumn({ className = "", style, navItem, children }) {
 // below the images.
 export default function WorkOverlay({ title, images, slide, children }) {
   const workLine = useWorkLineOffset();
+  const slideCount = useContext(SlideCountContext);
   const titleLine = slide ? slideLineOffset(slide) : workLine;
   return (
-    <div className="font-[Arial] text-[15px] leading-[20px] text-[green] p-6 min-h-dvh md:grid md:grid-cols-[auto_minmax(0,1fr)] md:gap-x-6 md:max-w-screen-xl md:mx-auto">
+    <div className="font-[Arial] text-[15px] leading-[20px] text-[green] p-6 min-h-dvh md:grid md:grid-cols-[auto_minmax(0,1fr)] md:gap-x-6">
       <div
         aria-hidden
         className="hidden md:block invisible h-0 overflow-hidden"
@@ -135,21 +138,40 @@ export default function WorkOverlay({ title, images, slide, children }) {
             with ContentColumn rather than sitting in the grid's column. */}
         <ContentColumn
           navItem={
-            // The one visible nav item, indented as active: this work's
-            // slide number (back to that slide), else Work.
-            slide ? (
+            // The nav's slide numbers, each on its own nav line (offset up
+            // from this row, which sits on the title line), linking back to
+            // that slide, then Work on its nav line (gap-5 below, as in the
+            // nav). The active item is indented: a featured work's number,
+            // else Work.
+            <div
+              className="flex flex-col gap-5"
+              style={{ marginTop: slideLineOffset(1) - titleLine }}
+            >
+              <ul>
+                {Array.from({ length: slideCount }, (_, i) => i + 1).map(
+                  (n) => (
+                    <li
+                      key={n}
+                      className={`w-fit ${n === slide ? "indent-6" : "hover:indent-6"}`}
+                    >
+                      <Link
+                        href={{ pathname: "/", query: { slide: n } }}
+                        as="/"
+                        className="block"
+                      >
+                        {n}
+                      </Link>
+                    </li>
+                  ),
+                )}
+              </ul>
               <Link
-                href={{ pathname: "/", query: { slide } }}
-                as="/"
-                className="block indent-6"
+                href="/work"
+                className={`block w-fit ${slide ? "hover:indent-6" : "indent-6"}`}
               >
-                {slide}
-              </Link>
-            ) : (
-              <Link href="/work" className="block indent-6">
                 Work
               </Link>
-            )
+            </div>
           }
           className="sticky z-10 top-6 md:top-[calc(24px+var(--title-line))] md:h-0 md:-mb-5 md:items-start"
         >

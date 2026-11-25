@@ -32,19 +32,20 @@ export default defineType({
       of: [{type: 'reference', to: [{type: 'tag'}]}],
     }),
     defineField({
-      name: 'location',
-      title: 'Location',
+      name: 'collaborator',
+      title: 'Client/Collaborator',
       type: 'string',
     }),
     defineField({
-      name: 'datesOpen',
-      title: 'Dates Open',
-      type: 'string',
+      name: 'description',
+      title: 'Description',
+      type: 'blockContent',
     }),
     defineField({
       name: 'note',
       title: 'Note',
-      type: 'blockContent',
+      type: 'text',
+      rows: 3,
     }),
     defineField({
       name: 'attributes',

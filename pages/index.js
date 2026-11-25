@@ -82,13 +82,11 @@ export default function Home({ slides }) {
         setSlide={setSlide}
         setHoveredSlide={setHoveredSlide}
       >
-        {/* From md up, each title sits left-aligned across the
-            content column, on the same line as its number in the nav: the
-            nav's name line + gap-5 put number 1 two 20px lines down from the
-            top, then one line per number. One line, never wrapping: the
-            title ("Title, 2025") on the left and, for the active slide, a
-            "View" link at the far right (truncating the title if they'd
-            meet). */}
+        {/* From md up, each slide's title sits across the content column,
+            on the same line as its number in the nav: the nav's name line +
+            gap-5 put number 1 two 20px lines down from the top, then one
+            line per number. One line: the title on the left (truncating)
+            and, for the active slide, a "View" link at the far right. */}
         {shownSlides.map((n) => {
           const { title, href } = slides[n - 1] ?? {};
           if (!title) return null;

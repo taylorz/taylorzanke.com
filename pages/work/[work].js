@@ -12,8 +12,6 @@ import {
 const WorkPage = ({ work, slide }) => {
   // Rows with no value in Sanity are left out.
   const details = [
-    { label: "Location", value: work.location },
-    { label: "Dates", value: work.datesOpen },
     ...(work.attributes ?? []),
     {
       label: "Filed in",
@@ -24,18 +22,18 @@ const WorkPage = ({ work, slide }) => {
     },
   ].filter((d) => d.label && d.value);
 
-  // Search/unfurl text: "Title, 2025", described by the note (or, without
+  // Search/unfurl text: "Title, 2025", described by its description (or, without
   // one, the detail rows), unfurling with the work's own first image.
   const seoTitle = [work.title, work.year].filter(Boolean).join(", ");
   const seoDescription = truncateDescription(
-    work.note
-      ? toPlainText(work.note)
+    work.description
+      ? toPlainText(work.description)
       : details.map(({ label, value }) => `${label}: ${value}`).join(". "),
   );
 
   return (
     <WorkOverlay
-      title={seoTitle}
+      title={work.title}
       images={work.images?.map(({ image }) => image)}
       slide={slide}
     >
@@ -44,15 +42,16 @@ const WorkPage = ({ work, slide }) => {
         description={seoDescription}
         image={ogImageUrl(work.images?.[0]?.image)}
       />
-      {/* Note and info sit one line apart; the overlay's gap-10 keeps the
-          group two lines from the images. */}
+      {/* Description and info sit one line apart; the overlay's gap-10 keeps the
+          group two lines from the images. The description is inset pl-6;
+          the details aren't. */}
       <div className="flex flex-col gap-5">
-        {work.note && (
+        {work.description && (
           // Half the content column (3 of 6 columns) from md, full width
           // below; paragraphs one line apart.
-          <div className="grid grid-cols-6 gap-x-6">
+          <div className="grid grid-cols-6 gap-x-6 pl-6">
             <div className="col-span-6 md:col-span-3 flex flex-col gap-5">
-              <PortableText value={work.note} />
+              <PortableText value={work.description} />
             </div>
           </div>
         )}
