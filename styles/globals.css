@@ -46,4 +46,18 @@ body {
   max-width: 100%;
 }
 
-
+/* Dithered text: the text is filled with green noise instead of solid, so
+   it reads as a lighter, grainy "printed" version of itself. Used for /work
+   list rows that can't be opened. The noise is a tiny inline SVG (a
+   turbulence filter at about the screen's pixel size, much finer than the
+   letter strokes, thresholded so each speck is either fully green or clear:
+   the 10 zeros then 11 ones in tableValues put the cut at 10/21 of the
+   noise range, a touch under half, so slightly more is green), tiled; its green (0.502 = 128/255) matches
+   the site's text color, so change it there if the text color changes. */
+.dither {
+  color: transparent;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n' color-interpolation-filters='sRGB'><feTurbulence type='fractalNoise' baseFrequency='2.5' numOctaves='1' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0.502  0 0 0 0 0  1 0 0 0 0'/><feComponentTransfer><feFuncA type='discrete' tableValues='0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1'/></feComponentTransfer></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  background-size: 160px 160px;
+  -webkit-background-clip: text;
+  background-clip: text;
+}

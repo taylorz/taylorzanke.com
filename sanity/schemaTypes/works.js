@@ -66,7 +66,7 @@ export default defineType({
     }),
     defineField({
       name: 'documents',
-      title: 'Documents',
+      title: 'Files',
       type: 'array',
       of: [{type: 'file'}],
     }),
@@ -75,6 +75,14 @@ export default defineType({
       title: 'Online',
       type: 'array',
       of: [{type: 'string'}],
+    }),
+    defineField({
+      name: 'mainImage',
+      title: 'Main Image',
+      description:
+        "Optional. Shown for this work in the Images view on /work (not on the work's own page). Without one, the first image below is used.",
+      type: 'image',
+      options: {hotspot: true},
     }),
     defineField({
       name: 'images',
