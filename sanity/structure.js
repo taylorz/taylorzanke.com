@@ -1,4 +1,4 @@
-export default (S) =>
+export default (S, context) =>
   S.list()
     .title('Content')
     .items([
@@ -19,7 +19,7 @@ export default (S) =>
         .child(S.document().schemaType('contact').documentId('contact')),
       // Add a divider for other document types
       S.divider(),
-      // Work: everything, then one list per tag doc
+      // Work: everything, then one list per tag doc, and one per year
       S.listItem()
         .title('Work')
         .child(
@@ -39,7 +39,7 @@ export default (S) =>
                 .child(
                   S.documentTypeList('tag')
                     .title('By tag')
-                    .defaultOrdering([{field: 'order', direction: 'asc'}])
+                    .defaultOrdering([{field: 'title', direction: 'asc'}])
                     .child((tagId) =>
                       S.documentList()
                         .title('Work')
@@ -52,6 +52,36 @@ export default (S) =>
                         ]),
                     ),
                 ),
+              // One list per year that has work, newest first. The years are
+              // fetched when "By year" is opened.
+              S.listItem()
+                .title('By year')
+                .child(async () => {
+                  const allYears = await context
+                    .getClient({apiVersion: '2024-04-07'})
+                    .fetch('*[_type == "works" && defined(year)].year')
+                  const years = [...new Set(allYears)].sort().reverse()
+                  return S.list()
+                    .title('By year')
+                    .items(
+                      years.map((year) =>
+                        S.listItem()
+                          .id(year)
+                          .title(year)
+                          .child(
+                            S.documentList()
+                              .title(year)
+                              .schemaType('works')
+                              .filter('_type == "works" && year == $year')
+                              .params({year})
+                              .defaultOrdering([{field: 'title', direction: 'asc'}])
+                              .initialValueTemplates([
+                                S.initialValueTemplateItem('works-by-year', {year}),
+                              ]),
+                          ),
+                      ),
+                    )
+                }),
             ]),
         ),
       S.listItem()
@@ -59,7 +89,7 @@ export default (S) =>
         .child(
           S.documentTypeList('tag')
             .title('Tags')
-            .defaultOrdering([{field: 'order', direction: 'asc'}]),
+            .defaultOrdering([{field: 'title', direction: 'asc'}]),
         ),
       S.listItem()
         .title('Individuals')

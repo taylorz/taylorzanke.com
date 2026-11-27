@@ -32,19 +32,20 @@ export default defineType({
       of: [{type: 'reference', to: [{type: 'tag'}]}],
     }),
     defineField({
-      name: 'location',
-      title: 'Location',
+      name: 'collaborator',
+      title: 'Client/Collaborator',
       type: 'string',
     }),
     defineField({
-      name: 'datesOpen',
-      title: 'Dates Open',
-      type: 'string',
+      name: 'description',
+      title: 'Description',
+      type: 'blockContent',
     }),
     defineField({
       name: 'note',
       title: 'Note',
-      type: 'blockContent',
+      type: 'text',
+      rows: 3,
     }),
     defineField({
       name: 'attributes',
@@ -65,7 +66,7 @@ export default defineType({
     }),
     defineField({
       name: 'documents',
-      title: 'Documents',
+      title: 'Files',
       type: 'array',
       of: [{type: 'file'}],
     }),
@@ -74,6 +75,14 @@ export default defineType({
       title: 'Online',
       type: 'array',
       of: [{type: 'string'}],
+    }),
+    defineField({
+      name: 'mainImage',
+      title: 'Main Image',
+      description:
+        "Optional. Shown for this work in the Images view on /work (not on the work's own page). Without one, the first image below is used.",
+      type: 'image',
+      options: {hotspot: true},
     }),
     defineField({
       name: 'images',

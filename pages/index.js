@@ -22,6 +22,15 @@ const sizesFor = (image) => {
 };
 
 // Center the cover crop on the image's hotspot when one is set in the Studio.
+// Below md the crop follows the slide's Mobile alignment instead (left,
+// center or right; MOBILE_ALIGN on the img, !important to beat this inline
+// style).
+// Full class names, so Tailwind finds them.
+const MOBILE_ALIGN = {
+  left: "max-md:!object-left",
+  center: "max-md:!object-center",
+  right: "max-md:!object-right",
+};
 const objectPosition = (image) =>
   image.hotspot
     ? `${image.hotspot.x * 100}% ${image.hotspot.y * 100}%`
@@ -60,7 +69,7 @@ export default function Home({ slides }) {
       {/* Every slide is rendered so switching is instant; only the active
           one is visible. The active one loads first at high priority, the
           rest right after at low priority. */}
-      {slides.map(({ image }, i) => {
+      {slides.map(({ image, mobileAlignment }, i) => {
         const active = i + 1 === slide;
         return (
           <img
@@ -71,7 +80,7 @@ export default function Home({ slides }) {
             loading="eager"
             fetchpriority={active ? "high" : "low"}
             style={{ objectPosition: objectPosition(image) }}
-            className={`fixed inset-0 -z-10 w-full h-full object-cover ${
+            className={`fixed inset-0 -z-10 w-full h-full object-cover ${MOBILE_ALIGN[mobileAlignment] ?? MOBILE_ALIGN.center} ${
               active ? "" : "invisible"
             }`}
           />
@@ -82,13 +91,11 @@ export default function Home({ slides }) {
         setSlide={setSlide}
         setHoveredSlide={setHoveredSlide}
       >
-        {/* From md up, each title sits left-aligned across the
-            content column, on the same line as its number in the nav: the
-            nav's name line + gap-5 put number 1 two 20px lines down from the
-            top, then one line per number. One line, never wrapping: the
-            title ("Title, 2025") on the left and, for the active slide, a
-            "View" link at the far right (truncating the title if they'd
-            meet). */}
+        {/* From md up, each slide's title sits across the content column,
+            on the same line as its number in the nav: the nav's name line +
+            gap-5 put number 1 two 20px lines down from the top, then one
+            line per number. One line: the title on the left (truncating)
+            and, for the active slide, a "View" link at the far right. */}
         {shownSlides.map((n) => {
           const { title, href } = slides[n - 1] ?? {};
           if (!title) return null;

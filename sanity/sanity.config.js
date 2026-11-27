@@ -27,6 +27,14 @@ export default defineConfig({
           tags: [{_type: 'reference', _ref: tagId, _key: tagId}],
         }),
       },
+      // New work pre-filled with the year whose list it was created from.
+      {
+        id: 'works-by-year',
+        title: 'Work from year',
+        schemaType: 'works',
+        parameters: [{name: 'year', type: 'string'}],
+        value: ({year}) => ({year}),
+      },
     ],
   },
 })

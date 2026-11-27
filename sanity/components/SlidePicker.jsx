@@ -10,6 +10,7 @@ import {
   MenuButton,
   MenuDivider,
   MenuItem,
+  Radio,
   Spinner,
   Stack,
   Text,
@@ -82,6 +83,12 @@ const imageCopy = ({asset, crop, hotspot}) => ({
   ...(crop && {crop}),
   ...(hotspot && {hotspot}),
 })
+
+const ALIGNMENTS = [
+  ['Left', 'left'],
+  ['Center', 'center'],
+  ['Right', 'right'],
+]
 
 export default function SlidePicker(props) {
   const {value, onChange, readOnly} = props
@@ -247,6 +254,37 @@ export default function SlidePicker(props) {
         <Card padding={3} radius={2} tone="critical">
           <Text size={1}>The selected image is no longer on this source. Pick another one.</Text>
         </Card>
+      )}
+
+      {/* Mobile alignment: where the full-screen crop sits on phones.
+          Optional; unset reads as Center. This custom input replaces the
+          default form, so the field is drawn here. */}
+      {value?.imageKey && (
+        <Stack space={2}>
+          <Text size={1} weight="medium">
+            Mobile alignment
+          </Text>
+          <Flex gap={4}>
+            {ALIGNMENTS.map(([title, alignment]) => (
+              <Flex key={alignment} as="label" align="center" gap={2}>
+                <Radio
+                  name={`mobile-alignment-${value?._key}`}
+                  value={alignment}
+                  disabled={readOnly}
+                  checked={(value?.mobileAlignment ?? 'center') === alignment}
+                  onChange={() =>
+                    onChange(
+                      alignment === 'center'
+                        ? unset(['mobileAlignment'])
+                        : set(alignment, ['mobileAlignment']),
+                    )
+                  }
+                />
+                <Text size={1}>{title}</Text>
+              </Flex>
+            ))}
+          </Flex>
+        </Stack>
       )}
     </Stack>
   )

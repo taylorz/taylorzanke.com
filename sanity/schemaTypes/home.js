@@ -43,6 +43,23 @@ export default defineType({
             // look it up). The site resolves the live image from the source
             // and only falls back to this copy.
             defineField({name: 'image', title: 'Image copy', type: 'image', readOnly: true}),
+            // Where the full-screen crop sits on phones (below md): the
+            // image's left edge, center, or right edge. Optional; unset
+            // means center.
+            defineField({
+              name: 'mobileAlignment',
+              title: 'Mobile alignment',
+              type: 'string',
+              options: {
+                list: [
+                  {title: 'Left', value: 'left'},
+                  {title: 'Center', value: 'center'},
+                  {title: 'Right', value: 'right'},
+                ],
+                layout: 'radio',
+                direction: 'horizontal',
+              },
+            }),
           ],
           validation: (Rule) =>
             Rule.custom((slide) =>
